@@ -11,6 +11,10 @@
       <slot />
     </main>
 
-    <!-- This is where our Footer will eventually go -->
+    <!-- Footer - Part of revamped vision -->
+    <LayoutAppFooter />
+    
+    <!-- Offer Modal with Newsletter Subscription -->
+    <LayoutOfferModal />
   </div>
 </template>
