@@ -1,6 +1,6 @@
 <template>
   <!-- 
-    LUXURY SERVICES PAGE: Kenya Safari Heritage
+    LUXURY SERVICES PAGE: Ethno Kenia Adventures
     CONCEPT: Premium, high-end showcase of exclusive services
     VISION: Luxury travel experience with sophisticated African elegance
   -->
@@ -22,7 +22,7 @@
             <span class="text-brand-terracotta"> Services</span>
           </h1>
           <div class="text-2xl md:text-3xl font-serif text-brand-charcoal/90 mb-8">
-            Kenya Safari Heritage
+            Ethno Kenia Adventures
           </div>
           <p class="text-xl font-light text-brand-charcoal/80 max-w-4xl mx-auto leading-relaxed">
             Experience the pinnacle of African luxury through our exclusive, curated services. 
@@ -255,10 +255,10 @@
 <script setup lang="ts">
 // Page title and meta
 useHead({
-  title: 'Premium Services - Kenya Safari Heritage',
+  title: 'Premium Services - Ethno Kenia Adventures',
   meta: [
     { name: 'description', content: 'Luxury travel services in Kenya including elite air travel, premium vehicle fleet, bespoke safaris, VIP corporate retreats, five-star accommodations, and curated cultural experiences.' },
-    { name: 'keywords', content: 'Kenya luxury travel, premium safaris, VIP services, exclusive experiences, Kenya Safari Heritage, luxury accommodations, elite air travel' }
+    { name: 'keywords', content: 'Kenya luxury travel, premium safaris, VIP services, exclusive experiences, Ethno Kenia Adventures, luxury accommodations, elite air travel' }
   ]
 })
 </script>

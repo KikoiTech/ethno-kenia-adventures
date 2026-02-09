@@ -157,7 +157,7 @@
 
         <!-- Map Attribution -->
         <div class="absolute bottom-2 right-2 text-xs text-brand-charcoal/60 font-sans">
-          &copy; Kenya Safari Heritage - Animal Migration Routes
+          &copy; Ethno Kenia Adventures - Animal Migration Routes
         </div>
       </div>
 

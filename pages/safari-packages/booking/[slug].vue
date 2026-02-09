@@ -247,7 +247,7 @@
             </div>
             <h3 class="text-2xl font-serif text-brand-charcoal mb-4">Booking Request Submitted!</h3>
             <p class="text-brand-charcoal/80 mb-6">
-              Thank you for choosing Kenya Safari Heritage. We'll contact you within 24 hours to confirm your safari adventure.
+              Thank you for choosing Ethno Kenia Adventures. We'll contact you within 24 hours to confirm your safari adventure.
             </p>
             <div class="flex gap-4 justify-center">
               <button
@@ -281,8 +281,8 @@ import BookingForm from '~/components/safari-packages/BookingForm.vue'
 
 // Page meta
 definePageMeta({
-  title: 'Safari Package Booking - Kenya Safari Heritage',
-  description: 'Book your dream African safari adventure with Kenya Safari Heritage'
+  title: 'Safari Package Booking - Ethno Kenia Adventures',
+  description: 'Book your dream African safari adventure with Ethno Kenia Adventures'
 })
 
 // Reactive state
@@ -308,14 +308,14 @@ if (error.value) {
 // SEO meta
 useHead({
   title: () => safariPackage.value ? 
-    `${getText(safariPackage.value.title, currentLanguage.value)} - Kenya Safari Heritage` : 
-    'Safari Package - Kenya Safari Heritage',
+    `${getText(safariPackage.value.title, currentLanguage.value)} - Ethno Kenia Adventures` : 
+    'Safari Package - Ethno Kenia Adventures',
   meta: [
     {
       name: 'description',
       content: () => safariPackage.value ? 
         getText(safariPackage.value.description, currentLanguage.value) : 
-        'Book your dream African safari adventure with Kenya Safari Heritage'
+        'Book your dream African safari adventure with Ethno Kenia Adventures'
     }
   ]
 })

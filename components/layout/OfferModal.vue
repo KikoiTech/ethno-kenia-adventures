@@ -26,7 +26,7 @@
         <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
           <img 
             src="https://res.cloudinary.com/ddfa67uba/image/upload/v1770492736/cheetah_on_car_ck0qre.jpg"
-            alt="Cheetah on safari vehicle - Kenya Safari Heritage"
+            alt="Cheetah on safari vehicle - Ethno Kenia Adventures"
             class="w-full h-full object-cover"
           >
           <!-- Overlay with Offer Badge -->

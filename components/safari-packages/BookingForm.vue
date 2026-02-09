@@ -78,7 +78,7 @@
               type="tel"
               class="w-full px-4 py-3 border border-brand-charcoal/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-terracotta/50"
               :class="{ 'border-red-500': errors.phone }"
-              placeholder="+254 123 456 789"
+              placeholder="+254 702 373 008"
             >
             <p v-if="errors.phone" class="text-red-500 text-sm mt-1">{{ errors.phone }}</p>
           </div>

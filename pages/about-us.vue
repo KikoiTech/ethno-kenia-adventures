@@ -1,6 +1,6 @@
 <template>
   <!-- 
-    ABOUT US PAGE: Kenya Safari Heritage
+    ABOUT US PAGE: Ethno Kenia Adventures
     CONCEPT: Natural, geographic style connecting to Kenya's landscapes and heritage
     VISION: African Heritage Symphony - Rooted in Kenyan geography and culture
   -->
@@ -31,7 +31,7 @@
           <div class="text-center lg:text-left order-1 lg:order-2">
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif text-brand-charcoal mb-6 leading-tight">
               About
-              <span class="text-brand-terracotta"> Kenya Safari Heritage</span>
+              <span class="text-brand-terracotta"> Ethno Kenia Adventures</span>
             </h1>
             <div class="text-xl md:text-2xl lg:text-3xl font-serif text-brand-charcoal/90 mb-8">
               Rooted in the Heart of Africa
@@ -480,10 +480,10 @@
 <script setup lang="ts">
 // Page title and meta
 useHead({
-  title: 'About Us - Kenya Safari Heritage',
+  title: 'About Us - Ethno Kenia Adventures',
   meta: [
-    { name: 'description', content: 'Learn about Kenya Safari Heritage - our story rooted in Kenyan geography, our local guides, and our commitment to authentic African experiences shaped by the land itself.' },
-    { name: 'keywords', content: 'Kenya Safari Heritage, about us, Kenyan guides, geographic heritage, African travel, local expertise, Mount Kenya, Maasai Mara, sustainable tourism' }
+    { name: 'description', content: 'Learn about Ethno Kenia Adventures - our story rooted in Kenyan geography, our local guides, and our commitment to authentic African experiences shaped by the land itself.' },
+    { name: 'keywords', content: 'Ethno Kenia Adventures, about us, Kenyan guides, geographic heritage, African travel, local expertise, Mount Kenya, Maasai Mara, sustainable tourism' }
   ]
 })
 </script>

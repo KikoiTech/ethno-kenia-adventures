@@ -43,11 +43,11 @@ if (error.value || !safariPackage.value) {
 
 // SEO
 useHead({
-  title: () => `${safariPackage.value?.title?.en || 'Safari Package'} - Kenya Safari Heritage`,
+  title: () => `${safariPackage.value?.title?.en || 'Safari Package'} - Ethno Kenia Adventures`,
   meta: [
     {
       name: 'description',
-      content: () => safariPackage.value?.description?.en || 'Kenya Safari Heritage package details'
+      content: () => safariPackage.value?.description?.en || 'Ethno Kenia Adventures package details'
     }
   ]
 })

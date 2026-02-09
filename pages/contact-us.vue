@@ -1,6 +1,6 @@
 <template>
   <!-- 
-    CONTACT US PAGE: Kenya Safari Heritage
+    CONTACT US PAGE: Ethno Kenia Adventures
     CONCEPT: Fun, engaging contact page with 60/30/10 rule
     VISION: African Heritage Symphony - Visual storytelling with GIF showcase
   -->
@@ -30,7 +30,7 @@
         <div class="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
           <img 
             src="https://media.giphy.com/media/v1.Y2lkPTc2M2NwY3p0MHhvYmY4a2FqZ3dpc2p6aW5qcGdub3JlY2xlYSZlcD12MV9pbnRlcm5hdGlvbl9naWZmaWlmYm9lbnw/3DqW5Qb3h3/giphy.gif"
-            alt="Kenya Safari Heritage - Wildlife and adventure showcase"
+            alt="Ethno Kenia Adventures - Wildlife and adventure showcase"
             class="w-full h-auto"
           >
           <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/20 to-transparent rounded-3xl"></div>
@@ -48,7 +48,7 @@
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-serif text-brand-charcoal mb-6">
-        Why Choose Kenya Safari Heritage?
+        Why Choose Ethno Kenia Adventures?
       </h2>
       <p class="text-xl text-brand-charcoal/80 max-w-3xl mx-auto leading-relaxed">
         Our 60/30/10 promise ensures your adventure exceeds expectations
@@ -137,7 +137,7 @@
             <input 
               type="tel" 
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
-              placeholder="+254 123 456 789"
+              placeholder="+254 702 373 008"
             >
           </div>
 
@@ -200,7 +200,7 @@
               </div>
               <div>
                 <div class="font-serif text-brand-charcoal font-semibold">Phone</div>
-                <div class="text-brand-charcoal/80">+254 123 456 789</div>
+                <div class="text-brand-charcoal/80">+254 702 373 008</div>
               </div>
             </div>
 
@@ -213,7 +213,7 @@
               </div>
               <div>
                 <div class="font-serif text-brand-charcoal font-semibold">Email</div>
-                <div class="text-brand-charcoal/80">info@kenyasafariheritage.com</div>
+                <div class="text-brand-charcoal/80">info@ethnokeniaadventure.com</div>
               </div>
             </div>
 
@@ -297,10 +297,10 @@
           <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
           </svg>
-          <span>Call Now +254 123 456 789</span>
+          <span>Call Now +254 702 373 008</span>
         </a>
         <a 
-          href="mailto:info@kenyasafariheritage.com"
+          href="mailto:info@ethnokeniaadventure.com"
           class="inline-flex items-center justify-center px-10 py-4 border-2 border-brand-off-white text-brand-off-white font-sans font-medium rounded-full transition-all duration-500 hover:bg-brand-off-white hover:text-brand-charcoal"
         >
           <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -320,10 +320,10 @@
 <script setup lang="ts">
 // Page title and meta
 useHead({
-  title: 'Contact Us - Kenya Safari Heritage',
+  title: 'Contact Us - Ethno Kenia Adventures',
   meta: [
-    { name: 'description', content: 'Contact Kenya Safari Heritage to start your African adventure. Our 60/30/10 promise ensures authentic local experience, conservation focus, and adventure guarantee.' },
-    { name: 'keywords', content: 'Kenya Safari Heritage, contact us, safari booking, African adventure, wildlife safari, Kenya tourism, 60/30/10 rule' }
+    { name: 'description', content: 'Contact Ethno Kenia Adventures to start your African adventure. Our 60/30/10 promise ensures authentic local experience, conservation focus, and adventure guarantee.' },
+    { name: 'keywords', content: 'Ethno Kenia Adventures, contact us, safari booking, African adventure, wildlife safari, Kenya tourism, 60/30/10 rule' }
   ]
 })
 </script>
