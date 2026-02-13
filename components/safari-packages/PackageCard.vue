@@ -9,7 +9,7 @@
     [x] Mobile-First: Layout is responsive and tested for smaller viewports.
   -->
   <div 
-    class="package-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
+    class="package-card bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 cursor-pointer premium-shadow"
     @click="handleCardClick"
   >
     <!-- Image & Overlay Container -->
@@ -219,29 +219,13 @@ onMounted(loadPrice)
 
 <style scoped>
 /* Scoped styles ensure these classes do not leak out of the component */
-.line-clamp-2 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  -webkit-line-clamp: 2;
-  -moz-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  overflow: hidden;
+.premium-shadow {
+  box-shadow: 0 10px 30px -10px rgba(66, 60, 50, 0.15);
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
-.line-clamp-3 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  -webkit-line-clamp: 3;
-  -moz-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  overflow: hidden;
+.package-card:hover.premium-shadow {
+  box-shadow: 0 20px 40px -15px rgba(66, 60, 50, 0.25);
 }
+
 </style>

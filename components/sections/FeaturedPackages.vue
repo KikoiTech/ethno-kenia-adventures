@@ -7,11 +7,11 @@
   -->
   <section 
     ref="featuredPackagesSection"
-    class="relative bg-brand-off-white py-20 md:py-32 overflow-hidden featured-packages-section"
+    class="relative bg-brand-off-white py-24 md:py-32 overflow-hidden featured-packages-section"
   >
     <!-- Papyrus texture overlay for consistency -->
     <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
-         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sZz4KICA8ZGVmcz4KICAgIDxmZmlsdGVyIGlkPSJwYXB5cnVzIgogICAgICA8ZmVUdXJidWxlbmNlIHR5cGU9Ii45IiBudW1PY3RlPSI0IiBzZWVkPSI1Ii8+CiAgICA8L2RlZz4KICAgICAgIDxmZVRidWxlbmNlIHR5cGU9Ii45IiBudW1PY3RlPSI0IiBzZWVkPSI1Ii8+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjQwMCIgZmlsdGVyPSJodHR0cDovL3N2Zy9dmV3LzIwMCIgZmlsdGVyPSJodHR0cDovL3N2Zy9dmV3LzIwMCIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
+         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9IjAuMDUiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjUiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNwYXB5cnVzKSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
     </div>
 
     <div class="container mx-auto px-6 relative">
@@ -29,12 +29,19 @@
       <!-- Packages Container -->
       <div class="relative">
         <!-- Horizontal Scroll Container -->
-        <div class="flex overflow-x-auto scrollbar-hide space-x-6 pb-4" ref="packagesContainer">
+        <div 
+          class="flex overflow-x-auto scrollbar-hide space-x-6 pb-4" 
+          ref="packagesContainer"
+          @mouseenter="isPaused = true"
+          @mouseleave="isPaused = false"
+        >
           
-          <!-- Package 1: Maasai Mara Explorer -->
+          <!-- Dynamic Package Cards (Duplicated for infinite scroll) -->
           <div 
+            v-for="(pkg, index) in displayPackages" 
+            :key="`${pkg.id}-${index}`"
             class="flex-shrink-0 w-80 md:w-96 relative group cursor-pointer"
-            @mouseenter="hoverPackage('maasai-mara')"
+            @mouseenter="hoverPackage(pkg.id)"
             @mouseleave="unhoverPackage"
           >
             <!-- Package Card -->
@@ -43,8 +50,8 @@
               <!-- Background Image with Zoom Effect -->
               <div class="absolute inset-0">
                 <img 
-                  src="https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
-                  alt="Maasai Mara safari experience"
+                  :src="pkg.image"
+                  :alt="pkg.alt"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 >
                 <!-- Dark Overlay -->
@@ -53,8 +60,7 @@
 
               <!-- African Geometric Border -->
               <div 
-                class="absolute inset-0 border-4 border-brand-terracotta/0 group-hover:border-brand-terracotta transition-all duration-500 rounded-lg"
-                :class="{ 'border-opacity-100': hoveredPackage === 'maasai-mara' }"
+                class="absolute inset-0 border-4 border-transparent group-hover:border-brand-terracotta transition-all duration-500 rounded-lg"
               >
                 <!-- Corner Decorations -->
                 <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brand-terracotta"></div>
@@ -66,172 +72,16 @@
               <!-- Package Content -->
               <div class="absolute bottom-0 left-0 right-0 p-6 text-brand-off-white z-10">
                 <div class="transform transition-transform duration-500 group-hover:translate-y-2">
-                  <h3 class="text-xl md:text-2xl font-serif mb-2">Maasai Mara Explorer</h3>
-                  <p class="text-sm md:text-base font-sans opacity-90 mb-4">7 days of unparalleled wildlife encounters</p>
+                  <h3 class="text-xl md:text-2xl font-serif mb-2">{{ pkg.title }}</h3>
+                  <p class="text-sm md:text-base font-sans opacity-90 mb-4">{{ pkg.duration }} of {{ pkg.description }}</p>
                   <div class="flex items-center justify-between">
-                    <span class="text-xs md:text-sm font-sans opacity-75">From $3,500</span>
+                    <span class="text-xs md:text-sm font-sans opacity-75">From {{ pkg.price }}</span>
                     <div class="flex items-center space-x-1">
                       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                         <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4H6a2 2 0 100 4h2a1 1 0 100 2 2 2 0 002-2V5a2 2 0 00-2-2H6z" clip-rule="evenodd"/>
                       </svg>
-                      <span class="text-xs font-medium">Premium</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Package 2: Amboseli Luxury -->
-          <div 
-            class="flex-shrink-0 w-80 md:w-96 relative group cursor-pointer"
-            @mouseenter="hoverPackage('amboseli')"
-            @mouseleave="unhoverPackage"
-          >
-            <!-- Package Card -->
-            <div class="relative h-96 md:h-[450px] rounded-lg overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl">
-              
-              <!-- Background Image with Zoom Effect -->
-              <div class="absolute inset-0">
-                <img 
-                  src="https://images.pexels.com/photos/15286/pexels-photo-15286.jpg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
-                  alt="Amboseli luxury safari with Kilimanjaro"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                >
-                <!-- Dark Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 via-brand-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-
-              <!-- African Geometric Border -->
-              <div 
-                class="absolute inset-0 border-4 border-brand-terracotta/0 group-hover:border-brand-terracotta transition-all duration-500 rounded-lg"
-                :class="{ 'border-opacity-100': hoveredPackage === 'amboseli' }"
-              >
-                <!-- Corner Decorations -->
-                <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brand-terracotta"></div>
-                <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-brand-terracotta"></div>
-                <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-brand-terracotta"></div>
-                <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-brand-terracotta"></div>
-              </div>
-
-              <!-- Package Content -->
-              <div class="absolute bottom-0 left-0 right-0 p-6 text-brand-off-white z-10">
-                <div class="transform transition-transform duration-500 group-hover:translate-y-2">
-                  <h3 class="text-xl md:text-2xl font-serif mb-2">Amboseli Luxury</h3>
-                  <p class="text-sm md:text-base font-sans opacity-90 mb-4">5 days of elegance with Kilimanjaro views</p>
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs md:text-sm font-sans opacity-75">From $5,200</span>
-                    <div class="flex items-center space-x-1">
-                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4H6a2 2 0 100 4h2a1 1 0 100 2 2 2 0 002-2V5a2 2 0 00-2-2H6z" clip-rule="evenodd"/>
-                      </svg>
-                      <span class="text-xs font-medium">Luxury</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Package 3: Samburu Adventure -->
-          <div 
-            class="flex-shrink-0 w-80 md:w-96 relative group cursor-pointer"
-            @mouseenter="hoverPackage('samburu')"
-            @mouseleave="unhoverPackage"
-          >
-            <!-- Package Card -->
-            <div class="relative h-96 md:h-[450px] rounded-lg overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl">
-              
-              <!-- Background Image with Zoom Effect -->
-              <div class="absolute inset-0">
-                <img 
-                  src="https://images.pexels.com/photos/1442368/pexels-photo-1442368.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
-                  alt="Samburu adventure safari experience"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                >
-                <!-- Dark Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 via-brand-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-
-              <!-- African Geometric Border -->
-              <div 
-                class="absolute inset-0 border-4 border-brand-terracotta/0 group-hover:border-brand-terracotta transition-all duration-500 rounded-lg"
-                :class="{ 'border-opacity-100': hoveredPackage === 'samburu' }"
-              >
-                <!-- Corner Decorations -->
-                <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brand-terracotta"></div>
-                <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-brand-terracotta"></div>
-                <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-brand-terracotta"></div>
-                <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-brand-terracotta"></div>
-              </div>
-
-              <!-- Package Content -->
-              <div class="absolute bottom-0 left-0 right-0 p-6 text-brand-off-white z-10">
-                <div class="transform transition-transform duration-500 group-hover:translate-y-2">
-                  <h3 class="text-xl md:text-2xl font-serif mb-2">Samburu Adventure</h3>
-                  <p class="text-sm md:text-base font-sans opacity-90 mb-4">4 days of rugged northern frontier exploration</p>
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs md:text-sm font-sans opacity-75">From $2,800</span>
-                    <div class="flex items-center space-x-1">
-                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4H6a2 2 0 100 4h2a1 1 0 100 2 2 2 0 002-2V5a2 2 0 00-2-2H6z" clip-rule="evenodd"/>
-                      </svg>
-                      <span class="text-xs font-medium">Adventure</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Package 4: Conservation Experience -->
-          <div 
-            class="flex-shrink-0 w-80 md:w-96 relative group cursor-pointer"
-            @mouseenter="hoverPackage('conservation')"
-            @mouseleave="unhoverPackage"
-          >
-            <!-- Package Card -->
-            <div class="relative h-96 md:h-[450px] rounded-lg overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl">
-              
-              <!-- Background Image with Zoom Effect -->
-              <div class="absolute inset-0">
-                <img 
-                  src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
-                  alt="Conservation experience with rhinos"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                >
-                <!-- Dark Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 via-brand-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-
-              <!-- African Geometric Border -->
-              <div 
-                class="absolute inset-0 border-4 border-brand-terracotta/0 group-hover:border-brand-terracotta transition-all duration-500 rounded-lg"
-                :class="{ 'border-opacity-100': hoveredPackage === 'conservation' }"
-              >
-                <!-- Corner Decorations -->
-                <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brand-terracotta"></div>
-                <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-brand-terracotta"></div>
-                <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-brand-terracotta"></div>
-                <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-brand-terracotta"></div>
-              </div>
-
-              <!-- Package Content -->
-              <div class="absolute bottom-0 left-0 right-0 p-6 text-brand-off-white z-10">
-                <div class="transform transition-transform duration-500 group-hover:translate-y-2">
-                  <h3 class="text-xl md:text-2xl font-serif mb-2">Conservation Experience</h3>
-                  <p class="text-sm md:text-base font-sans opacity-90 mb-4">3 days supporting Kenya's wildlife protection</p>
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs md:text-sm font-sans opacity-75">From $4,100</span>
-                    <div class="flex items-center space-x-1">
-                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4H6a2 2 0 100 4h2a1 1 0 100 2 2 2 0 002-2V5a2 2 0 00-2-2H6z" clip-rule="evenodd"/>
-                      </svg>
-                      <span class="text-xs font-medium">Impact</span>
+                      <span class="text-xs font-medium">{{ pkg.label }}</span>
                     </div>
                   </div>
                 </div>
@@ -270,10 +120,60 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 const featuredPackagesSection = ref<HTMLElement>()
+const packagesContainer = ref<HTMLElement>()
 const hoveredPackage = ref<string | null>(null)
+const isPaused = ref(false)
+let animationId: number | null = null
+
+// Package Data
+const packages = [
+  {
+    id: 'maasai-mara',
+    title: 'Maasai Mara Explorer',
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905959/DSC_0443_jozfk3.jpg',
+    alt: 'Maasai Mara safari experience',
+    duration: '7 days',
+    description: 'unparalleled wildlife encounters',
+    price: '$3,500',
+    label: 'Premium'
+  },
+  {
+    id: 'amboseli',
+    title: 'Amboseli Luxury',
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905930/DSC_0227_tqver0.jpg',
+    alt: 'Amboseli luxury safari with Kilimanjaro',
+    duration: '5 days',
+    description: 'elegance with Kilimanjaro views',
+    price: '$5,200',
+    label: 'Luxury'
+  },
+  {
+    id: 'samburu',
+    title: 'Samburu Adventure',
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905975/DSC_0551_flntpk.jpg',
+    alt: 'Samburu adventure safari experience',
+    duration: '4 days',
+    description: 'rugged northern frontier exploration',
+    price: '$2,800',
+    label: 'Adventure'
+  },
+  {
+    id: 'conservation',
+    title: 'Conservation Experience',
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903469/DSC_0011_dp0tlt.jpg',
+    alt: 'Conservation experience with rhinos',
+    duration: '3 days',
+    description: 'supporting Kenya\'s wildlife protection',
+    price: '$4,100',
+    label: 'Impact'
+  }
+]
+
+// Duplicate packages for infinite scroll effect
+const displayPackages = computed(() => [...packages, ...packages, ...packages]) // Triple to ensure enough content for smooth loop
 
 // Package hover handlers
 const hoverPackage = (packageId: string) => {
@@ -282,6 +182,30 @@ const hoverPackage = (packageId: string) => {
 
 const unhoverPackage = () => {
   hoveredPackage.value = null
+}
+
+// Auto-scroll logic
+const startAutoScroll = () => {
+  if (!packagesContainer.value) return
+  
+  const scrollSpeed = 0.5 // Adjust speed here
+  
+  const animate = () => {
+    if (!packagesContainer.value) return
+    
+    if (!isPaused.value) {
+      if (packagesContainer.value.scrollLeft >= (packagesContainer.value.scrollWidth / 3)) {
+        // Reset to start (visually seamless because we tripled the content)
+        packagesContainer.value.scrollLeft = 0
+      } else {
+        packagesContainer.value.scrollLeft += scrollSpeed
+      }
+    }
+    
+    animationId = requestAnimationFrame(animate)
+  }
+  
+  animate()
 }
 
 // Parallax scrolling effect
@@ -306,16 +230,14 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  // Add scroll listener for parallax
   window.addEventListener('scroll', handleScroll, { passive: true })
-  
-  // Initial call to set starting state
   handleScroll()
+  startAutoScroll()
 })
 
 onUnmounted(() => {
-  // Clean up
   window.removeEventListener('scroll', handleScroll)
+  if (animationId) cancelAnimationFrame(animationId)
 })
 </script>
 
@@ -334,11 +256,6 @@ onUnmounted(() => {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
-}
-
-/* Border opacity transitions */
-.border-opacity-100 {
-  opacity: 1;
 }
 
 /* Group hover effects */

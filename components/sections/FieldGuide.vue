@@ -6,11 +6,11 @@
   -->
   <section 
     ref="fieldGuideSection"
-    class="relative bg-brand-off-white py-20 md:py-32 overflow-hidden field-guide-section"
+    class="relative bg-brand-off-white py-24 md:py-32 overflow-hidden field-guide-section"
   >
     <!-- Papyrus texture overlay -->
     <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
-         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45IiBudW1PY3RhdmVzPSI0IiBzZWVkPSI1Ii8+CiAgICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9InNhdHVyYXRlIiB2YWx1ZXM9IjAiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjcGFweXJ1cyIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
+         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9IjAuMDUiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjUiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNwYXB5cnVzKSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
     </div>
 
     <div class="container mx-auto px-6 relative">
@@ -155,45 +155,40 @@
           </div>
         </div>
 
-        <!-- Map Attribution -->
-        <div class="absolute bottom-2 right-2 text-xs text-brand-charcoal/60 font-sans">
-          &copy; Ethno Kenia Adventures - Animal Migration Routes
-        </div>
+      </div>
+    </div>
+
+    <!-- Business Owner Tourism Invitation (Wildlife Sanctuary Parallax) -->
+    <div class="mt-24 relative overflow-hidden h-[450px] flex items-center justify-center">
+      <!-- Parallax Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770907016/copy_of_dsc_0521_p2loc7_cf1710.jpggi t" 
+          class="w-full h-full object-cover" 
+          alt="Wildlife Sanctuary"
+        >
+        <div class="absolute inset-0 bg-brand-charcoal/60 backdrop-blur-[2px]"></div>
       </div>
 
-      <!-- Business Owner Tourism Invitation -->
-      <div class="mt-16 text-center">
-        <div class="bg-brand-charcoal/5 rounded-lg p-8 max-w-4xl mx-auto">
-          <h3 class="text-2xl md:text-3xl font-serif mb-4 text-brand-charcoal">
-            Welcome to Our Wildlife Sanctuary
-          </h3>
-          <p class="text-lg font-sans text-brand-charcoal/80 mb-6">
-            As a proud Kenyan business, we invite both local and international tourists to experience these magnificent animal migrations. Witness elephants, wildebeest, zebras, and more in their natural habitats across our protected conservation areas.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#" 
-              class="inline-flex items-center justify-center px-6 py-3 bg-brand-terracotta text-brand-off-white font-sans font-medium rounded-full transition-all duration-300 hover:bg-brand-terracotta/90 hover:scale-105"
-            >
-              <span>Plan Your Safari</span>
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5 5-5M13 17l5 5-5"/>
-              </svg>
-            </a>
-            
-            <a 
-              href="#" 
-              class="inline-flex items-center justify-center px-6 py-3 border border-brand-charcoal/30 text-brand-charcoal font-sans font-medium rounded-full transition-all duration-300 hover:border-brand-charcoal/50 hover:bg-brand-charcoal/5"
-            >
-              <span>Learn Conservation</span>
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
+      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <h3 class="text-3xl md:text-5xl font-serif mb-6 text-brand-off-white leading-tight">
+          Welcome to Our Wildlife Sanctuary
+        </h3>
+        <p class="text-lg md:text-xl font-sans text-brand-off-white/90 mb-8 leading-relaxed">
+          As a proud Kenyan business, we invite you to experience these magnificent animal migrations. Witness the raw beauty of nature across our protected conservation areas.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <NuxtLink 
+            to="/safari-packages?category=migration" 
+            class="inline-flex items-center justify-center px-8 py-4 bg-brand-terracotta text-brand-off-white font-sans font-bold rounded-full transition-all duration-300 hover:bg-brand-terracotta/90 hover:scale-105 shadow-xl"
+          >
+            <span>Explore Migration Safaris</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5 5-5M13 17l5 5-5"/>
+            </svg>
+          </NuxtLink>
         </div>
       </div>
-
     </div>
   </section>
 </template>

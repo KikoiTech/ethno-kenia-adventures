@@ -137,6 +137,27 @@
             </div>
           </div>
         </div>
+
+        <!-- Newsletter Signup -->
+        <div class="space-y-4">
+          <h4 class="text-lg font-serif text-brand-terracotta">Join Our Tribe</h4>
+          <p class="text-brand-off-white/80 font-sans text-sm">
+            Exclusive travel tips and safari insights delivered to you.
+          </p>
+          <form @submit.prevent class="relative">
+            <input 
+              type="email" 
+              placeholder="Email address" 
+              class="w-full bg-white/5 border border-brand-off-white/20 rounded-full py-2 px-4 text-xs font-sans focus:outline-none focus:border-brand-terracotta transition-colors"
+            >
+            <button 
+              type="submit"
+              class="absolute right-1 top-1 bottom-1 px-4 bg-brand-terracotta text-brand-off-white rounded-full text-[10px] font-sans font-bold hover:bg-brand-terracotta/90 transition-all"
+            >
+              Join
+            </button>
+          </form>
+        </div>
       </div>
 
       <!-- Bottom Bar -->

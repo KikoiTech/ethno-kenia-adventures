@@ -5,10 +5,17 @@
     VISUALS: Brand-off-white with papyrus texture, sophisticated slider
     LAYOUT: Large emotive portraits with elegant overlay typography
   -->
-  <section class="relative bg-brand-off-white py-20 md:py-32 overflow-hidden">
+  <section class="relative bg-brand-off-white py-24 md:py-32 overflow-hidden">
+    <!-- Torn Paper SVG Divider -->
+    <div class="absolute top-0 left-0 right-0 h-16 w-full -translate-y-px z-10 pointer-events-none">
+      <svg class="w-full h-full fill-brand-off-white" viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,60 L1440,60 L1440,10 C1350,25 1250,-5 1100,15 C950,35 800,0 650,20 C500,40 350,10 200,30 C100,40 50,25 0,35 Z"></path>
+      </svg>
+    </div>
+
     <!-- Papyrus texture overlay -->
     <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
-         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45IiBudW1PY3RhdmVzPSI0IiBzZWVkPSI1Ii8+CiAgICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9InNhdHVyYXRlIiB2YWx1ZXM9IjAiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjcGFweXJ1cyIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
+         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9IjAuMDUiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjUiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNwYXB5cnVzKSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
     </div>
 
     <div class="container mx-auto px-6 relative">
@@ -31,8 +38,8 @@
           <!-- Testimonial Background Image -->
           <div class="absolute inset-0">
             <img 
-              :src="testimonials[currentTestimonial].image"
-              :alt="testimonials[currentTestimonial].name"
+              :src="activeTestimonial.image"
+              :alt="activeTestimonial.name"
               class="w-full h-full object-cover"
             >
             <!-- Dark overlay for text readability -->
@@ -53,16 +60,16 @@
 
               <!-- Large Quote Text -->
               <blockquote class="text-2xl md:text-3xl lg:text-4xl font-serif leading-relaxed mb-8">
-                "{{ testimonials[currentTestimonial].quote }}"
+                "{{ activeTestimonial.quote }}"
               </blockquote>
 
               <!-- Author Information -->
               <div class="space-y-2">
                 <p class="text-lg md:text-xl font-sans font-medium">
-                  {{ testimonials[currentTestimonial].name }}
+                  {{ activeTestimonial.name }}
                 </p>
                 <p class="text-sm md:text-base font-sans opacity-80">
-                  {{ testimonials[currentTestimonial].location }}
+                  {{ activeTestimonial.location }}
                 </p>
               </div>
 
@@ -72,7 +79,7 @@
                   <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                   <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4H6a2 2 0 100 4h2a1 1 0 100 2 2 2 0 002-2V5a2 2 0 00-2-2H6z" clip-rule="evenodd"/>
                 </svg>
-                <span>{{ testimonials[currentTestimonial].safari }}</span>
+                <span>{{ activeTestimonial.safari }}</span>
               </div>
             </div>
           </div>
@@ -139,15 +146,18 @@
           <p class="text-lg font-sans text-brand-charcoal/80 mb-6">
             Join the adventurers who have discovered the magic of Kenya's wilderness. Create memories that will last a lifetime.
           </p>
-          <a 
-            href="#" 
+          
+          <!-- Updated Link Section -->
+          <NuxtLink 
+            to="/safari-packages" 
             class="inline-flex items-center justify-center px-8 py-4 bg-brand-terracotta text-brand-off-white font-sans font-medium rounded-full transition-all duration-300 hover:bg-brand-terracotta/90 hover:scale-105"
           >
             <span>Begin Your Journey</span>
             <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5 5-5M13 17l5 5-5"/>
             </svg>
-          </a>
+          </NuxtLink>
+          
         </div>
       </div>
 
@@ -156,7 +166,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 const currentTestimonial = ref(0)
 
@@ -167,42 +177,45 @@ const testimonials = [
     location: 'London, United Kingdom',
     safari: '7-Day Maasai Mara Adventure',
     quote: 'Watching the sunrise over the savanna, with elephants moving silently in the distance, I felt connected to something ancient and profound. Kenya doesn\'t just show you wildlife; it reminds you of your place in the natural world.',
-    image: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2',
-    thumbnail: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2'
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903537/DSC_0506_pr32cg.jpg',
+    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903537/DSC_0506_pr32cg.jpg'
   },
   {
     name: 'James Chen',
     location: 'San Francisco, USA',
     safari: '10-Day Kenya Explorer',
     quote: 'The guides\' knowledge of the land and its creatures is extraordinary. We tracked lions on foot and sat around the campfire under stars so bright they felt close enough to touch. This wasn\'t just a vacation; it was an education in wonder.',
-    image: 'https://images.pexels.com/photos/2387416/pexels-photo-2387416.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2',
-    thumbnail: 'https://images.pexels.com/photos/2387416/pexels-photo-2387416.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2'
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903523/DSC_0316_ygi6fm.jpg',
+    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903523/DSC_0316_ygi6fm.jpg'
   },
   {
     name: 'Amara Okonkwo',
     location: 'Lagos, Nigeria',
     safari: '5-Day Amboseli Luxury Safari',
     quote: 'As an African visiting another African country, I was moved by the warmth of the Kenyan people and the majesty of Mount Kilimanjaro backdrop. The giraffes walking against that sunrise - that image stays with me always.',
-    image: 'https://images.pexels.com/photos/15286/pexels-photo-15286.jpg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2',
-    thumbnail: 'https://images.pexels.com/photos/15286/pexels-photo-15286.jpg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2'
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903539/DSC_0519_cjrhjf.jpg',
+    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903539/DSC_0519_cjrhjf.jpg'
   },
   {
     name: 'Michael & Emma Thompson',
     location: 'Sydney, Australia',
     safari: '14-Day Honeymoon Safari',
     quote: 'We chose Kenya for our honeymoon, seeking adventure beyond beaches. What we found was magic - hot air balloons over wildebeest migrations, private bush dinners, and the sound of lions calling at night. Perfect doesn\'t begin to describe it.',
-    image: 'https://images.pexels.com/photos/3586966/pexels-photo-3586966.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2',
-    thumbnail: 'https://images.pexels.com/photos/3586966/pexels-photo-3586966.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2'
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905945/DSC_0325_evpkqa.jpg',
+    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905945/DSC_0325_evpkqa.jpg'
   },
   {
     name: 'David Rodriguez',
     location: 'Madrid, Spain',
     safari: 'Conservation Experience Safari',
     quote: 'Working alongside rangers to track rhinos, learning about conservation efforts, and seeing black rhinos in their natural habitat - this trip changed how I see our responsibility to protect these magnificent creatures.',
-    image: 'https://images.pexels.com/photos/1442368/pexels-photo-1442368.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2',
-    thumbnail: 'https://images.pexels.com/photos/1442368/pexels-photo-1442368.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2'
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977757/DSC_1047_vkmqff.jpg',
+    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977757/DSC_1047_vkmqff.jpg'
   }
 ]
+
+// Computed property to safely access the current testimonial
+const activeTestimonial = computed(() => testimonials[currentTestimonial.value] ?? testimonials[0]!)
 
 // Navigation functions
 const nextTestimonial = () => {
@@ -216,7 +229,7 @@ const previousTestimonial = () => {
 }
 
 // Auto-rotate testimonials
-let interval: NodeJS.Timeout | null = null
+let interval: ReturnType<typeof setInterval> | null = null
 
 onMounted(() => {
   // Auto-rotate every 8 seconds
