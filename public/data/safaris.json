@@ -1,0 +1,857 @@
+[
+  {
+    "id": 1,
+    "slug": "lake-naivasha-hells-gate-crescent-island",
+    "title": "1 Day Lake Naivasha, Hell’s Gate & Crescent Island Tour",
+    "shortTitle": "Naivasha & Hell's Gate Adventure",
+    "category": "Day Trips",
+    "location": "Lake Naivasha / Rift Valley",
+    "price": 150,
+    "duration": "8 – 10 hours",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977492/DSC_0824_m6kzf5.jpg",
+    "gallery": [
+      "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977484/DSC_0059_jkummp.jpg",
+      "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977494/DSC_0866_jptj0w.jpg"
+    ],
+    "snippet": "Explore the Great Rift Valley, cycle among wildlife in Hell's Gate, and walk with giraffes on Crescent Island.",
+    "description": "Escape the busy city of Nairobi and explore the breathtaking beauty of Kenya’s Great Rift Valley on this exciting full-day adventure. Located approximately 90 kilometers from Nairobi, Lake Naivasha is surrounded by dramatic escarpments and volcanic formations.",
+    "itinerary": [
+      {
+        "time": "Early Morning",
+        "title": "Departure from Nairobi",
+        "details": "Guests are picked up from their hotel in Nairobi. Scenic drive to the Great Rift Valley with a stop at the Rift Valley viewpoint for panoramic photography.",
+        "icon": "tabler:car-safari"
+      },
+      {
+        "time": "Morning",
+        "title": "Hell’s Gate National Park",
+        "details": "One of the few parks where you can explore on foot or bicycle. Famous for towering cliffs and geothermal activity.",
+        "activities": ["Guided cycling/walking safari", "Hell’s Gate Gorge walk", "Geothermal hot springs visit"],
+        "wildlife": ["Zebras", "Giraffes", "Buffaloes", "Antelopes"],
+        "icon": "tabler:bike"
+      },
+      {
+        "time": "Midday",
+        "title": "Boat Ride on Lake Naivasha",
+        "details": "Relaxing scenic boat ride to see hippos in their natural habitat and over 400 bird species including fish eagles and pelicans.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Afternoon",
+        "title": "Crescent Island Walking Safari",
+        "details": "A private sanctuary for a peaceful walking safari. Walk freely among roaming wildlife with no predators present.",
+        "highlights": ["Guided walking safari", "Close encounters with Wildebeests", "Mountain views"],
+        "icon": "tabler:walk"
+      },
+      {
+        "time": "Lunch",
+        "title": "Lakeside Lunch Break",
+        "details": "Enjoy local and international cuisine at a lakeside restaurant (Cost not included in package).",
+        "icon": "tabler:tools-kitchen-2"
+      },
+      {
+        "time": "Late Afternoon",
+        "title": "Return to Nairobi",
+        "details": "Depart Lake Naivasha and drive back to Nairobi, arriving in the early evening.",
+        "icon": "tabler:home"
+      }
+    ],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "03-days-mount-kenya-sirimon",
+    "title": "03 Days Mount Kenya Sirimon",
+    "shortTitle": "03 Days Mount Kenya Sirimon",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "03 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-03-days-mount-kenya-sirimon.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 03 Days Mount Kenya Sirimon. A unique journey through Kenya.",
+    "description": "Join us for a memorable 03 Days Mount Kenya Sirimon. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "04-days-mount-kenya-sirimon-chogoria",
+    "title": "04 Days Mount Kenya Sirimon chogoria",
+    "shortTitle": "04 Days Mount Kenya Sirimon chogoria",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "04 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-04-days-mount-kenya-sirimon-chogoria.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 04 Days Mount Kenya Sirimon chogoria. A unique journey through Kenya.",
+    "description": "Join us for a memorable 04 Days Mount Kenya Sirimon chogoria. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "04-days-mount-kenya-sirimon",
+    "title": "04 Days Mount Kenya Sirimon",
+    "shortTitle": "04 Days Mount Kenya Sirimon",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "04 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-04-days-mount-kenya-sirimon.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 04 Days Mount Kenya Sirimon. A unique journey through Kenya.",
+    "description": "Join us for a memorable 04 Days Mount Kenya Sirimon. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "05-days-mount-kenya-sirimon",
+    "title": "05 Days Mount Kenya Sirimon",
+    "shortTitle": "05 Days Mount Kenya Sirimon",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "05 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-05-days-mount-kenya-sirimon.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 05 Days Mount Kenya Sirimon. A unique journey through Kenya.",
+    "description": "Join us for a memorable 05 Days Mount Kenya Sirimon. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "09-days-private-tour",
+    "title": "09 Days Private tour",
+    "shortTitle": "09 Days Private tour",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "09 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-09-days-private-tour.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 09 Days Private tour. A unique journey through Kenya.",
+    "description": "Join us for a memorable 09 Days Private tour. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "09-days-samburu",
+    "title": "09 Days Samburu",
+    "shortTitle": "09 Days Samburu",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "09 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-09-days-samburu.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 09 Days Samburu. A unique journey through Kenya.",
+    "description": "Join us for a memorable 09 Days Samburu. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "1-day-lake-naivasha",
+    "title": "1 Day Lake Naivasha",
+    "shortTitle": "1 Day Lake Naivasha",
+    "category": "Day Trips",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "1 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-1-day-lake-naivasha.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 1 Day Lake Naivasha. A unique journey through Kenya.",
+    "description": "Join us for a memorable 1 Day Lake Naivasha. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "1-day-nairobi-city-tour-itinerary",
+    "title": "1 Day Nairobi City Tour Itinerary",
+    "shortTitle": "1 Day Nairobi City Tour Itinerary",
+    "category": "Day Trips",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "1 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-1-day-nairobi-city-tour-itinerary.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 1 Day Nairobi City Tour Itinerary. A unique journey through Kenya.",
+    "description": "Join us for a memorable 1 Day Nairobi City Tour Itinerary. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "10-days-kenya-tanzania",
+    "title": "10 Days Kenya Tanzania",
+    "shortTitle": "10 Days Kenya Tanzania",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "10 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-10-days-kenya-tanzania.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 10 Days Kenya Tanzania. A unique journey through Tanzania.",
+    "description": "Join us for a memorable 10 Days Kenya Tanzania. This package is designed to give you the best experience in Tanzania. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "10-days-luxury-private-honeymoon-safari",
+    "title": "10 Days Luxury Private Honeymoon Safari",
+    "shortTitle": "10 Days Luxury Private Honeymoon Safari",
+    "category": "Luxury Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "10 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-10-days-luxury-private-honeymoon-safari.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 10 Days Luxury Private Honeymoon Safari. A unique journey through Kenya.",
+    "description": "Join us for a memorable 10 Days Luxury Private Honeymoon Safari. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "12-days-uganda-rare-parks",
+    "title": "12 DAYS UGANDA RARE PARKS",
+    "shortTitle": "12 DAYS UGANDA RARE PARKS",
+    "category": "Multi-Day Safaris",
+    "location": "Uganda",
+    "price": 0,
+    "duration": "12 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-12-days-uganda-rare-parks.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 12 DAYS UGANDA RARE PARKS. A unique journey through Uganda.",
+    "description": "Join us for a memorable 12 DAYS UGANDA RARE PARKS. This package is designed to give you the best experience in Uganda. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "12-days-private-kenya-and-tanzania",
+    "title": "12 Days Private Kenya and Tanzania",
+    "shortTitle": "12 Days Private Kenya and Tanzania",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "12 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-12-days-private-kenya-and-tanzania.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 12 Days Private Kenya and Tanzania. A unique journey through Tanzania.",
+    "description": "Join us for a memorable 12 Days Private Kenya and Tanzania. This package is designed to give you the best experience in Tanzania. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "15-days-best-of-uganda",
+    "title": "15 Days Best of Uganda",
+    "shortTitle": "15 Days Best of Uganda",
+    "category": "Multi-Day Safaris",
+    "location": "Uganda",
+    "price": 0,
+    "duration": "15 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-15-days-best-of-uganda.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 15 Days Best of Uganda. A unique journey through Uganda.",
+    "description": "Join us for a memorable 15 Days Best of Uganda. This package is designed to give you the best experience in Uganda. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "3-days-amboseli-national-park-safari",
+    "title": "3 Days Amboseli National Park Safari",
+    "shortTitle": "3 Days Amboseli National Park Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-3-days-amboseli-national-park-safari.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 3 Days Amboseli National Park Safari. A unique journey through Kenya.",
+    "description": "Join us for a memorable 3 Days Amboseli National Park Safari. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "3-days-luxury-private-honeymoon-safari-in-kenya",
+    "title": "3 Days Luxury Private Honeymoon Safari in Kenya",
+    "shortTitle": "3 Days Luxury Private Honeymoon Safari in Kenya",
+    "category": "Luxury Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-3-days-luxury-private-honeymoon-safari-in-kenya.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 3 Days Luxury Private Honeymoon Safari in Kenya. A unique journey through Kenya.",
+    "description": "Join us for a memorable 3 Days Luxury Private Honeymoon Safari in Kenya. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 17,
+    "slug": "3-days-murchisson-falls",
+    "title": "3 Days Murchisson falls",
+    "shortTitle": "3 Days Murchisson falls",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-3-days-murchisson-falls.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 3 Days Murchisson falls. A unique journey through Kenya.",
+    "description": "Join us for a memorable 3 Days Murchisson falls. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "3-days-safari-uganda",
+    "title": "3 Days Safari Uganda",
+    "shortTitle": "3 Days Safari Uganda",
+    "category": "Multi-Day Safaris",
+    "location": "Uganda",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-3-days-safari-uganda.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 3 Days Safari Uganda. A unique journey through Uganda.",
+    "description": "Join us for a memorable 3 Days Safari Uganda. This package is designed to give you the best experience in Uganda. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 19,
+    "slug": "6-days-5-nights-dubai-tour-package",
+    "title": "6 Days 5 Nights Dubai Tour Package",
+    "shortTitle": "6 Days 5 Nights Dubai Tour Package",
+    "category": "Multi-Day Safaris",
+    "location": "Dubai",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-6-days-5-nights-dubai-tour-package.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 6 Days 5 Nights Dubai Tour Package. A unique journey through Dubai.",
+    "description": "Join us for a memorable 6 Days 5 Nights Dubai Tour Package. This package is designed to give you the best experience in Dubai. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 20,
+    "slug": "6-days-lemosho-route-climb",
+    "title": "6 Days Lemosho Route Climb",
+    "shortTitle": "6 Days Lemosho Route Climb",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-6-days-lemosho-route-climb.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 6 Days Lemosho Route Climb. A unique journey through Kenya.",
+    "description": "Join us for a memorable 6 Days Lemosho Route Climb. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 21,
+    "slug": "6-days-machame-route-climb",
+    "title": "6 Days Machame Route Climb",
+    "shortTitle": "6 Days Machame Route Climb",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-6-days-machame-route-climb.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 6 Days Machame Route Climb. A unique journey through Kenya.",
+    "description": "Join us for a memorable 6 Days Machame Route Climb. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 22,
+    "slug": "6-days-marangu-route-climb",
+    "title": "6 Days Marangu Route Climb",
+    "shortTitle": "6 Days Marangu Route Climb",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-6-days-marangu-route-climb.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 6 Days Marangu Route Climb. A unique journey through Kenya.",
+    "description": "Join us for a memorable 6 Days Marangu Route Climb. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 23,
+    "slug": "7-days-chimpanzee",
+    "title": "7 Days Chimpanzee",
+    "shortTitle": "7 Days Chimpanzee",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "7 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-7-days-chimpanzee.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 7 Days Chimpanzee. A unique journey through Kenya.",
+    "description": "Join us for a memorable 7 Days Chimpanzee. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 24,
+    "slug": "79-days-mt-kenya-safari-combo",
+    "title": "7-9 Days Mt Kenya Safari Combo",
+    "shortTitle": "7-9 Days Mt Kenya Safari Combo",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "9 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-79-days-mt-kenya-safari-combo.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 7-9 Days Mt Kenya Safari Combo. A unique journey through Kenya.",
+    "description": "Join us for a memorable 7-9 Days Mt Kenya Safari Combo. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 25,
+    "slug": "carnivore-dining-experience",
+    "title": "Carnivore Dining Experience",
+    "shortTitle": "Carnivore Dining Experience",
+    "category": "Day Trips",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "Flexible",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-carnivore-dining-experience.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Carnivore Dining Experience. A unique journey through Kenya.",
+    "description": "Join us for a memorable Carnivore Dining Experience. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 26,
+    "slug": "mount-kenya-07-days",
+    "title": "Mount Kenya 07 Days",
+    "shortTitle": "Mount Kenya 07 Days",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "07 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-mount-kenya-07-days.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Mount Kenya 07 Days. A unique journey through Kenya.",
+    "description": "Join us for a memorable Mount Kenya 07 Days. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 27,
+    "slug": "mt-kenya-bird-watching",
+    "title": "Mt Kenya Bird Watching",
+    "shortTitle": "Mt Kenya Bird Watching",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "Flexible",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-mt-kenya-bird-watching.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Mt Kenya Bird Watching. A unique journey through Kenya.",
+    "description": "Join us for a memorable Mt Kenya Bird Watching. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 28,
+    "slug": "private-safari",
+    "title": "Private Safari",
+    "shortTitle": "Private Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "Flexible",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-private-safari.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Private Safari. A unique journey through Kenya.",
+    "description": "Join us for a memorable Private Safari. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 29,
+    "slug": "samburu",
+    "title": "Samburu",
+    "shortTitle": "Samburu",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "Flexible",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-samburu.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Samburu. A unique journey through Kenya.",
+    "description": "Join us for a memorable Samburu. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  }
+]

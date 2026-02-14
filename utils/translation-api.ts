@@ -23,11 +23,14 @@ let translationCache: TranslationCache = {}
  * Gets text in the specified language from MultiLanguageText object
  */
 export function getText(
-  text: MultiLanguageText,
+  text: string | MultiLanguageText | undefined,
   language: string = 'en'
 ): string {
+  if (!text) return ''
+  if (typeof text === 'string') return text
+  
   // Return text in requested language if available
-  const translatedText = text[language as SupportedLanguage]
+  const translatedText = (text as any)[language as SupportedLanguage]
   if (translatedText) {
     return translatedText
   }

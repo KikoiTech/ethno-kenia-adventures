@@ -12,12 +12,13 @@ export default {
     extend: {
       colors: {
         'brand-off-white': '#F8F5F1',
+        'brand-sand': '#E4DFD5 ',
         'brand-green': '#3D4A3D',
-        'brand-terracotta': '#C06C58',
+        'brand-terracotta': '#A25035',
         'brand-charcoal': '#2A2B2A',
       },
   fontFamily: {
-  sans: ['Poppins', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
   serif: ['"Playfair Display"', 'serif'],
 },
     },

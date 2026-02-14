@@ -1,18 +1,29 @@
 // TypeScript interfaces for Safari Packages system
 
 export interface SafariPackage {
-  id: string
-  title: MultiLanguageText
-  description: MultiLanguageText
+  id: string | number
+  slug?: string
+  title: string | MultiLanguageText
+  shortTitle?: string | MultiLanguageText
+  description: string | MultiLanguageText
+  snippet?: string | MultiLanguageText
   duration: string
-  difficulty: string
+  difficulty?: string
   category: string
-  price: PackagePricing
-  image: string
-  gallery: string[]
-  highlights: MultiLanguageText[]
-  included: MultiLanguageText[]
-  excluded: MultiLanguageText[]
+  country?: string
+  location?: string
+  popular?: number
+  featured?: number
+  price: number | PackagePricing
+  image?: string
+  featuredImage?: string
+  gallery?: string[]
+  itinerary?: any[]
+  includes?: string[]
+  excludes?: string[]
+  highlights?: MultiLanguageText[]
+  included?: MultiLanguageText[]
+  excluded?: MultiLanguageText[]
   availability: {
     yearRound: boolean
     bestTime: string[]

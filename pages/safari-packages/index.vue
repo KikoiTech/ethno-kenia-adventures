@@ -83,40 +83,21 @@
     <section class="py-16 px-6 bg-gradient-to-r from-amber-100 to-orange-100 border-y-2 border-yellow-400/30">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-8">
-          <h2 class="text-3xl font-serif text-amber-900 mb-2">{{ getText({ en: "Explore Our Adventures", es: "Explora Nuestras Aventuras", fr: "Explorez Nos Aventures", de: "Erkunde Unsere Abenteuer", zh: "探索我们的冒险", ja: "私たちの冒険を探る", sw: "Chunguza Safari Zetu" }, currentLanguage) }}</h2>
+          <h2 class="text-3xl font-serif text-amber-900 mb-2">{{ getText({ en: "Explore Our Adventures", sw: "Chunguza Safari Zetu" }, currentLanguage) }}</h2>
           <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
         </div>
         
-        <div class="flex flex-wrap justify-center gap-4 mb-8">
-          <button
-            v-for="category in categories"
-            :key="category.value"
-            @click="selectedCategory = category.value"
-            :class="[
-              'px-8 py-4 rounded-full font-serif font-medium transition-all duration-300 border-2',
-              selectedCategory === category.value
-                ? 'bg-amber-900 text-yellow-100 border-yellow-400 shadow-xl transform scale-105'
-                : 'bg-white/80 text-amber-900 border-yellow-400/50 hover:bg-white hover:border-yellow-400 hover:shadow-lg'
-            ]"
-          >
-            <span class="flex items-center gap-2">
-              <span class="text-2xl">{{ category.icon }}</span>
-              {{ category.label[currentLanguage as keyof typeof category.label] }}
-            </span>
-          </button>
-        </div>
-        
-        <div class="flex justify-center items-center gap-4">
-          <label class="text-amber-900 font-serif font-medium">{{ getText({ en: "Sort by:", es: "Ordenar por:", fr: "Trier par:", de: "Sortieren nach:", zh: "排序方式:", ja: "並び替え:", sw: "Panga kwa:" }, currentLanguage) }}</label>
-          <select 
-            v-model="sortBy"
-            class="bg-white/80 border-2 border-yellow-400/50 rounded-full px-6 py-3 text-amber-900 font-serif focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
-          >
-            <option value="price-low">{{ getText({ en: "Price: Low to High", es: "Precio: Menor a Mayor", fr: "Prix: Croissant", de: "Preis: Aufsteigend", zh: "价格：从低到高", ja: "価格：安い順", sw: "Bei: Chini hadi Juu Juu" }, currentLanguage) }}</option>
-            <option value="price-high">{{ getText({ en: "Price: High to Low", es: "Precio: Mayor a Menor", fr: "Prix: Décroissant", de: "Preis: Absteigend", zh: "价格：从高到低", ja: "価格：高い順", sw: "Bei: Juu Juu Hadi Chini" }, currentLanguage) }}</option>
-            <option value="duration">{{ getText({ en: "Duration", es: "Duración", fr: "Durée", de: "Dauer", zh: "时长", ja: "期間", sw: "Muda" }, currentLanguage) }}</option>
-            <option value="difficulty">{{ getText({ en: "Difficulty", es: "Dificultad", fr: "Difficulté", de: "Schwierigkeit", zh: "难度", ja: "難易度", sw: "Ugumu" }, currentLanguage) }}</option>
-          </select>
+        <div class="flex flex-wrap justify-center items-center gap-6">
+          <div class="flex items-center gap-4">
+            <label class="text-amber-900 font-serif font-medium">{{ getText({ en: "Sort by:", sw: "Panga kwa:" }, currentLanguage) }}</label>
+            <select 
+              v-model="sortBy"
+              class="bg-white/80 border-2 border-yellow-400/50 rounded-full px-6 py-3 text-amber-900 font-serif focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
+            >
+              <option value="default">{{ getText({ en: "Featured", sw: "Imeangaziwa" }, currentLanguage) }}</option>
+              <option value="duration">{{ getText({ en: "Duration", sw: "Muda" }, currentLanguage) }}</option>
+            </select>
+          </div>
         </div>
       </div>
     </section>
@@ -125,7 +106,7 @@
     <div v-if="loading" class="py-32 text-center">
       <div class="inline-block">
         <div class="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
-        <p class="mt-6 text-amber-900 font-serif text-lg">{{ getText({ en: "Discovering amazing safaris...", es: "Descubriendo safaris increíbles...", fr: "Découverte de safaris incroyables...", de: "Entdecke unglaubliche Safaris...", zh: "发现令人惊叹的野生动物园...", ja: "素晴らしいサファリを発見中...", sw: "Kugundua safari za ajabu..." }, currentLanguage) }}</p>
+        <p class="mt-6 text-amber-900 font-serif text-lg">{{ getText({ en: "Discovering amazing safaris...", sw: "Kugundua safari za ajabu..." }, currentLanguage) }}</p>
       </div>
     </div>
 
@@ -135,13 +116,13 @@
         <svg class="w-16 h-16 text-red-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v2z"/>
         </svg>
-        <h3 class="text-xl font-serif text-red-800 mb-2">{{ getText({ en: "Unable to load packages", es: "No se pueden cargar los paquetes", fr: "Impossible de charger les paquets", de: "Pakete können nicht geladen werden", zh: "无法加载套餐", ja: "パッケージを読み込めません", sw: "Haiwezi kupakua paketi" }, currentLanguage) }}</h3>
+        <h3 class="text-xl font-serif text-red-800 mb-2">{{ getText({ en: "Unable to load packages", sw: "Haiwezi kupakua paketi" }, currentLanguage) }}</h3>
         <p class="text-red-600 mb-6">{{ loadError }}</p>
         <button 
           @click="loadPackages"
           class="px-8 py-3 bg-amber-900 text-yellow-100 rounded-full hover:bg-amber-800 transition-colors font-serif"
         >
-          {{ getText({ en: "Try Again", es: "Intentar de Nuevo", fr: "Réessayer", de: "Erneut Versuchen", zh: "重试", ja: "再試行", sw: "Jaribu Tena" }, currentLanguage) }}
+          {{ getText({ en: "Try Again", sw: "Jaribu Tena" }, currentLanguage) }}
         </button>
       </div>
     </div>
@@ -149,15 +130,12 @@
     <!-- Packages Grid -->
     <div v-else-if="filteredPackages.length > 0" class="py-16 px-6">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
           <PackageCard
             v-for="pkg in filteredPackages"
             :key="pkg.id"
             :safariPackage="pkg"
-            :currency="selectedCurrency"
             :language="currentLanguage"
-            :show-price="true"
-            @click="handlePackageClick(pkg)"
             class="transform transition-all duration-300 hover:scale-105"
           />
         </div>
@@ -170,276 +148,80 @@
         <svg class="w-16 h-16 text-amber-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
           <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
-        <h3 class="text-xl font-serif text-amber-900 mb-2">{{ getText({ en: "No packages found", es: "No se encontraron paquetes", fr: "Aucun paquet trouvé", de: "Keine Pakete gefunden", zh: "未找到套餐", ja: "パッケージが見つかりません", sw: "Hakuna paketi ilipatwa" }, currentLanguage) }}</h3>
-        <p class="text-amber-700 mb-6">{{ getText({ en: "Try adjusting your filters", es: "Intenta ajustar tus filtros", fr: "Essayez d'ajuster vos filtres", de: "Versuchen Sie, Ihre Filter anzupassen", zh: "尝试调整您的筛选条件", ja: "フィルターを調整してみてください", sw: "Jaribu kurekebusha vichungo vyako" }, currentLanguage) }}</p>
-        <button 
-          @click="selectedCategory = 'all'"
-          class="px-8 py-3 bg-amber-900 text-yellow-100 rounded-full hover:bg-amber-800 transition-colors font-serif"
-        >
-          {{ getText({ en: "Show All Packages", es: "Mostrar Todos los Paquetes", fr: "Afficher Tous les Paquets", de: "Alle Pakete Anzeigen", zh: "显示所有套餐", ja: "すべてのパッケージを表示", sw: "Onyesha Paketi Zote" }, currentLanguage) }}
-        </button>
+        <h3 class="text-xl font-serif text-amber-900 mb-2">{{ getText({ en: "No packages found", sw: "Hakuna paketi ilipatwa" }, currentLanguage) }}</h3>
       </div>
     </div>
 
-    <!-- Booking Modal -->
-    <div v-if="showBookingModal" class="fixed inset-0 z-50 overflow-y-auto">
-      <div class="flex items-center justify-center min-h-screen px-4">
-        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm" @click="closeBookingModal"></div>
-        <div class="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border-2 border-yellow-400/30">
-          <!-- Modal Header -->
-          <div class="bg-gradient-to-r from-amber-900 to-orange-900 text-white p-6 rounded-t-2xl">
-            <div class="flex justify-between items-start">
-              <div>
-                <h3 class="text-2xl font-serif mb-2">{{ getText({ en: "Book Your Safari Adventure", es: "Reserva Tu Aventura Safari", fr: "Réservez Votre Aventure Safari", de: "Buchen Sie Ihr Safari-Abenteuer", zh: "预订您的野生动物园冒险", ja: "サファリの冒険を予約", sw: "Weka Safari Yako" }, currentLanguage) }}</h3>
-                <p class="text-yellow-100/80">{{ selectedPackage?.title?.en || selectedPackage?.title?.sw || 'Safari Package' }}</p>
-              </div>
-              <button
-                @click="closeBookingModal"
-                class="text-yellow-100 hover:text-white transition-colors"
-              >
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          
-          <div class="p-8">
-            <BookingForm
-              v-if="selectedPackage"
-              :package="selectedPackage"
-              :language="currentLanguage"
-              :show-package-selection="false"
-              @submit="handleBookingSubmit"
-              @success="handleBookingSuccess"
-              @error="handleBookingError"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Success Modal -->
-    <div v-if="showSuccessModal" class="fixed inset-0 z-50 overflow-y-auto">
-      <div class="flex items-center justify-center min-h-screen px-4">
-        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm" @click="closeSuccessModal"></div>
-        <div class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 border-2 border-yellow-400/30">
-          <div class="text-center">
-            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-serif text-amber-900 mb-4">
-              {{ getText({ en: "Booking Request Submitted!", es: "¡Solicitud de Reserva Enviada!", fr: "Demande de Réservation Soumise!", de: "Buchungsanfrage Gesendet!", zh: "预订请求已提交！", ja: "予約リクエストが送信されました！", sw: "Ombi la Kuweka Nafasi Limetumwa!" }, currentLanguage) }}
-            </h3>
-            <p class="text-amber-700 mb-6">
-              {{ getText({ en: "Thank you for choosing Ethno Kenia Adventures. We'll contact you within 24 hours to confirm your safari adventure.", es: "Gracias por elegir Ethno Kenia Adventures. Nos pondremos en contacto en 24 horas para confirmar tu aventura safari.", fr: "Merci d'avoir choisi Ethno Kenia Adventures. Nous vous contacterons dans 24 heures pour confirmer votre aventure safari.", de: "Vielen Dank, dass Sie sich für Ethno Kenia Adventures entschieden haben. Wir werden uns innerhalb von 24 Stunden bei Ihnen melden, um Ihr Safari-Abenteuer zu bestätigen.", zh: "感谢您选择肯尼亚野生动物园遗产。我们将在24小时内与您联系确认您的野生动物园冒险。", ja: "ケニアサファリ遺産をお選びいただきありがとうございます。24時間以内にご連絡し、サファリアドベンチャーを確認させていただきます。", sw: "Asante kwa kuchagua Urithi wa Safari Kenya. Tutakupigia ndani ya saa 24 kuthibitisha uzoefu wako wa safari." }, currentLanguage) }}
-            </p>
-            <div class="flex gap-4 justify-center">
-              <button
-                @click="closeSuccessModal"
-                class="px-8 py-3 bg-amber-900 text-yellow-100 rounded-full hover:bg-amber-800 transition-colors font-serif"
-              >
-                {{ getText({ en: "Continue Browsing", es: "Seguir Navegando", fr: "Continuer la Navigation", de: "Weiter Stöbern", zh: "继续浏览", ja: "閲覧を続ける", sw: "Endele Kuvinjari" }, currentLanguage) }}
-              </button>
-              <button
-                @click="closeSuccessModal; $router.push('/safari-packages')"
-                class="px-8 py-3 border-2 border-amber-900 text-amber-900 rounded-full hover:bg-amber-50 transition-colors font-serif"
-              >
-                {{ getText({ en: "View More Packages", es: "Ver Más Paquetes", fr: "Voir Plus de Paquets", de: "Weitere Pakete Anzeigen", zh: "查看更多套餐", ja: "他のパッケージを見る", sw: "Ona Paketi Zaidi" }, currentLanguage) }}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Success Modal placeholder (removed for now as per simplicity focus) -->
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import type { SafariPackage } from '~/types/safari-package'
-import { getText, getLanguageName } from '~/utils/translation-api'
-import { convertCurrency, formatCurrency } from '~/utils/currency-api'
-import { getAllPackages } from '~/utils/package-loader'
+import { getText } from '~/utils/translation-api'
+import { getSafaris } from '~/utils/package-loader'
 
 // Components
 import PackageCard from '~/components/safari-packages/PackageCard.vue'
-import BookingForm from '~/components/safari-packages/BookingForm.vue'
 import LanguageSelector from '~/components/safari-packages/LanguageSelector.vue'
-import CurrencyConverter from '~/components/safari-packages/CurrencyConverter.vue'
 
 // Reactive state
 const currentLanguage = ref('en')
-const selectedCurrency = ref('KSH') // Start with KSH
-const selectedCategory = ref('all')
-const sortBy = ref('price-low')
-const showBookingModal = ref(false)
-const showSuccessModal = ref(false)
-const selectedPackage = ref<SafariPackage | null>(null)
+const selectedCurrency = ref('KES')
+const sortBy = ref('default')
 const loading = ref(true)
 const loadError = ref('')
+const packages = ref<SafariPackage[]>([])
 
-// Categories with National Geographic style icons
-const categories = ref([
-  { 
-    value: 'all', 
-    icon: '🌍',
-    label: {
-      en: 'All Adventures',
-      es: 'Todas las Aventuras',
-      fr: 'Toutes les Aventures',
-      de: 'Alle Abenteuer',
-      zh: '所有冒险',
-      ja: 'すべての冒険',
-      sw: 'Safari Zote'
+// Load packages data
+const loadPackages = async () => {
+  loading.value = true
+  loadError.value = ''
+  try {
+    const data = await getSafaris()
+    packages.value = data
+    if (!data || data.length === 0) {
+      loadError.value = 'No safari packages found.'
     }
-  },
-  { 
-    value: 'luxury', 
-    icon: '🦁',
-    label: {
-      en: 'Luxury Safaris',
-      es: 'Safaris de Lujo',
-      fr: 'Safaris de Luxe',
-      de: 'Luxus-Safaris',
-      zh: '豪华野生动物园',
-      ja: 'ラグジュアリーサファリ',
-      sw: 'Safari za Kifahama'
-    }
-  },
-  { 
-    value: 'adventure', 
-    icon: '🏔️',
-    label: {
-      en: 'Adventure',
-      es: 'Aventura',
-      fr: 'Aventure',
-      de: 'Abenteuer',
-      zh: '冒险',
-      ja: 'アドベンチャー',
-      sw: 'Safari ya Kusoma'
-    }
-  },
-  { 
-    value: 'family', 
-    icon: '👨‍👩‍👧‍👦',
-    label: {
-      en: 'Family Friendly',
-      es: 'Familiar',
-      fr: 'Familial',
-      de: 'Familienfreundlich',
-      zh: '家庭友好',
-      ja: 'ファミリー向け',
-      sw: 'Inayofa Familia'
-    }
-  },
-  { 
-    value: 'wildlife', 
-    icon: '🐘',
-    label: {
-      en: 'Wildlife Focus',
-      es: 'Enfoque en Vida Silvestre',
-      fr: 'Focus sur la Faune',
-      de: 'Fokus auf Wildtiere',
-      zh: '野生动物重点',
-      ja: '野生動物重点',
-      sw: 'Lenga Kwa Wanyama'
-    }
+  } catch (error) {
+    console.error('Error loading packages:', error)
+    loadError.value = 'Unable to load safari packages. Please try again later.'
+  } finally {
+    loading.value = false
   }
-])
-
-// Load packages data using clean utility
-const packages = await getAllPackages()
-
-// Update loading state
-loading.value = false
-
-// Set error if no packages loaded
-if (packages.length === 0) {
-  loadError.value = 'Unable to load safari packages. Please try again later.'
-} else {
-  console.log(`Successfully loaded ${packages.length} safari packages`)
 }
+
+// Initial load
+onMounted(() => {
+  loadPackages()
+})
 
 // Computed properties for filtering and sorting
 const filteredPackages = computed(() => {
-  let filtered = packages
-
-  // Filter by category
-  if (selectedCategory.value !== 'all') {
-    filtered = filtered.filter(pkg => pkg.category === selectedCategory.value)
-  }
+  let filtered = [...packages.value]
 
   // Sort packages
-  filtered = [...filtered].sort((a, b) => {
+  filtered = filtered.sort((a, b) => {
     switch (sortBy.value) {
-      case 'price-low':
-        return a.price.USD - b.price.USD
-      case 'price-high':
-        return b.price.USD - a.price.USD
       case 'duration':
         return parseInt(a.duration) - parseInt(b.duration)
-      case 'difficulty':
-        const difficultyOrder = { easy: 1, moderate: 2, challenging: 3 }
-        return difficultyOrder[a.difficulty as keyof typeof difficultyOrder] - difficultyOrder[b.difficulty as keyof typeof difficultyOrder]
+      case 'default':
       default:
+        // Featured/Popular first
+        const aFeatured = a.featured ?? 0
+        const bFeatured = b.featured ?? 0
+        const aPopular = a.popular ?? 0
+        const bPopular = b.popular ?? 0
+        
+        if (aFeatured !== bFeatured) return bFeatured - aFeatured
+        if (aPopular !== bPopular) return bPopular - aPopular
         return 0
     }
   })
 
   return filtered
 })
-
-// Methods
-const handlePackageClick = (pkg: SafariPackage) => {
-  selectedPackage.value = pkg
-  showBookingModal.value = true
-}
-
-const closeBookingModal = () => {
-  showBookingModal.value = false
-  document.body.style.overflow = 'auto'
-}
-
-const closeSuccessModal = () => {
-  showSuccessModal.value = false
-  document.body.style.overflow = 'auto'
-}
-
-const handleBookingSubmit = (bookingData: any) => {
-  console.log('Booking submitted:', bookingData)
-  closeBookingModal()
-}
-
-const handleBookingSuccess = (bookingData: any) => {
-  console.log('Booking successful:', bookingData)
-  closeBookingModal()
-  showSuccessModal.value = true
-}
-
-const handleBookingError = (error: string) => {
-  console.error('Booking error:', error)
-  // You could show an error toast here
-}
-
-const loadPackages = async () => {
-  loading.value = true
-  loadError.value = ''
-  try {
-    const newPackages = await getAllPackages()
-    if (newPackages.length > 0) {
-      // Update the packages array (this would require updating the reactive state)
-      console.log('Packages reloaded successfully')
-    }
-  } catch (error) {
-    console.error('Error reloading packages:', error)
-    loadError.value = 'Failed to reload packages. Please try again.'
-  } finally {
-    loading.value = false
-  }
-}
 
 // SEO
 useHead({

@@ -5,13 +5,9 @@
     VISUALS: Brand-off-white with papyrus texture, sophisticated slider
     LAYOUT: Large emotive portraits with elegant overlay typography
   -->
-  <section class="relative bg-brand-off-white py-24 md:py-32 overflow-hidden">
+  <section class="relative bg-brand-sand py-24 md:py-32 overflow-hidden">
     <!-- Torn Paper SVG Divider -->
-    <div class="absolute top-0 left-0 right-0 h-16 w-full -translate-y-px z-10 pointer-events-none">
-      <svg class="w-full h-full fill-brand-off-white" viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M0,60 L1440,60 L1440,10 C1350,25 1250,-5 1100,15 C950,35 800,0 650,20 C500,40 350,10 200,30 C100,40 50,25 0,35 Z"></path>
-      </svg>
-    </div>
+    <!-- Torn Paper SVG Divider Removed -->
 
     <!-- Papyrus texture overlay -->
     <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"

@@ -7,10 +7,10 @@
   -->
   <section 
     ref="featuredPackagesSection"
-    class="relative bg-brand-off-white py-24 md:py-32 overflow-hidden featured-packages-section"
+    class="relative bg-brand-sand py-24 md:py-32 overflow-hidden featured-packages-section"
   >
     <!-- Papyrus texture overlay for consistency -->
-    <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
+    <div class="absolute inset-0 opacity-[0.1] mix-blend-multiply pointer-events-none"
          style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9IjAuMDUiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjUiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNwYXB5cnVzKSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
     </div>
 
@@ -225,7 +225,7 @@ const handleScroll = () => {
   
   if (featuredPackagesSection.value) {
     featuredPackagesSection.value.style.transform = `translateY(${translateY}px)`
-    featuredPackagesSection.value.style.opacity = opacity.toString()
+    // featuredPackagesSection.value.style.opacity = opacity.toString()
   }
 }
 
