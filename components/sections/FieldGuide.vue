@@ -159,35 +159,43 @@
     </div>
 
     <!-- Business Owner Tourism Invitation (Wildlife Sanctuary Parallax) -->
-    <div class="mt-24 relative overflow-hidden h-[450px] flex items-center justify-center">
-      <!-- Parallax Background Image -->
+    <div class="mt-24 relative overflow-hidden h-[500px] flex items-center justify-center group">
+  <!-- Background Container -->
       <div class="absolute inset-0 z-0">
         <img 
-          src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770907016/copy_of_dsc_0521_p2loc7_cf1710.jpggi t" 
-          class="w-full h-full object-cover" 
+          src="https://res.cloudinary.com/dmdihuyvn/image/upload/ar_21:9,c_fill,g_auto,w_1600/v1770903461/DSC_0036_dgo8e1.jpg" 
           alt="Wildlife Sanctuary"
+          class="w-full h-[120%] object-cover object-center transition-transform duration-700 will-change-transform scale-110 group-hover:scale-100"
+          style="transform: translateY(0px);" 
+          ref="parallaxImg"
         >
-        <div class="absolute inset-0 bg-brand-charcoal/60 backdrop-blur-[2px]"></div>
+        <!-- Darker overlay for better text contrast -->
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-charcoal/70 via-brand-charcoal/40 to-brand-charcoal/70 backdrop-blur-[1px]"></div>
       </div>
 
+      <!-- Content -->
       <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h3 class="text-3xl md:text-5xl font-serif mb-6 text-brand-off-white leading-tight">
-          Welcome to Our Wildlife Sanctuary
-        </h3>
-        <p class="text-lg md:text-xl font-sans text-brand-off-white/90 mb-8 leading-relaxed">
-          As a proud Kenyan business, we invite you to experience these magnificent animal migrations. Witness the raw beauty of nature across our protected conservation areas.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <NuxtLink 
-            to="/safari-packages?category=migration" 
-            class="inline-flex items-center justify-center px-8 py-4 bg-brand-terracotta text-brand-off-white font-sans font-bold rounded-full transition-all duration-300 hover:bg-brand-terracotta/90 hover:scale-105 shadow-xl"
-          >
-            <span>Explore Migration Safaris</span>
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5 5-5M13 17l5 5-5"/>
-            </svg>
-          </NuxtLink>
+        <!-- Optional: Small Tribal Icon above Title -->
+        <div class="mb-4 opacity-80">
+          <svg class="w-8 h-8 mx-auto text-brand-terracotta" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L15 8L22 9L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9L9 8L12 2Z" />
+          </svg>
         </div>
+        
+        <h3 class="text-4xl md:text-6xl font-serif mb-6 text-brand-off-white leading-tight">
+          Welcome to Our <span class="italic text-brand-terracotta">Wildlife</span> Sanctuary
+        </h3>
+        
+        <p class="text-lg md:text-xl font-sans text-brand-off-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
+          Experience the raw rhythm of the Great Migration. Witness nature’s greatest spectacle within our protected conservation corridors.
+        </p>
+
+        <NuxtLink 
+          to="/safari-packages?category=migration" 
+          class="inline-flex items-center justify-center px-10 py-4 bg-brand-terracotta text-brand-off-white font-sans font-bold rounded-full transition-all duration-300 hover:bg-white hover:text-brand-terracotta shadow-2xl"
+        >
+          <span>Explore Migration Safaris</span>
+        </NuxtLink>
       </div>
     </div>
   </section>

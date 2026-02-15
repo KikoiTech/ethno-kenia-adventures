@@ -240,28 +240,28 @@
           <div class="grid grid-cols-2 gap-4">
             <div class="relative rounded-lg overflow-hidden h-32">
               <img 
-                src="https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905953/DSC_0360_uubkrj.jpg"
                 alt="Wildlife safari experience"
                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               >
             </div>
             <div class="relative rounded-lg overflow-hidden h-32">
               <img 
-                src="https://images.pexels.com/photos/33098/leopard-africa-wildlife-big-cat.jpg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977461/DSC_0090_udmgbc.jpg"
                 alt="Big cat sighting"
                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               >
             </div>
             <div class="relative rounded-lg overflow-hidden h-32">
               <img 
-                src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905978/DSC_0559_tz9q2t.jpg"
                 alt="Mountain landscape"
                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               >
             </div>
             <div class="relative rounded-lg overflow-hidden h-32">
               <img 
-                src="https://images.pexels.com/photos/36762/elephant-african-wildlife-animal.jpg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905930/DSC_0241_dt68u6.jpg"
                 alt="Elephant herd"
                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               >

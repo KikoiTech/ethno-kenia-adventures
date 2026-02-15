@@ -7,7 +7,7 @@
       <div class="absolute inset-0">
         <div class="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-orange-900/60 to-yellow-900/40"></div>
         <img 
-          src="https://images.unsplash.com/photo-1544735724-1dff02b6c614?ixlib=rb-4&auto=format&fit=crop&w=1920&q=80"
+          src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905930/DSC_0247_dkzytn.jpg"
           alt="Kenyan Safari Landscape"
           class="w-full h-full object-cover"
         >

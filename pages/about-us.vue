@@ -157,7 +157,7 @@
             <!-- Dramatic Image -->
             <div class="lg:order-1 relative h-96 lg:h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/33098/leopard-africa-wildlife-big-cat.jpg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1771131067/WhatsApp_Image_2026-02-11_at_9.11.58_PM_ocb72e.jpg"
                 alt="Lion in Maasai Mara at sunset"
                 class="w-full h-full object-cover"
               >
@@ -214,7 +214,7 @@
             <!-- Dramatic Image -->
             <div class="lg:order-2 relative h-96 lg:h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/36762/elephant-african-wildlife-animal.jpg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905934/DSC_0256_hah4ue.jpg"
                 alt="Elephant herd at watering hole"
                 class="w-full h-full object-cover"
               >
@@ -377,8 +377,8 @@
     </section>
 
     <!-- Team Section -->
-    <section class="py-16 md:py-24 bg-brand-off-white/50">
-      <div class="container mx-auto px-6">
+    <!-- <section class="py-16 md:py-24 bg-brand-off-white/50"> -->
+      <!-- <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-serif text-brand-charcoal mb-6">
             Meet Your Local Guides
@@ -386,27 +386,27 @@
           <p class="text-xl text-brand-charcoal/80 max-w-3xl mx-auto leading-relaxed">
             Born and raised in Kenya, our team carries generations of geographic knowledge
           </p>
-        </div>
+        </div> -->
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> -->
           <!-- Guide 1 -->
-          <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-terracotta/20">
-              <img 
+          <!-- <div class="text-center"> -->
+            <!-- <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-terracotta/20"> -->
+              <!-- <img 
                 src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2"
                 alt="Kenyan safari guide with geographic expertise"
                 class="w-full h-full object-cover"
-              >
-            </div>
+              > -->
+            <!-- </div>
             <h3 class="text-xl font-serif text-brand-charcoal mb-2">James Kiprop</h3>
             <p class="text-brand-charcoal/80 font-sans mb-2">Lead Guide - Maasai Mara Specialist</p>
             <p class="text-brand-charcoal/70 font-sans text-sm">
               15+ years tracking the Great Migration across the savanna
             </p>
-          </div>
+          </div> -->
 
           <!-- Guide 2 -->
-          <div class="text-center">
+          <!-- <div class="text-center">
             <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-terracotta/20">
               <img 
                 src="https://images.pexels.com/photos/2182971/pexels-photo-2182971.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2"
@@ -419,10 +419,10 @@
             <p class="text-brand-charcoal/70 font-sans text-sm">
               Deep knowledge of tribal traditions and ancient geographic wisdom
             </p>
-          </div>
+          </div> -->
 
           <!-- Guide 3 -->
-          <div class="text-center">
+          <!-- <div class="text-center">
             <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-terracotta/20">
               <img 
                 src="https://images.pexels.com/photos/2182972/pexels-photo-2182972.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2"
@@ -435,10 +435,10 @@
             <p class="text-brand-charcoal/70 font-sans text-sm">
               Expert navigator of Mount Kenya and Aberdare ranges
             </p>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Geographic Call to Action -->
     <section class="py-20 md:py-32 bg-gradient-to-br from-brand-charcoal via-brand-terracotta to-brand-charcoal text-brand-off-white">
