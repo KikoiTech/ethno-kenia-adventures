@@ -8,7 +8,7 @@
         
         <!-- Main headline -->
         <h1 class="hero-headline opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-500" ref="headline">
-          Where the Earth <span class="italic text-brand-terracotta">Still</span> Speaks
+          Where Nature becomes <span class="italic text-brand-terracotta">Adventure</span>
         </h1>
         
         <!-- Divider Line -->
@@ -110,8 +110,7 @@ const slides = [
   },
   {
     id: 'lion',
-    image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&q=80&w=1920',
-    alt: 'Majestic lion in the tall grass'
+    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134154/1001261550_vb8n99.jpg'
   },
   {
     id: 'gazelle',
