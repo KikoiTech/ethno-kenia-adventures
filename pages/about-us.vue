@@ -20,7 +20,7 @@
           <!-- Left Side - Hero Image -->
           <div class="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1">
             <img 
-              src="https://images.pexels.com/photos/15250/pexels-photo-15250.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&dpr=2"
+              src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903539/DSC_0519_cjrhjf.jpg"
               alt="Kenyan geographic landscape with Mount Kenya silhouette"
               class="w-full h-full object-cover"
             >
@@ -37,9 +37,7 @@
               Rooted in the Heart of Africa
             </div>
             <p class="text-lg md:text-xl font-light text-brand-charcoal/80 leading-relaxed">
-              Born from the vast savannas and ancient mountains of Kenya, 
-              we are custodians of authentic African experiences, 
-              connecting travelers to the soul of our magnificent land.
+              Ethno Kenia Adventure is a professional safari and tours company based in Kenya, offering unforgettable wildlife safaris, beach holidays, and cultural experiences across Kenya and East Africa. We believe every safari should be more than a trip it should be a meaningful journey.
             </p>
           </div>
         </div>
@@ -57,9 +55,13 @@
             </h2>
             <div class="space-y-4 text-brand-charcoal/80 font-sans leading-relaxed">
               <p>
-                From the snow-capped peaks of Mount Kenya to the golden plains of the Maasai Mara, 
-                our story is woven into the very fabric of this land. We are not just tour operators; 
-                we are storytellers, guardians, and passionate advocates for Kenya's natural treasures.
+                Our team focuses on:
+                Reliable and well-maintained safari vehicles,
+                experienced driver-guides,
+                quality accommodation options (budget, mid-range, and luxury),
+                flexible itineraries tailored to your needs,
+                excellent customer service from inquiry to departure.
+                Whether you are visiting Kenya for the first time or returning for another adventure, we will help you explore the best of <i>Masai Mara, Amboseli, Lake Nakuru, Samburu, Tsavo, and the Kenyan Coast</i>.
               </p>
               <p>
                 Founded by Kenyan guides who have spent decades tracking wildlife through acacia-dotted landscapes, 
@@ -76,7 +78,7 @@
           <!-- Geographic Image -->
           <div class="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+              src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905920/DSC_0149_pa70pi.jpg"
               alt="Kenyan landscape with Mount Kenya and savanna"
               class="w-full h-full object-cover"
             >
