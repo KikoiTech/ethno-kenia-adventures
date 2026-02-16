@@ -239,7 +239,7 @@
               </div>
               <div>
                 <div class="font-serif text-brand-charcoal font-semibold">Email</div>
-                <div class="text-brand-charcoal/80">ethnokeniaadventures@gmail.com</div>
+                <div class="text-brand-charcoal/80">ethnokeniaadventure@gmail.com</div>
               </div>
             </div>
 

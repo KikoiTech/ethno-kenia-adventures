@@ -206,10 +206,10 @@
                 />
               </svg>
               <a
-                href="mailto:ethnokeniaadventures@gmail.com"
+                href="mailto:ethnokeniaadventure@gmail.com"
                 class="text-brand-off-white/80 hover:text-brand-terracotta transition-colors duration-300 font-sans text-sm"
               >
-                ethnokeniaadventures@gmail.com
+                ethnokeniaadventure@gmail.com
               </a>
             </div>
             <div class="flex items-center space-x-3">

@@ -8,17 +8,17 @@
       <div class="container mx-auto flex justify-between items-center text-brand-off-white text-xs md:text-sm font-sans">
         <!-- Contact Info -->
         <div class="flex items-center space-x-6">
-          <a href="mailto:info@ethnokeniaadventures.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
+          <a href="mailto:info@ethnokeniaadventure.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-            <span>info@ethnokeniaadventures.com</span>
+            <span>info@ethnokeniaadventure.com</span>
           </a>
-          <a href="mailto:ethnokeniaadventures@gmail.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
+          <a href="mailto:ethnokeniaadventure@gmail.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-            <span>ethnokeniaadventures@gmail.com</span>
+            <span>ethnokeniaadventure@gmail.com</span>
           </a>
           <a href="tel:+254702373008" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
