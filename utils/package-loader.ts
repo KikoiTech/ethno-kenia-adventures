@@ -75,9 +75,29 @@ export function getPackageSlugs(): string[] {
 }
 
 /**
+ * Load all safaris from the central safaris.json
+ * @returns Promise<SafariPackage[]> - Array of all safaris
+ */
+export async function getSafaris(): Promise<SafariPackage[]> {
+  try {
+    const safaris = await $fetch<SafariPackage[]>('/data/safaris.json')
+    return safaris || []
+  } catch (error) {
+    console.error('Error loading safaris:', error)
+    return []
+  }
+}
+
+/**
+ * Get a single safari by slug from safaris.json
+ */
+export async function getSafariBySlug(slug: string): Promise<SafariPackage | null> {
+  const safaris = await getSafaris()
+  return safaris.find(s => s.slug === slug) || null
+}
+
+/**
  * Check if a package slug exists
- * @param slug - Package slug to check
- * @returns boolean - True if package exists
  */
 export function packageExists(slug: string): boolean {
   return PACKAGE_SLUGS.includes(slug as any)

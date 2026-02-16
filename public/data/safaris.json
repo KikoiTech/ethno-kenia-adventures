@@ -1,0 +1,1611 @@
+[
+  {
+    "id": 1,
+    "slug": "lake-naivasha-hells-gate-crescent-island",
+    "title": "1 Day Lake Naivasha, Hell’s Gate & Crescent Island Tour",
+    "shortTitle": "Naivasha & Hell's Gate Adventure",
+    "category": "Day Trips",
+    "location": "Lake Naivasha / Rift Valley",
+    "price": 0,
+    "duration": "8 – 10 hours",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977492/DSC_0824_m6kzf5.jpg",
+    "gallery": [
+      "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977484/DSC_0059_jkummp.jpg",
+      "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977494/DSC_0866_jptj0w.jpg"
+    ],
+    "snippet": "Explore the Great Rift Valley, cycle among wildlife in Hell's Gate, and walk with giraffes on Crescent Island.",
+    "description": "Escape the busy city of Nairobi and explore the breathtaking beauty of Kenya’s Great Rift Valley on this exciting full-day adventure. Located approximately 90 kilometers from Nairobi, Lake Naivasha is surrounded by dramatic escarpments and volcanic formations.",
+    "itinerary": [
+      {
+        "time": "Early Morning",
+        "title": "Departure from Nairobi",
+        "details": "Guests are picked up from their hotel in Nairobi. Scenic drive to the Great Rift Valley with a stop at the Rift Valley viewpoint for panoramic photography.",
+        "icon": "tabler:car-safari"
+      },
+      {
+        "time": "Morning",
+        "title": "Hell’s Gate National Park",
+        "details": "One of the few parks where you can explore on foot or bicycle. Famous for towering cliffs and geothermal activity.",
+        "activities": ["Guided cycling/walking safari", "Hell’s Gate Gorge walk", "Geothermal hot springs visit"],
+        "wildlife": ["Zebras", "Giraffes", "Buffaloes", "Antelopes"],
+        "icon": "tabler:bike"
+      },
+      {
+        "time": "Midday",
+        "title": "Boat Ride on Lake Naivasha",
+        "details": "Relaxing scenic boat ride to see hippos in their natural habitat and over 400 bird species including fish eagles and pelicans.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Afternoon",
+        "title": "Crescent Island Walking Safari",
+        "details": "A private sanctuary for a peaceful walking safari. Walk freely among roaming wildlife with no predators present.",
+        "highlights": ["Guided walking safari", "Close encounters with Wildebeests", "Mountain views"],
+        "icon": "tabler:walk"
+      },
+      {
+        "time": "Lunch",
+        "title": "Lakeside Lunch Break",
+        "details": "Enjoy local and international cuisine at a lakeside restaurant (Cost not included in package).",
+        "icon": "tabler:tools-kitchen-2"
+      },
+      {
+        "time": "Late Afternoon",
+        "title": "Return to Nairobi",
+        "details": "Depart Lake Naivasha and drive back to Nairobi, arriving in the early evening.",
+        "icon": "tabler:home"
+      }
+    ],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "03-days-mount-kenya-sirimon",
+    "title": "03 Days Mount Kenya Sirimon",
+    "shortTitle": "03 Days Mount Kenya Sirimon",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "03 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977493/DSC_0867_upjfw4.jpg",
+    "gallery": [],
+    "snippet": "The 3 Days Sirimon – Sirimon trek is the shortest and most direct trekking route to Point Lenana via the northern slopes of Mount Kenya...",
+    "description": "The 3 Days Sirimon – Sirimon trek is the shortest and most direct trekking route to Point Lenana via the northern slopes of Mount Kenya. This itinerary is ideal for trekkers with limited time but still seeking a rewarding high-altitude trekking experience. The route offers gradual altitude gain, scenic alpine landscapes, and excellent chances of wildlife sightings. This trek starts and ends via the Sirimon Gate, making logistics easier while still providing spectacular mountain views.",
+    "itinerary": [{
+        "time": "Day 1",
+        "title": "Nairobi-Sirimon Gate-Old Moses Camp (Judmaier Camp)",
+        "details": "Your adventure begins with an early morning departure from Nairobi heading north through Kenya’s scenic central highlands. You will arrive at Sirimon Gate in time for registration and a briefing from your mountain guide. The trek begins through montane forest filled with cedar, olive, and podocarpus trees. Wildlife such as colobus monkeys, bushbucks, and numerous bird species are often spotted along the trail.The trail gradually opens into moorland vegetation with spectacular views of the mountain peaks. You will arrive at Old Moses Camp in the afternoon where your crew prepares hot meals and comfortable accommodation. The evening is spent resting, hydrating, and preparing for the higher altitude trekking ahead.",
+        "icon": "tabler:car-safari"
+      },
+      {
+        "time": "Day 2",
+        "title": "Old Moses Camp - Shipton Camp",
+        "details": "After breakfast, the trek continues across the scenic Mackinder Valley. The route offers panoramic views of Mount Kenya’s main peaks and dramatic alpine terrain. You will pass unique giant lobelia and senecio plants that dominate the high-altitude ecosystem. The gradual ascent allows your body to adjust to increasing altitude while enjoying incredible mountain scenery. Lunch is served along the trail before continuing towards Shipton Camp, located beneath the towering peaks of Batian and Nelion. Upon arrival, you will rest and prepare for the summit attempt. Your guide will conduct a summit briefing explaining safety procedures and climbing strategy.",
+        "icon": "tabler:bike"
+      },
+      {
+        "time": "Day 3",
+        "title": "Summit Point Lenana - Descend to Sirimon Gate - Nairobi",
+        "details": "You will wake up around midnight for tea and light snacks before starting the summit ascent under the stars. The trail climbs gradually over rocky terrain and glacial scree.You will reach Point Lenana (4,985m) at sunrise. This is the third highest peak of Mount Kenya and offers breathtaking views of glaciers, lakes, and surrounding landscapes. On clear mornings, distant views stretch across northern Kenya.After celebrating and photography, you will descend via Shipton Camp and continue down to Old Moses Camp for lunch. The trek then continues down through forest vegetation to Sirimon Gate. You will meet your transport and drive back to Nairobi arriving late afternoon or evening.",
+        "icon": "tabler:ship"
+      }
+    ],
+    "includes": [
+      "Park & Conservation Fees",
+      "Professional Mountain Guide",
+      "Accommodation & Meals",
+      "Transport and Trek Support",
+      "Safety and Emergency Support"
+    ],
+    "excludes": [
+      "Travel & Insurance",
+      "Personal Trekking Equipment",
+      "Accommodation outside Trek",
+      "Personal Expenses",
+      "Tips & Gratuities"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "04-days-mount-kenya-sirimon-chogoria",
+    "title": "04 Days Mount Kenya Sirimon Chogoria",
+    "shortTitle": "04 Days Mount Kenya Sirimon Chogoria",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "04 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977500/DSC_0900_r9g4jo.jpg",
+    "gallery": [],
+    "snippet": "The 4 Days Sirimon – Chogoria trek is a scenic Mount Kenya climbing itinerary combining the gradual ascent of the Sirimon route with the breathtaking descent along the Chogoria route...",
+    "description": "The 4 Days Sirimon – Chogoria trek is a scenic Mount Kenya climbing itinerary combining the gradual ascent of the Sirimon route with the breathtaking descent along the Chogoria route. This trek offers diverse landscapes, good acclimatization, and spectacular alpine scenery, making it one of the most rewarding short Mount Kenya climbing options. This itinerary is ideal for trekkers looking for a balance between time efficiency and scenic experience. Join us for a memorable 04 Days Mount Kenya Sirimon chogoria. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Nairobi-Sirimon Gate-Old Moses Camp (Judmaier Camp)",
+        "details": "Your Mount Kenya adventure begins with an early morning departure from Nairobi travelling north through Kenya’s scenic central highlands. Upon arrival at Sirimon Gate, you will complete park registration and meet your trekking crew including guides, porters, and cook. After a safety and trek briefing, your climb begins through montane forest filled with cedar and olive trees. Wildlife sightings are common in this region including colobus monkeys, bushbucks, and numerous bird species. As you gain altitude, the trail gradually opens into moorland vegetation with spectacular mountain views.You will arrive at Old Moses Camp in the afternoon where meals and accommodation will be prepared by your mountain crew. The evening is spent resting and acclimatizing.",
+        "icon": "tabler:car-safari"
+      },
+      {
+        "time": "Day 2",
+        "title": "Old Moses Camp - Shipton Camp",
+        "details": "After breakfast, the trek continues across the scenic Mackinder Valley. The trail offers panoramic views of jagged peaks, alpine ridges, and glacial valleys. You will pass unique giant lobelia and senecio plants which thrive in this high-altitude environment. The trek maintains a gradual pace to support natural acclimatization.Lunch is served along the trail before continuing towards Shipton Camp, located beneath the towering peaks of Batian and Nelion. Upon arrival, you will rest, hydrate, and receive a summit briefing from your guides.",
+        "icon": "tabler:bike"
+      },
+      {
+        "time": "Day 3",
+        "title": "Summit Point Lenana - Descend via Chogoria Route - Mintos Camp",
+        "details": "You will wake up around midnight for tea and light snacks before starting the summit ascent under the stars. The trail climbs gradually over rocky terrain and glacial scree.You will reach Point Lenana (4,985m) at sunrise where you will enjoy breathtaking panoramic views of glaciers, alpine lakes, and surrounding valleys. After celebrating and photography, you will descend via the scenic Chogoria route. This descent offers spectacular views of Gorges Valley and dramatic cliff formations. You will arrive at Mintos Camp in the afternoon where you will rest after the summit climb.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 4",
+        "title": "Mintos Camp - Lake Ellis - Chogoria Gate - Nairobi",
+        "details": "After breakfast, you will descend through the stunning Gorges Valley enjoying views of waterfalls, alpine lakes, and valleys.You will pass the beautiful Lake Ellis, one of Mount Kenya’s most picturesque locations, offering excellent photography opportunities. The trek continues downhill through bamboo forest and rainforest vegetation towards Chogoria Gate.Upon arrival at the park exit, you will receive your Mount Kenya trekking certificate before meeting your driver for the return journey to Nairobi, arriving late afternoon.",
+        "icon": "tabler:ship"
+      }
+    ],
+    "includes": [
+      "Park & Conversation Fees",
+      "Professional Mountain Crew",
+      "Accommodation & Meals",
+      "Transport & Trek Support",
+      "Safety & Emergency Support"
+    ],
+    "excludes": [
+      "Travel & Insurance",
+      "Personal Trekking Equipment",
+      "Accommodation Outside Trek",
+      "Personal Expenses"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "04-days-mount-kenya-sirimon",
+    "title": "04 Days Mount Kenya Sirimon",
+    "shortTitle": "04 Days Mount Kenya Sirimon",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "04 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977494/DSC_0850_nl3ows.jpg",
+    "gallery": [],
+    "snippet": "Your journey begins with an early morning departure from Nairobi travelling north through Kenya’s scenic agricultural highlands towards Mount Kenya National Park...",
+    "description": "Your journey begins with an early morning departure from Nairobi travelling north through Kenya’s scenic agricultural highlands towards Mount Kenya National Park. Upon arrival at Sirimon Gate, you will complete park registration and meet your mountain crew including guides, porters, and cook. After a safety and trek briefing, the climb begins through lush montane forest.The trail passes through cedar and olive forests with opportunities to spot wildlife such as colobus monkeys, bushbucks, and a variety of bird species. As altitude increases, the vegetation gradually transitions into open moorland with spectacular mountain views. You will arrive at Old Moses Camp in the afternoon where your crew will have prepared meals and accommodation. The evening is spent relaxing and acclimatizing.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Nairobi - Sirimon Gate - Old Moses Camp (Judmaier Camp)",
+        "details": "Your journey begins with an early morning departure from Nairobi travelling north through Kenya’s scenic agricultural highlands towards Mount Kenya National Park. Upon arrival at Sirimon Gate, you will complete park registration and meet your mountain crew including guides, porters, and cook. After a safety and trek briefing, the climb begins through lush montane forest. The trail passes through cedar and olive forests with opportunities to spot wildlife such as colobus monkeys, bushbucks, and a variety of bird species. As altitude increases, the vegetation gradually transitions into open moorland with spectacular mountain views. You will arrive at Old Moses Camp in the afternoon where your crew will have prepared meals and accommodation. The evening is spent relaxing and acclimatizing.",
+        "icon": "tabler:car-safari"
+      },
+      {
+        "time": "Day 2",
+        "title": "Old Moses Camp - Shipton Camp",
+        "details": "After breakfast, the trek continues across the dramatic Mackinder Valley. This is one of Mount Kenya’s most scenic trekking sections offering panoramic views of jagged peaks, alpine ridges, and high-altitude vegetation. You will pass giant lobelias and senecio plants which are unique to East African mountains. The gradual ascent allows your body to adapt naturally to the altitude. Lunch is served along the trail before continuing towards Shipton Camp, located beneath the towering peaks of Batian and Nelion. Upon arrival, you will rest and hydrate. Your guides will conduct a summit briefing and monitor acclimatization progress.",
+        "icon": "tabler:bike"
+      },
+      {
+        "time": "Day 3",
+        "title": "Acclimatization Day – Trek Towards Kami Hut / Hausberg Col – Return to Shipton Camp",
+        "details": "This day is dedicated to acclimatization which is essential for summit success and safety. After breakfast, you will take a short hike towards Kami Hut or Hausberg Col. This climb helps your body adapt to higher altitude while following the “climb high, sleep low” acclimatization principle. During this hike, trekkers enjoy spectacular views of Mount Kenya’s glaciers, valleys, and rock formations. Your guide will also provide information about the mountain’s geography, flora, and wildlife. You will return to Shipton Camp for lunch and spend the afternoon resting and preparing for the summit attempt. Early dinner is served to allow sufficient rest before the night climb.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 4",
+        "title": "Summit Point Lenana – Descend to Sirimon Gate – Nairobi",
+        "details": "You will wake around midnight for tea and light snacks before beginning your summit ascent under the stars. The trail climbs gradually over rocky terrain and glacial scree slopes. You will reach Point Lenana (4,985m) at sunrise. This is Mount Kenya’s third highest peak and offers breathtaking panoramic views of glaciers, alpine lakes, and surrounding landscapes. On clear days, distant mountain ranges and northern Kenyan plains are visible. After photography and summit celebrations, you will descend to Shipton Camp for breakfast. The trek continues downhill to Old Moses Camp for lunch before completing the final descent to Sirimon Gate. Your driver will meet you at the gate for your transfer back to Nairobi arriving late afternoon or evening.",
+        "icon": "tabler:ship"
+      }
+    ],
+    "includes": [
+      "Park & Conservation Fees",
+      "Professional Mountain Crew",
+      "Transport & Trek Support",
+      "Safety & Emergency Support"
+
+    ],
+    "excludes": [
+      "Travel & Insurance",
+      "Personal Trekking Equipment",
+      "Accommodation Outside Trek",
+      "Personal Expenses"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "05-days-mount-kenya-sirimon",
+    "title": "05 Days Mount Kenya Sirimon - Chogoria Trek",
+    "shortTitle": "05 Days Mount Kenya Sirimon - Chogoria Trek",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "05 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977488/DSC_0784_ug8a41.jpg",
+    "gallery": [],
+    "snippet": "The 5 Days Sirimon – Chogoria route is one of the most scenic and well-balanced Mount Kenya trekking itineraries...",
+    "description": "The 5 Days Sirimon – Chogoria route is one of the most scenic and well-balanced Mount Kenya trekking itineraries. The trek approaches the mountain from the drier northern slopes via Sirimon and descends through the spectacular Chogoria route, widely regarded as the most beautiful side of Mount Kenya.This itinerary offers excellent acclimatization, diverse ecosystems, breathtaking alpine lakes, dramatic valleys, and high summit success rates, making it one of the most recommended Mount Kenya trekking routes.Join us for a memorable 05 Days Mount Kenya Sirimon. This package is designed to give you the best experience in Kenya. Full details coming soon",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Nairobi – Sirimon Gate – Old Moses Camp (Judmaier Camp)",
+        "details": "Your Mount Kenya adventure begins with an early morning departure from Nairobi travelling north through the scenic central highlands. Upon arrival at Sirimon Gate, you will complete park registration and meet your trekking crew including guides, porters, and cook. After a safety briefing, the trek begins through montane forest filled with cedar and olive trees. Wildlife sightings are common in this zone including colobus monkeys, bushbucks, and several bird species. As you gain altitude, the trail opens into moorland vegetation with wide scenic views. You will arrive at Old Moses Camp in the afternoon where meals and accommodation are prepared by your mountain crew.",
+        "icon": "tabler:bike"
+      },
+      {
+        "time": "Day 2",
+        "title": "Old Moses Camp – Shipton Camp",
+        "details": "After breakfast, you will trek across the scenic Mackinder Valley, one of the most dramatic landscapes on Mount Kenya. The route offers clear views of the mountain’s main peaks and alpine ridges. You will pass giant lobelia and senecio plants unique to East African alpine environments. The trek maintains a gradual pace to allow natural acclimatization. Lunch is served along the trail before continuing towards Shipton Camp, located beneath the towering peaks of Batian and Nelion. Upon arrival, you will rest and prepare for summit day.",
+        "icon": "tabler:bike"
+      },
+      {
+        "time": "Day 3",
+        "title": "Acclimatization Day – Trek Towards Kami Hut / Hausberg Col – Return to Shipton Camp",
+        "details": "This day is dedicated to acclimatization to improve summit success and safety. After breakfast, you will take a short hike towards Hausberg Col or Kami Hut following the “climb high, sleep low” principle. This acclimatization hike offers spectacular views of glaciers, rock formations, and alpine valleys. Your guides will monitor your altitude adaptation and provide mountain education and safety guidance. You will return to Shipton Camp for lunch and spend the afternoon resting in preparation for the summit climb.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 4",
+        "title": "Summit Point Lenana – Descend to Sirimon Gate – Nairobi",
+        "details": "You will wake around midnight for tea and light snacks before beginning your summit ascent under the stars. The trail climbs gradually over rocky terrain and glacial scree slopes. You will reach Point Lenana (4,985m) at sunrise. This is Mount Kenya’s third highest peak and offers breathtaking panoramic views of glaciers, alpine lakes, and surrounding landscapes. On clear days, distant mountain ranges and northern Kenyan plains are visible. After photography and summit celebrations, you will descend to Shipton Camp for breakfast. The trek continues downhill to Old Moses Camp for lunch before completing the final descent to Sirimon Gate. Your driver will meet you at the gate for your transfer back to Nairobi arriving late afternoon or evening.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 5",
+        "title": "Mintos Camp – Lake Ellis – Chogoria Gate – Nairobi",
+        "details": "After breakfast, you will descend through the stunning Gorges Valley with views of waterfalls, alpine lakes, and valleys. You will pass Lake Ellis, one of Mount Kenya’s most picturesque locations, perfect for photography and relaxation. The trail continues downhill through bamboo and rainforest vegetation towards Chogoria Gate. Upon arrival at the park exit, you will receive your Mount Kenya trekking certificate before meeting your driver for the return journey to Nairobi.",
+        "icon": "tabler:ship"
+      }
+    ],
+    "includes": [
+      "Park & Conservation Fees",
+      "Professional Mountain Crew",
+      "Transport in a comfortable tour vehicle",
+      "Accommodation & Meals",
+      "Transport & Trek Support",
+      "Safety & Emergency Support"
+    ],
+    "excludes": [
+      "Travel & Insurance",
+      "Personal Trekking Equipment",
+      "Accommodation Outside Trek",
+      "Personal Expenses",
+      "Tips & Gratuities"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "09-days-private-tour",
+    "title": "09 Days Samburu, Lake Nakuru, Lake Bogoria, Masai Mara & Amboseli Private Safari",
+    "shortTitle": "09 Days Samburu, Lake Nakuru, Lake Bogoria, Masai Mara & Amboseli Private Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "09 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977496/DSC_0873_fwgejf.jpg",
+    "gallery": [],
+    "snippet": "Your safari begins with an early morning pick-up from your Nairobi hotel or airport...",
+    "description": "Your safari begins with an early morning pick-up from your Nairobi hotel or airport. Travel north through Kenya’s central highlands, passing coffee and tea plantations with scenic views of Mount Kenya. Cross the equator en route to Samburu National Reserve.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Nairobi – Samburu National Reserve",
+        "details": "Your safari begins with an early morning pick-up from your Nairobi hotel or airport. Travel north through Kenya’s central highlands, passing coffee and tea plantations with scenic views of Mount Kenya. Cross the equator en route to Samburu National Reserve. Arrive in time for lunch at your lodge or camp and later proceed for an afternoon game drive in Samburu, home to the famous Samburu Special Five: Grevy’s zebra, Reticulated giraffe, Beisa oryx, Gerenuk, Somali ostrich",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 2",
+        "title": "Full Day in Samburu National Reserve",
+        "details": "Enjoy morning and afternoon game drives along the Ewaso Nyiro River, which attracts elephants, lions, leopards, cheetahs, crocodiles, and abundant birdlife. Optional visit to a Samburu cultural village can be arranged. Dinner and overnight at your lodge or camp.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Samburu – Lake Nakuru National Park",
+        "details": "After breakfast, drive south to Lake Nakuru National Park located in the Great Rift Valley. Arrive in time for lunch. Afternoon game drive in Lake Nakuru, famous for:• Black and white rhinos • Rothschild giraffes • Flamingos and pelicans (seasonal) • Lions and leopards. Dinner and overnight at your lodge or camp.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 4",
+        "title": "Lake Nakuru – Lake Bogoria – Lake Naivasha",
+        "details": "After breakfast, drive to Lake Bogoria, well known for its geothermal hot springs, geysers, and flamingo populations.Continue to Lake Naivasha arriving in time for lunch. Optional activities: Boat ride on Lake Naivasha, Crescent Island walking safari, Bird watching. Dinner and overnight at your lodge or camp.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 5",
+        "title": "Lake Naivasha – Masai Mara National Reserve",
+        "details": "After breakfast, depart for Masai Mara via the scenic Rift Valley escarpment and Maasai countryside. Arrive in time for lunch followed by an afternoon game drive in one of Africa’s most famous wildlife reserves, known for its rich wildlife populations and the seasonal Great Wildebeest Migration. Dinner and overnight at your lodge or camp.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 6",
+        "title": "Full Day in Masai Mara National Reserve",
+        "details": "Enjoy full-day game drives in Masai Mara with picnic lunches, exploring different areas of the reserve. Witness predator-prey interactions, large herds, and diverse birdlife. Optional hot air balloon safari at sunrise for breathtaking aerial views of the Mara plains. Cultural visit to a Maasai village can be arranged. Dinner and overnight at your lodge or camp.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 7",
+        "title": "Masai Mara – Amboseli National Park",
+        "details": "After breakfast, depart Masai Mara and drive to Amboseli via Nairobi with lunch en route. Arrive in Amboseli in the late afternoon with an evening game drive if time allows. Amboseli is famous for large elephant herds and spectacular views of Mount Kilimanjaro. Dinner and overnight at your lodge or camp.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 8",
+        "title": "Full Day in Amboseli National Park",
+        "details": "Enjoy morning and afternoon game drives in Amboseli, exploring the swamps, plains, and woodlands. Witness elephants, giraffes, zebras, buffalo, lions, cheetahs, and abundant birdlife. Optional visit to a Maasai cultural village to learn about their traditions and lifestyle. Dinner and overnight at your lodge or camp.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 9",
+        "title": "Amboseli – Nairobi",
+        "details": "Enjoy an early morning game drive followed by breakfast. Later depart for Nairobi arriving in the afternoon with drop-off at your hotel or airport.",
+        "icon": "tabler:ship"
+      }
+    ],
+    "includes": [
+      "Transport in a private 4x4 safari Land Cruiser",
+      "Services of professional safari driver/guide",
+      "Accommodation for 8 nights on full board basis (lunch, dinner & breakfast)",
+      "All park entrance fees and government taxes",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Airport/hotel pick-up and drop-off",
+      "AMREF Flying Doctors emergency evacuation cover"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees",
+      "Travel insurance",
+      "Drinks, beverages, and alcohol",
+      "Optional activities (balloon safari, boat rides, cultural visits, etc.)",
+      "Tips and gratuities",
+      "Personal expenses (laundry, phone calls, souvenirs, etc.)",
+      "Accommodation in Nairobi before or after safari (unless requested)"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "09-days-samburu",
+    "title": "09 Days Samburu",
+    "shortTitle": "09 Days Samburu",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "09 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-09-days-samburu.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 09 Days Samburu. A unique journey through Kenya.",
+    "description": "Join us for a memorable 09 Days Samburu. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "1-day-lake-naivasha",
+    "title": "1 Day Lake Naivasha",
+    "shortTitle": "1 Day Lake Naivasha",
+    "category": "Day Trips",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "1 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977498/DSC_0893_teqpfh.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 1 Day Lake Naivasha. A unique journey through Kenya.",
+    "description": "Join us for a memorable 1 Day Lake Naivasha. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "1-day-nairobi-city-tour-itinerary",
+    "title": "1 Day Nairobi City Tour Itinerary",
+    "shortTitle": "1 Day Nairobi City Tour Itinerary",
+    "category": "Day Trips",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "1 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977484/DSC_0761_fzsobf.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 1 Day Nairobi City Tour Itinerary. A unique journey through Kenya.",
+    "description": "Join us for a memorable 1 Day Nairobi City Tour Itinerary. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "10-days-kenya-tanzania",
+    "title": "10 Days Kenya Tanzania",
+    "shortTitle": "10 Days Kenya Tanzania",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "10 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977481/DSC_0075_ty0k97.jpg",
+    "gallery": [],
+    "snippet": "This 10-day Kenya and Tanzania safari follows one of the most popular and well-balanced routes across East Africa’s most famous wildlife destinations...",
+    "description": "This 10-day Kenya and Tanzania safari follows one of the most popular and well-balanced routes across East Africa’s most famous wildlife destinations. The journey begins in Kenya’s Maasai Mara and continues through Lake Nakuru and Amboseli National Park before crossing into Tanzania to explore Serengeti National Park and the Ngorongoro Crater. This itinerary offers outstanding wildlife viewing, diverse landscapes, and an authentic African safari experience suitable for both first-time and returning safari travelers.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Nairobi – Maasai Mara National Reserve",
+        "details": "Your safari begins with early morning departure from Nairobi after meeting your safari driver guide. Travel toward Maasai Mara through the Great Rift Valley with a stop at the scenic viewpoint where you can take photographs and enjoy breathtaking views. Continue driving through rural Kenya, passing Maasai villages and open countryside before arriving at Maasai Mara in time for lunch. In the afternoon, enjoy your first game drive in one of Africa’s most famous wildlife reserves.",
+        "highlights": [
+          "Maasai Mara is renowned for its abundant wildlife and spectacular predator sightings. The reserve forms part of the greater Serengeti ecosystem and hosts the famous Great Wildebeest Migration seasonally. Wildlife commonly seen includes:",
+          "Lions, cheetahs, and leopards",
+          "Elephants and buffalo",
+          "Zebras and wildebeests",
+          "Giraffes and antelopes"
+        ],
+        "icon": "tabler:car-safari"
+      },
+      {
+        "time": "Day 2",
+        "title": "Full Day in Maasai Mara",
+        "details": "Spend a full day exploring Maasai Mara with morning and afternoon game drives. A packed picnic lunch is provided allowing maximum time for wildlife viewing. Your guide will explore different regions of the reserve searching for big cats, elephants, and large grazing herds. During migration season, you may witness dramatic river crossings as wildebeest and zebras cross crocodile-filled rivers.",
+        "Optional Activities": " Hot air balloon safari followed by bush breakfast. Visit to a traditional Maasai village. Return to camp in the late afternoon for dinner and relaxation.",
+        "icon": "tabler:bike"
+      },
+      {
+        "time": "Day 3",
+        "title": "Maasai Mara – Lake Nakuru National Park",
+        "details": "After breakfast, depart Maasai Mara and drive toward Lake Nakuru National Park located in the Great Rift Valley. Enjoy scenic views along the journey including farmland, escarpments, and local villages. Stop en route for lunch before continuing to Nakuru. Arrive in the afternoon and proceed for a game drive in Lake Nakuru National Park.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 4",
+        "title": "Lake Nakuru – Amboseli National Park",
+        "details": "After breakfast, enjoy a short morning game drive in Lake Nakuru before departing for Amboseli National Park located near the Tanzania border. The journey takes you through changing landscapes including highlands, open plains, and rural towns. Arrive in Amboseli in the afternoon followed by a game drive.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 5",
+        "title": "Full Day in Amboseli National Park",
+        "details": "Spend a full day exploring Amboseli with morning and afternoon game drives. The park’s open plains make wildlife spotting easier and provide excellent photography opportunities, especially with Mount Kilimanjaro in the background when weather conditions allow.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 6",
+        "title": "Amboseli – Arusha, Tanzania",
+        "details": "After breakfast, depart Amboseli and drive to Namanga border for immigration formalities between Kenya and Tanzania. After crossing the border, meet your Tanzanian driver guide and continue to Arusha town located at the base of Mount Meru. Arusha serves as the gateway to Tanzania’s Northern Safari Circuit. The remainder of the day is free for relaxation at your hotel or lodge.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 7",
+        "title": "Arusha – Serengeti National Park",
+        "details": "After breakfast, depart Arusha and travel toward Serengeti National Park via the Ngorongoro Conservation Area. The journey offers spectacular highland scenery and occasional wildlife sightings. Arrive in Serengeti with game viewing en route to your lodge or camp",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 8",
+        "title": "Full Day Serengeti Safari",
+        "details": "Enjoy a full day exploring Serengeti’s vast plains, home to one of Africa’s largest wildlife populations.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 9",
+        "title": "Serengeti – Ngorongoro Crater",
+        "details": "After breakfast, enjoy a morning game drive before traveling to Ngorongoro Conservation Area. Descend into the Ngorongoro Crater for a spectacular wildlife safari. The crater supports one of Africa’s densest wildlife populations.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 10",
+        "title": "Ngorongoro – Arusha Depature",
+        "details": "After breakfast, depart Ngorongoro and drive back to Arusha. Transfer to Kilimanjaro International Airport or Arusha Airport for departure or onward travel.",
+        "icon": "tabler:ship"
+      }
+    ],
+    "includes": [
+      "Airport transfers",
+      "Transport in 4x4 safari vehicle",
+      "Professional safari guide",
+      "Accommodation and meals as indicated",
+      "Park entry fees",
+      "Drinking water during safari"
+    ],
+    "excludes": [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses and tips"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "10-days-luxury-private-honeymoon-safari",
+    "title": "10 Days Luxury Private Honeymoon Safari & Beach Holiday in Kenya",
+    "shortTitle": "10 Days Luxury Private Honeymoon Safari & Beach Holiday in Kenya",
+    "category": "Luxury Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "10 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770854329/samples/landscapes/beach-boat.jpg",
+    "gallery": [],
+    "snippet": "Celebrate love with an exclusive 10-day luxury honeymoon in Kenya, combining iconic wildlife safaris, private romantic experiences, and tropical Indian Ocean beach relaxation...",
+    "description": "Celebrate love with an exclusive 10-day luxury honeymoon in Kenya, combining iconic wildlife safaris, private romantic experiences, and tropical Indian Ocean beach relaxation. This carefully curated private honeymoon journey takes couples across Kenya’s most breathtaking destinations including Nairobi, Maasai Mara National Reserve, Amboseli National Park, and Diani Beach.Experience unmatched luxury, privacy, and authentic African romance.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Arrival in Nairobi -VIP Romantic Welcome",
+        "details": "Your luxury Kenya honeymoon begins upon arrival at Jomo Kenyatta International Airport where you will receive a VIP meet-and-greet service followed by a private chauffeur transfer. You will check into the world-renowned Giraffe Manor, one of Africa’s most iconic boutique honeymoon properties. This historic manor offers a magical romantic experience where endangered Rothschild giraffes freely roam the grounds.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Scenic Flight to Maasai Mara – Luxury Safari Begins",
+        "details": "After breakfast, you will transfer to Wilson Airport for a scenic bush flight over Kenya’s Great Rift Valley to the famous Maasai Mara. Upon arrival, you will transfer to Angama Mara, perched high above the Mara plains offering some of Africa’s most breathtaking honeymoon views.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Private Maasai Mara Safari & Balloon Adventure",
+        "details": "Start your morning with an early sunrise safari when wildlife is most active. Your private guide will track lions, elephants, cheetahs, and other iconic African animals.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 4",
+        "title": "Cultural Safari & Conservation Romance",
+        "details": "Today blends authentic Kenyan culture with meaningful travel experiences. Experiences Include: Private guided visit to a traditional Maasai village, Conservation and nature walk with expert safari guides, Romantic sunset picnic setup on private rock viewpoints, Optional star-bed sleep-out under the African night sky. This day offers deeper connection to Kenya’s heritage and nature.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Full Day Maasai Mara Safari",
+        "details": "Enjoy full-day game drives in Maasai Mara, searching for the Big Five (lion, leopard, elephant, rhino, buffalo). Optional activities include hot air balloon safari at sunrise, Maasai village visit, or guided bush walks.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 6",
+        "title": "Maasai Mara – Diani Beach",
+        "details": "After a final morning game drive, fly from Maasai Mara to Ukunda Airstrip near Diani Beach. Transfer to your luxury beach resort. Spend the afternoon relaxing on the white-sand beaches or enjoying water sports.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 7",
+        "title": "Diani Beach Relaxation",
+        "details": "Enjoy a full day at leisure in Diani Beach. Relax by the pool, swim in the turquoise waters, or indulge in spa treatments. Optional activities include snorkeling, diving, sunset dhow cruise, or quad biking.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 8",
+        "title": "Diani Beach – Tsavo East National Park",
+        "details": "After breakfast, drive to Tsavo East National Park, one of Kenya’s largest protected areas. Check into your safari lodge and enjoy an afternoon game drive through the red-earth landscapes. Look for elephants, lions, giraffes, and diverse birdlife.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 9",
+        "title": "Full Day Tsavo East Safari",
+        "details": "Spend the day exploring Tsavo East with morning and afternoon game drives. Visit Aruba Dam, Mudanda Rock, and other wildlife hotspots. Enjoy sundowners in the bush followed by a farewell dinner.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 10",
+        "title": "Tsavo East – Nairobi Departure",
+        "details": "After breakfast, enjoy a final game drive before driving back to Nairobi. Transfer to Jomo Kenyatta International Airport (NBO) for your departure flight, filled with unforgettable honeymoon memories.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "12-days-uganda-rare-parks",
+    "title": "12 Days Uganda National Parks",
+    "shortTitle": "12 Days Uganda National Parks",
+    "category": "Multi-Day Safaris",
+    "location": "Uganda",
+    "price": 0,
+    "duration": "12 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134153/1001261539_qw8dya.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 12 Days Uganda National Parks with amazing sceneries, beautiful landscapes, and diverse wildlife...",
+    "description": "Embark on an unforgettable 12-day journey through Uganda’s most iconic national parks, where verdant rainforests meet vast savannas and rare primates roam free. This immersive safari adventure combines thrilling wildlife encounters with breathtaking natural beauty, offering a unique glimpse into the heart of East Africa.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1 – Arrival and Transfer to Entebbe",
+        "details": "You will arrive at the airport  and meet the safari guide. You will be transferred to the hotel and briefed about the safari. Option to visit botanical gardens and Lake Victoria shoreline.",
+        "highlights": [
+          "Airport arrival and meet safari guide",
+          "Hotel transfer and briefing",
+          "Optional visit to botanical gardens and Lake Victoria shoreline",
+          "Magical romantic experience where endangered Rothschild giraffes freely roam the grounds"
+        ],
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2 - Transfer to Murchison Falls National Park",
+        "details": "Accompanied by a scenic countryside drive, experience rhino tracking at Ziwa Rhino Sanctuary. Finish the day with an evening relaxation at safari lodge",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3 – Safari & Waterfall Adventure",
+        "details": "Start your morning with an early morning wildlife game drive. Followed by a boat cruise along the Nile River. Finish with a hike to the top of Murchinson Falls for a breathtaking view of the falls.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4 – Transfer to Kibale National Park",
+        "details": "Drive through tea plantations  and visit crater lakes region.Experience a guided forest walk in Kibale National Park.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5 – Chimpanzee Trekking Experience",
+        "details": "A guided chimpanzee trekking experience, coupled with a bird watching tour in the surrounding forests. Community visits for cultural interaction",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6 – Transfer to Queen Elizabeth National Park",
+        "details": "Start the morning with a scenic drive through savannah landscapes. An afternoon wildlife game drive to catch wildlife. Finish the day with an evening sunset viewing.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 7",
+        "title": "Day 7 – Wildlife Safari & Kazinga Channel Cruise",
+        "details":"Begin the day with lion tracking, followed by a boat cruise along the Kazinga Channel. Finish the day with a visit to the salt mining communities",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 8",
+        "title": "Day 8 – Transfer to Bwindi Impenetrable National Park",
+        "details": "Scenic mountain drive to start the day. Followed by a visit to Batwa indigenous communities. And to finish the day, a rainforest exploration.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 9",
+        "title": "Day 9 – Gorilla Trekking Experience",
+        "details": "Guided mountain gorilla trekking experience, with wildlife photography and conservation education.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 10",
+        "title": "Day 10 – Transfer to Lake Mburo National Park",
+        "details": "Begin the day with a scenic countryside drive. Followed by an evening game drive and lodge relaxation",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 11",
+        "title": "Day 11 – Walking Safari & Horseback Wildlife Viewing Activities",
+        "details": "Walking safari with park rangers, with horseback wildlife tours and bird watching.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 12",
+        "title": "Day 12 – Return to Entebbe & Departure",
+        "details": "Travel back to Entebbe and do some souvenir shopping before heading to the airport for departure.",
+        "icon": "tabler:plane"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "12-days-private-kenya-and-tanzania",
+    "title": "12 Days Private Kenya & Tanzania Combined Safari",
+    "shortTitle": "12 Days Private Kenya & Tanzania Combined Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "12 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134157/1001261565_tqqbiy.jpg",
+    "gallery": [],
+    "snippet": "Discover the ultimate East African safari adventure combining Kenya and Tanzania’s most spectacular wildlife destinations...",
+    "description": "Discover the ultimate East African safari adventure combining Kenya and Tanzania’s most spectacular wildlife destinations. This 12-day journey takes you through world-renowned game reserves, conservation areas, breathtaking landscapes, and authentic cultural experiences. Traveling in a custom safari 4x4 Land Cruiser with an expert guide, you will enjoy exceptional wildlife viewing while staying in carefully selected lodges or tented camps. This safari blends popular destinations with exclusive experiences and quieter wildlife regions, making it ideal for travelers seeking both classic highlights and unique safari moments.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Arrival in Nairobi, Kenya",
+        "details": "Welcome to Kenya! Upon arrival at Jomo Kenyatta International Airport, you will be met by our representative and transferred to your hotel in Nairobi. Depending on your arrival time, you may choose optional excursions to help you ease into your African adventure.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Nairobi to Ol Pejeta Conservancy",
+        "details": "After breakfast, depart Nairobi and drive north toward Ol Pejeta Conservancy, located between Mount Kenya and the Aberdare Mountains. Ol Pejeta is one of East Africa’s leading wildlife conservation areas and offers exceptional wildlife viewing in a less crowded environment.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Ol Pejeta to Lake Naivasha",
+        "details": "After breakfast, travel south through Kenya’s scenic Great Rift Valley to Lake Naivasha, a freshwater lake surrounded by acacia forests and volcanic landscapes. Lake Naivasha is known for its birdlife, hippo populations, and peaceful environment. Activities: Boat safari across Lake Naivasha where you may see hippos, fish eagles, pelicans, and cormorants. Guided walking safari on Crescent Island, allowing you to walk among zebras, giraffes, and gazelles safely. Relaxation time at your lakeside lodge or camp. This day offers a unique break from vehicle-based safaris and allows travelers to experience nature on foot and by water.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Lake Naivasha to Maasai Mara National Reserve",
+        "details": "Depart after breakfast and drive to the legendary Maasai Mara National Reserve, one of Africa’s most famous wildlife destinations. Arrive in time for lunch followed by your first game drive in the reserve.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Full Day in Maasai Mara",
+        "details": "Spend the entire day exploring different regions of the Maasai Mara. Morning and afternoon game drives maximize wildlife viewing opportunities.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Explore Mara Triangle – Remote Wildlife Viewing",
+        "details": "Today you will explore the Mara Triangle, a less crowded section of the Maasai Mara known for exceptional wildlife sightings and scenic river landscapes.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 7",
+        "title": "Day 7: Maasai Mara to Serengeti National Park, Tanzania",
+        "details":"After breakfast, depart for the Kenya–Tanzania border at Isebania for immigration formalities. After crossing into Tanzania, continue your journey into the Serengeti National Park with game viewing along the way. The Serengeti is famous for its vast open plains and incredible wildlife density.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 8",
+        "title": "Day 8: Full Day Serengeti Safari",
+        "details": "Enjoy a full day exploring the Serengeti ecosystem, home to one of the greatest wildlife spectacles on earth.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 9",
+        "title": "Day 9: Serengeti to Ngorongoro Conservation Area",
+        "details": "Enjoy a morning game drive before traveling toward the Ngorongoro Highlands.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 10",
+        "title": "Day 10: Ngorongoro Crater Safari",
+        "details": "Descend 600 meters into the Ngorongoro Crater for a spectacular wildlife safari in one of Africa’s most unique ecosystems. The crater supports one of the highest wildlife densities in Africa.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 11",
+        "title": "Day 11: Ngorongoro to Tarangire National Park",
+        "details": "Travel to Tarangire National Park, famous for its giant baobab trees and large elephant herds. Tarangire offers a quieter safari experience and excellent wildlife viewing, especially during the dry season.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 12",
+        "title": "Day 12: Tarangire to Arusha / Departure",
+        "details": "Enjoy breakfast followed by a short morning game drive or relaxation at your lodge. You will then be transferred to Arusha or Kilimanjaro International Airport for your onward flight.",
+        "icon": "tabler:plane"
+      }
+
+    ],
+    "includes": [
+      "Airport transfers",
+      "All park entry fees",
+      "Accommodation as specified",
+      "Meals as indicated",
+      "All game drives",
+      "Private safari vehicle and guide",
+      "Government taxes and levies",
+      "Bottled drinking water during safari"
+    ],
+    "excludes": [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities (balloon safari, cultural visits, etc.)",
+      "Alcoholic and soft drinks (unless specified)",
+      "Personal expenses and tips"
+
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "15-days-best-of-uganda",
+    "title": "15 Days Best of Uganda",
+    "shortTitle": "15 Days Best of Uganda",
+    "category": "Multi-Day Safaris",
+    "location": "Uganda",
+    "price": 0,
+    "duration": "15 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977504/DSC_0931_cnjhw2.jpg",
+    "gallery": [],
+    "snippet": "This day-to-day Uganda itinerary is designed for travel websites, safari planners, and visitors looking for a structured daily schedule covering wildlife, culture, adventure, and relaxation...",
+    "description": "This day-to-day Uganda itinerary is designed for travel websites, safari planners, and visitors looking for a structured daily schedule covering wildlife, culture, adventure, and relaxation.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Arrival in Entebbe",
+        "details": "Arrive at Entebbe International Airport (EBB), meet your guide, and transfer to your hotel in Kampala. Depending on arrival time, you can relax or take a short city tour. In the evening visit Entebbe Botanical Gardens. Followed by some birdwatching along Lake Victoria, topped off by a sunset lakeside dinner.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: City Tour in Kampala",
+        "details": "Travel from Entebbe to Kampala, visit Uganda Museum and explore Kasubi Royal Tombs. In the afternoon have lunch at a traditional Ugandan restaurant and explore Kasubi Royal Tombs. To close the day,  cultural dance performance and overnight stay in Kampala in the evening.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3 – Travel to Murchison Falls National Park",
+        "details": "Depart early for the national park for a scenic countryside drive in the morning. In the afternoon experience rhino trekking at Ziwa Rhino Sanctuary and continue drive to safari lodge. Relax at the lodge with optional sunset wildlife viewing. ",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4 - Murchison Falls – Game Drive & Boat Safari",
+        "details": "Morning game drive searching for elephants, lions, giraffes, buffalo and antelope. A boat cruise along the river Nile and a hike to the top of Murchison Falls in the afternoon. End the day wuith wildlife photography and lodge relaxation",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5 – Transfer to Kibale National Park",
+        "details": "Drive through tea plantations and crater lakes. A forest nature walk and visiting nearby local villages. End the day with a relaxing lodge stay near  rainforest.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Murchison Falls – Top of Falls & Transfer to Kibale Forest",
+        "details": "Visit the top of Murchison Falls in the morning. Afterward, begin the scenic drive to Kibale Forest National Park, the primate capital of Uganda.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 7",
+        "title": "Day 7: Kibale Forest – Chimpanzee Trekking & Bigodi Swamp",
+        "details": "Morning chimpanzee trekking in Kibale Forest, followed by a guided walk in the Bigodi Wetland Sanctuary to see primates and birds.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 8",
+        "title": "Day 8: Kibale to Queen Elizabeth National Park",
+        "details": "Drive to Queen Elizabeth National Park, stopping at the equator for photos. Enjoy an afternoon game drive in the park.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 9",
+        "title": "Day 9: Queen Elizabeth – Kazinga Channel & Ishasha Plains",
+        "details": "Morning boat cruise on Kazinga Channel, famous for its hippos and birdlife. In the afternoon, drive to the southern sector (Ishasha) to see tree-climbing lions.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 10",
+        "title": "Day 10: Bwindi Impenetrable National Park – Gorilla Trekking",
+        "details": "Transfer to Bwindi Impenetrable National Park for gorilla trekking. This is the highlight of the trip, offering a chance to see mountain gorillas in their natural habitat.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 11",
+        "title": "Day 11: Bwindi – Batwa Cultural Experience & Transfer to Lake Bunyonyi",
+        "details": "Morning cultural visit to the Batwa pygmy community to learn about their traditional lifestyle. Afterward, transfer to Lake Bunyonyi, one of Africa’s deepest lakes.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 12",
+        "title": "Day 12: Lake Bunyonyi – Relaxation & Canoeing",
+        "details": "Enjoy a full day of relaxation at Lake Bunyonyi. Activities include canoeing, swimming, bird watching, or hiking around the lake.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 13",
+        "title": "Day 13: Transfer to Lake Mburo National Park",
+        "details": "Drive to Lake Mburo National Park, known for its zebras, impalas, and beautiful landscapes. Enjoy an afternoon game drive or walking safari.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 14",
+        "title": "Day 14: Lake Mburo – Morning Safari & Transfer to Kampala",
+        "details": "Morning game drive or horseback safari in Lake Mburo. Afterward, begin the journey back to Kampala, stopping at the equator for photos.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 15",
+        "title": "Day 15: Departure from Entebbe",
+        "details": "Depending on your flight schedule, enjoy some last-minute souvenir shopping or relax at your hotel. Transfer to Entebbe International Airport for your departure.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "3-days-amboseli-national-park-safari",
+    "title": "3 Days Amboseli National Park Safari",
+    "shortTitle": "3 Days Amboseli National Park Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-3-days-amboseli-national-park-safari.jpg",
+    "gallery": [],
+    "snippet": "This 3-day Amboseli safari offers a rewarding wildlife experience in one of Kenya’s most scenic national parks. Amboseli is famous for its large elephant herds, wide open plains, seasonal wetlands, and views of Mount Kilimanjaro...",
+    "description": "This 3-day Amboseli safari offers a rewarding wildlife experience in one of Kenya’s most scenic national parks. Amboseli is famous for its large elephant herds, wide open plains, seasonal wetlands, and views of Mount Kilimanjaro. Travel in a comfortable 4x4 safari Land Cruiser with a professional driver guide and stay in a selected safari lodge or tented camp located near or inside the park. This safari is ideal for travelers with limited time seeking an authentic wildlife experience.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1 : Nairobi - Amboseli National Park",
+        "details": "Depart Nairobi at 01:00 PM and drive south toward Amboseli National Park via the Nairobi–Mombasa highway. The drive takes approximately 4 to 5 hours depending on traffic and road conditions. The journey passes through local towns, open savannah landscapes, and Maasai pastoral areas offering a glimpse into rural Kenyan life. Arrive at your camp or lodge in the early evening and check in. Spend the remainder of the evening relaxing and enjoying lodge facilities while preparing for the following day’s safari activities. Dinner and overnight stay at the lodge or camp.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2 : Full Day Amboseli National Park",
+        "details": "After early breakfast, depart for a full day game drive inside Amboseli National Park.Amboseli is known for its excellent wildlife viewing due to its open plains and reliable water sources that attract animals year-round.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3 : Amboseli - Nairobi",
+        "details": "After early breakfast, depart for a full day game drive inside Amboseli National Park. Amboseli is known for its excellent wildlife viewing due to its open plains and reliable water sources that attract animals year-round. A picnic lunch will be served inside the park or you may return to the lodge for lunch depending on wildlife activity and location. Continue with afternoon game viewing before returning to the lodge or camp in the evening.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "Transport in 4x4 safari vehicle",
+      "Accommodation as specified",
+      "Meals as indicated",
+      "Park entry fees",
+      "Game drives as per itinerary",
+      "Professional safari driver guide",
+      "Drinking water during safari"
+    ],
+    "excludes": [
+      "International flights",
+      "Travel insurance",
+      "Optional cultural visits",
+      "Alcoholic and soft drinks",
+      "Personal expenses",
+      "Tips and gratuities"
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "3-days-luxury-private-honeymoon-safari-in-kenya",
+    "title": "3 Days Luxury Private Honeymoon Safari in Kenya",
+    "shortTitle": "3 Days Luxury Private Honeymoon Safari in Kenya",
+    "category": "Luxury Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977467/DSC_0100_ddi6sk.jpg",
+    "gallery": [],
+    "snippet": "Celebrate your love with a 3-day luxury private honeymoon safari in Kenya, designed for couples seeking an intimate, high-end romantic escape within a short timeframe...",
+    "description": "Celebrate your love with a 3-day luxury private honeymoon safari in Kenya, designed for couples seeking an intimate, high-end romantic escape within a short timeframe. This premium safari combines iconic wildlife encounters, personalized romantic experiences, and ultra-luxury accommodation in Maasai Mara National Reserve, one of Africa’s most celebrated safari destinations. Perfect for mini honeymoons, anniversary trips, or luxury romantic getaways, this private safari ensures exclusivity, comfort, and unforgettable wildlife experiences.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1 : Romantic Arrival & Scenic Flight to the Maasai Mara",
+        "details": "Your luxury honeymoon begins with arrival in Nairobi, where you will receive VIP meet-and-greet services at the airport. You will then transfer to Wilson Airport for a scenic bush flight across Kenya’s breathtaking landscapes, including aerial views of the Great Rift Valley. Upon arrival in the Maasai Mara, your private safari guide will transfer you to the award-winning Angama Mara, perched high above the Mara plains with panoramic honeymoon views. Romantic Honeymoon Experiences: • Champagne welcome and private lodge orientation • Gourmet honeymoon lunch overlooking the savannah • Private afternoon Big Five safari game drive • Sunset sundowners with panoramic wildlife views • Luxury candlelit dinner under African skies • Honeymoon suite turn-down with romantic décorSpend your first evening surrounded by Africa’s untouched wilderness and luxury comfort.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2 : Private Safari Adventure & Exclusive Bush Romance",
+        "details": "Wake up to the sounds of the African wilderness and enjoy sunrise coffee overlooking the Mara plains before departing on your private morning safari drive. The Maasai Mara is home to lions, elephants, cheetahs, giraffes, zebras, and numerous other iconic African wildlife species, offering one of the best honeymoon safari experiences in Africa.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3 : Sunrise Safari & Romantic Departure",
+        "details": "Enjoy your final sunrise in the African wilderness with an early morning game drive offering one last opportunity to experience the magic of Kenya’s wildlife. After breakfast, you will transfer to the airstrip for your scenic return flight to Nairobi, followed by VIP airport assistance for your international departure or optional honeymoon extension.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "Accommodation",
+      "Private Safari Experiences",
+      "Flights & Transfers",
+      "Dining & Romantic Experiences",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Activities & Added Experiences"
+    ]
+  },
+  {
+    "id": 17,
+    "slug": "3-days-murchisson-falls",
+    "title": "3 Days Murchisson falls",
+    "shortTitle": "3 Days Murchisson falls",
+    "category": "Multi-Day Safaris",
+    "location": "Uganda",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977504/DSC_0931_cnjhw2.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 3 Days Murchisson falls. A unique journey through Uganda.",
+    "description": "This 3 Days Murchison Falls National Park safari itinerary is perfect for travelers seeking a short wildlife adventure in Uganda. The safari offers game drives, Nile River boat cruises, and breathtaking waterfall views inside Uganda’s largest national park.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1 – Transfer to Murchison Falls National Park & Rhino Tracking",
+        "details": "Begin your journey with a scenic drive through central Uganda’s countryside and wildlife conservation areas. Visit Ziwa Rhino Sanctuary for rhino tracking experience. Continue drive to Murchison Falls National Park",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2 : Wildlife Safari & Nile River Boat Cruise",
+        "details": "The boat cruise takes visitors along theb Victoria Nile toward the base of Murchison Falls.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3 : Morning Safari & Return Journey",
+        "details": "Optional sunrise game drive and breakfast at safari lodge. Depart park and travel back to Kampala or Entebbe with option for souvenir shopping and local ,market visits. Airport drop-off or hotel transfer.",
+        "icon": "tabler:plane"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "3-days-safari-uganda",
+    "title": "3 Days Safari Uganda",
+    "shortTitle": "3 Days Safari Uganda",
+    "category": "Multi-Day Safaris",
+    "location": "Uganda",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977504/DSC_0931_cnjhw2.jpg",
+    "gallery": [],
+    "snippet": "This 3 Days Queen Elizabeth National Park safari itinerary is ideal for travelers seeking a short but rewarding wildlife safari in Uganda.",
+    "description": "This 3 Days Queen Elizabeth National Park safari itinerary is ideal for travelers seeking a short but rewarding wildlife safari in Uganda. Join us for a memorable 3 Days Safari Uganda. The itinerary combines the park's famous safari highlights with unique hidden experiences for a well-balanced wildlife and cultural adventure.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1 – Transfer to Queen Elizabeth National Park & Evening Game Drive",
+        "details": "Begin your journey with a scenic drive through central Uganda’s countryside and wildlife conservation areas. Continue drive to Queen Elizabeth National Park",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2 : Wildlife Safari & Boat Cruise Experience",
+        "details": "Start the day with a sunrise safari  for active wildlife viewing. Later, enjoy a boat cruise on Kazinga Channel. Optional crater lake exploration or relaxation at lodge with sunset views.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3 : Morning Safari & Return Journey",
+        "details": "Optional sunrise game drive and breakfast at safari lodge. Depart park and travel back to Kampala or option for souvenir shopping and craft market visits or equator landmark photography.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ]
+  },
+  {
+    "id": 19,
+    "slug": "6-days-5-nights-dubai-tour-package",
+    "title": "6 Days 5 Nights Dubai Tour Package",
+    "shortTitle": "6 Days 5 Nights Dubai Tour Package",
+    "category": "Multi-Day Safaris",
+    "location": "Dubai",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905987/DSC_0592_ehn5so.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 6 Days 5 Nights Dubai Tour Package. A unique journey through Dubai...",
+    "description": "Join us for a memorable 6 Days 5 Nights Dubai Tour Package. This package is designed to give you the best experience in Dubai.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Arrival in Dubai - Welcome  to the City of Luxury",
+        "details": "Upon arrival at Dubai International Airport, guests will be warmly welcomed by our airport representative and transferred to the hotel in a comfortable, air-conditioned vehicle. After check-in, guests can relax and recover from their journey. In the evening, visitors can explore nearby shopping areas, cafes, and entertainment spots at leisure. Dubai offers a perfect blend of modern skyscrapers and traditional Arabian culture, making it one of the world’s top tourist destinations.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2 : Dubai City Tour & Visit to Burj Khalifa and Dubai Mall",
+        "details": "Morning city tour of Dubai including Burj Khalifa, Dubai Mall, and Jumeirah Beach. Evening desert safari with dune bashing, camel riding, and dinner.",
+        "icon": "tabler:ship"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3 : Dubai Desert Safari Adventure",
+        "details": "Enjoy a relaxed morning with breakfast at the hotel. In the afternoon, guests will heqad to the   Arabian Desert fora thrilling Desert Safari experience. In the vening guests will enjoy a BBQ dinner accompained by live entertainment including bellly dancing, Tanoura dance, fire shows.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Marina Cruise Experience at Dubai Marina",
+        "details": "After breakfast, guests have free time to explore the city, shop, or relax at the hotel. In the evening, guests will enjoy a luxurious dhow cruise dinner at Dubai Marina. Sail through the stunning waterfront lined with skyscrapers and illuminated city views.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Palm Island Exploration & Visit to Atlantis The Palm and Dubai Miracle Garden",
+        "details": "After breakfast, guests will explore Palm Jumeirah, the world's-famous man-made island shaped like a palm tree. Later, guests will visit Dubai Miracle Garden (seasonal), featuring millions of flowers arranged in stunning artistic designs and themed displays, making it one of the most photographed attractions in the Middle East.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6 : Optional Abu Dhabi Tour & Departure via Abu Dhabi and Sheikh Zayed Grand Mosque",
+        "details": "After breakfast, guests have the option to embark on a full-day excursion to Abu Dhabi, the capital of the UAE. This tour includes a visit to the magnificent Sheikh Zayed Grand Mosque, one of the world's largest and most stunning mosques, showcasing incredible Islamic architecture and design. Guests will then transfer to Dubai International Airport for their departure.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "5 Nights Hotel Accommodation",
+      "Daily Breakfast",
+      "Airport Transfers",
+      "Dubai City Tour",
+      "Desert Safari with BBQ",
+      "Marina Dhow Cruise Dinner",
+      "Sightseeing Transfers"
+    ],
+    "excludes": [
+      "UAE Tourist Visa Fees",
+      "Travel Insurance",
+      "Personl Expenses",
+      "Optional Tours & Activities",
+      "Tips & Gratuities"
+    ]
+  },
+  {
+    "id": 20,
+    "slug": "6-days-lemosho-route-climb",
+    "title": "6 Days Lemosho Route Climb",
+    "shortTitle": "6 Days Lemosho Route Climb",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905964/DSC_0494_krqtol.jpg",
+    "gallery": [],
+    "snippet": "The 6 Days Lemosho Route is one of the most beautiful and less crowded trekking routes on Kilimanjaro. Approaching from the western side of the mountain, this route offers breathtaking scenery, diverse landscapes, and excellent acclimatization opportunities...",
+    "description": "Join us for a memorable 6 Days Lemosho Route Climb. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 21,
+    "slug": "6-days-machame-route-climb",
+    "title": "6 Days Machame Route Climb – Scenic Trekking on Mount Kilimanjaro",
+    "shortTitle": "6 Days Machame Route Climb",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905982/DSC_0569_cfkuwt.jpg",
+    "gallery": [],
+    "snippet": "The 6 Days Machame Route is one of the most popular and scenic ways to summit Africa’s highest mountain. Located inside Kilimanjaro National Park in Tanzania....",
+    "description": "The 6 Days Machame Route is one of the most popular and scenic ways to summit Africa’s highest mountain. Located inside Kilimanjaro National Park in Tanzania, this route is famous for its diverse landscapes, strong acclimatization profile, and high summit success rates. Often called the “Whiskey Route,” it offers trekkers an adventurous and rewarding journey through rainforest, moorland, alpine desert, and arctic summit zones..",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Machame Gate to Machame Camp",
+        "details": "Your Kilimanjaro trekking adventure begins at Machame Gate, where registration and park formalities are completed. The trek starts through lush tropical rainforest filled with towering trees, moss-covered trunks, and unique wildlife. The steady ascent gradually introduces you to the mountain environment before arriving at Machame Camp for dinner and overnight stay.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Machame Gate to Machame Camp",
+        "details": "Leaving the rainforest behind, the trail climbs into moorland terrain with expansive views across the Shira Plateau. The landscape changes dramatically with giant heathers, volcanic rock formations, and open ridges offering clear mountain views.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Shira Camp to Barranco Camp via Lava Tower",
+        "details": "This is a key acclimatization day designed to help your body adjust to altitude. The trail climbs toward Lava Tower before descending into the scenic Barranco Valley. The descent improves acclimatization while providing breathtaking views of glaciers and towering cliffs.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Barranco Camp to Karanga Camp",
+        "details": "The day begins with the famous Barranco Wall climb, a rewarding and exciting scramble that is one of the highlights of the Machame Route. After reaching the top, the trail continues across ridges and valleys with dramatic glacier views before arriving at Karanga Camp.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Karanga Camp to Barafu Camp",
+        "details": "The trail gradually climbs to Barafu Camp, the base camp for your summit attempt. Trekkers spend the afternoon resting, hydrating, and preparing equipment for the midnight summit push. Early dinner and sleep are essential before the final ascent.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Barafu Camp to Uhuru Peak to Mweka Camp",
+        "details": "The summit attempt begins shortly after midnight. Trek slowly through the arctic zone to Stella Point and continue along the crater rim to Uhuru Peak, the highest point in Africa. After celebrating your achievement, descend back to Barafu Camp for a short rest before continuing to Mweka Camp.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "Park & Government Fees",
+      "Professional Trekking Crew",
+      "Accommodation & Camping Equipment",
+      "Meals & Drinking Water",
+      "Safety Equipment & Services",
+      "Transfers"
+    ],
+    "excludes": [
+      "International & Personal Travel Costs",
+      "Accommodation Outside the Mountain",
+      "Personal Trekking Equipment",
+      "Personal Expenses"
+    ]
+  },
+  {
+    "id": 22,
+    "slug": "6-days-marangu-route-climb",
+    "title": "6 Days Marangu Route Climb – Trek Mount Kilimanjaro via the “Coca-Cola Route”",
+    "shortTitle": "6 Days Marangu Route Climb",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-6-days-marangu-route-climb.jpg",
+    "gallery": [],
+    "snippet": "The 6 Days Marangu Route is the only Kilimanjaro trail offering hut accommodation, making it one of the most ...",
+    "description": "The 6 Days Marangu Route is the only Kilimanjaro trail offering hut accommodation, making it one of the most comfortable ways to summit Africa’s highest peak. This classic trekking route is located within Kilimanjaro National Park in Tanzania. The extra acclimatization day included in the 6-day itinerary significantly improves summit success rates while allowing trekkers to enjoy diverse mountain scenery.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Marangu Gate to Mandara Hut",
+        "details": "Your Kilimanjaro trekking adventure begins with park registration before entering dense tropical rainforest. The trail passes through lush vegetation and offers opportunities to spot wildlife and unique bird species. The trek ends at Mandara Hut where climbers stay in wooden mountain huts.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Mandara Hut to Horombo Hut",
+        "details": "Leaving the rainforest, the trail ascends into moorland with stunning views of Mawenzi Peak and open alpine terrain. The vegetation changes dramatically with giant lobelias and heather plants dominating the landscape.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Acclimatization Day at Horombo Hut",
+        "details": "Trekkers spend the day acclimatizing to altitude with a short hike toward Mawenzi Ridge before returning to Horombo Hut for rest. This additional day improves altitude adaptation and increases chances of reaching the summit successfully.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Horombo Hut to Kibo Hut",
+        "details": "The trail gradually crosses the alpine desert landscape known as the saddle between Kilimanjaro’s peaks. Vegetation becomes sparse as climbers approach Kibo Hut, the base camp for the summit attempt. The afternoon is spent resting and preparing for the midnight summit climb.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Kibo Hut to Uhuru Peak to Horombo Hut",
+        "details": "The summit push begins shortly after midnight. Climbers trek slowly through steep volcanic scree to Gilman’s Point and continue along the crater rim to Uhuru Peak, the highest point in Africa. After celebrating at the summit, descend back to Horombo Hut for overnight rest.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Horombo Hut to Marangu Gate",
+        "details": "The final day involves descending through moorland and rainforest zones back to Marangu Gate. Climbers receive summit certificates and celebrate completing their Kilimanjaro trekking adventure.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "Park & Government Fees",
+      "Professional Mountain Crew",
+      "Accommodation & Meals",
+      "Safety Equipment & Services",
+      "Transfers"
+    ],
+    "excludes": [
+      "Travel & Insurance",
+      "Accommodation Outside the Mountain",
+      "Personal Trekking Gear",
+      "Personal Expenses",
+      "Optional Add-Ons"
+    ]
+  },
+  {
+    "id": 23,
+    "slug": "7-days-chimpanzee",
+    "title": "7 Days Chimpanzee & Gorilla Trekking Uganda",
+    "shortTitle": "7 Days Chimpanzee",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "7 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-7-days-chimpanzee.jpg",
+    "gallery": [],
+    "snippet": "This 7 Days Chimpanzee and Gorilla Trekking Uganda itinerary offers travelers a once-in-a-lifetime primate safari experience...",
+    "description": "This 7 Days Chimpanzee and Gorilla Trekking Uganda itinerary offers travelers a once-in-a-lifetime primate safari experience. The journey combines rainforest adventures, wildlife encounters, cultural experiences, and scenic landscapes in Uganda, known as the Pearl of Africa. This itinerary is ideal for wildlife lovers, photographers, and eco-tourists seeking Uganda’s most iconic primate trekking experiences",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Arrival in Entebbe & Transfer to Kampala",
+        "details": "Begin your Uganda safari adventure with arrival at Entebbe International Airport, where you will be warmly received for an airport pickup and safari briefing before transferring to your hotel in Kampala or Entebbe. After your journey, take time to relax and recover from travel, with an optional visit to the scenic shores of Lake Victoria. This first day offers a gentle introduction to Ugandan culture and cuisine while allowing you to prepare for the exciting rainforest trekking experiences that lie ahead.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Transfer to Kibale National Park",
+        "details": "Travel to East Africa’s primate capital, renowned for its exceptional chimpanzee tracking and rich rainforest ecosystems. Enjoy a scenic drive through rolling tea plantations and picturesque crater lakes, with stopovers for photography and visits to local markets along the way. In the evening, take a gentle nature walk near the rainforest, where you may spot playful monkeys, colorful forest birds, and immerse yourself in the beauty of lush tropical vegetation.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Chimpanzee Trekking Experience in Kibale",
+        "details": "Begin your morning adventure with a guided chimpanzee trekking experience along rainforest trails, where you will observe chimpanzees feeding, playing, and socializing in their natural habitat while learning about primate conservation from expert guides. In the afternoon, visit the Bigodi Wetland Sanctuary for birdwatching and monkey tracking, followed by engaging community cultural tours that offer insight into local life. This day’s highlight is Kibale’s reputation as home to one of Africa’s largest populations of chimpanzees.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Transfer to Queen Elizabeth National Park",
+        "details": "Travel through scenic savannah landscapes and past beautiful crater lakes to one of Uganda’s most diverse wildlife parks. In the afternoon, enjoy an exciting wildlife game drive where you can spot elephants, buffalo, and various antelope species, and conclude the day with a memorable sunset photography safari as the park’s landscapes glow in the evening light.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Safari & Transfer to Bwindi Impenetrable National Park",
+        "details": "Start your day with a relaxing boat cruise along the Kazinga Channel, where you will enjoy close-up views of hippos and crocodiles and take part in a rewarding bird-watching safari. In the afternoon, continue with a scenic drive to the Bwindi rainforest region, followed by a visit to the Batwa indigenous community to experience cultural storytelling, traditional dances, and gain insight into their rich heritage.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Mountain Gorilla Trekking Adventure.",
+        "details": "Begin with an early morning guided gorilla trekking experience through dense rainforest, where you will spend a magical hour observing mountain gorillas in their natural habitat while enjoying photography opportunities and learning about vital conservation efforts. In the afternoon, return to your eco-lodge for relaxation, with optional village walks and handicraft shopping to engage with local communities. The highlight of the day is Bwindi’s remarkable status as home to nearly half of the world’s remaining mountain gorillas, making it Uganda’s most iconic wildlife destination.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Return to Entebbe & Departure.",
+        "details": "In the morning, enjoy a scenic drive or opt for a domestic flight back to Entebbe. The afternoon is reserved for souvenir shopping and a cultural farewell lunch, after which you will be transferred to the airport for your onward departure, bringing your unforgettable safari experience to a close.",
+        "icon": "tabler:plane"
+      }
+    ],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 24,
+    "slug": "79-days-mt-kenya-safari-combo",
+    "title": "7-9 Days Mt Kenya Safari Combo",
+    "shortTitle": "7-9 Days Mt Kenya Safari Combo",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "9 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-79-days-mt-kenya-safari-combo.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of 7-9 Days Mt Kenya Safari Combo. A unique journey through Kenya.",
+    "description": "Join us for a memorable 7-9 Days Mt Kenya Safari Combo. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 25,
+    "slug": "carnivore-dining-experience",
+    "title": "Carnivore Dining Experience",
+    "shortTitle": "Carnivore Dining Experience",
+    "category": "Day Trips",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "Flexible",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-carnivore-dining-experience.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Carnivore Dining Experience. A unique journey through Kenya.",
+    "description": "Join us for a memorable Carnivore Dining Experience. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 26,
+    "slug": "mount-kenya-07-days",
+    "title": "Mount Kenya 07 Days",
+    "shortTitle": "Mount Kenya 07 Days",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "07 Days",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-mount-kenya-07-days.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Mount Kenya 07 Days. A unique journey through Kenya.",
+    "description": "Join us for a memorable Mount Kenya 07 Days. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 27,
+    "slug": "mt-kenya-bird-watching",
+    "title": "Mt Kenya Bird Watching",
+    "shortTitle": "Mt Kenya Bird Watching",
+    "category": "Mountain Climbing",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "Flexible",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-mt-kenya-bird-watching.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Mt Kenya Bird Watching. A unique journey through Kenya.",
+    "description": "Join us for a memorable Mt Kenya Bird Watching. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 28,
+    "slug": "private-safari",
+    "title": "Private Safari",
+    "shortTitle": "Private Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "Flexible",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-private-safari.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Private Safari. A unique journey through Kenya.",
+    "description": "Join us for a memorable Private Safari. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  },
+  {
+    "id": 29,
+    "slug": "samburu",
+    "title": "Samburu",
+    "shortTitle": "Samburu",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "Flexible",
+    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-samburu.jpg",
+    "gallery": [],
+    "snippet": "Experience the magic of Samburu. A unique journey through Kenya.",
+    "description": "Join us for a memorable Samburu. This package is designed to give you the best experience in Kenya. Full details coming soon.",
+    "itinerary": [],
+    "includes": [
+      "Hotel pick-up and drop-off within Nairobi",
+      "Professional driver/guide",
+      "Transport in a comfortable tour vehicle",
+      "Guided activities at attractions",
+      "Bottled drinking water"
+    ],
+    "excludes": [
+      "Park entry fees",
+      "Boat ride fees",
+      "Crescent Island conservation fees",
+      "Lunch and drinks"
+    ]
+  }
+]

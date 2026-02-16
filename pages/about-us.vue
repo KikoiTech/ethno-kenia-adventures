@@ -20,7 +20,7 @@
           <!-- Left Side - Hero Image -->
           <div class="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1">
             <img 
-              src="https://images.pexels.com/photos/15250/pexels-photo-15250.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&dpr=2"
+              src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903539/DSC_0519_cjrhjf.jpg"
               alt="Kenyan geographic landscape with Mount Kenya silhouette"
               class="w-full h-full object-cover"
             >
@@ -37,9 +37,7 @@
               Rooted in the Heart of Africa
             </div>
             <p class="text-lg md:text-xl font-light text-brand-charcoal/80 leading-relaxed">
-              Born from the vast savannas and ancient mountains of Kenya, 
-              we are custodians of authentic African experiences, 
-              connecting travelers to the soul of our magnificent land.
+              Ethno Kenia Adventure is a professional safari and tours company based in Kenya, offering unforgettable wildlife safaris, beach holidays, and cultural experiences across Kenya and East Africa. We believe every safari should be more than a trip it should be a meaningful journey.
             </p>
           </div>
         </div>
@@ -57,9 +55,13 @@
             </h2>
             <div class="space-y-4 text-brand-charcoal/80 font-sans leading-relaxed">
               <p>
-                From the snow-capped peaks of Mount Kenya to the golden plains of the Maasai Mara, 
-                our story is woven into the very fabric of this land. We are not just tour operators; 
-                we are storytellers, guardians, and passionate advocates for Kenya's natural treasures.
+                Our team focuses on:
+                Reliable and well-maintained safari vehicles,
+                experienced driver-guides,
+                quality accommodation options (budget, mid-range, and luxury),
+                flexible itineraries tailored to your needs,
+                excellent customer service from inquiry to departure.
+                Whether you are visiting Kenya for the first time or returning for another adventure, we will help you explore the best of <i>Masai Mara, Amboseli, Lake Nakuru, Samburu, Tsavo, and the Kenyan Coast</i>.
               </p>
               <p>
                 Founded by Kenyan guides who have spent decades tracking wildlife through acacia-dotted landscapes, 
@@ -76,7 +78,7 @@
           <!-- Geographic Image -->
           <div class="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+              src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905920/DSC_0149_pa70pi.jpg"
               alt="Kenyan landscape with Mount Kenya and savanna"
               class="w-full h-full object-cover"
             >
@@ -118,12 +120,14 @@
             <div class="lg:order-2">
               <div class="mb-6">
                 <div class="flex items-center space-x-4 mb-4">
-                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta">
-                    <img 
-                      src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-                      alt="James Kiprop - Lion Whisperer"
-                      class="w-full h-full object-cover"
+                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta bg-brand-charcoal/5 flex items-center justify-center">
+                    <svg 
+                      class="w-10 h-10 text-brand-charcoal/40" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
                     >
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 class="text-2xl font-serif text-brand-charcoal font-bold">James Kiprop</h3>
@@ -155,7 +159,7 @@
             <!-- Dramatic Image -->
             <div class="lg:order-1 relative h-96 lg:h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/33098/leopard-africa-wildlife-big-cat.jpg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1771131067/WhatsApp_Image_2026-02-11_at_9.11.58_PM_ocb72e.jpg"
                 alt="Lion in Maasai Mara at sunset"
                 class="w-full h-full object-cover"
               >
@@ -175,12 +179,14 @@
             <div class="lg:order-1">
               <div class="mb-6">
                 <div class="flex items-center space-x-4 mb-4">
-                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta">
-                    <img 
-                      src="https://images.pexels.com/photos/2182971/pexels-photo-2182971.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-                      alt="Grace Wanjiru - Cultural Keeper"
-                      class="w-full h-full object-cover"
+                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta bg-brand-charcoal/5 flex items-center justify-center">
+                    <svg 
+                      class="w-10 h-10 text-brand-charcoal/40" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
                     >
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 class="text-2xl font-serif text-brand-charcoal font-bold">Grace Wanjiru</h3>
@@ -212,7 +218,7 @@
             <!-- Dramatic Image -->
             <div class="lg:order-2 relative h-96 lg:h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/36762/elephant-african-wildlife-animal.jpg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905934/DSC_0256_hah4ue.jpg"
                 alt="Elephant herd at watering hole"
                 class="w-full h-full object-cover"
               >
@@ -232,12 +238,14 @@
             <div class="lg:order-2">
               <div class="mb-6">
                 <div class="flex items-center space-x-4 mb-4">
-                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta">
-                    <img 
-                      src="https://images.pexels.com/photos/2182972/pexels-photo-2182972.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-                      alt="Samuel Kirubi - Mountain Guardian"
-                      class="w-full h-full object-cover"
+                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta bg-brand-charcoal/5 flex items-center justify-center">
+                    <svg 
+                      class="w-10 h-10 text-brand-charcoal/40" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
                     >
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 class="text-2xl font-serif text-brand-charcoal font-bold">Samuel Kirubi</h3>
@@ -375,8 +383,8 @@
     </section>
 
     <!-- Team Section -->
-    <section class="py-16 md:py-24 bg-brand-off-white/50">
-      <div class="container mx-auto px-6">
+    <!-- <section class="py-16 md:py-24 bg-brand-off-white/50"> -->
+      <!-- <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-serif text-brand-charcoal mb-6">
             Meet Your Local Guides
@@ -384,27 +392,27 @@
           <p class="text-xl text-brand-charcoal/80 max-w-3xl mx-auto leading-relaxed">
             Born and raised in Kenya, our team carries generations of geographic knowledge
           </p>
-        </div>
+        </div> -->
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> -->
           <!-- Guide 1 -->
-          <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-terracotta/20">
-              <img 
+          <!-- <div class="text-center"> -->
+            <!-- <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-terracotta/20"> -->
+              <!-- <img 
                 src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2"
                 alt="Kenyan safari guide with geographic expertise"
                 class="w-full h-full object-cover"
-              >
-            </div>
+              > -->
+            <!-- </div>
             <h3 class="text-xl font-serif text-brand-charcoal mb-2">James Kiprop</h3>
             <p class="text-brand-charcoal/80 font-sans mb-2">Lead Guide - Maasai Mara Specialist</p>
             <p class="text-brand-charcoal/70 font-sans text-sm">
               15+ years tracking the Great Migration across the savanna
             </p>
-          </div>
+          </div> -->
 
           <!-- Guide 2 -->
-          <div class="text-center">
+          <!-- <div class="text-center">
             <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-terracotta/20">
               <img 
                 src="https://images.pexels.com/photos/2182971/pexels-photo-2182971.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2"
@@ -417,10 +425,10 @@
             <p class="text-brand-charcoal/70 font-sans text-sm">
               Deep knowledge of tribal traditions and ancient geographic wisdom
             </p>
-          </div>
+          </div> -->
 
           <!-- Guide 3 -->
-          <div class="text-center">
+          <!-- <div class="text-center">
             <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-terracotta/20">
               <img 
                 src="https://images.pexels.com/photos/2182972/pexels-photo-2182972.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2"
@@ -433,10 +441,10 @@
             <p class="text-brand-charcoal/70 font-sans text-sm">
               Expert navigator of Mount Kenya and Aberdare ranges
             </p>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Geographic Call to Action -->
     <section class="py-20 md:py-32 bg-gradient-to-br from-brand-charcoal via-brand-terracotta to-brand-charcoal text-brand-off-white">

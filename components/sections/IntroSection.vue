@@ -7,14 +7,14 @@
   -->
   <section 
     ref="manifestoSection"
-    class="relative bg-brand-off-white py-20 md:py-32 overflow-x-hidden manifesto-section"
+    class="relative bg-brand-off-white py-24 md:py-32 overflow-x-hidden manifesto-section"
   >
     <!-- 
       Papyrus Texture Overlay
       Creates tactile, organic feel on the brand-off-white canvas
     -->
     <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
-         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45IiBudW1PY3RhdmVzPSI0IiBzZWVkPSI1Ii8+CiAgICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9InNhdHVyYXRlIiB2YWx1ZXM9IjAiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjcGFweXJ1cyIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
+         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9IjAuMDUiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjUiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNwYXB5cnVzKSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
     </div>
 
     <div class="container mx-auto px-6 relative">
@@ -224,189 +224,12 @@ onUnmounted(() => {
   transition: transform 0.3s ease-out, opacity 0.5s ease-out;
 }
 
-/* Vintage TV Scan Lines */
-.scanline {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(146, 64, 14, 0.3), transparent);
-  animation: scan 8s linear infinite;
+.polaroid {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@keyframes scan {
-  0% { top: 0%; }
-  100% { top: 100%; }
-}
-
-/* TV Screen Flicker Effect */
-.tv-screen {
-  animation: flicker 0.15s infinite;
-}
-
-@keyframes flicker {
-  0% { opacity: 0.97; }
-  50% { opacity: 1; }
-  100% { opacity: 0.98; }
-}
-
-/* Glitch Layers */
-.glitch-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  mix-blend-mode: screen;
-  opacity: 0;
-  animation: glitch 3s infinite;
-}
-
-.glitch-red {
-  animation-delay: 0s;
-  background: linear-gradient(45deg, transparent 30%, rgba(255, 0, 0, 0.1) 50%, transparent 70%);
-}
-
-.glitch-green {
-  animation-delay: 1s;
-  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 0, 0.1) 50%, transparent 70%);
-}
-
-.glitch-blue {
-  animation-delay: 2s;
-  background: linear-gradient(45deg, transparent 30%, rgba(0, 0, 255, 0.1) 50%, transparent 70%);
-}
-
-@keyframes glitch {
-  0%, 90%, 100% {
-    opacity: 0;
-    transform: translate(0, 0);
-  }
-  92% {
-    opacity: 0.8;
-    transform: translate(-2px, 2px);
-  }
-  94% {
-    opacity: 0.6;
-    transform: translate(2px, -2px);
-  }
-  96% {
-    opacity: 0.4;
-    transform: translate(-1px, 1px);
-  }
-}
-
-/* Random Glitch Overlay */
-.glitch-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(146, 64, 14, 0.03) 20%,
-    transparent 40%,
-    rgba(146, 64, 14, 0.03) 60%,
-    transparent 80%,
-    rgba(146, 64, 14, 0.03) 100%
-  );
-  animation: glitch-move 4s infinite;
-  pointer-events: none;
-}
-
-@keyframes glitch-move {
-  0%, 100% {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  10% {
-    transform: translateX(-5px);
-    opacity: 1;
-  }
-  20% {
-    transform: translateX(5px);
-    opacity: 0.8;
-  }
-  30% {
-    transform: translateX(-3px);
-    opacity: 0.6;
-  }
-  40% {
-    transform: translateX(3px);
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateX(0);
-    opacity: 0;
-  }
-}
-
-/* Static Burst Effect */
-.static-burst {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(146, 64, 14, 0.1) 2px,
-      rgba(146, 64, 14, 0.1) 4px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 2px,
-      rgba(146, 64, 14, 0.1) 2px,
-      rgba(146, 64, 14, 0.1) 4px
-    );
-  opacity: 0;
-  animation: static-burst 8s infinite;
-  pointer-events: none;
-}
-
-@keyframes static-burst {
-  0%, 85%, 100% {
-    opacity: 0;
-  }
-  87% {
-    opacity: 0.8;
-  }
-  89% {
-    opacity: 0.6;
-  }
-  91% {
-    opacity: 0.4;
-  }
-  93% {
-    opacity: 0.2;
-  }
-}
-
-/* Vintage TV Glow */
-.tv-glow {
-  box-shadow: 
-    0 0 20px rgba(146, 64, 14, 0.3),
-    0 0 40px rgba(146, 64, 14, 0.1),
-    inset 0 0 20px rgba(255, 255, 255, 0.1);
-}
-
-/* Responsive TV Sizing */
-@media (max-width: 768px) {
-  .tv-screen {
-    height: 20rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .tv-screen {
-    height: 25rem;
-  }
+.polaroid:hover {
+  z-index: 40;
+  transform: scale(1.1) rotate(0deg);
 }
 </style>

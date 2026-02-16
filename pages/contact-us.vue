@@ -29,7 +29,7 @@
       <div class="relative mb-12">
         <div class="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
           <img 
-            src="https://media.giphy.com/media/v1.Y2lkPTc2M2NwY3p0MHhvYmY4a2FqZ3dpc2p6aW5qcGdub3JlY2xlYSZlcD12MV9pbnRlcm5hdGlvbl9naWZmaWlmYm9lbnw/3DqW5Qb3h3/giphy.gif"
+            src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cW1ienczdjJlcHF6M2dlaTR0anI0OGU5N2k5dGhtdTJ4MXg0OWtuaSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3IFE7W1Ms2qV6cy7pl/giphy.gif"
             alt="Ethno Kenia Adventures - Wildlife and adventure showcase"
             class="w-full h-auto"
           >
@@ -44,50 +44,71 @@
 </section>
 
 <!-- 60/30/10 Rule Section -->
-<section class="py-16 md:py-24 bg-brand-off-white/50">
+<section class="py-16 md:py-24 bg-brand-off-white">
   <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-serif text-brand-charcoal mb-6">
-        Why Choose Ethno Kenia Adventures?
+    <div class="text-center mb-20">
+      <h2 class="text-3xl md:text-4xl font-serif text-brand-charcoal mb-4">
+        Why we are the best
       </h2>
-      <p class="text-xl text-brand-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-        Our 60/30/10 promise ensures your adventure exceeds expectations
-      </p>
+      <div class="w-20 h-1 bg-brand-terracotta mx-auto opacity-30"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-      <!-- 60% - Experience -->
+    <!-- 4-Column Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
+      
+      <!-- 1. 24-hour support -->
       <div class="text-center group">
-        <div class="w-24 h-24 mx-auto mb-6 bg-brand-terracotta/10 rounded-full flex items-center justify-center group-hover:bg-brand-terracotta/20 transition-colors duration-300">
-          <div class="text-3xl font-bold text-brand-terracotta">60%</div>
+        <div class="mb-6 text-brand-charcoal flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
         </div>
-        <h3 class="text-2xl font-serif text-brand-charcoal mb-4">Local Experience</h3>
-        <p class="text-brand-charcoal/80 font-sans leading-relaxed">
-          60% of our guides are born and raised in Kenya, bringing authentic local knowledge and deep cultural connections to every safari.
+        <h3 class="text-xl font-bold text-brand-charcoal mb-3 font-sans">24-hour support</h3>
+        <p class="text-brand-charcoal/70 text-sm leading-relaxed max-w-[250px] mx-auto">
+          Our dedicated team is available around the clock to assist you before, during, and after travel.
         </p>
       </div>
 
-      <!-- 30% - Conservation -->
+      <!-- 2. No hidden fees -->
       <div class="text-center group">
-        <div class="w-24 h-24 mx-auto mb-6 bg-brand-terracotta/10 rounded-full flex items-center justify-center group-hover:bg-brand-terracotta/20 transition-colors duration-300">
-          <div class="text-3xl font-bold text-brand-terracotta">30%</div>
+        <div class="mb-6 text-brand-charcoal flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>
+          </svg>
         </div>
-        <h3 class="text-2xl font-serif text-brand-charcoal mb-4">Conservation Focus</h3>
-        <p class="text-brand-charcoal/80 font-sans leading-relaxed">
-          30% of all profits go directly to wildlife conservation and community development projects across Kenya.
+        <h3 class="text-xl font-bold text-brand-charcoal mb-3 font-sans">No hidden fees</h3>
+        <p class="text-brand-charcoal/70 text-sm leading-relaxed max-w-[250px] mx-auto">
+          We offer transparent pricing with clear costs, ensuring you pay exactly what is quoted.
         </p>
       </div>
 
-      <!-- 10% - Adventure -->
+      <!-- 3. Booking flexibility -->
       <div class="text-center group">
-        <div class="w-24 h-24 mx-auto mb-6 bg-brand-terracotta/10 rounded-full flex items-center justify-center group-hover:bg-brand-terracotta/20 transition-colors duration-300">
-          <div class="text-3xl font-bold text-brand-terracotta">10%</div>
+        <div class="mb-6 text-brand-charcoal flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/>
+          </svg>
         </div>
-        <h3 class="text-2xl font-serif text-brand-charcoal mb-4">Adventure Guarantee</h3>
-        <p class="text-brand-charcoal/80 font-sans leading-relaxed">
-          10% adventure guarantee - if you don't see the Big 5, we'll extend your safari for free!
+        <h3 class="text-xl font-bold text-brand-charcoal mb-3 font-sans">Booking flexibility</h3>
+        <p class="text-brand-charcoal/70 text-sm leading-relaxed max-w-[250px] mx-auto">
+          Enjoy flexible booking options that adapt to your schedule, preferences, and unexpected travel changes.
         </p>
       </div>
+
+      <!-- 4. Included transfers -->
+      <div class="text-center group">
+        <div class="mb-6 text-brand-charcoal flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 1.1.9 2 2 2h10"/>
+            <circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-brand-charcoal mb-3 font-sans">Included transfers</h3>
+        <p class="text-brand-charcoal/70 text-sm leading-relaxed max-w-[250px] mx-auto">
+          All packages include reliable airport and destination transfers for a seamless, stress-free travel experience.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -95,20 +116,27 @@
 <!-- Contact Form Section -->
 <section class="py-16 md:py-24">
   <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto items-start">
       <!-- Contact Form -->
-      <div>
+      <div class="sticky top-32">
         <h2 class="text-4xl font-serif text-brand-charcoal mb-8">
           Start Planning Your Safari
         </h2>
         
-        <form class="space-y-6">
+        <form @submit.prevent="handleFormSubmit" class="space-y-6">
+          <!-- Status Message -->
+          <div v-if="statusType" 
+               :class="statusType === 'success' ? 'bg-green-100 border-green-400 text-green-700' : 'bg-red-100 border-red-400 text-red-700'"
+               class="px-4 py-3 rounded relative border mb-6" role="alert">
+            <span class="block sm:inline">{{ statusMessage }}</span>
+          </div>
           <!-- Name Input -->
           <div>
             <label class="block text-brand-charcoal font-serif font-semibold mb-2">
               Your Name *
             </label>
             <input 
+              v-model="formData.name"
               type="text" 
               required
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
@@ -122,6 +150,7 @@
               Email Address *
             </label>
             <input 
+              v-model="formData.email"
               type="email" 
               required
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
@@ -135,30 +164,13 @@
               Phone Number
             </label>
             <input 
+              v-model="formData.phone"
               type="tel" 
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
               placeholder="+254 702 373 008"
             >
           </div>
 
-          <!-- Safari Type -->
-          <div>
-            <label class="block text-brand-charcoal font-serif font-semibold mb-2">
-              Safari Type *
-            </label>
-            <select 
-              required
-              class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
-            >
-              <option value="">Select your safari type</option>
-              <option value="luxury">Luxury Safari</option>
-              <option value="family">Family Safari</option>
-              <option value="adventure">Adventure Safari</option>
-              <option value="photography">Photography Safari</option>
-              <option value="cultural">Cultural Safari</option>
-              <option value="honeymoon">Honeymoon Safari</option>
-            </select>
-          </div>
 
           <!-- Message -->
           <div>
@@ -166,6 +178,7 @@
               Tell us about your dream safari *
             </label>
             <textarea 
+              v-model="formData.message"
               required
               rows="4"
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
@@ -176,9 +189,10 @@
           <!-- Submit Button -->
           <button 
             type="submit"
-            class="w-full px-8 py-4 bg-brand-terracotta text-brand-off-white font-serif font-semibold rounded-full transition-all duration-300 hover:bg-brand-terracotta/90 hover:scale-105 hover:shadow-lg"
+            :disabled="isSubmitting"
+            class="w-full px-8 py-4 bg-brand-terracotta text-brand-off-white font-serif font-semibold rounded-full transition-all duration-300 active:scale-95 hover:bg-brand-terracotta/90 hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Start My African Adventure
+            {{ isSubmitting ? 'Sending Request...' : 'Start My African Adventure' }}
           </button>
         </form>
       </div>
@@ -216,6 +230,18 @@
                 <div class="text-brand-charcoal/80">info@ethnokeniaadventure.com</div>
               </div>
             </div>
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-brand-terracotta/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand-terracotta" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-serif text-brand-charcoal font-semibold">Email</div>
+                <div class="text-brand-charcoal/80">ethnokeniaadventures@gmail.com</div>
+              </div>
+            </div>
 
             <div class="flex items-center space-x-4">
               <div class="w-12 h-12 bg-brand-terracotta/10 rounded-full flex items-center justify-center">
@@ -231,6 +257,59 @@
           </div>
         </div>
 
+        <!-- Opening Hours -->
+        <div class="bg-brand-off-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-serif text-brand-charcoal mb-8 font-bold">
+            Opening hours
+          </h3>
+
+          <!-- October – March -->
+          <!-- <div class="mb-8">
+            <p class="text-brand-terracotta font-serif font-semibold mb-3">October – March</p>
+            <div class="text-brand-charcoal/80 font-sans leading-relaxed">
+              <p>Monday through Friday:</p>
+              <p>7 AM – 5 PM, PST</p>
+            </div>
+          </div> -->
+
+          <!-- April – September -->
+          <div>
+            <!-- <p class="text-brand-terracotta font-serif font-semibold mb-3">April – September</p> -->
+            <div class="text-brand-charcoal/80 font-sans leading-relaxed">
+              <p>Monday through Friday:</p>
+              <p>6 AM – 9 PM, EAT</p>
+              <p class="mt-2">Saturday:</p>
+              <p>7 AM – 1 PM, EAT</p>
+              <p class="mt-2">Sunday:</p>
+              <p>Closed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Head Office -->
+        <div class="bg-brand-off-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-serif text-brand-charcoal mb-8 font-bold">
+            Head Office
+          </h3>
+
+          <p class="text-brand-charcoal/80 font-sans text-lg leading-relaxed mb-8">
+            Pension Towers, Loita street, 5th Floor, Nairobi Kenya
+          </p>
+
+          <a 
+            href="https://maps.app.goo.gl/uRRadNDVE8JisY388"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-3 border-2 border-brand-terracotta text-brand-terracotta font-sans font-medium rounded-full transition-all duration-300 hover:bg-brand-terracotta hover:text-brand-off-white hover:shadow-lg"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            View on Google maps
+          </a>
+        </div>
+
         <!-- Visual Showcase -->
         <div class="bg-brand-off-white rounded-2xl p-8 shadow-lg">
           <h3 class="text-2xl font-serif text-brand-charcoal mb-6">
@@ -240,28 +319,28 @@
           <div class="grid grid-cols-2 gap-4">
             <div class="relative rounded-lg overflow-hidden h-32">
               <img 
-                src="https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905953/DSC_0360_uubkrj.jpg"
                 alt="Wildlife safari experience"
                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               >
             </div>
             <div class="relative rounded-lg overflow-hidden h-32">
               <img 
-                src="https://images.pexels.com/photos/33098/leopard-africa-wildlife-big-cat.jpg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977461/DSC_0090_udmgbc.jpg"
                 alt="Big cat sighting"
                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               >
             </div>
             <div class="relative rounded-lg overflow-hidden h-32">
               <img 
-                src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905978/DSC_0559_tz9q2t.jpg"
                 alt="Mountain landscape"
                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               >
             </div>
             <div class="relative rounded-lg overflow-hidden h-32">
               <img 
-                src="https://images.pexels.com/photos/36762/elephant-african-wildlife-animal.jpg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905930/DSC_0241_dt68u6.jpg"
                 alt="Elephant herd"
                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
               >
@@ -318,6 +397,39 @@
 </template>
 
 <script setup lang="ts">
+// Form reactive state
+const formData = ref({
+  name: '',
+  email: '',
+  phone: '',
+  message: ''
+})
+const isSubmitting = ref(false)
+const statusMessage = ref('')
+const statusType = ref<'success' | 'error' | null>(null)
+
+// Submit logic
+const handleFormSubmit = async () => {
+  isSubmitting.value = true
+  statusType.value = null
+  statusMessage.value = ''
+  
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: formData.value
+    })
+    statusType.value = 'success'
+    statusMessage.value = "Asante! Your message has been sent. We'll get back to you shortly."
+    formData.value = { name: '', email: '', phone: '', message: '' }
+  } catch (err) {
+    statusType.value = 'error'
+    statusMessage.value = "Error sending message. Please email info@ethnokeniaadventure.com directly."
+  } finally {
+    isSubmitting.value = false
+  }
+}
+
 // Page title and meta
 useHead({
   title: 'Contact Us - Ethno Kenia Adventures',
