@@ -1240,35 +1240,73 @@
   {
     "id": 21,
     "slug": "6-days-machame-route-climb",
-    "title": "6 Days Machame Route Climb",
+    "title": "6 Days Machame Route Climb – Scenic Trekking on Mount Kilimanjaro",
     "shortTitle": "6 Days Machame Route Climb",
     "category": "Mountain Climbing",
     "location": "Kenya",
     "price": 0,
     "duration": "6 Days",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-6-days-machame-route-climb.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905982/DSC_0569_cfkuwt.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of 6 Days Machame Route Climb. A unique journey through Kenya.",
-    "description": "Join us for a memorable 6 Days Machame Route Climb. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "The 6 Days Machame Route is one of the most popular and scenic ways to summit Africa’s highest mountain. Located inside Kilimanjaro National Park in Tanzania....",
+    "description": "The 6 Days Machame Route is one of the most popular and scenic ways to summit Africa’s highest mountain. Located inside Kilimanjaro National Park in Tanzania, this route is famous for its diverse landscapes, strong acclimatization profile, and high summit success rates. Often called the “Whiskey Route,” it offers trekkers an adventurous and rewarding journey through rainforest, moorland, alpine desert, and arctic summit zones..",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Machame Gate to Machame Camp",
+        "details": "Your Kilimanjaro trekking adventure begins at Machame Gate, where registration and park formalities are completed. The trek starts through lush tropical rainforest filled with towering trees, moss-covered trunks, and unique wildlife. The steady ascent gradually introduces you to the mountain environment before arriving at Machame Camp for dinner and overnight stay.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Machame Gate to Machame Camp",
+        "details": "Leaving the rainforest behind, the trail climbs into moorland terrain with expansive views across the Shira Plateau. The landscape changes dramatically with giant heathers, volcanic rock formations, and open ridges offering clear mountain views.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Shira Camp to Barranco Camp via Lava Tower",
+        "details": "This is a key acclimatization day designed to help your body adjust to altitude. The trail climbs toward Lava Tower before descending into the scenic Barranco Valley. The descent improves acclimatization while providing breathtaking views of glaciers and towering cliffs.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Barranco Camp to Karanga Camp",
+        "details": "The day begins with the famous Barranco Wall climb, a rewarding and exciting scramble that is one of the highlights of the Machame Route. After reaching the top, the trail continues across ridges and valleys with dramatic glacier views before arriving at Karanga Camp.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Karanga Camp to Barafu Camp",
+        "details": "The trail gradually climbs to Barafu Camp, the base camp for your summit attempt. Trekkers spend the afternoon resting, hydrating, and preparing equipment for the midnight summit push. Early dinner and sleep are essential before the final ascent.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Barafu Camp to Uhuru Peak to Mweka Camp",
+        "details": "The summit attempt begins shortly after midnight. Trek slowly through the arctic zone to Stella Point and continue along the crater rim to Uhuru Peak, the highest point in Africa. After celebrating your achievement, descend back to Barafu Camp for a short rest before continuing to Mweka Camp.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Park & Government Fees",
+      "Professional Trekking Crew",
+      "Accommodation & Camping Equipment",
+      "Meals & Drinking Water",
+      "Safety Equipment & Services",
+      "Transfers"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "International & Personal Travel Costs",
+      "Accommodation Outside the Mountain",
+      "Personal Trekking Equipment",
+      "Personal Expenses"
     ]
   },
   {
     "id": 22,
     "slug": "6-days-marangu-route-climb",
-    "title": "6 Days Marangu Route Climb",
+    "title": "6 Days Marangu Route Climb – Trek Mount Kilimanjaro via the “Coca-Cola Route”",
     "shortTitle": "6 Days Marangu Route Climb",
     "category": "Mountain Climbing",
     "location": "Kenya",
@@ -1276,27 +1314,65 @@
     "duration": "6 Days",
     "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-6-days-marangu-route-climb.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of 6 Days Marangu Route Climb. A unique journey through Kenya.",
-    "description": "Join us for a memorable 6 Days Marangu Route Climb. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "The 6 Days Marangu Route is the only Kilimanjaro trail offering hut accommodation, making it one of the most ...",
+    "description": "The 6 Days Marangu Route is the only Kilimanjaro trail offering hut accommodation, making it one of the most comfortable ways to summit Africa’s highest peak. This classic trekking route is located within Kilimanjaro National Park in Tanzania. The extra acclimatization day included in the 6-day itinerary significantly improves summit success rates while allowing trekkers to enjoy diverse mountain scenery.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Marangu Gate to Mandara Hut",
+        "details": "Your Kilimanjaro trekking adventure begins with park registration before entering dense tropical rainforest. The trail passes through lush vegetation and offers opportunities to spot wildlife and unique bird species. The trek ends at Mandara Hut where climbers stay in wooden mountain huts.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Mandara Hut to Horombo Hut",
+        "details": "Leaving the rainforest, the trail ascends into moorland with stunning views of Mawenzi Peak and open alpine terrain. The vegetation changes dramatically with giant lobelias and heather plants dominating the landscape.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Acclimatization Day at Horombo Hut",
+        "details": "Trekkers spend the day acclimatizing to altitude with a short hike toward Mawenzi Ridge before returning to Horombo Hut for rest. This additional day improves altitude adaptation and increases chances of reaching the summit successfully.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Horombo Hut to Kibo Hut",
+        "details": "The trail gradually crosses the alpine desert landscape known as the saddle between Kilimanjaro’s peaks. Vegetation becomes sparse as climbers approach Kibo Hut, the base camp for the summit attempt. The afternoon is spent resting and preparing for the midnight summit climb.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Kibo Hut to Uhuru Peak to Horombo Hut",
+        "details": "The summit push begins shortly after midnight. Climbers trek slowly through steep volcanic scree to Gilman’s Point and continue along the crater rim to Uhuru Peak, the highest point in Africa. After celebrating at the summit, descend back to Horombo Hut for overnight rest.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Horombo Hut to Marangu Gate",
+        "details": "The final day involves descending through moorland and rainforest zones back to Marangu Gate. Climbers receive summit certificates and celebrate completing their Kilimanjaro trekking adventure.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Park & Government Fees",
+      "Professional Mountain Crew",
+      "Accommodation & Meals",
+      "Safety Equipment & Services",
+      "Transfers"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "Travel & Insurance",
+      "Accommodation Outside the Mountain",
+      "Personal Trekking Gear",
+      "Personal Expenses",
+      "Optional Add-Ons"
     ]
   },
   {
     "id": 23,
     "slug": "7-days-chimpanzee",
-    "title": "7 Days Chimpanzee",
+    "title": "7 Days Chimpanzee & Gorilla Trekking Uganda",
     "shortTitle": "7 Days Chimpanzee",
     "category": "Multi-Day Safaris",
     "location": "Kenya",
@@ -1304,9 +1380,52 @@
     "duration": "7 Days",
     "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-7-days-chimpanzee.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of 7 Days Chimpanzee. A unique journey through Kenya.",
-    "description": "Join us for a memorable 7 Days Chimpanzee. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "This 7 Days Chimpanzee and Gorilla Trekking Uganda itinerary offers travelers a once-in-a-lifetime primate safari experience...",
+    "description": "This 7 Days Chimpanzee and Gorilla Trekking Uganda itinerary offers travelers a once-in-a-lifetime primate safari experience. The journey combines rainforest adventures, wildlife encounters, cultural experiences, and scenic landscapes in Uganda, known as the Pearl of Africa. This itinerary is ideal for wildlife lovers, photographers, and eco-tourists seeking Uganda’s most iconic primate trekking experiences",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Arrival in Entebbe & Transfer to Kampala",
+        "details": "Begin your Uganda safari adventure with arrival at Entebbe International Airport, where you will be warmly received for an airport pickup and safari briefing before transferring to your hotel in Kampala or Entebbe. After your journey, take time to relax and recover from travel, with an optional visit to the scenic shores of Lake Victoria. This first day offers a gentle introduction to Ugandan culture and cuisine while allowing you to prepare for the exciting rainforest trekking experiences that lie ahead.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Transfer to Kibale National Park",
+        "details": "Travel to East Africa’s primate capital, renowned for its exceptional chimpanzee tracking and rich rainforest ecosystems. Enjoy a scenic drive through rolling tea plantations and picturesque crater lakes, with stopovers for photography and visits to local markets along the way. In the evening, take a gentle nature walk near the rainforest, where you may spot playful monkeys, colorful forest birds, and immerse yourself in the beauty of lush tropical vegetation.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Chimpanzee Trekking Experience in Kibale",
+        "details": "Begin your morning adventure with a guided chimpanzee trekking experience along rainforest trails, where you will observe chimpanzees feeding, playing, and socializing in their natural habitat while learning about primate conservation from expert guides. In the afternoon, visit the Bigodi Wetland Sanctuary for birdwatching and monkey tracking, followed by engaging community cultural tours that offer insight into local life. This day’s highlight is Kibale’s reputation as home to one of Africa’s largest populations of chimpanzees.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Transfer to Queen Elizabeth National Park",
+        "details": "Travel through scenic savannah landscapes and past beautiful crater lakes to one of Uganda’s most diverse wildlife parks. In the afternoon, enjoy an exciting wildlife game drive where you can spot elephants, buffalo, and various antelope species, and conclude the day with a memorable sunset photography safari as the park’s landscapes glow in the evening light.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Safari & Transfer to Bwindi Impenetrable National Park",
+        "details": "Start your day with a relaxing boat cruise along the Kazinga Channel, where you will enjoy close-up views of hippos and crocodiles and take part in a rewarding bird-watching safari. In the afternoon, continue with a scenic drive to the Bwindi rainforest region, followed by a visit to the Batwa indigenous community to experience cultural storytelling, traditional dances, and gain insight into their rich heritage.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Mountain Gorilla Trekking Adventure.",
+        "details": "Begin with an early morning guided gorilla trekking experience through dense rainforest, where you will spend a magical hour observing mountain gorillas in their natural habitat while enjoying photography opportunities and learning about vital conservation efforts. In the afternoon, return to your eco-lodge for relaxation, with optional village walks and handicraft shopping to engage with local communities. The highlight of the day is Bwindi’s remarkable status as home to nearly half of the world’s remaining mountain gorillas, making it Uganda’s most iconic wildlife destination.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Return to Entebbe & Departure.",
+        "details": "In the morning, enjoy a scenic drive or opt for a domestic flight back to Entebbe. The afternoon is reserved for souvenir shopping and a cultural farewell lunch, after which you will be transferred to the airport for your onward departure, bringing your unforgettable safari experience to a close.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
       "Hotel pick-up and drop-off within Nairobi",
       "Professional driver/guide",
