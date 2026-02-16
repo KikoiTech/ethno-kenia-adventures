@@ -123,13 +123,20 @@
           Start Planning Your Safari
         </h2>
         
-        <form class="space-y-6">
+        <form @submit.prevent="handleFormSubmit" class="space-y-6">
+          <!-- Status Message -->
+          <div v-if="statusType" 
+               :class="statusType === 'success' ? 'bg-green-100 border-green-400 text-green-700' : 'bg-red-100 border-red-400 text-red-700'"
+               class="px-4 py-3 rounded relative border mb-6" role="alert">
+            <span class="block sm:inline">{{ statusMessage }}</span>
+          </div>
           <!-- Name Input -->
           <div>
             <label class="block text-brand-charcoal font-serif font-semibold mb-2">
               Your Name *
             </label>
             <input 
+              v-model="formData.name"
               type="text" 
               required
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
@@ -143,6 +150,7 @@
               Email Address *
             </label>
             <input 
+              v-model="formData.email"
               type="email" 
               required
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
@@ -156,30 +164,13 @@
               Phone Number
             </label>
             <input 
+              v-model="formData.phone"
               type="tel" 
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
               placeholder="+254 702 373 008"
             >
           </div>
 
-          <!-- Safari Type -->
-          <div>
-            <label class="block text-brand-charcoal font-serif font-semibold mb-2">
-              Safari Type *
-            </label>
-            <select 
-              required
-              class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
-            >
-              <option value="">Select your safari type</option>
-              <option value="luxury">Luxury Safari</option>
-              <option value="family">Family Safari</option>
-              <option value="adventure">Adventure Safari</option>
-              <option value="photography">Photography Safari</option>
-              <option value="cultural">Cultural Safari</option>
-              <option value="honeymoon">Honeymoon Safari</option>
-            </select>
-          </div>
 
           <!-- Message -->
           <div>
@@ -187,6 +178,7 @@
               Tell us about your dream safari *
             </label>
             <textarea 
+              v-model="formData.message"
               required
               rows="4"
               class="w-full px-4 py-3 border-2 border-brand-charcoal/20 rounded-lg focus:border-brand-terracotta focus:outline-none transition-colors duration-300"
@@ -197,9 +189,10 @@
           <!-- Submit Button -->
           <button 
             type="submit"
-            class="w-full px-8 py-4 bg-brand-terracotta text-brand-off-white font-serif font-semibold rounded-full transition-all duration-300 hover:bg-brand-terracotta/90 hover:scale-105 hover:shadow-lg"
+            :disabled="isSubmitting"
+            class="w-full px-8 py-4 bg-brand-terracotta text-brand-off-white font-serif font-semibold rounded-full transition-all duration-300 active:scale-95 hover:bg-brand-terracotta/90 hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Start My African Adventure
+            {{ isSubmitting ? 'Sending Request...' : 'Start My African Adventure' }}
           </button>
         </form>
       </div>
@@ -404,6 +397,39 @@
 </template>
 
 <script setup lang="ts">
+// Form reactive state
+const formData = ref({
+  name: '',
+  email: '',
+  phone: '',
+  message: ''
+})
+const isSubmitting = ref(false)
+const statusMessage = ref('')
+const statusType = ref<'success' | 'error' | null>(null)
+
+// Submit logic
+const handleFormSubmit = async () => {
+  isSubmitting.value = true
+  statusType.value = null
+  statusMessage.value = ''
+  
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: formData.value
+    })
+    statusType.value = 'success'
+    statusMessage.value = "Asante! Your message has been sent. We'll get back to you shortly."
+    formData.value = { name: '', email: '', phone: '', message: '' }
+  } catch (err) {
+    statusType.value = 'error'
+    statusMessage.value = "Error sending message. Please email info@ethnokeniaadventure.com directly."
+  } finally {
+    isSubmitting.value = false
+  }
+}
+
 // Page title and meta
 useHead({
   title: 'Contact Us - Ethno Kenia Adventures',

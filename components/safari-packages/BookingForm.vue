@@ -72,43 +72,46 @@
         </select>
       </div>
 
-      <!-- Tour Start Date (Simplified Dropdowns) -->
+      <!-- Tour Start Date (Calendar Picker) -->
       <div class="space-y-2">
-        <label class="text-sm text-brand-charcoal/40 font-medium ml-1">Tour Start Date</label>
-        <div class="grid grid-cols-3 gap-3">
-          <select v-model="dateFields.month" class="px-4 py-3 border border-brand-charcoal/20 rounded-lg focus:outline-none">
-            <option value="">MM</option>
-            <option v-for="m in 12" :key="m" :value="m">{{ String(m).padStart(2, '0') }}</option>
-          </select>
-          <select v-model="dateFields.day" class="px-4 py-3 border border-brand-charcoal/20 rounded-lg focus:outline-none">
-            <option value="">DD</option>
-            <option v-for="d in 31" :key="d" :value="d">{{ String(d).padStart(2, '0') }}</option>
-          </select>
-          <select v-model="dateFields.year" class="px-4 py-3 border border-brand-charcoal/20 rounded-lg focus:outline-none">
-            <option value="">YYYY</option>
-            <option v-for="y in [2024, 2025, 2026]" :key="y" :value="y">{{ y }}</option>
-          </select>
-        </div>
+        <label for="travelDate" class="block text-sm font-semibold text-brand-charcoal mb-1">
+          When would you like to travel? *
+        </label>
+        <input 
+          id="travelDate"
+          v-model="bookingDate"
+          type="date"
+          required
+          class="w-full px-4 py-3 border border-brand-charcoal/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-terracotta/50"
+        >
       </div>
 
       <!-- Adults & Children -->
       <div class="grid grid-cols-2 gap-4">
-        <div>
+        <div class="space-y-1">
+          <label for="adults" class="block text-xs font-semibold text-brand-charcoal/60 uppercase tracking-wider ml-1">
+            Number of Adults
+          </label>
           <input
+            id="adults"
             v-model.number="formData.travelPreferences.groupSize"
             type="number"
             min="1"
             class="w-full px-4 py-3 border border-brand-charcoal/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-terracotta/50"
-            placeholder="Adults #"
+            placeholder="e.g. 2"
           >
         </div>
-        <div>
+        <div class="space-y-1">
+          <label for="children" class="block text-xs font-semibold text-brand-charcoal/60 uppercase tracking-wider ml-1">
+            Number of Children
+          </label>
           <input
+            id="children"
             v-model.number="numChildren"
             type="number"
             min="0"
             class="w-full px-4 py-3 border border-brand-charcoal/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-terracotta/50"
-            placeholder="Children #"
+            placeholder="e.g. 1"
           >
         </div>
       </div>
@@ -217,11 +220,7 @@ const additionalInfo = ref({
 // Validation errors
 const errors = ref<Record<string, string>>({})
 
-const dateFields = ref({
-  month: '',
-  day: '',
-  year: ''
-})
+const bookingDate = ref('')
 
 const numChildren = ref(0)
 
@@ -267,8 +266,27 @@ const handleSubmit = async () => {
   showSuccess.value = false
 
   try {
-    // Create booking submission
+    // Prepare submission data
     const submission = createBookingSubmission(formData.value)
+    
+    // Construct email payload
+    const emailPayload = {
+      name: `${formData.value.personalInfo.firstName} ${formData.value.personalInfo.lastName}`,
+      email: formData.value.personalInfo.email,
+      phone: formData.value.personalInfo.phone,
+      nationality: formData.value.personalInfo.nationality,
+      safariName: props.package?.title || 'Unknown Safari',
+      preferredDate: bookingDate.value || 'Flexible',
+      groupSize: formData.value.travelPreferences.groupSize + numChildren.value,
+      message: formData.value.travelPreferences.specialRequirements,
+      type: 'booking' // Differentiate on server
+    }
+
+    // Send to API
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: emailPayload
+    })
     
     // Emit events
     emit('submit', submission.data)

@@ -120,12 +120,14 @@
             <div class="lg:order-2">
               <div class="mb-6">
                 <div class="flex items-center space-x-4 mb-4">
-                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta">
-                    <img 
-                      src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-                      alt="James Kiprop - Lion Whisperer"
-                      class="w-full h-full object-cover"
+                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta bg-brand-charcoal/5 flex items-center justify-center">
+                    <svg 
+                      class="w-10 h-10 text-brand-charcoal/40" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
                     >
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 class="text-2xl font-serif text-brand-charcoal font-bold">James Kiprop</h3>
@@ -177,12 +179,14 @@
             <div class="lg:order-1">
               <div class="mb-6">
                 <div class="flex items-center space-x-4 mb-4">
-                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta">
-                    <img 
-                      src="https://images.pexels.com/photos/2182971/pexels-photo-2182971.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-                      alt="Grace Wanjiru - Cultural Keeper"
-                      class="w-full h-full object-cover"
+                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta bg-brand-charcoal/5 flex items-center justify-center">
+                    <svg 
+                      class="w-10 h-10 text-brand-charcoal/40" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
                     >
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 class="text-2xl font-serif text-brand-charcoal font-bold">Grace Wanjiru</h3>
@@ -234,12 +238,14 @@
             <div class="lg:order-2">
               <div class="mb-6">
                 <div class="flex items-center space-x-4 mb-4">
-                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta">
-                    <img 
-                      src="https://images.pexels.com/photos/2182972/pexels-photo-2182972.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-                      alt="Samuel Kirubi - Mountain Guardian"
-                      class="w-full h-full object-cover"
+                  <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-brand-terracotta bg-brand-charcoal/5 flex items-center justify-center">
+                    <svg 
+                      class="w-10 h-10 text-brand-charcoal/40" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
                     >
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 class="text-2xl font-serif text-brand-charcoal font-bold">Samuel Kirubi</h3>

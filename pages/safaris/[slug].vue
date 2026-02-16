@@ -148,10 +148,10 @@
             </div>
             
             <!-- Quick Help -->
-            <div class="mt-8 px-6 text-center">
+            <!-- <div class="mt-8 px-6 text-center">
               <p class="text-sm text-brand-charcoal/60 mb-2">Prefer speaking to an expert?</p>
               <a href="tel:+254702373008" class="text-brand-terracotta font-bold hover:underline">+254 702 373 008</a>
-            </div>
+            </div> -->
           </div>
         </aside>
 
