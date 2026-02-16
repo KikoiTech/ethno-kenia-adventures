@@ -75,7 +75,7 @@
                   <h3 class="text-xl md:text-2xl font-serif mb-2">{{ pkg.title }}</h3>
                   <p class="text-sm md:text-base font-sans opacity-90 mb-4">{{ pkg.duration }} of {{ pkg.description }}</p>
                   <div class="flex items-center justify-between">
-                    <span class="text-xs md:text-sm font-sans opacity-75">From {{ pkg.price }}</span>
+                    <!-- <span class="text-xs md:text-sm font-sans opacity-75">From {{ pkg.price }}</span> -->
                     <div class="flex items-center space-x-1">
                       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
