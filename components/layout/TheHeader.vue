@@ -161,12 +161,6 @@ const navigationLinks = ref([
     name: 'Safari Packages',
     children: [
       { name: 'All Packages', path: '/safari-packages' },
-      // CORRECTED PATHS: Point to booking pages
-      { name: 'Savannah Sky', path: '/safari-packages/booking/savannah-sky' },
-      { name: 'Beach Safari', path: '/safari-packages/booking/beach-safari' },
-      { name: 'Great Migration', path: '/safari-packages/booking/great-migration' },
-      { name: 'Mountain Climbing', path: '/safari-packages/booking/mountain-climbing' },
-      { name: 'Primate Encounter', path: '/safari-packages/booking/primate-encounter' },
     ]
   },
   { name: 'About Us', path: '/about-us' },
