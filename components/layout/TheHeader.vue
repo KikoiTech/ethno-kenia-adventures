@@ -166,15 +166,26 @@ onUnmounted(() => {
 // *** THE CRITICAL FIX IS HERE ***
 const navigationLinks = ref([
   { name: 'Home', path: '/' },
+  { name: 'Safari Packages', path: '/safari-packages' },
   {
-    name: 'Safari Packages',
+    name: 'KENYA HOLIDAYS',
     children: [
-      { name: 'All Packages', path: '/safari-packages' },
+      { name: 'Bush Safaris', path: '/safari-packages?type=wildlife&country=Kenya' },
+      { name: 'Beach Holidays', path: '/safari-packages?type=beach&country=Kenya' },
+      { name: 'Bush and Beach', path: '/safari-packages?type=beach&country=Kenya' },
     ]
   },
+  {
+    name: 'EAST AFRICA',
+    children: [
+      { name: 'Tanzania Safaris', path: '/safari-packages?country=tanzania' },
+      { name: 'Uganda Safaris', path: '/safari-packages?country=uganda' },
+      { name: 'Rwanda Safaris', path: '/safari-packages?country=rwanda' },
+    ]
+  },
+  { name: 'Mt Climbing', path: '/safari-packages?category=mountain-climbing' },
+  { name: 'International Tours', path: '/safari-packages?category=international' },
   { name: 'About Us', path: '/about-us' },
-  { name: 'Services', path: '/services' },
-  { name: 'Journal', path: '/journal' },
   { name: 'Contact Us', path: '/contact-us' },
 ])
 </script>

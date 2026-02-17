@@ -1,104 +1,45 @@
 import type { SafariPackage } from '~/types/safari-package'
+// 1. Ensure this path is correct. If it's in assets/data, use ~/assets/data/...
+import safariPackages from '~/public/data/safaris.json'
 
 /**
- * Package data loader utility
- * Centralizes all JSON loading logic for safari packages
- */
-
-// Available package slugs
-const PACKAGE_SLUGS = [
-  'savannah-sky',
-  'beach-safari', 
-  'great-migration',
-  'mountain-climbing',
-  'primate-encounter'
-] as const
-
-/**
- * Load all safari packages using Nuxt's $fetch
- * @returns Promise<SafariPackage[]> - Array of all packages
- */
-export async function getAllPackages(): Promise<SafariPackage[]> {
-  try {
-    const packagePromises = PACKAGE_SLUGS.map(async (slug) => {
-      try {
-        // Use $fetch to get JSON files from public directory
-        const packageData = await $fetch<SafariPackage>(`/data/safari-packages/${slug}.json`)
-        return packageData
-      } catch (error) {
-        console.warn(`Failed to load package ${slug}:`, error)
-        return null
-      }
-    })
-
-    const results = await Promise.allSettled(packagePromises)
-    
-    return results
-      .map((result, index) => {
-        if (result.status === 'fulfilled' && result.value) {
-          return result.value
-        } else {
-          console.warn(`Package ${PACKAGE_SLUGS[index]} failed to load`)
-          return null
-        }
-      })
-      .filter((pkg): pkg is SafariPackage => pkg !== null)
-      
-  } catch (error) {
-    console.error('Error loading packages:', error)
-    return []
-  }
-}
-
-/**
- * Load a single safari package by slug using Nuxt's $fetch
- * @param slug - Package slug (e.g., 'savannah-sky')
- * @returns Promise<SafariPackage | null> - Single package or null if not found
- */
-export async function getPackageBySlug(slug: string): Promise<SafariPackage | null> {
-  try {
-    // Use $fetch to get JSON file from public directory
-    const packageData = await $fetch<SafariPackage>(`/data/safari-packages/${slug}.json`)
-    return packageData
-  } catch (error) {
-    console.error(`Failed to load package ${slug}:`, error)
-    return null
-  }
-}
-
-/**
- * Get available package slugs
- * @returns string[] - Array of available package slugs
- */
-export function getPackageSlugs(): string[] {
-  return [...PACKAGE_SLUGS]
-}
-
-/**
- * Load all safaris from the central safaris.json
- * @returns Promise<SafariPackage[]> - Array of all safaris
+ * Load all safaris from the already imported safariPackages variable.
+ * Because it is imported at the top, it is bundled with the app and
+ * works perfectly on hard-refreshes.
  */
 export async function getSafaris(): Promise<SafariPackage[]> {
   try {
-    const safaris = await $fetch<SafariPackage[]>('/data/safaris.json')
-    return safaris || []
+    // We cast it as SafariPackage[] to ensure type safety
+    return (safariPackages as unknown as SafariPackage[]) || []
   } catch (error) {
-    console.error('Error loading safaris:', error)
+    console.error('Error returning safaris:', error)
     return []
   }
 }
 
 /**
- * Get a single safari by slug from safaris.json
+ * Get a single safari by slug from the imported data
  */
 export async function getSafariBySlug(slug: string): Promise<SafariPackage | null> {
   const safaris = await getSafaris()
-  return safaris.find(s => s.slug === slug) || null
+  return safaris.find(s => s.slug === slug || s.id.toString() === slug) || null
 }
 
 /**
- * Check if a package slug exists
+ * LEGACY/INDIVIDUAL FILE LOADING
+ * If you still want to fetch individual .json files from the public folder,
+ * you MUST use a full URL or keep them in assets. 
+ * But for your refresh bug, using the 'safariPackages' import above is the fix.
  */
-export function packageExists(slug: string): boolean {
-  return PACKAGE_SLUGS.includes(slug as any)
+export async function getPackageBySlug(slug: string): Promise<SafariPackage | null> {
+  // Instead of $fetch, use the already imported list
+  return getSafariBySlug(slug)
+}
+
+export async function getAllPackages(): Promise<SafariPackage[]> {
+  return getSafaris()
+}
+
+export function getPackageSlugs(): string[] {
+  return safariPackages.map(s => s.slug)
 }

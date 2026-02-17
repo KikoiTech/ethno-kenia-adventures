@@ -48,7 +48,7 @@
               </video>
 
               <!-- Glitch & Static Overlays (Only active when section is visible) -->
-              <div v-if="isVisible" class="absolute inset-0 pointer-events-none opacity-20 mix-blend-screen bg-[url('/images/static-noise.png')]"></div>
+              <!-- <div v-if="isVisible" class="absolute inset-0 pointer-events-none opacity-20 mix-blend-screen bg-[url('/images/static-noise.png')]"></div> -->
               
               <!-- Channel Controls -->
               <div class="absolute top-4 right-4 flex flex-col space-y-2 z-20">

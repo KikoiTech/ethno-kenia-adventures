@@ -23,8 +23,17 @@
         "time": "Morning",
         "title": "Hell’s Gate National Park",
         "details": "One of the few parks where you can explore on foot or bicycle. Famous for towering cliffs and geothermal activity.",
-        "activities": ["Guided cycling/walking safari", "Hell’s Gate Gorge walk", "Geothermal hot springs visit"],
-        "wildlife": ["Zebras", "Giraffes", "Buffaloes", "Antelopes"],
+        "activities": [
+          "Guided cycling/walking safari",
+          "Hell’s Gate Gorge walk",
+          "Geothermal hot springs visit"
+        ],
+        "wildlife": [
+          "Zebras",
+          "Giraffes",
+          "Buffaloes",
+          "Antelopes"
+        ],
         "icon": "tabler:bike"
       },
       {
@@ -37,7 +46,11 @@
         "time": "Afternoon",
         "title": "Crescent Island Walking Safari",
         "details": "A private sanctuary for a peaceful walking safari. Walk freely among roaming wildlife with no predators present.",
-        "highlights": ["Guided walking safari", "Close encounters with Wildebeests", "Mountain views"],
+        "highlights": [
+          "Guided walking safari",
+          "Close encounters with Wildebeests",
+          "Mountain views"
+        ],
         "icon": "tabler:walk"
       },
       {
@@ -65,6 +78,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Day Trip"
     ]
   },
   {
@@ -80,7 +101,8 @@
     "gallery": [],
     "snippet": "The 3 Days Sirimon – Sirimon trek is the shortest and most direct trekking route to Point Lenana via the northern slopes of Mount Kenya...",
     "description": "The 3 Days Sirimon – Sirimon trek is the shortest and most direct trekking route to Point Lenana via the northern slopes of Mount Kenya. This itinerary is ideal for trekkers with limited time but still seeking a rewarding high-altitude trekking experience. The route offers gradual altitude gain, scenic alpine landscapes, and excellent chances of wildlife sightings. This trek starts and ends via the Sirimon Gate, making logistics easier while still providing spectacular mountain views.",
-    "itinerary": [{
+    "itinerary": [
+      {
         "time": "Day 1",
         "title": "Nairobi-Sirimon Gate-Old Moses Camp (Judmaier Camp)",
         "details": "Your adventure begins with an early morning departure from Nairobi heading north through Kenya’s scenic central highlands. You will arrive at Sirimon Gate in time for registration and a briefing from your mountain guide. The trek begins through montane forest filled with cedar, olive, and podocarpus trees. Wildlife such as colobus monkeys, bushbucks, and numerous bird species are often spotted along the trail.The trail gradually opens into moorland vegetation with spectacular views of the mountain peaks. You will arrive at Old Moses Camp in the afternoon where your crew prepares hot meals and comfortable accommodation. The evening is spent resting, hydrating, and preparing for the higher altitude trekking ahead.",
@@ -112,6 +134,15 @@
       "Accommodation outside Trek",
       "Personal Expenses",
       "Tips & Gratuities"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -165,6 +196,15 @@
       "Personal Trekking Equipment",
       "Accommodation Outside Trek",
       "Personal Expenses"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -211,13 +251,21 @@
       "Professional Mountain Crew",
       "Transport & Trek Support",
       "Safety & Emergency Support"
-
     ],
     "excludes": [
       "Travel & Insurance",
       "Personal Trekking Equipment",
       "Accommodation Outside Trek",
       "Personal Expenses"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -279,6 +327,15 @@
       "Accommodation Outside Trek",
       "Personal Expenses",
       "Tips & Gratuities"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -369,6 +426,14 @@
       "Tips and gratuities",
       "Personal expenses (laundry, phone calls, souvenirs, etc.)",
       "Accommodation in Nairobi before or after safari (unless requested)"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   },
   {
@@ -397,6 +462,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   },
   {
@@ -425,6 +498,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Day Trip"
     ]
   },
   {
@@ -453,6 +534,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Day Trip"
     ]
   },
   {
@@ -553,12 +642,22 @@
       "Optional activities",
       "Alcoholic and soft drinks",
       "Personal expenses and tips"
+    ],
+    "country": [
+      "Kenya",
+      "Tanzania"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Kenya-Tanzania",
+      "Multi-Day"
     ]
   },
   {
     "id": 11,
     "slug": "10-days-luxury-private-honeymoon-safari",
-    "title": "10 Days Luxury Private Honeymoon Safari & Beach Holiday in Kenya",
+    "title": "10 Days Luxury Private Honeymoon Safari & Diani Holiday in Kenya",
     "shortTitle": "10 Days Luxury Private Honeymoon Safari & Beach Holiday in Kenya",
     "category": "Luxury Safaris",
     "location": "Kenya",
@@ -642,6 +741,17 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Beach",
+    "tags": [
+      "Relaxation",
+      "wildlife",
+      "Honeymoon",
+      "Romantic"
     ]
   },
   {
@@ -703,7 +813,7 @@
       {
         "time": "Day 7",
         "title": "Day 7 – Wildlife Safari & Kazinga Channel Cruise",
-        "details":"Begin the day with lion tracking, followed by a boat cruise along the Kazinga Channel. Finish the day with a visit to the salt mining communities",
+        "details": "Begin the day with lion tracking, followed by a boat cruise along the Kazinga Channel. Finish the day with a visit to the salt mining communities",
         "icon": "tabler:ship"
       },
       {
@@ -736,6 +846,15 @@
         "details": "Travel back to Entebbe and do some souvenir shopping before heading to the airport for departure.",
         "icon": "tabler:plane"
       }
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -791,7 +910,7 @@
       {
         "time": "Day 7",
         "title": "Day 7: Maasai Mara to Serengeti National Park, Tanzania",
-        "details":"After breakfast, depart for the Kenya–Tanzania border at Isebania for immigration formalities. After crossing into Tanzania, continue your journey into the Serengeti National Park with game viewing along the way. The Serengeti is famous for its vast open plains and incredible wildlife density.",
+        "details": "After breakfast, depart for the Kenya–Tanzania border at Isebania for immigration formalities. After crossing into Tanzania, continue your journey into the Serengeti National Park with game viewing along the way. The Serengeti is famous for its vast open plains and incredible wildlife density.",
         "icon": "tabler:ship"
       },
       {
@@ -824,7 +943,6 @@
         "details": "Enjoy breakfast followed by a short morning game drive or relaxation at your lodge. You will then be transferred to Arusha or Kilimanjaro International Airport for your onward flight.",
         "icon": "tabler:plane"
       }
-
     ],
     "includes": [
       "Airport transfers",
@@ -843,7 +961,16 @@
       "Optional activities (balloon safari, cultural visits, etc.)",
       "Alcoholic and soft drinks (unless specified)",
       "Personal expenses and tips"
-
+    ],
+    "country": [
+      "Kenya",
+      "Tanzania"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Kenya-Tanzania",
+      "Multi-Day"
     ]
   },
   {
@@ -963,6 +1090,15 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -1014,6 +1150,14 @@
       "Alcoholic and soft drinks",
       "Personal expenses",
       "Tips and gratuities"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   },
   {
@@ -1061,6 +1205,16 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Activities & Added Experiences"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Luxury",
+      "Honeymoon",
+      "Romantic"
     ]
   },
   {
@@ -1095,6 +1249,15 @@
         "details": "Optional sunrise game drive and breakfast at safari lodge. Depart park and travel back to Kampala or Entebbe with option for souvenir shopping and local ,market visits. Airport drop-off or hotel transfer.",
         "icon": "tabler:plane"
       }
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -1136,6 +1299,15 @@
       "Transport in a comfortable tour vehicle",
       "Guided activities at attractions",
       "Bottled drinking water"
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -1143,11 +1315,11 @@
     "slug": "6-days-5-nights-dubai-tour-package",
     "title": "6 Days 5 Nights Dubai Tour Package",
     "shortTitle": "6 Days 5 Nights Dubai Tour Package",
-    "category": "Multi-Day Safaris",
+    "category": "International",
     "location": "Dubai",
     "price": 0,
     "duration": "6 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905968/DSC_0521_p2loc7.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252087/dubai_p0wyxj.webp",
     "gallery": [],
     "snippet": "Experience the magic of 6 Days 5 Nights Dubai Tour Package. A unique journey through Dubai...",
     "description": "Join us for a memorable 6 Days 5 Nights Dubai Tour Package. This package is designed to give you the best experience in Dubai.",
@@ -1204,6 +1376,15 @@
       "Personl Expenses",
       "Optional Tours & Activities",
       "Tips & Gratuities"
+    ],
+    "country": [
+      "UAE"
+    ],
+    "countryCode": "AE",
+    "type": "Dining",
+    "tags": [
+      "International",
+      "Multi-Day"
     ]
   },
   {
@@ -1232,6 +1413,15 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1298,6 +1488,15 @@
       "Accommodation Outside the Mountain",
       "Personal Trekking Equipment",
       "Personal Expenses"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1364,6 +1563,15 @@
       "Personal Trekking Gear",
       "Personal Expenses",
       "Optional Add-Ons"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1435,6 +1643,15 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -1463,6 +1680,15 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1474,7 +1700,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "Flexible",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-carnivore-dining-experience.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771312437/WhatsApp_Image_2026-02-17_at_9.55.35_AM_jryj5t.jpg",
     "gallery": [],
     "snippet": "Experience the magic of Carnivore Dining Experience. A unique journey through Kenya.",
     "description": "Join us for a memorable Carnivore Dining Experience. This package is designed to give you the best experience in Kenya. Full details coming soon.",
@@ -1491,6 +1717,16 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Dining",
+    "tags": [
+      "Food",
+      "Cultural",
+      "Day Trip"
     ]
   },
   {
@@ -1519,6 +1755,15 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1547,6 +1792,15 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1575,6 +1829,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   },
   {
@@ -1603,6 +1865,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   }
 ]

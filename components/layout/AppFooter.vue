@@ -24,7 +24,7 @@
         <!-- Brand Section -->
         <div class="space-y-4">
           <h3 class="text-2xl font-serif text-brand-terracotta">
-            Ethno Kenia Adventures
+            Ethno Kenia Adventure
           </h3>
           <p class="text-brand-off-white/80 font-sans text-sm leading-relaxed">
             Ethno Kenia Adventure is a professional safari and tours company
@@ -262,7 +262,7 @@
           class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
         >
           <p class="text-brand-off-white/60 font-sans text-sm">
-            © {{ currentYear }} Ethno Kenia Adventures. All rights reserved.
+            © {{ currentYear }} Ethno Kenia Adventure. All rights reserved.
           </p>
           <div class="flex space-x-6">
             <a

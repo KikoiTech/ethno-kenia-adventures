@@ -1,6 +1,6 @@
 <template>
   <!-- 
-    CONTACT US PAGE: Ethno Kenia Adventures
+    CONTACT US PAGE: Ethno Kenia Adventure
     CONCEPT: Fun, engaging contact page with 60/30/10 rule
     VISION: African Heritage Symphony - Visual storytelling with GIF showcase
   -->
@@ -30,7 +30,7 @@
         <div class="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
           <img 
             src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cW1ienczdjJlcHF6M2dlaTR0anI0OGU5N2k5dGhtdTJ4MXg0OWtuaSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3IFE7W1Ms2qV6cy7pl/giphy.gif"
-            alt="Ethno Kenia Adventures - Wildlife and adventure showcase"
+            alt="Ethno Kenia Adventure - Wildlife and adventure showcase"
             class="w-full h-auto"
           >
           <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/20 to-transparent rounded-3xl"></div>
@@ -313,7 +313,7 @@
         <!-- Visual Showcase -->
         <div class="bg-brand-off-white rounded-2xl p-8 shadow-lg">
           <h3 class="text-2xl font-serif text-brand-charcoal mb-6">
-            Visual Adventures
+            Visual Adventure
           </h3>
           
           <div class="grid grid-cols-2 gap-4">
@@ -432,10 +432,10 @@ const handleFormSubmit = async () => {
 
 // Page title and meta
 useHead({
-  title: 'Contact Us - Ethno Kenia Adventures',
+  title: 'Contact Us - Ethno Kenia Adventure',
   meta: [
-    { name: 'description', content: 'Contact Ethno Kenia Adventures to start your African adventure. Our 60/30/10 promise ensures authentic local experience, conservation focus, and adventure guarantee.' },
-    { name: 'keywords', content: 'Ethno Kenia Adventures, contact us, safari booking, African adventure, wildlife safari, Kenya tourism, 60/30/10 rule' }
+    { name: 'description', content: 'Contact Ethno Kenia Adventure to start your African adventure. Our 60/30/10 promise ensures authentic local experience, conservation focus, and adventure guarantee.' },
+    { name: 'keywords', content: 'Ethno Kenia Adventure, contact us, safari booking, African adventure, wildlife safari, Kenya tourism, 60/30/10 rule' }
   ]
 })
 </script>

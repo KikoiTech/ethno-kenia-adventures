@@ -6,11 +6,22 @@
       <!-- Hero Background with Parallax -->
       <div class="absolute inset-0">
         <div class="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-orange-900/60 to-yellow-900/40"></div>
-        <img 
-          src="https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905930/DSC_0247_dkzytn.jpg"
+        <NuxtImg 
+          provider="cloudinary"
+          src="v1770905930/DSC_0247_dkzytn.jpg"
           alt="Kenyan Safari Landscape"
           class="w-full h-full object-cover"
-        >
+          
+          loading="eager"
+          fetchpriority="high"
+          preload
+          
+          format="webp"
+          quality="80"
+          sizes="sm:100vw md:100vw lg:100vw"
+          width="1920"
+          height="1080"
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-amber-900/60 to-transparent"></div>
       </div>
       
@@ -30,8 +41,8 @@
                 </div>
               </div>
               
-              <h1 class="text-6xl md:text-7xl font-serif tracking-wider mb-4 text-yellow-100">
-                {{ getText({ en: "SAFARI PACKAGES", es: "PAQUETES SAFARI", fr: "PAQUETS SAFARI", de: "SAFARI-PAKETE", zh: "野生动物园套餐", ja: "サファリパッケージ", sw: "PAKETI ZA SAFARI" }, currentLanguage) }}
+              <h1 class="text-4xl md:text-6xl font-serif tracking-wider mb-4 text-yellow-100 uppercase">
+                {{ heroTitle }}
               </h1>
               <div class="w-32 h-1 bg-yellow-400 mx-auto mb-6"></div>
               <p class="text-xl md:text-2xl font-light text-yellow-50 max-w-3xl mx-auto leading-relaxed">
@@ -41,7 +52,7 @@
           </div>
           
           <!-- Currency & Language Controls -->
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
+          <!-- <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
             <div class="bg-white/10 backdrop-blur-md border border-yellow-400/30 rounded-full px-6 py-3">
               <div class="flex items-center gap-3">
                 <span class="text-yellow-100 font-medium">{{ getText({ en: "Currency:", es: "Moneda:", fr: "Devise:", de: "Währung:", zh: "货币:", ja: "通貨:", sw: "Fedha:" }, currentLanguage) }}</span>
@@ -62,7 +73,7 @@
               mode="dropdown"
               class="bg-white/10 backdrop-blur-md border border-yellow-400/30"
             />
-          </div>
+          </div> -->
         </div>
       </div>
       
@@ -103,15 +114,15 @@
     </section>
 
     <!-- Loading State -->
-    <div v-if="loading" class="py-32 text-center">
+    <!-- <div v-if="loading" class="py-32 text-center">
       <div class="inline-block">
         <div class="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
         <p class="mt-6 text-amber-900 font-serif text-lg">{{ getText({ en: "Discovering amazing safaris...", sw: "Kugundua safari za ajabu..." }, currentLanguage) }}</p>
       </div>
-    </div>
+    </div> -->
 
     <!-- Error State -->
-    <div v-else-if="loadError" class="py-32 text-center">
+    <!-- <div v-else-if="loadError" class="py-32 text-center">
       <div class="inline-block bg-red-100 border-2 border-red-300 rounded-full p-8">
         <svg class="w-16 h-16 text-red-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v2z"/>
@@ -125,17 +136,19 @@
           {{ getText({ en: "Try Again", sw: "Jaribu Tena" }, currentLanguage) }}
         </button>
       </div>
-    </div>
+    </div> -->
 
     <!-- Packages Grid -->
-    <div v-else-if="filteredPackages.length > 0" class="py-16 px-6">
+    <div v-if="filteredPackages.length > 0" class="py-16 px-6">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
           <PackageCard
-            v-for="pkg in filteredPackages"
+            v-for="(pkg, index) in filteredPackages"
             :key="pkg.id"
             :safariPackage="pkg"
             :language="currentLanguage"
+            
+            :index="index" 
             class="transform transition-all duration-300 hover:scale-105"
           />
         </div>
@@ -157,7 +170,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue' 
+import { useRoute } from 'vue-router'
 import type { SafariPackage } from '~/types/safari-package'
 import { getText } from '~/utils/translation-api'
 import { getSafaris } from '~/utils/package-loader'
@@ -166,70 +180,92 @@ import { getSafaris } from '~/utils/package-loader'
 import PackageCard from '~/components/safari-packages/PackageCard.vue'
 import LanguageSelector from '~/components/safari-packages/LanguageSelector.vue'
 
-// Reactive state
+const route = useRoute()
+
+// 1. DATA FETCHING
+const { data: rawPackages, error: loadError } = await useAsyncData(
+  'all-safaris-list', 
+  () => getSafaris()
+)
+
+// 2. REACTIVE STATE
 const currentLanguage = ref('en')
 const selectedCurrency = ref('KES')
 const sortBy = ref('default')
-const loading = ref(true)
-const loadError = ref('')
-const packages = ref<SafariPackage[]>([])
 
-// Load packages data
-const loadPackages = async () => {
-  loading.value = true
-  loadError.value = ''
-  try {
-    const data = await getSafaris()
-    packages.value = data
-    if (!data || data.length === 0) {
-      loadError.value = 'No safari packages found.'
-    }
-  } catch (error) {
-    console.error('Error loading packages:', error)
-    loadError.value = 'Unable to load safari packages. Please try again later.'
-  } finally {
-    loading.value = false
+// 3. COMPUTED LOGIC (Filtering and Sorting)
+const heroTitle = computed(() => {
+  const { category, type, country } = route.query
+  
+  if (category === 'mountain-climbing') return getText({ en: 'Mount Climbing', sw: 'Kupanda Milima' }, currentLanguage.value)
+  if (category === 'international') return getText({ en: 'International Tours', sw: 'Ziara za Kimataifa' }, currentLanguage.value)
+  if (type === 'bush') return getText({ en: 'Kenya Bush Safaris', sw: 'Safari za Nyika Kenya' }, currentLanguage.value)
+  if (type === 'beach') return getText({ en: 'Kenya Beach Holidays', sw: 'Likizo za Pwani Kenya' }, currentLanguage.value)
+  if (type === 'bush-and-beach') return getText({ en: 'Bush and Beach', sw: 'Nyika na Pwani' }, currentLanguage.value)
+  
+  if (country) {
+    const c = String(country)
+    const name = c.charAt(0).toUpperCase() + c.slice(1)
+    return getText({ en: `${name} Safaris`, sw: `Safari za ${name}` }, currentLanguage.value)
   }
-}
-
-// Initial load
-onMounted(() => {
-  loadPackages()
+  
+  return getText({ en: 'Safari Packages', sw: 'Paketi za Safari' }, currentLanguage.value)
 })
 
-// Computed properties for filtering and sorting
 const filteredPackages = computed(() => {
-  let filtered = [...packages.value]
+  if (!rawPackages.value) return []
+  
+  const { category, type, country } = route.query
+  let list = [...rawPackages.value]
 
-  // Sort packages
-  filtered = filtered.sort((a, b) => {
-    switch (sortBy.value) {
-      case 'duration':
-        return parseInt(a.duration) - parseInt(b.duration)
-      case 'default':
-      default:
-        // Featured/Popular first
-        const aFeatured = a.featured ?? 0
-        const bFeatured = b.featured ?? 0
-        const aPopular = a.popular ?? 0
-        const bPopular = b.popular ?? 0
-        
-        if (aFeatured !== bFeatured) return bFeatured - aFeatured
-        if (aPopular !== bPopular) return bPopular - aPopular
-        return 0
+  // Apply filters based on query parameters
+  if (category === 'mountain-climbing') {
+    list = list.filter(pkg => pkg.type === 'Trekking')
+  } else if (category === 'international') {
+    list = list.filter(pkg => pkg.category === 'International')
+  } else if (type === 'bush') {
+    // Kenya Bush = Kenya + Wildlife tag
+    list = list.filter(pkg => pkg.country?.includes('Kenya') && (pkg.tags || []).includes('Wildlife'))
+  } else if (type === 'beach') {
+    // Kenya Beach = Kenya + Beach type
+    list = list.filter(pkg => pkg.country?.includes('Kenya') && pkg.type === 'Beach')
+  } else if (type === 'bush-and-beach') {
+    // Bush and Beach = contains both Beach and Wildlife markers
+    list = list.filter(pkg => 
+      (pkg.type === 'Beach' || (pkg.tags || []).includes('Beach') || (pkg.tags || []).includes('Relaxation')) && 
+      (pkg.type === 'Wildlife' || (pkg.tags || []).includes('Wildlife'))
+    )
+  } else if (country) {
+    // East Africa countries filter - support multi-country packages
+    const filterCountry = String(country).toLowerCase()
+    list = list.filter(pkg => 
+      pkg.country?.some(c => c.toLowerCase() === filterCountry)
+    )
+  }
+
+  // Sort logic
+  return list.sort((a, b) => {
+    if (sortBy.value === 'duration') {
+      return parseInt(a.duration) - parseInt(b.duration)
     }
+    const aFeatured = a.featured ?? 0
+    const bFeatured = b.featured ?? 0
+    const aPopular = a.popular ?? 0
+    const bPopular = b.popular ?? 0
+    
+    if (aFeatured !== bFeatured) return bFeatured - aFeatured
+    if (aPopular !== bPopular) return bPopular - aPopular
+    return 0
   })
-
-  return filtered
 })
 
-// SEO
+// 4. SEO
 useHead({
-  title: () => `${getText({ en: 'Safari Packages - Ethno Kenia Adventures', es: 'Paquetes Safari - Patrimonio Safari Kenya', fr: 'Paquets Safari - Patrimoine Safari Kenya', de: 'Safari-Pakete - Kenya Safari Erbe', zh: '野生动物园套餐 - 肯尼亚野生动物园遗产', ja: 'サファリパッケージ - ケニアサファリ遺産', sw: 'Paketi za Safari - Urithi wa Safari Kenya' }, currentLanguage.value)}`,
+  title: () => `${getText({ en: 'Safari Packages - Ethno Kenia Adventure', sw: 'Paketi za Safari - Urithi wa Safari Kenya' }, currentLanguage.value)}`,
   meta: [
     {
       name: 'description',
-      content: () => getText({ en: 'Discover amazing safari packages in Kenya. From luxury wildlife experiences to family-friendly adventures, explore Africa\'s incredible wilderness with Ethno Kenia Adventures.', es: 'Descubre paquetes de safari increíbles en Kenia. Desde experiencias de vida silvestre de lujo hasta aventuras familiares, explora la increíble naturaleza de África con Patrimonio Safari Kenya.', fr: 'Découvrez des paquets de safari incroyables au Kenya. Des expériences fauniques de luxe aux aventures familiales, explorez la nature incroyable de l\'Afrique avec Patrimoine Safari Kenya.', de: 'Entdecke unglaubliche Safari-Pakete in Kenia. Von Luxus-Wildtiererlebnissen bis familienfreundlichen Abenteuern, erkunden Sie die unglaubliche Wildnis Afrikas mit Kenya Safari Erbe.', zh: '在肯尼亚发现令人惊叹的野生动物园套餐。从豪华野生动物体验到家庭友好型冒险，与肯尼亚野生动物园遗产一起探索非洲令人难以置信的荒野。', ja: 'ケニアで素晴らしいサファリパッケージを発見。ラグジュアリーな野生動物体験から家族向けの冒険まで、ケニアサファリ遺産と一緒にアフリカの信じられないほどの荒野を探索してください。', sw: 'Gundua paketi za safari za ajabu katika Kenya. Kuanzia uzoefu wa wanyama wa kifahama hadi safari za familia, chunguza pori la ajabu la Afrika na Urithi wa Safari Kenya.' }, currentLanguage.value)
+      content: () => getText({ en: 'Discover amazing safari packages in Kenya...', sw: 'Gundua paketi za safari za ajabu...' }, currentLanguage.value)
     }
   ]
 })

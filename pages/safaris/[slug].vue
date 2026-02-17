@@ -184,7 +184,7 @@ onMounted(async () => {
     const descText = getText(safari.value.snippet || safari.value.description)
     
     useSeoMeta({
-      title: `${titleText} | Ethno Kenia Adventures`,
+      title: `${titleText} | Ethno Kenia Adventure`,
       ogTitle: titleText,
       description: descText,
       ogDescription: descText,
