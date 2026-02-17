@@ -112,7 +112,7 @@
             <div>
               <h3 class="text-xl font-serif mb-6">What's Included</h3>
               <ul class="space-y-4">
-                <li v-for="(item, index) in safariPackage.included" :key="index" class="flex items-start text-sm text-brand-charcoal/70">
+                <li v-for="(item, index) in safariPackage.includes" :key="index" class="flex items-start text-sm text-brand-charcoal/70">
                   <svg class="w-4 h-4 text-green-500 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                   {{ getText(item, currentLanguage) }}
                 </li>
@@ -121,7 +121,7 @@
             <div>
               <h3 class="text-xl font-serif mb-6 text-gray-500">Not Included</h3>
               <ul class="space-y-4">
-                <li v-for="(item, index) in safariPackage.excluded" :key="index" class="flex items-start text-sm text-gray-400">
+                <li v-for="(item, index) in safariPackage.excludes" :key="index" class="flex items-start text-sm text-gray-400">
                   <svg class="w-4 h-4 text-brand-terracotta/40 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                   {{ getText(item, currentLanguage) }}
                 </li>
