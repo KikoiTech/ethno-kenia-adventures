@@ -20,7 +20,7 @@
           
           <div class="space-y-6 text-brand-charcoal/80 max-w-xl">
             <p class="font-sans text-lg lg:text-xl leading-relaxed font-light">
-              We believe a safari is more than a holiday; it's a reconnection with the wild soul that resides within each of us.
+              We believe a safari is more than a holiday it's a reconnection with the wild soul that resides within each of us.
             </p>
             <p class="font-sans text-lg lg:text-xl leading-relaxed font-light">
               Our journeys are crafted where luxury meets wilderness, where you meet your truest self.
