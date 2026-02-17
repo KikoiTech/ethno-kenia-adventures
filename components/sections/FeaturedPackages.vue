@@ -49,11 +49,23 @@
               
               <!-- Background Image with Zoom Effect -->
               <div class="absolute inset-0">
-                <img 
-                  :src="pkg.image"
-                  :alt="pkg.alt"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                >
+                <NuxtImg 
+                    provider="cloudinary"
+                    :src="pkg.image"
+                    :alt="pkg.alt"
+                    
+                    sizes="sm:320px md:400px" 
+                    
+                    format="webp"
+                    quality="75"
+                    
+                    width="400"
+                    height="450"
+                    
+                    loading="lazy"
+                    
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 <!-- Dark Overlay -->
                 <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 via-brand-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
@@ -110,7 +122,7 @@
         >
           <span>View All Safari Packages</span>
           <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5 5-5M13 17l5 5-5"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
           </svg>
         </a>
       </div>
@@ -133,7 +145,7 @@ const packages = [
   {
     id: 'maasai-mara',
     title: 'Maasai Mara Explorer',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905959/DSC_0443_jozfk3.jpg',
+    image: 'v1770905959/DSC_0443_jozfk3.jpg',
     alt: 'Maasai Mara safari experience',
     duration: '7 days',
     description: 'unparalleled wildlife encounters',
@@ -143,7 +155,7 @@ const packages = [
   {
     id: 'amboseli',
     title: 'Amboseli Luxury',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905930/DSC_0227_tqver0.jpg',
+    image: 'v1770905930/DSC_0227_tqver0.jpg',
     alt: 'Amboseli luxury safari with Kilimanjaro',
     duration: '5 days',
     description: 'elegance with Kilimanjaro views',
@@ -153,7 +165,7 @@ const packages = [
   {
     id: 'samburu',
     title: 'Samburu Adventure',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905975/DSC_0551_flntpk.jpg',
+    image: 'v1770905975/DSC_0551_flntpk.jpg',
     alt: 'Samburu adventure safari experience',
     duration: '4 days',
     description: 'rugged northern frontier exploration',
@@ -163,7 +175,7 @@ const packages = [
   {
     id: 'conservation',
     title: 'Conservation Experience',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903469/DSC_0011_dp0tlt.jpg',
+    image: 'v1770903469/DSC_0011_dp0tlt.jpg',
     alt: 'Conservation experience with rhinos',
     duration: '3 days',
     description: 'supporting Kenya\'s wildlife protection',
@@ -243,11 +255,13 @@ onUnmounted(() => {
 
 <style scoped>
 /* Parallax section styling */
-.featured-packages-section {
+/*.featured-packages-section {
   will-change: transform, opacity;
   transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+}*/
+.group:hover img {
+  will-change: transform; 
 }
-
 /* Hide scrollbar for clean horizontal scroll */
 .scrollbar-hide {
   -ms-overflow-style: none;

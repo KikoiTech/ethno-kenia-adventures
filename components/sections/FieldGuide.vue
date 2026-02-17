@@ -162,13 +162,26 @@
     <div class="mt-24 relative overflow-hidden h-[500px] flex items-center justify-center group">
   <!-- Background Container -->
       <div class="absolute inset-0 z-0">
-        <img 
-          src="https://res.cloudinary.com/dmdihuyvn/image/upload/ar_21:9,c_fill,g_auto,w_1600/v1770903461/DSC_0036_dgo8e1.jpg" 
+        <NuxtImg 
+          provider="cloudinary"
+          src="v1770903461/DSC_0036_dgo8e1.jpg" 
           alt="Wildlife Sanctuary"
-          class="w-full h-[120%] object-cover object-center transition-transform duration-700 will-change-transform scale-110 group-hover:scale-100"
-          style="transform: translateY(0px);" 
-          ref="parallaxImg"
-        >
+          
+          fit="fill"
+          
+          :modifiers="{ 
+            gravity: 'auto', 
+            aspectRatio: '21:9' 
+          }"
+          
+          format="webp"
+          quality="80"
+          loading="lazy"
+          sizes="sm:100vw md:100vw lg:1600px"
+          width="1600"
+          height="686"
+          class="w-full h-[120%] object-cover object-center transition-transform duration-700"
+        />
         <!-- Darker overlay for better text contrast -->
         <div class="absolute inset-0 bg-gradient-to-b from-brand-charcoal/70 via-brand-charcoal/40 to-brand-charcoal/70 backdrop-blur-[1px]"></div>
       </div>
@@ -289,21 +302,38 @@ const handleScroll = () => {
   const windowHeight = window.innerHeight
   
   // Calculate parallax progress for field guide section
-  const sectionProgress = Math.max(0, Math.min(1, (scrolled - sectionTop + windowHeight * 0.5) / (windowHeight * 1.5)))
+  if (scrolled + windowHeight > sectionTop && scrolled < sectionTop + fieldGuideSection.value.offsetHeight) {
+    const sectionProgress = (scrolled - sectionTop + windowHeight * 0.5) / (windowHeight * 1.5)
   
   // Apply parallax transformation
-  const translateY = sectionProgress * -40 // Subtle upward movement
-  const opacity = Math.max(0.4, 1 - sectionProgress * 0.2) // Gentle fade as user scrolls
-  
-  fieldGuideSection.value.style.transform = `translateY(${translateY}px)`
-  fieldGuideSection.value.style.opacity = opacity.toString()
+    const translateY = Math.max(-50, Math.min(50, sectionProgress * -40))
+    fieldGuideSection.value.style.transform = `translateY(${translateY}px)`
+  }
 }
 
 onMounted(() => {
   // Add scroll listener for parallax
   window.addEventListener('scroll', handleScroll, { passive: true })
   
-  // Initialize Mapbox map with animal migration styling
+  // Use Intersection Observer to load map ONLY when user reaches the section
+  const observer = new IntersectionObserver((entries) => {
+    // FIX: Check if the first entry exists before accessing .isIntersecting
+    const entry = entries[0] 
+    
+    if (entry && entry.isIntersecting) {
+      initMap()
+      observer.disconnect() // Run only once
+    }
+  }, { rootMargin: '200px' }) // Start loading 200px before user reaches it
+
+  // Ensure the ref is assigned before observing
+  const section = fieldGuideSection.value
+  if (section) {
+    observer.observe(section)
+  }
+})
+
+const initMap = () => {
   if (typeof window !== 'undefined' && (window as any).mapboxgl) {
     const mapboxgl = (window as any).mapboxgl
     mapboxgl.accessToken = 'pk.eyJ1Ijoia2VueeS1zYWZhcmlfaGVyaXRhZ2UiLCJhIjoiY2w4dGZjNzVhMjBkNjJsbzJqbnQ4aDZ0aSJ9.abc123def456ghi789jkl'
@@ -337,7 +367,10 @@ onMounted(() => {
   
   // Initial call to set starting state
   handleScroll()
-})
+}
+
+  
+  // Initialize Mapbox map with animal migration styling
 
 onUnmounted(() => {
   // Clean up
@@ -351,8 +384,12 @@ onUnmounted(() => {
 <style scoped>
 /* Parallax section styling */
 .field-guide-section {
-  will-change: transform, opacity;
+  /*will-change: transform, opacity;*/
   transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+}
+
+img[data-nuxt-img] {
+  will-change: transform;
 }
 
 /* Location marker styles */

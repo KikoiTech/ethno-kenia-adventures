@@ -42,15 +42,22 @@
       </div>
     </div>
     
-    <nav class="w-full py-2 flex justify-between items-center text-white transition-all duration-300">
+    <nav 
+      :class="[
+        'w-full flex justify-between items-center text-white transition-all duration-300',
+        !isMounted ? 'py-4' : (isScrolled ? 'py-2' : 'py-4')
+      ]"
+    >
       <div class="container mx-auto px-6 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex-shrink-0">
           <NuxtLink to="/">
             <img 
               src="/logo.png" 
-              alt="Ethnos Kenia Adventures" 
+              alt="Ethnos Kenia Adventure" 
               class="h-14 w-auto" 
+              width="120"
+              height="56"
             />
           </NuxtLink>
         </div>
@@ -141,12 +148,14 @@ import { ref } from 'vue'
 const isMenuOpen = ref(false)
 const isMobileDropdownOpen = ref(false)
 const isScrolled = ref(false)
+const isMounted = ref(false)
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
 }
 
 onMounted(() => {
+  isMounted.value = true
   window.addEventListener('scroll', handleScroll)
 })
 

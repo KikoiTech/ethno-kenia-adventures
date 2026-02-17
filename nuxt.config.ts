@@ -1,21 +1,35 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.ts
 export default defineNuxtConfig({
   devtools: { enabled: true },
   
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image',      // Add this
+    '@nuxtjs/google-fonts' // Add this
   ],
+
+  // Optimization 1: Localize Fonts (Removes render-blocking)
+  googleFonts: {
+    families: {
+      Inter: [400, 500, 600],
+      'Playfair Display': {
+        wght: [400, 700],
+        ital: [400]
+      }
+    },
+    display: 'swap',
+    download: true
+  },
+
+  // Optimization 2: Cloudinary Auto-Compression
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/dmdihuyvn/image/upload/'
+    }
+  },
 
   css: ['~/assets/css/tailwind.css'],
 
-  // Add this entire 'app' section
-  app: {
-    head: {
-      link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap' }
-      ]
-    }
-  }
+  // REMOVE the app.head.link section entirely! 
+  // It is now handled by @nuxtjs/google-fonts more efficiently.
 })
