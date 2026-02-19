@@ -2819,5 +2819,234 @@
       "Zanzibar",
       "Beach Holiday"
     ]
+  },
+  {
+  "id": 39,
+  "slug": "7-days-masai-mara-lake-nakuru-lake-naivasha-amboseli-safari",
+  "title": "7 Days Masai Mara, Lake Nakuru, Lake Naivasha & Amboseli Safari",
+  "shortTitle": "Kenya Classic Safari",
+  "category": "Kenya Safaris",
+  "location": "Kenya",
+  "price": 0,
+  "duration": "7 Days",
+  "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905959/DSC_0443_jozfk3.jpg",
+  "gallery": [],
+  "snippet": "A classic 7-day Kenya safari covering Masai Mara, Lake Nakuru, Lake Naivasha, and Amboseli National Park with diverse wildlife and scenic landscapes.",
+  "description": "This exciting 7-day safari takes you through Kenya’s most iconic wildlife destinations. Explore the endless plains of Masai Mara, the rhino sanctuary at Lake Nakuru, the scenic beauty of Lake Naivasha, and the breathtaking landscapes of Amboseli National Park with Mount Kilimanjaro as a stunning backdrop.",
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Nairobi – Masai Mara National Reserve",
+      "details": "Early morning pick-up from your Nairobi hotel or airport followed by a scenic drive to Masai Mara via the Great Rift Valley. Arrive at your lodge or camp for lunch and relaxation. Afternoon game drive in Masai Mara. Dinner and overnight stay at your lodge or camp."
+    },
+    {
+      "day": 2,
+      "title": "Masai Mara – Full Day Game Drive",
+      "details": "Full day game drive in Masai Mara with picnic lunch boxes. Spot lions, elephants, cheetahs, giraffes, zebras, and antelopes. During migration season, witness wildebeest migration and river crossings. Dinner and overnight stay at your lodge or camp."
+    },
+    {
+      "day": 3,
+      "title": "Masai Mara – Lake Nakuru (Optional Maasai Village & Lake Naivasha Boat Ride)",
+      "details": "After breakfast, depart Masai Mara for Lake Nakuru. Optional visit to a Maasai village and optional Lake Naivasha boat ride en route. Arrive in Nakuru in the evening. Dinner and overnight stay at your lodge or resort."
+    },
+    {
+      "day": 4,
+      "title": "Lake Nakuru – Lake Naivasha",
+      "details": "Early morning game drive in Lake Nakuru National Park, known for rhinos, flamingos, and Rothschild giraffes. After the game drive, proceed to Lake Naivasha for lunch. Afternoon at leisure or optional activities. Dinner and overnight stay at your Naivasha lodge or resort."
+    },
+    {
+      "day": 5,
+      "title": "Lake Naivasha – Amboseli National Park (Hell’s Gate Visit)",
+      "details": "Morning visit to Hell’s Gate National Park with walking or cycling opportunities. Later, depart for Amboseli National Park arriving in the evening. Dinner and overnight stay at your lodge or camp."
+    },
+    {
+      "day": 6,
+      "title": "Amboseli – Full Day Game Drive",
+      "details": "Full day game drives in Amboseli National Park with picnic lunch. Spot large elephant herds, lions, cheetahs, buffaloes, giraffes, zebras, and birdlife. Enjoy views of Mount Kilimanjaro if weather permits. Dinner and overnight stay at your lodge or camp."
+    },
+    {
+      "day": 7,
+      "title": "Amboseli – Nairobi (En-Route Game Drive)",
+      "details": "Early morning game drive in Amboseli. After breakfast, depart for Nairobi arriving in the afternoon with drop off at your hotel or Jomo Kenyatta International Airport."
+    }
+  ],
+  "includes": [
+    "Transport in a 4x4 Land Cruiser safari vehicle with pop-up roof",
+    "Professional English-speaking safari guide/driver",
+    "Accommodation in selected lodges or camps",
+    "Meals on full board basis during safari",
+    "Park entrance fees for all parks mentioned",
+    "Game drives as per itinerary",
+    "Bottled drinking water during safari",
+    "Pick up and drop off in Nairobi"
+  ],
+  "excludes": [
+    "International and domestic flights",
+    "Visa fees",
+    "Travel insurance",
+    "Optional activities (Maasai village visit, Lake Naivasha boat ride, cycling at Hell’s Gate, etc.)",
+    "Alcoholic and soft drinks",
+    "Personal expenses such as laundry, souvenirs, and tips"
+  ],
+  "country": [
+    "Kenya"
+  ],
+  "countryCode": "KE",
+  "type": "Wildlife Safari",
+  "tags": [
+    "Masai Mara",
+    "Amboseli",
+    "Lake Nakuru",
+    "Lake Naivasha",
+    "Big Five",
+    "Multi-Day Safari"
+  ]
+  },
+  {
+    "id": 40,
+    "slug": "6-days-masai-mara-lake-nakuru-amboseli-safari",
+    "title": "6 Days Masai Mara, Lake Nakuru & Amboseli Safari",
+    "shortTitle": "Kenya Highlights Safari",
+    "category": "Kenya Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905945/DSC_0325_evpkqa.jpg",
+    "gallery": [],
+    "snippet": "A 6-day Kenya safari exploring Masai Mara, Lake Nakuru, and Amboseli National Park with excellent wildlife viewing and scenic landscapes.",
+    "description": "Discover Kenya’s most celebrated wildlife destinations on this 6-day safari adventure. Visit the world-famous Masai Mara, the rhino sanctuary of Lake Nakuru National Park, and Amboseli National Park, renowned for its large elephant herds and breathtaking views of Mount Kilimanjaro. Travel in a comfortable 4x4 Land Cruiser designed for optimal game viewing.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Masai Mara National Reserve",
+        "details": "Early morning pick-up from your Nairobi hotel or airport followed by a scenic drive through the Great Rift Valley to Masai Mara National Reserve. Arrive for lunch at your lodge or camp. Afternoon game drive across the savannah plains. Dinner and overnight stay at your Masai Mara lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Masai Mara – Full Day Game Drive",
+        "details": "Full day game drive in Masai Mara with picnic lunch boxes. Explore different sections of the reserve known for predators and diverse wildlife. During migration season, witness the spectacular wildebeest migration. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 3,
+        "title": "Masai Mara – Lake Nakuru (Optional Maasai Village & Lake Naivasha Boat Ride)",
+        "details": "After breakfast, depart Masai Mara for Lake Nakuru. Optional visit to a Maasai village and optional stop at Lake Naivasha for a boat ride en route. Arrive in Nakuru in the late afternoon. Dinner and overnight stay at your lodge or resort."
+      },
+      {
+        "day": 4,
+        "title": "Lake Nakuru – Amboseli National Park",
+        "details": "Early morning game drive in Lake Nakuru National Park, famous for rhinos, Rothschild giraffes, flamingos, and birdlife. After the game drive, depart for Amboseli National Park with lunch en route. Arrive in the evening. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 5,
+        "title": "Amboseli – Full Day Game Drive",
+        "details": "Spend the day exploring Amboseli National Park with morning and afternoon game drives and picnic lunch. Spot large elephant herds, lions, cheetahs, giraffes, zebras, wildebeests, and birdlife. Enjoy views of Mount Kilimanjaro if weather permits. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 6,
+        "title": "Amboseli – Nairobi (En-route Game Drive)",
+        "details": "Early morning game drive in Amboseli followed by breakfast. Depart for Nairobi arriving in the afternoon with drop off at your hotel or Jomo Kenyatta International Airport."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 Land Cruiser safari vehicle with pop-up roof",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or camps",
+      "Meals on full board basis during safari",
+      "Park entrance fees for all parks mentioned",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Nairobi"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities (Maasai village visit, Lake Naivasha boat ride, etc.)",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife Safari",
+    "tags": [
+      "Masai Mara",
+      "Lake Nakuru",
+      "Amboseli",
+      "Big Five",
+      "Multi-Day Safari"
+    ]
+  },
+  {
+    "id": 41,
+    "slug": "5-days-masai-mara-lake-nakuru-lake-naivasha-safari",
+    "title": "5 Days Masai Mara, Lake Nakuru & Lake Naivasha Safari",
+    "shortTitle": "Masai Mara, Nakuru & Naivasha Safari",
+    "category": "Kenya Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "5 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905943/DSC_0336_vmhmvv.jpg",
+    "gallery": [],
+    "snippet": "A 5-day Kenya safari exploring Masai Mara, Lake Nakuru, and Lake Naivasha with exciting game drives and scenic landscapes.",
+    "description": "Experience Kenya’s most iconic wildlife destinations on this 5-day safari adventure covering the world-famous Masai Mara, the bird-rich Lake Nakuru National Park, and the scenic Lake Naivasha. Enjoy thrilling game drives, breathtaking landscapes, and optional cultural and adventure activities.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Masai Mara National Reserve",
+        "details": "Early morning pick-up from your Nairobi hotel or airport followed by a scenic drive via the Great Rift Valley to Masai Mara National Reserve. Arrive in time for lunch and relaxation. Afternoon game drive in Masai Mara. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Masai Mara – Full Day Game Drive",
+        "details": "Full day game drive in Masai Mara with picnic lunch boxes. Explore the vast plains rich in wildlife including the Big Five. During migration season, witness wildebeest migration and river crossings. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 3,
+        "title": "Masai Mara – Lake Nakuru (Optional Maasai Village & Lake Naivasha Boat Ride)",
+        "details": "After breakfast, depart Masai Mara for Lake Nakuru. Optional Maasai village visit and optional stop at Lake Naivasha for a boat ride en route. Arrive in Nakuru in the evening. Dinner and overnight stay at your lodge."
+      },
+      {
+        "day": 4,
+        "title": "Lake Nakuru – Lake Naivasha",
+        "details": "Early morning game drive in Lake Nakuru National Park, known for rhinos, flamingos, Rothschild giraffes, and birdlife. After the game drive, proceed to Lake Naivasha for lunch and leisure time. Dinner and overnight stay at your Naivasha lodge."
+      },
+      {
+        "day": 5,
+        "title": "Lake Naivasha – Nairobi (Hell’s Gate National Park)",
+        "details": "After breakfast, visit Hell’s Gate National Park for a morning game viewing experience with options for walking or cycling. Later, depart for Nairobi arriving in the afternoon with drop off at your hotel or Jomo Kenyatta International Airport."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 Land Cruiser safari vehicle with pop-up roof",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or camps",
+      "Meals on full board basis during safari",
+      "Park entrance fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Nairobi"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities (Maasai village visit, boat ride, cycling, etc.)",
+      "Alcoholic and soft drinks",
+      "Personal expenses (laundry, souvenirs, tips, etc.)"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife Safari",
+    "tags": [
+      "Masai Mara",
+      "Lake Nakuru",
+      "Lake Naivasha",
+      "Big Five",
+      "Multi-Day Safari"
+    ]
   }
 ]
