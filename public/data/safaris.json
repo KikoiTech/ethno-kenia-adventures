@@ -1665,21 +1665,70 @@
     "duration": "9 Days",
     "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252088/MtKenya2_bya1uu.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of 7-9 Days Mt Kenya Safari Combo. A unique journey through Kenya.",
-    "description": "Join us for a memorable 7-9 Days Mt Kenya Safari Combo. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "This adventure combines high-altitude trekking on Mount Kenya with world-class wildlife safaris in Kenya’s premier conservancies...",
+    "description": "This adventure combines high-altitude trekking on Mount Kenya with world-class wildlife safaris in Kenya’s premier conservancies. The itinerary offers an unforgettable journey that blends mountain climbing, wildlife encounters, cultural experiences, and scenic landscapes into one complete Kenyan adventure. This package is designed for travelers who want both summit achievement and authentic African safari experiences within one trip.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Nairobi – Sirimon Gate – Old Moses Camp",
+        "details": "Habitat: Montane Forest → Moorland Your adventure begins with an early morning departure from Nairobi travelling north through Kenya’s scenic central highlands. Upon arrival at Sirimon Gate, you will meet your mountain trekking crew including guides, porters, and cook. After registration and a safety briefing, the trek begins through dense montane forest with opportunities to spot wildlife such as colobus monkeys, bushbucks, and bird species. The trail gradually transitions into moorland vegetation with beautiful mountain scenery. You will arrive at Old Moses Camp in the afternoon where hot meals and accommodation await.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Old Moses Camp – Shipton Camp",
+        "details": "After breakfast, the trek continues across the scenic Mackinder Valley offering panoramic views of Mount Kenya’s rugged peaks and alpine terrain. You will pass giant lobelia and senecio plants unique to high-altitude environments. The trek is paced slowly to allow proper acclimatization. Lunch is served along the trail before continuing to Shipton Camp, located beneath Mount Kenya’s highest peaks. Upon arrival, trekkers rest and prepare for summit day while guides conduct altitude monitoring and safety briefings.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Summit Point Lenana – Descend to Old Moses Camp",
+        "details": "You will wake around midnight for tea and light snacks before starting the summit climb under the stars. The trail climbs gradually over rocky alpine terrain. You will reach Point Lenana (4,985m) at sunrise. This is Mount Kenya’s trekking summit and offers breathtaking views of glaciers, alpine lakes, and surrounding landscapes. After celebrating and photography, you will descend back through Shipton Camp and continue down to Old Moses Camp for overnight stay.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Old Moses Camp – Sirimon Gate – Transfer to Ol Pejeta Conservancy",
+        "details": "After breakfast, you will descend through forest vegetation to Sirimon Gate where you will meet your safari vehicle. You will transfer to Ol Pejeta Conservancy, arriving in time for lunch and an afternoon game drive. Ol Pejeta is famous for rhino conservation and offers excellent wildlife viewing including lions, elephants, buffalos, giraffes, and zebras. Optional visits include the chimpanzee sanctuary and endangered species conservation centers.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Full Day Safari in Ol Pejeta Conservancy",
+        "details": "Today is dedicated to wildlife exploration within Ol Pejeta Conservancy. Morning and afternoon game drives provide opportunities to spot the Big Five and other wildlife species. The conservancy is known for its successful rhino conservation programs and offers close encounters with endangered black and white rhinos. Between game drives, guests relax at the lodge enjoying scenic views and wildlife around waterholes.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Transfer to Samburu National Reserve",
+        "details": "After breakfast, you will travel north to Samburu National Reserve, known for its unique northern wildlife species and semi-arid landscapes. Upon arrival, lunch is served followed by an afternoon game drive. Samburu is home to rare species including Grevy’s zebra, reticulated giraffe, and Somali ostrich. The reserve offers stunning riverine forest landscapes along the Ewaso Nyiro River.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 7",
+        "title": "Day 7: Safari and Cultural Experience in Samburu",
+        "details": "Today includes morning and afternoon game drives exploring Samburu’s diverse wildlife habitats. Guests will also enjoy optional cultural visits to local Samburu communities to learn about traditional lifestyles, customs, and pastoral heritage. This day offers exceptional wildlife photography opportunities and authentic cultural interactions.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 8",
+        "title": "Day 8: Samburu – Return to Nairobi",
+        "details": "After breakfast, you will depart Samburu and drive back to Nairobi arriving in the afternoon marking the end of your Mount Kenya Trek and Safari adventure.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Park & Conservation Fees",
+      "Professional Mountain & Safari Crew",
+      "Accommodation & Meals",
+      "Transport & Trek Support",
+      "Safety & Emergency Support"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "Travel & Insurance",
+      "Personal Trekking Equipment",
+      "Accommodation outside Itinerary",
+      "Personal Expenses"
     ],
     "country": [
       "Kenya"
@@ -1699,24 +1748,64 @@
     "category": "Day Trips",
     "location": "Kenya",
     "price": 0,
-    "duration": "Flexible",
+    "duration": "3 - 4 hours",
     "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771312437/WhatsApp_Image_2026-02-17_at_9.55.35_AM_jryj5t.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Carnivore Dining Experience. A unique journey through Kenya.",
-    "description": "Join us for a memorable Carnivore Dining Experience. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "Enjoy one of Nairobi’s most iconic culinary adventures at the world-famous Carnivore Restaurant, widely known as “Africa’s Greatest Eating Experience...",
+    "description": "Enjoy one of Nairobi’s most iconic culinary adventures at the world-famous Carnivore Restaurant, widely known as “Africa’s Greatest Eating Experience.” This unforgettable dining experience combines traditional African barbecue, lively atmosphere, and exceptional service, making it a must-visit attraction for visitors to Nairobi.",
+    "itinerary": [
+      {
+        "time": "Pick up",
+        "title": "Hotel Pick-up",
+        "details": "Guests are picked up from their hotel or residence within Nairobi and transferred to Carnivore Restaurant in comfortable transport.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Arrival",
+        "title": "Arrival & Welcome",
+        "details": "Upon arrival, guests are welcomed into the vibrant restaurant setting, designed to reflect traditional African safari dining. Friendly staff guide visitors to their reserved tables and introduce the dining experience",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Carnivore Feast",
+        "title": "The Carnivore Feast",
+        "details": "The dining experience begins with: Freshly prepared soup of the day, Assorted side dishes including salads, vegetables, sauces, and condiments, Selection of freshly baked bread",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Barbecue Experience",
+        "title": "Unlimited Barbecue Experience",
+        "details": "Guests are served a continuous selection of roasted meats including: Beef, Lamb, Pork, Chicken, Turkey, Sausages, Seasonal game meat (subject to availability and regulations). The meats are roasted on traditional Maasai swords over a large charcoal pit and carved directly onto guests’ plates until they signal they are satisfied.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Dessert & Refreshments",
+        "title": "Dessert & Refreshments",
+        "details": "The meal concludes with a selection of desserts and optional tea or coffee. Guests may also enjoy a wide selection of beverages and cocktails available for purchase.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Entertainment & Atmosphere",
+        "title": "The restaurant features lively music, vibrant décor, and a relaxed social environment, making it perfect for couples, families, groups, and corporate visitors.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Return Transfer",
+        "title": "Day 7: Lake Ellis – Chogoria Gate – Nairobi",
+        "details": "After dinner, guests are transferred back to their hotel or preferred drop-off location in Nairobi.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
       "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Reserved table at Carnivore Restaurant",
+      "Full dining experience",
+      "Professional driver/guide"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "Alcoholic and soft drinks",
+      "Personal expenses",
+      "Tips and gratuities"
     ],
     "country": [
       "Kenya"
@@ -1732,7 +1821,7 @@
   {
     "id": 26,
     "slug": "mount-kenya-07-days",
-    "title": "Mount Kenya 07 Days",
+    "title": "Mount Kenya Multi Route Grand Traverse – Detailed Day-to-Day Itinerary",
     "shortTitle": "Mount Kenya 07 Days",
     "category": "Mountain Climbing",
     "location": "Kenya",
@@ -1740,20 +1829,67 @@
     "duration": "07 Days",
     "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252088/MtKenya2_bya1uu.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Mount Kenya 07 Days. A unique journey through Kenya.",
-    "description": "Join us for a memorable Mount Kenya 07 Days. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "Your adventure begins with an early morning departure from Nairobi, driving north through the scenic agricultural highlands towards Mount Kenya National Park...",
+    "description": "Your adventure begins with an early morning departure from Nairobi, driving north through the scenic agricultural highlands towards Mount Kenya National Park. Upon arrival at Burguret Gate, you will meet your full mountain crew including guides, porters, and cook. After registration and briefing, the trek begins through dense tropical rainforest. This section is rich in biodiversity and offers excellent opportunities to spot wildlife such as colobus monkeys, forest elephants, and exotic bird species. The trail is relatively gentle but can be muddy depending  You will arrive at Burguret Forest Camp in the afternoon where your crew will have prepared tents and hot refreshments. The evening is spent relaxing, enjoying dinner, and receiving your first altitude and safety briefing.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Nairobi – Burguret Gate – Burguret Forest Camp",
+        "details": "Your adventure begins with an early morning departure from Nairobi, driving north through the scenic agricultural highlands towards Mount Kenya National Park. Upon arrival at Burguret Gate, you will meet your full mountain crew including guides, porters, and cook. After registration and briefing, the trek begins through dense tropical rainforest. This section is rich in biodiversity and offers excellent opportunities to spot wildlife such as colobus monkeys, forest elephants, and exotic bird species. The trail is relatively gentle but can be muddy depending on weather conditions. You will arrive at Burguret Forest Camp in the afternoon where your crew will have prepared tents and hot refreshments. The evening is spent relaxing, enjoying dinner, and receiving your first altitude and safety briefing.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Burguret Forest Camp – Giant Bamboo Zone Camp",
+        "details": "After breakfast, the trek continues deeper into the mountain transitioning into the Giant Bamboo zone. This area is unique to Mount Kenya and provides a mystical trekking experience with towering bamboo forests surrounding the trail. The route becomes slightly steeper, allowing gradual altitude gain which supports acclimatization. Wildlife sightings remain common here, particularly forest birds and small mammals. You will stop for a picnic lunch along the trail before continuing to Bamboo Zone Camp. Upon arrival, enjoy hot drinks and relaxation while surrounded by pristine wilderness rarely visited by trekkers.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Bamboo Zone – Highland Castle Moorlands",
+        "details": "Today marks your transition from forest to alpine moorland vegetation. The landscape opens dramatically, revealing giant lobelias, senecio plants, and expansive valleys. The trek offers breathtaking views of the mountain’s jagged peaks as you gain elevation steadily. The air becomes cooler and clearer as you approach the Highland Castle area, a spectacular camping location surrounded by rolling moorlands. This day is crucial for acclimatization and guides will maintain a slow, steady trekking pace. After arriving at camp, you will have time to rest and hydrate while enjoying panoramic sunset views.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Highland Castle – Shipton Camp",
+        "details": "After breakfast, the trek continues into the alpine zone where vegetation becomes sparse and rugged glacial valleys dominate the landscape. The route gradually merges with sections of the Sirimon trail as you approach Shipton Camp. Shipton Camp sits beneath the towering peaks of Batian and Nelion, offering one of Mount Kenya’s most spectacular base camp settings. Upon arrival, lunch is served followed by rest and optional short acclimatization walks. Your guides will provide a detailed summit briefing, explaining safety procedures, weather conditions, and summit strategy.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Summit Attempt – Point Lenana – Mintos Camp (Chogoria Route)",
+        "details": "You will wake around midnight for tea and light snacks before beginning the summit ascent under the stars. The trail climbs gradually over rocky terrain and glacial scree slopes. Reaching Point Lenana (4,985m) at sunrise is the highlight of your expedition. From the summit, enjoy breathtaking views across Mount Kenya’s glaciers, lakes, and surrounding plains. On clear days, Mount Kilimanjaro can sometimes be seen in the distance. After photography and celebration, you will descend via the scenic Chogoria route. The descent offers stunning views of the Gorges Valley, Lake Michaelson, and dramatic cliffs. You will arrive at Mintos Camp in the afternoon for rest and overnight stay.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Mintos Camp – Lake Ellis",
+        "details": "Today is a scenic descent through the breathtaking Gorges Valley. The trail offers incredible views of waterfalls, valleys, and alpine lakes. You will descend steadily towards Lake Ellis, one of Mount Kenya’s most picturesque camping locations. The lake is surrounded by rolling hills and provides excellent photography opportunities. The afternoon is relaxed allowing trekkers to recover after summit day. Optional nature walks around the lake can be arranged.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 7",
+        "title": "Day 7: Lake Ellis – Chogoria Gate – Nairobi",
+        "details": "After breakfast, you will complete the final descent through bamboo and rainforest vegetation towards Chogoria Gate. At the park exit, you will receive your Mount Kenya trekking certificate and bid farewell to your mountain crew. Lunch is usually served in Chogoria town before the drive back to Nairobi. You will arrive in Nairobi late afternoon marking the successful completion of your Mount Kenya Grand Traverse adventure",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Park & Conservation Fees",
+      "Professional Mountain Crew",
+      "Accommodation",
+      "Meals & Drinking Water",
+      "Safety & Emergency Support",
+      "Trekking Support Equipment",
+      "Summit Certification",
+      "Transport & Transfers"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
+      "Travel & Insurance",
+      "Personal Equipment",
+      "Accommodation outside Trek",
+      "Personal Expenses",
       "Lunch and drinks"
     ],
     "country": [
@@ -1777,21 +1913,52 @@
     "duration": "Flexible",
     "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905955/DSC_0388_snnmrh.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Mt Kenya Bird Watching. A unique journey through Kenya.",
-    "description": "Join us for a memorable Mt Kenya Bird Watching. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "The Mount Kenya Birding and Nature Expedition is a specialized trekking experience on Mount Kenya designed for nature enthusiasts, bird watchers...",
+    "description": "The Mount Kenya Birding and Nature Expedition is a specialized trekking experience on Mount Kenya designed for nature enthusiasts, bird watchers, conservation travelers, and photographers. This itinerary focuses on exploring the mountain’s unique ecosystems, endemic bird species, and diverse plant biodiversity while still offering an optional summit experience. Trekkers journey through pristine montane forests, bamboo zones, moorlands, and alpine environments while accompanied by experienced birding guides who help identify rare species and explain conservation efforts.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Nairobi – Sirimon Gate – Forest Bird Watching Trek",
+        "details": "Your expedition begins with a morning departure from Nairobi travelling north through Kenya’s fertile agricultural highlands toward Mount Kenya’s northern access point. Upon arrival at Sirimon Gate, you will meet your birding specialist guide, trekking crew, and porters. After registration and orientation, the trek begins through dense montane forest rich in birdlife and biodiversity. The forest hosts numerous bird species including sunbirds, turacos, hornbills, and forest raptors. The guide will conduct frequent bird observation stops, teaching identification techniques and sharing ecological knowledge. The trail gradually opens into moorland vegetation with scenic views of the mountain slopes. Arrival at camp is usually in the afternoon allowing time for relaxed evening bird observation.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Trek to Shipton Camp with Bird Observation Stops",
+        "details": "After breakfast, the trek continues across the scenic Mackinder Valley. The landscape changes dramatically as trekkers move into higher altitude habitats with unique plant species such as giant lobelias and senecios. Bird watching continues throughout the trek with opportunities to observe high-altitude species adapted to moorland and alpine environments. The pace remains moderate allowing frequent observation and photography stops. You will arrive at Shipton Camp in the afternoon, located beneath Mount Kenya’s dramatic peaks. The evening includes bird activity observation and altitude acclimatization.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Alpine Bird Watching and Nature Exploration",
+        "details": "This day focuses on slow-paced alpine exploration and bird observation around Shipton Camp and surrounding valleys. The alpine ecosystem supports specialized bird species that survive in extreme high-altitude conditions. Trekkers participate in guided acclimatization walks to nearby ridges and glacial valleys while learning about high-altitude plant adaptation and fragile mountain ecosystems. This day allows rest and proper acclimatization before the summit attempt while maximizing wildlife and nature observation opportunities.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Summit Attempt – Point Lenana",
+        "details": "You will wake shortly after midnight for tea and snacks before beginning the summit ascent under the stars. The trail climbs gradually across rocky alpine slopes and glacial scree. You will reach Point Lenana at sunrise. The summit offers spectacular panoramic views of glaciers, crater lakes, and surrounding landscapes. Early morning hours also provide rare opportunities to observe high-altitude bird activity. After summit celebrations and photography, trekkers descend back to Shipton Camp for rest and lunch before continuing to lower altitude camp.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Descend to Sirimon Gate – Return to Nairobi",
+        "details": "After breakfast, the descent begins through alpine vegetation into moorland and forest habitats. This section provides final opportunities for bird watching and nature photography.Upon reaching Sirimon Gate, you will meet your transport and drive back to Nairobi arriving in the afternoon or early evening marking the end of the expedition.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Park & Conservation Fees",
+      "Professional Trekking & Birding Crew",
+      "Accommodation & Meals",
+      "Transport & Expedition Support",
+      "Safety & Emergency Support"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "Travel & Insurance",
+      "Personal Trekking Equipment",
+      "Accommodation Outside Expedition",
+      "Personal Expenses"
     ],
     "country": [
       "Kenya"
@@ -1806,32 +1973,74 @@
   {
     "id": 28,
     "slug": "private-safari",
-    "title": "Private Safari",
-    "shortTitle": "Private Safari",
+    "title": "Private Safari: Amboseli, Tsavo West & Tsavo East",
+    "shortTitle": "6 Days Kenya Southern Circuit Wildlife Safari",
     "category": "Multi-Day Safaris",
     "location": "Kenya",
     "price": 0,
-    "duration": "Flexible",
+    "duration": "6 Days",
     "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134453/1001261634_gizz04.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Private Safari. A unique journey through Kenya.",
-    "description": "Join us for a memorable Private Safari. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "Explore Kenya’s famous southern safari circuit on this private guided wildlife safari visiting Amboseli National Park, Tsavo West National Park, and Tsavo East National Park...",
+    "description": "Explore Kenya’s famous southern safari circuit on this private guided wildlife safari visiting Amboseli National Park, Tsavo West National Park, and Tsavo East National Park. This itinerary combines breathtaking scenery, diverse wildlife habitats, and Kenya’s largest protected wilderness areas. Travel in a private 4x4 safari Land Cruiser with an experienced driver guide, allowing flexibility, comfort, and personalized wildlife viewing. This safari offers a balanced combination of mountain views, volcanic landscapes, rivers, and vast savannah plains.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Nairobi – Amboseli National Park",
+        "details": "Depart Nairobi in the morning and drive south toward Amboseli National Park via the Nairobi–Mombasa highway. The journey takes approximately 4 to 5 hours and passes through rural towns and Maasai pastoral lands. Arrive at Amboseli in time for lunch at your lodge or camp followed by an afternoon game drive. Amboseli is one of Kenya’s most scenic parks and is famous for its large elephant herds and open plains with spectacular views of Mount Kilimanjaro. Wildlife commonly seen includes: Elephants, Lions and hyenas, Zebras and wildebeests, Giraffes and antelopes, Various bird species Return to your lodge or camp for dinner and overnight stay.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Full Day Amboseli National Park",
+        "details": "Spend the entire day exploring Amboseli National Park with morning and afternoon game drives. Amboseli’s permanent water swamps attract wildlife throughout the year, making it one of the best parks in Kenya for consistent wildlife viewing. Safari Experiences, Observation of elephant families in natural habitat, Views of Mount Kilimanjaro (weather permitting), Visits to swamp areas rich in wildlife and birdlife, Predator tracking opportunities, Scenic photography of open plains. Lunch will be served at the lodge or as a picnic inside the park depending on wildlife activity. Return to your accommodation in the evening.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Amboseli – Tsavo West National Park",
+        "details": "After breakfast, depart Amboseli and drive to Tsavo West National Park. The journey offers scenic views of volcanic hills and lava flows. Arrive at Tsavo West in time for lunch followed by an afternoon game drive. Tsavo West Highlights: Tsavo West features rugged landscapes, volcanic terrain, and natural springs making it one of Kenya’s most diverse parks. Safari activities include visiting:Mzima Springs – A natural freshwater oasis inhabited by hippos and crocodiles, Shetani Lava Flows – Vast volcanic formations. Rhino Sanctuary (subject to park regulations). Wildlife commonly found includes elephants, buffalo, leopards, and various antelope species.Return to the lodge or camp in the evening.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Tsavo West – Tsavo East National Park",
+        "details": "After breakfast, enjoy a morning game drive in Tsavo West before departing for Tsavo East National Park via the Tsavo River Gate. Tsavo East is Kenya’s largest national park and is known for its open savannah landscapes and large elephant populations. Arrive in time for lunch followed by an afternoon game drive. Tsavo East Highlights, Red-dust elephants unique to the Tsavo ecosystem, Aruba Dam wildlife viewing area, Galana River ecosystem, Open plains ideal for wildlife spotting. Wildlife commonly seen includes lions, elephants, giraffes, zebras, and buffalo.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Full Day Tsavo East National Park",
+        "details": "After breakfast, the descent begins through alpine vegetation into moorland and forest habitats. This section provides final opportunities for bird watching and nature photography.Upon reaching Sirimon Gate, you will meet your transport and drive back to Nairobi arriving in the afternoon or early evening marking the end of the expedition.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Tsavo East – Nairobi",
+        "details": "After breakfast, enjoy a short morning game drive before departing Tsavo East and returning to Nairobi. Arrive in Nairobi in the afternoon with drop-off at your hotel or airport.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Airport or hotel transfers",
+      "Private safari vehicle and guide",
+      "Accommodation as specified",
+      "Meals as indicated",
+      "Park entry fees",
+      "Game drives as per itinerary",
+      "Drinking water during safari"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses and tips"
     ],
     "country": [
-      "Kenya"
+      "Kenya",
+      "Tanzania"
     ],
     "countryCode": "KE",
     "type": "Wildlife",
@@ -1850,9 +2059,45 @@
     "duration": "Flexible",
     "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903550/DSC_0585_xnv3ng.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Samburu. A unique journey through Kenya.",
-    "description": "Join us for a memorable Samburu. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "Depart Nairobi after breakfast and drive north through the scenic central highlands, passing ...",
+    "description": "Depart Nairobi after breakfast and drive north through the scenic central highlands, passing Mount Kenya and crossing the equator. Enjoy beautiful views of changing landscapes as you head into Kenya’s semi-arid northern frontier.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Samburu National Reserve",
+        "details": "Depart Nairobi after breakfast and drive north through the scenic central highlands, passing Mount Kenya and crossing the equator. Enjoy beautiful views of changing landscapes as you head into Kenya’s semi-arid northern frontier. Arrive in Samburu in time for lunch at your lodge or camp, followed by some relaxation. In the afternoon, enjoy your first game drive in Samburu National Reserve, known for its rugged beauty and rare wildlife including Grevy’s zebra, reticulated giraffe, Somali ostrich, Beisa oryx, and gerenuk. Return to the lodge at sunset for dinner and overnight stay."
+      },
+      {
+        "day": 2,
+        "title": "Full Day in Samburu National Reserve",
+        "details": "Spend the day exploring Samburu with morning and afternoon game drives. The Ewaso Nyiro River attracts a wide variety of wildlife including elephants, lions, leopards, and crocodiles, as well as numerous bird species unique to northern Kenya. An optional cultural visit to a Samburu village can be arranged to experience local traditions, music, and lifestyle. Return to your lodge for dinner and overnight."
+      },
+      {
+        "day": 3,
+        "title": "Samburu – Ol Pejeta Conservancy",
+        "details": "After breakfast, depart for Ol Pejeta Conservancy, located between the foothills of Mount Kenya and the Aberdare Ranges. Arrive in time for lunch at your camp or lodge. In the afternoon, enjoy a game drive in this renowned private conservancy, home to the last two remaining northern white rhinos, large populations of black and southern white rhinos, the only chimpanzee sanctuary in Kenya, and abundant Big Five wildlife. Return to the lodge for dinner and overnight."
+      },
+      {
+        "day": 4,
+        "title": "Full Day in Ol Pejeta Conservancy",
+        "details": "Spend the day exploring Ol Pejeta with morning and afternoon game drives. Optional activities include visiting the Rhino Sanctuary, guided bush walks, night game drives where permitted, and a visit to the Sweetwaters Chimpanzee Sanctuary. The conservancy offers excellent wildlife viewing combined with strong conservation experiences. Dinner and overnight at your lodge."
+      },
+      {
+        "day": 5,
+        "title": "Ol Pejeta – Meru National Park",
+        "details": "After breakfast, depart for Meru National Park, one of Kenya’s most diverse and less crowded safari destinations. Arrive in time for lunch at your lodge or camp. Later, enjoy an afternoon game drive through Meru’s lush landscapes of rivers, swamps, grasslands, and acacia forests. Meru is famous as the setting of the story of Elsa the Lioness from Born Free and is home to elephants, lions, cheetahs, buffalo, and abundant birdlife. Dinner and overnight at your lodge."
+      },
+      {
+        "day": 6,
+        "title": "Full Day in Meru National Park",
+        "details": "Enjoy a full day of exploration in Meru National Park with morning and afternoon game drives. Highlights include the Rhino Sanctuary, Adamson Falls, Tana River ecosystems, and diverse wildlife and bird species. Meru offers a quieter and more exclusive safari experience with spectacular scenery and excellent photography opportunities. Return to your lodge for dinner and overnight."
+      },
+      {
+        "day": 7,
+        "title": "Meru – Nairobi",
+        "details": "After breakfast, depart Meru and drive back to Nairobi with scenic stops along the way. Arrive in Nairobi in the afternoon with drop-off at your hotel or at the airport for onward travel."
+      }
+    ],
     "includes": [
       "Hotel pick-up and drop-off within Nairobi",
       "Professional driver/guide",
