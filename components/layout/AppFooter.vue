@@ -118,34 +118,28 @@
           </h4>
           <nav class="space-y-2">
             <a
-              href="#"
+              href="/safari-packages/masai-mara-group-tour-3-days"
               class="block text-brand-off-white/80 hover:text-brand-terracotta transition-colors duration-300 font-sans text-sm"
             >
               Maasai Mara Explorer
             </a>
             <a
-              href="#"
+              href="/safari-packages/3-days-amboseli-national-park-safari"
               class="block text-brand-off-white/80 hover:text-brand-terracotta transition-colors duration-300 font-sans text-sm"
             >
               Amboseli Luxury
             </a>
             <a
-              href="#"
+              href="/safari-packages/samburu"
               class="block text-brand-off-white/80 hover:text-brand-terracotta transition-colors duration-300 font-sans text-sm"
             >
               Samburu Adventure
             </a>
             <a
-              href="#"
+              href="/safari-packages/mt-kenya-bird-watching"
               class="block text-brand-off-white/80 hover:text-brand-terracotta transition-colors duration-300 font-sans text-sm"
             >
               Conservation Experience
-            </a>
-            <a
-              href="#"
-              class="block text-brand-off-white/80 hover:text-brand-terracotta transition-colors duration-300 font-sans text-sm"
-            >
-              Custom Safaris
             </a>
           </nav>
         </div>

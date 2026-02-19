@@ -2119,5 +2119,705 @@
     "tags": [
       "Multi-Day"
     ]
+  },
+  {
+  "id": 30,
+  "slug": "masai-mara-group-tour-3-days",
+  "title": "03 Days Masai Mara Group Tour",
+  "shortTitle": "Masai Mara Group Tour",
+  "category": "Multi-Day Safaris",
+  "location": "Kenya",
+  "price": 0,
+  "duration": "3 Days",
+  "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977750/DSC_1020_tgnj14.jpg",
+  "gallery": [],
+  "snippet": "Enjoy a 3-day group safari to Masai Mara with exciting game drives, scenic views, and rich wildlife experiences.",
+  "description": "This 3 Days Masai Mara Group Tour offers an unforgettable safari experience through Kenya’s most famous wildlife reserve. Travel in a 4x4 Land Cruiser, enjoy guided game drives, full-board accommodation, and opportunities to spot the Big Five while exploring the vast savannahs of Masai Mara.",
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Nairobi – Masai Mara National Reserve",
+      "details": "Pick up from Nairobi in the morning and depart for Masai Mara National Reserve via the Great Rift Valley with a brief stop for photos. Arrive in Masai Mara in time for lunch at the camp. After lunch and a short rest, proceed for an afternoon game drive with chances to spot lions, elephants, giraffes, buffaloes, and various bird species. Return to the camp for dinner and overnight."
+    },
+    {
+      "day": 2,
+      "title": "Masai Mara Full Day Game Drive",
+      "details": "After an early breakfast, depart for a full-day game drive in Masai Mara National Reserve with packed lunch. Explore the vast savannahs and riverbanks, home to the Big Five and other wildlife. Visit the Mara River, famous for the seasonal wildebeest migration. Enjoy a picnic lunch in the park before continuing game viewing until late afternoon. Return to the camp for dinner and overnight."
+    },
+    {
+      "day": 3,
+      "title": "Masai Mara – Nairobi",
+      "details": "Enjoy an early morning breakfast at the camp. Check out and depart Masai Mara for Nairobi. An optional Maasai village visit can be arranged to experience local culture, traditional dances, and daily life. Arrive in Nairobi in the afternoon and be dropped off at your hotel or designated drop-off point, marking the end of the safari."
+    }
+  ],
+  "includes": [
+    "Transport in a 4x4 Land Cruiser (group tour)",
+    "Park entry fees to Masai Mara National Reserve",
+    "Accommodation on full board basis",
+    "All meals as per itinerary",
+    "Professional English-speaking driver-guide",
+    "Game drives as per itinerary",
+    "1 litre of drinking water per person per day"
+  ],
+  "excludes": [
+    "International and domestic flights",
+    "Visa fees and travel insurance",
+    "Drinks and beverages not mentioned",
+    "Personal expenses (laundry, telephone calls, tips)",
+    "Optional activities such as Maasai village visit",
+    "Anything not mentioned under ‘Tour Includes’"
+  ],
+  "country": [
+    "Kenya"
+  ],
+  "countryCode": "KE",
+  "type": "Wildlife",
+  "tags": [
+    "Multi-Day",
+    "Group Tour"
+  ]
+  },
+  {
+    "id": 31,
+    "slug": "masai-mara-lake-nakuru-4-days-budget-group-tour",
+    "title": "04 Days Masai Mara & Lake Nakuru Budget Group Tour",
+    "shortTitle": "Masai Mara & Nakuru Group Tour",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "4 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977470/DSC_0003_lnwosq.jpg",
+    "gallery": [],
+    "snippet": "A budget-friendly 4-day group safari combining Masai Mara and Lake Nakuru for excellent wildlife viewing and cultural experiences.",
+    "description": "This 4 Days Masai Mara & Lake Nakuru Budget Group Tour combines Kenya’s most iconic wildlife destinations with comfortable budget accommodation. Enjoy guided game drives, cultural interaction at a Maasai village, and outstanding wildlife viewing including the Big Five, rhinos, flamingos, and diverse birdlife.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Masai Mara National Reserve",
+        "details": "Pick up from Nairobi in the morning and depart for Masai Mara National Reserve via the Great Rift Valley, with a brief scenic stop en route. Arrive at the camp in time for lunch and check-in. In the afternoon, enjoy a game drive in the reserve with opportunities to spot lions, elephants, giraffes, zebras, antelopes, and other wildlife. Return to the camp for dinner and overnight."
+      },
+      {
+        "day": 2,
+        "title": "Masai Mara Full Day Game Drive",
+        "details": "After an early breakfast, depart for a full-day game drive in Masai Mara National Reserve with a picnic lunch. Explore the vast plains and riverbanks, home to the Big Five and abundant wildlife. Visit the Mara River, famous for the seasonal wildebeest migration, and enjoy lunch at a designated picnic site inside the park. Continue game viewing until late afternoon before returning to the camp for dinner and overnight."
+      },
+      {
+        "day": 3,
+        "title": "Masai Mara – Lake Nakuru (Maasai Village Visit)",
+        "details": "After breakfast, check out and depart Masai Mara for the Lake Nakuru area. En route, visit a traditional Maasai village to learn about Maasai culture, customs, and daily life. Continue to Nakuru and arrive at the resort in the afternoon. Spend the rest of the day at leisure. Dinner and overnight at the resort."
+      },
+      {
+        "day": 4,
+        "title": "Lake Nakuru – Nairobi (Morning Game Drive)",
+        "details": "After an early breakfast, proceed for a morning game drive in Lake Nakuru National Park, known for seasonal flamingos, rhinos, Rothschild giraffes, and rich birdlife. Later, exit the park and drive back to Nairobi, arriving in the afternoon. Drop off at your hotel or designated point, marking the end of the safari."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle (budget group tour)",
+      "Park entry fees to Masai Mara and Lake Nakuru National Parks",
+      "Accommodation in budget camps and resort on full board basis",
+      "All meals as per itinerary",
+      "Professional English-speaking driver-guide",
+      "Game drives as per itinerary",
+      "Picnic lunch on full-day game drive",
+      "1 litre of drinking water per person per day"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees and travel insurance",
+      "Drinks and beverages",
+      "Personal expenses (tips, laundry, phone calls)",
+      "Optional activities not mentioned",
+      "Anything not mentioned under ‘Tour Includes’"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Group Tour",
+      "Budget"
+    ]
+  },
+  {
+    "id": 32,
+    "slug": "12-days-tanzania-northern-circuit-zanzibar-holiday",
+    "title": "12 Days Tanzania Northern Circuit Safari & Zanzibar Beach Holiday",
+    "shortTitle": "Tanzania Safari & Zanzibar",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "12 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905963/DSC_0487_xrue8t.jpg",
+    "gallery": [],
+    "snippet": "A 12-day journey combining Tanzania’s Northern Safari Circuit with a relaxing Zanzibar beach holiday.",
+    "description": "This 12-day Tanzania safari and beach holiday blends exceptional wildlife viewing across the Northern Circuit—Tarangire, Lake Manyara, Serengeti, and Ngorongoro Crater—with a tranquil beach escape in Zanzibar. Enjoy expertly guided game drives, comfortable lodges and camps, and idyllic Indian Ocean beaches.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Arusha",
+        "details": "Upon arrival at Kilimanjaro International Airport, meet your safari representative and transfer to your hotel in Arusha. Spend the rest of the day at leisure. Dinner and overnight at your Arusha lodge or hotel."
+      },
+      {
+        "day": 2,
+        "title": "Arusha – Tarangire National Park",
+        "details": "After breakfast, depart for Tarangire National Park, renowned for large elephant herds and iconic baobab trees. Enjoy a game drive with sightings of elephants, lions, leopards, giraffes, zebras, wildebeests, and abundant birdlife. Dinner and overnight at a lodge or tented camp in Tarangire."
+      },
+      {
+        "day": 3,
+        "title": "Tarangire – Lake Manyara National Park",
+        "details": "After breakfast, drive to Lake Manyara National Park. Enjoy a game drive through forests, plains, and along the alkaline lake known for flamingos. The park is famous for tree-climbing lions and large elephant populations. Dinner and overnight near Lake Manyara."
+      },
+      {
+        "day": 4,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "Depart after breakfast for Serengeti National Park via the Ngorongoro Conservation Area. Enjoy scenic landscapes and wildlife en route. Arrive for lunch followed by an afternoon game drive across the vast Serengeti plains. Dinner and overnight in Serengeti."
+      },
+      {
+        "day": 5,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Spend a full day on morning and afternoon game drives in Serengeti, famous for predators and vast herbivore herds. Migration sightings are possible depending on the season. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 6,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Enjoy another full day exploring different regions of Serengeti for extended wildlife viewing. Optional hot air balloon safari available at extra cost, followed by a bush breakfast. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 7,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive before departing Serengeti with game viewing en route to Ngorongoro Conservation Area. Arrive late afternoon and check in near the crater rim. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 8,
+        "title": "Ngorongoro Crater Tour – Arusha",
+        "details": "After an early breakfast, descend into the Ngorongoro Crater for a half-day game drive featuring dense wildlife including lions, elephants, buffaloes, black rhinos, zebras, and flamingos. Enjoy a picnic lunch before ascending and returning to Arusha for overnight."
+      },
+      {
+        "day": 9,
+        "title": "Arusha – Zanzibar",
+        "details": "After breakfast, transfer to the airport for a domestic flight to Zanzibar. Upon arrival, transfer to your beach resort and relax by the Indian Ocean. Dinner and overnight at the resort."
+      },
+      {
+        "day": 10,
+        "title": "Zanzibar – Beach Relaxation",
+        "details": "Day at leisure enjoying white sandy beaches, turquoise waters, and resort facilities. Optional activities include snorkeling, diving, dolphin tours, or spice farm visits. Dinner and overnight at your beach resort."
+      },
+      {
+        "day": 11,
+        "title": "Zanzibar – Stone Town & Cultural Tour",
+        "details": "After breakfast, enjoy a guided tour of Stone Town, a UNESCO World Heritage Site, exploring historic buildings, markets, and cultural landmarks. Optional spice farm visit available. Return to the resort for relaxation. Dinner and overnight at your beach resort."
+      },
+      {
+        "day": 12,
+        "title": "Zanzibar – Departure",
+        "details": "After breakfast, enjoy free time at the resort before transfer to Zanzibar International Airport for your onward flight, marking the end of the safari and beach holiday."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in lodges, tented camps, and Zanzibar beach resort",
+      "Meals on full board basis during safari",
+      "Half board or all-inclusive meal plan in Zanzibar (depending on resort)",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Domestic flight from Arusha to Zanzibar",
+      "Airport and hotel transfers",
+      "Bottled drinking water during safari"
+    ],
+    "excludes": [
+      "International flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities (hot air balloon safari, snorkeling, diving, spice tours, etc.)",
+      "Alcoholic and soft drinks unless stated in Zanzibar package",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife & Beach",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Beach Holiday"
+    ]
+  },
+  {
+    "id": 33,
+    "slug": "8-days-masai-mara-nakuru-naivasha-amboseli-safari",
+    "title": "8 Days Masai Mara, Lake Nakuru, Lake Naivasha & Amboseli Safari",
+    "shortTitle": "Kenya Highlights Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "8 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134159/1001261572_od07z2.jpg",
+    "gallery": [],
+    "snippet": "An extended 8-day Kenya safari covering Masai Mara, Lake Nakuru, Lake Naivasha, and Amboseli with excellent game viewing and scenic highlights.",
+    "description": "This 8-day safari offers an in-depth exploration of Kenya’s premier wildlife destinations. Enjoy three nights in Masai Mara, discover rhinos and birdlife at Lake Nakuru, relax around Lake Naivasha, and experience Amboseli’s iconic elephant herds with views of Mount Kilimanjaro, all while traveling in a comfortable 4x4 Land Cruiser.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Masai Mara National Reserve",
+        "details": "Early morning pick-up from your Nairobi hotel or airport followed by a scenic drive to Masai Mara via the Great Rift Valley viewpoint. Arrive in time for lunch and relaxation. Enjoy an afternoon game drive in Masai Mara. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Masai Mara – Full Day Game Drive",
+        "details": "After breakfast, depart with picnic lunch boxes for a full day of game drives in Masai Mara. Spot lions, elephants, cheetahs, giraffes, zebras, hyenas, and antelopes. Visit the Mara River area during migration season. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 3,
+        "title": "Masai Mara – Full Day Game Drive",
+        "details": "Spend another full day exploring different sections of Masai Mara for a relaxed and in-depth wildlife experience. Enjoy a picnic lunch inside the reserve before continuing game drives. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 4,
+        "title": "Masai Mara – Lake Nakuru (Optional Maasai Village & Lake Naivasha Boat Ride)",
+        "details": "After breakfast, depart Masai Mara for Lake Nakuru. Optional visit to a Maasai village and an optional stop at Lake Naivasha for a boat ride. Continue to Lake Nakuru, arriving in the evening. Dinner and overnight at your lodge or resort."
+      },
+      {
+        "day": 5,
+        "title": "Lake Nakuru – Lake Naivasha",
+        "details": "Enjoy an early morning game drive in Lake Nakuru National Park, known for rhinos, flamingos (seasonal), Rothschild giraffes, and birdlife. Later depart for Lake Naivasha, arriving in time for lunch. Afternoon at leisure with optional activities. Dinner and overnight at your Naivasha lodge."
+      },
+      {
+        "day": 6,
+        "title": "Lake Naivasha – Amboseli National Park (Hell’s Gate Visit)",
+        "details": "After breakfast, visit Hell’s Gate National Park for a morning game viewing experience on foot or by bicycle. Later depart for Amboseli National Park with lunch en route. Arrive in the evening, check in, and enjoy dinner and overnight."
+      },
+      {
+        "day": 7,
+        "title": "Amboseli – Full Day Game Drive",
+        "details": "Spend a full day exploring Amboseli National Park with morning and afternoon game drives and picnic lunch. Enjoy sightings of large elephant herds and views of Mount Kilimanjaro, weather permitting. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 8,
+        "title": "Amboseli – Nairobi (En-route Game Drive)",
+        "details": "Early morning game drive in Amboseli followed by breakfast. Depart for Nairobi, arriving in the afternoon for drop-off at your hotel or Jomo Kenyatta International Airport, marking the end of the safari."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 Land Cruiser safari vehicle with pop-up roof",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or camps",
+      "Meals on full board basis during safari",
+      "Park entrance fees for all parks mentioned",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Nairobi"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities (Maasai village visit, Lake Naivasha boat ride, cycling at Hell’s Gate, etc.)",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Extended"
+    ]
+  },
+  {
+    "id": 34,
+    "slug": "3-days-serengeti-ngorongoro-crater-safari",
+    "title": "3 Days Serengeti & Ngorongoro Crater Tanzania Safari",
+    "shortTitle": "Serengeti & Ngorongoro Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134230/1001261597_u2ysrq.jpg",
+    "gallery": [],
+    "snippet": "A short but rewarding 3-day safari exploring Serengeti National Park and the Ngorongoro Crater with exceptional wildlife viewing.",
+    "description": "This 3-day Tanzania safari explores two of the country’s most iconic wildlife destinations—Serengeti National Park and the Ngorongoro Crater. Enjoy breathtaking landscapes, excellent game viewing opportunities, and comfortable accommodation in lodges or tented camps.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arusha – Serengeti National Park",
+        "details": "Early morning pick-up from Arusha followed by a scenic drive through the Ngorongoro Conservation Area to Serengeti National Park. Arrive in time for lunch at your lodge or camp. In the afternoon, enjoy your first game drive across the Serengeti plains, home to lions, elephants, leopards, cheetahs, giraffes, zebras, and antelopes. Dinner and overnight at a lodge or tented camp in Serengeti."
+      },
+      {
+        "day": 2,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive in Serengeti exploring different sections of the park. During migration season, you may witness the wildebeest migration depending on animal movements. After lunch, depart Serengeti and drive toward the Ngorongoro Conservation Area with game viewing en route. Arrive in the late afternoon and check in at your lodge or camp near the crater rim. Dinner and overnight in Ngorongoro."
+      },
+      {
+        "day": 3,
+        "title": "Ngorongoro Crater – Arusha",
+        "details": "After early breakfast, descend into the Ngorongoro Crater for a half-day game drive. The crater hosts one of the highest wildlife concentrations in Africa, including lions, elephants, buffaloes, rhinos, zebras, wildebeests, and flamingos. Enjoy a picnic lunch before ascending and driving back to Arusha. Arrive in the late afternoon for drop-off at your hotel or airport."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or tented camps",
+      "Meals on full board basis during safari",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Arusha"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Short Safari"
+    ]
+  },
+  {
+    "id": 35,
+    "slug": "4-days-lake-manyara-serengeti-ngorongoro-safari",
+    "title": "04 Days Lake Manyara, Serengeti & Ngorongoro Crater Tanzania Safari",
+    "shortTitle": "Manyara, Serengeti & Ngorongoro",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "4 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134159/1001261576_fixnrt.jpg",
+    "gallery": [],
+    "snippet": "A 4-day Northern Tanzania safari covering Lake Manyara, Serengeti National Park, and the iconic Ngorongoro Crater.",
+    "description": "This 4-day Tanzania safari delivers an exceptional wildlife experience across three of Northern Tanzania’s most celebrated parks—Lake Manyara, Serengeti National Park, and the Ngorongoro Crater. Enjoy diverse landscapes, abundant wildlife, and comfortable accommodation in carefully selected lodges or tented camps.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arusha – Lake Manyara National Park",
+        "details": "Morning pick-up from your Arusha hotel followed by a short drive to Lake Manyara National Park. Enjoy a game drive through forests, woodlands, and along the alkaline lake famous for flamingos and birdlife. Spot tree-climbing lions, elephants, giraffes, zebras, hippos, and more. Picnic lunch inside the park. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "After breakfast, depart for Serengeti National Park via the Ngorongoro Conservation Area, enjoying scenic landscapes and wildlife en route. Arrive in time for lunch. Afternoon game drive across the Serengeti plains, home to lions, cheetahs, leopards, elephants, giraffes, zebras, and antelopes. Dinner and overnight in Serengeti."
+      },
+      {
+        "day": 3,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive in Serengeti. During migration season, wildebeest migration sightings may be possible depending on animal movements. After lunch, depart for Ngorongoro Conservation Area with game viewing en route. Arrive late afternoon and check in near the crater rim. Dinner and overnight in Ngorongoro."
+      },
+      {
+        "day": 4,
+        "title": "Ngorongoro Crater – Arusha",
+        "details": "Early breakfast followed by a descent into the Ngorongoro Crater for a half-day game drive. The crater hosts dense wildlife populations including lions, elephants, buffaloes, black rhinos, zebras, wildebeests, hyenas, and flamingos. Enjoy a picnic lunch before ascending and driving back to Arusha. Arrive late afternoon for hotel or airport drop-off."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or tented camps",
+      "Meals on full board basis during safari",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Arusha"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Northern Circuit"
+    ]
+  },
+  {
+    "id": 36,
+    "slug": "5-days-lake-manyara-serengeti-ngorongoro-safari",
+    "title": "5 Days Lake Manyara, Serengeti & Ngorongoro Crater Tanzania Safari",
+    "shortTitle": "Manyara, Serengeti & Ngorongoro",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "5 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977514/DSC_0949_m9leo1.jpg",
+    "gallery": [],
+    "snippet": "A 5-day Northern Tanzania safari featuring Lake Manyara, two nights in Serengeti for extended game viewing, and the iconic Ngorongoro Crater.",
+    "description": "This 5-day Tanzania safari explores the highlights of the Northern Safari Circuit, combining Lake Manyara’s diverse habitats, extended wildlife viewing in the Serengeti with two nights, and the spectacular Ngorongoro Crater. Enjoy abundant wildlife, varied landscapes, and comfortable lodges or tented camps.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arusha – Lake Manyara National Park",
+        "details": "Morning pick-up from your hotel or airport in Arusha followed by a drive to Lake Manyara National Park. Enjoy a game drive through groundwater forests, acacia woodlands, and along the alkaline lake known for flamingos and birdlife. Spot tree-climbing lions, elephants, giraffes, zebras, and hippos. Picnic lunch inside the park. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "After breakfast, depart for Serengeti National Park via the Ngorongoro Conservation Area, enjoying scenic landscapes and wildlife en route. Arrive in time for lunch. Afternoon game drive across the Serengeti plains with chances to see lions, cheetahs, leopards, elephants, giraffes, zebras, and antelopes. Dinner and overnight in Serengeti."
+      },
+      {
+        "day": 3,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Spend the full day exploring Serengeti National Park with picnic lunches. Enjoy extensive game viewing across different regions of the park. During migration season, you may witness the wildebeest migration depending on animal movements. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 4,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive in Serengeti. After lunch, depart for Ngorongoro Conservation Area with game viewing en route. Arrive late afternoon and check in near the crater rim. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 5,
+        "title": "Ngorongoro Crater – Arusha",
+        "details": "Early breakfast followed by a descent into the Ngorongoro Crater for a half-day game drive. The crater hosts dense wildlife populations including lions, elephants, buffaloes, black rhinos, zebras, wildebeests, and flamingos. Picnic lunch inside the crater before ascending and driving back to Arusha. Arrive late afternoon for hotel or airport drop-off."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or tented camps",
+      "Meals on full board basis during safari",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Arusha"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Northern Circuit"
+    ]
+  },
+  {
+    "id": 37,
+    "slug": "9-days-tanzania-northern-circuit-safari",
+    "title": "9 Days Tanzania Northern Circuit Safari",
+    "shortTitle": "Tanzania Northern Circuit",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "9 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977496/DSC_0880_z04093.jpg",
+    "gallery": [],
+    "snippet": "An in-depth 9-day Northern Circuit safari covering Tarangire, Lake Manyara, Serengeti, and Ngorongoro Crater with extended wildlife viewing.",
+    "description": "This extended Northern Circuit safari offers a comprehensive exploration of Tanzania’s top wildlife destinations. Visit Tarangire National Park, Lake Manyara National Park, spend multiple days in Serengeti National Park, and explore the iconic Ngorongoro Crater while enjoying carefully selected lodges or tented camps.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Arusha",
+        "details": "Arrival at Kilimanjaro International Airport where you will be met by your safari representative and transferred to your hotel in Arusha. Rest and relax in preparation for your safari. Dinner and overnight stay at your Arusha lodge or hotel."
+      },
+      {
+        "day": 2,
+        "title": "Arusha – Tarangire National Park",
+        "details": "After breakfast, depart for Tarangire National Park, famous for its large elephant herds and baobab trees. Enjoy a game drive with chances to see elephants, lions, leopards, giraffes, zebras, wildebeests, and rich birdlife along the Tarangire River. Dinner and overnight at a lodge or tented camp in Tarangire."
+      },
+      {
+        "day": 3,
+        "title": "Tarangire – Lake Manyara National Park",
+        "details": "After breakfast, drive to Lake Manyara National Park. Enjoy a game drive through forests, open plains, and along the alkaline lake known for flamingos. Wildlife includes tree-climbing lions, elephants, hippos, and giraffes. Picnic lunch inside the park. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 4,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "After breakfast, depart for Serengeti National Park via the Ngorongoro Conservation Area. Enjoy scenic landscapes and wildlife en route. Arrive in time for lunch followed by an afternoon game drive in the Serengeti plains. Dinner and overnight at a lodge or tented camp in Serengeti."
+      },
+      {
+        "day": 5,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Full day of game drives in Serengeti National Park with morning and afternoon sessions. The park is known for its predators and large herbivore herds. During migration season, you may witness the wildebeest migration depending on animal movements. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 6,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Another full day exploring different regions of Serengeti for extensive wildlife viewing. Optional early morning hot air balloon safari available at extra cost. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 7,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive in Serengeti before departing for Ngorongoro Conservation Area with game viewing en route. Arrive late afternoon and check in near the crater rim. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 8,
+        "title": "Ngorongoro Crater Tour",
+        "details": "Early breakfast followed by a descent into the Ngorongoro Crater for a half-day game drive. The crater hosts dense wildlife populations including lions, elephants, buffaloes, black rhinos, zebras, wildebeests, hyenas, and flamingos. Picnic lunch inside the crater. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 9,
+        "title": "Ngorongoro – Arusha / Departure",
+        "details": "After breakfast, drive back to Arusha enjoying scenic views along the way. Drop-off at your hotel or Kilimanjaro International Airport for your onward journey."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or tented camps",
+      "Meals on full board basis during safari",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Airport transfers"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities (hot air balloon safari, cultural visits, etc.)",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Northern Circuit"
+    ]
+  },
+  {
+    "id": 38,
+    "slug": "12-days-tanzania-northern-circuit-safari-zanzibar-beach-holiday",
+    "title": "12 Days Tanzania Northern Circuit Safari & Zanzibar Beach Holiday",
+    "shortTitle": "Tanzania Safari & Zanzibar",
+    "category": "International",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "12 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771492839/zanzibar_u0i46k.jpg",
+    "gallery": [],
+    "snippet": "A perfect 12-day combination of Tanzania’s Northern Safari Circuit and a relaxing Zanzibar beach holiday, blending wildlife adventure with tropical leisure.",
+    "description": "This 12-day itinerary combines Tanzania’s top wildlife destinations—Tarangire, Lake Manyara, Serengeti, and Ngorongoro Crater—with a relaxing beach escape in Zanzibar. Enjoy unforgettable game drives, rich cultural experiences, and tranquil Indian Ocean beaches while staying in carefully selected lodges, tented camps, and beach resorts.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Arusha",
+        "details": "Arrival at Kilimanjaro International Airport, meet and greet by your safari representative, and transfer to your hotel in Arusha. Rest and prepare for your safari adventure. Dinner and overnight stay at your Arusha lodge or hotel."
+      },
+      {
+        "day": 2,
+        "title": "Arusha – Tarangire National Park",
+        "details": "After breakfast, drive to Tarangire National Park, famous for large elephant herds and baobab trees. Enjoy a game drive spotting elephants, lions, leopards, giraffes, zebras, wildebeests, and diverse birdlife along the Tarangire River. Dinner and overnight at a lodge or tented camp in Tarangire."
+      },
+      {
+        "day": 3,
+        "title": "Tarangire – Lake Manyara National Park",
+        "details": "After breakfast, depart for Lake Manyara National Park. Enjoy a game drive through forests, open plains, and along the alkaline lake known for flamingos. Wildlife includes tree-climbing lions and large elephant populations. Dinner and overnight at a lodge or camp near Lake Manyara."
+      },
+      {
+        "day": 4,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "After breakfast, depart for Serengeti National Park via the Ngorongoro Conservation Area. Enjoy scenic landscapes and wildlife sightings en route. Arrive for lunch followed by an afternoon game drive across the Serengeti plains. Dinner and overnight at a lodge or tented camp in Serengeti."
+      },
+      {
+        "day": 5,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Full day of game drives in Serengeti National Park with morning and afternoon sessions. The park is renowned for its predators and vast herds of herbivores. During migration season, you may witness the wildebeest migration depending on animal movements. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 6,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Another full day exploring different regions of Serengeti for extended wildlife viewing. Optional hot air balloon safari available at extra cost, offering aerial views of the plains followed by a bush breakfast. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 7,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive before departing Serengeti for Ngorongoro Conservation Area with game viewing en route. Arrive late afternoon and check in near the crater rim. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 8,
+        "title": "Ngorongoro Crater Tour – Arusha",
+        "details": "Early breakfast followed by a descent into the Ngorongoro Crater for a half-day game drive. Spot lions, elephants, buffaloes, black rhinos, zebras, and flamingos. Picnic lunch inside the crater, then drive back to Arusha for dinner and overnight stay."
+      },
+      {
+        "day": 9,
+        "title": "Arusha – Zanzibar",
+        "details": "After breakfast, transfer to the airport for your domestic flight to Zanzibar. On arrival, transfer to your beach resort and spend the rest of the day relaxing by the Indian Ocean. Dinner and overnight at your Zanzibar beach resort."
+      },
+      {
+        "day": 10,
+        "title": "Zanzibar – Beach Relaxation",
+        "details": "Leisure day at the beach enjoying white sands, turquoise waters, and resort facilities. Optional activities include snorkeling, diving, dolphin tours, and spice farm visits. Dinner and overnight at your beach resort."
+      },
+      {
+        "day": 11,
+        "title": "Zanzibar – Stone Town & Cultural Tour",
+        "details": "After breakfast, enjoy a guided tour of Stone Town exploring historical sites, local markets, and cultural landmarks. Optional spice farm visit available. Return to your beach resort for relaxation. Dinner and overnight at your beach resort."
+      },
+      {
+        "day": 12,
+        "title": "Zanzibar – Departure",
+        "details": "After breakfast, enjoy free time at the resort before transfer to Zanzibar International Airport for your onward flight, marking the end of your safari and beach holiday."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in lodges, tented camps, and Zanzibar beach resort",
+      "Meals on full board basis during safari",
+      "Half board or all-inclusive meal plan in Zanzibar (depending on resort)",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Domestic flight from Arusha to Zanzibar",
+      "Airport and hotel transfers",
+      "Bottled drinking water during safari"
+    ],
+    "excludes": [
+      "International flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities (hot air balloon safari, snorkeling, diving, spice tours, etc.)",
+      "Alcoholic and soft drinks unless stated in Zanzibar package",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Safari & Beach",
+    "tags": [
+      "Multi-Day",
+      "Northern Circuit",
+      "Safari",
+      "Zanzibar",
+      "Beach Holiday"
+    ]
   }
 ]
