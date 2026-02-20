@@ -60,7 +60,7 @@
           <NuxtLink to="/">
             <img 
               src="/logo.png" 
-              alt="Ethnos Kenia Adventure" 
+              alt="Ethno Kenia Adventure" 
               class="h-14 w-auto" 
               width="120"
               height="56"
