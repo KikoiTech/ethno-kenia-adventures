@@ -5,8 +5,19 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',      // Add this
-    '@nuxtjs/google-fonts' // Add this
+    '@nuxtjs/google-fonts', // Add this
+    'nuxt-gtag'
   ],
+
+  gtag: {
+    // No ID here! It will read from .env automatically if named correctly
+  },
+
+  runtimeConfig: {
+    public: {
+      gtagId: process.env.NUXT_PUBLIC_GTAG_ID // Fallback
+    }
+  },
 
   // Optimization 1: Localize Fonts (Removes render-blocking)
   googleFonts: {
