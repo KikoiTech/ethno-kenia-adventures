@@ -1,6 +1,17 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
+  app: {
+    head: {
+      meta: [
+        {
+          name: 'google-site-verification',
+          content: 'googlecc1c10fbc69c4000'
+        }
+      ]
+    }
+  },
   
   modules: [
     '@nuxtjs/tailwindcss',
