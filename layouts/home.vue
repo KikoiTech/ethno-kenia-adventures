@@ -5,6 +5,6 @@
       <slot />
     </main>
     <LayoutAppFooter />
-    <LayoutOfferModal />
+    <!-- <LayoutOfferModal /> -->
   </div>
 </template>
