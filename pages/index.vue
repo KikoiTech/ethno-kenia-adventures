@@ -55,11 +55,24 @@
           v-show="currentSlideIndex === index"
           class="absolute inset-0"
         >
-          <img 
+          <NuxtImg 
+            provider="cloudinary"
             :src="slide.image"
             :alt="slide.alt"
+            
+            :loading="index === 0 ? 'eager' : 'lazy'"
+            :fetchpriority="index === 0 ? 'high' : 'auto'"
+            :preload="index === 0"
+            
+            sizes="sm:100vw md:100vw lg:100vw"
+            format="webp"
+            quality="80"
+            
+            width="1920"
+            height="1080"
+            
             class="w-full h-full object-cover ken-burns-active"
-          >
+          />
         </div>
       </TransitionGroup>
       
@@ -90,6 +103,12 @@ definePageMeta({
   layout: 'home'
 })
 
+interface HeroSlide {
+  id: string;
+  image: string; // This is the path/filename from Cloudinary
+  alt: string;
+}
+
 // Reactive data
 const typography = ref<HTMLElement | null>(null)
 const headline = ref<HTMLElement | null>(null)
@@ -102,34 +121,36 @@ const divider = ref<HTMLElement | null>(null)
 
 // Slideshow data for Ken Burns Hero
 const currentSlideIndex = ref(0)
-const slides = [
+// updated the slides array to support the new cloudinary auto compression
+const slides: HeroSlide[] = [
   { 
     id: 'elephants',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903538/DSC_0513_ajzrvb.jpg',
+    image: 'v1770903538/DSC_0513_ajzrvb.jpg',
     alt: 'Golden savanna with elephants at dawn'
   },
   {
     id: 'lion',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134154/1001261550_vb8n99.jpg'
+    image: 'v1771134154/1001261550_vb8n99.jpg',
+    alt: 'A lion roaring'
   },
   {
     id: 'gazelle',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903488/DSC_0169_lowu5p.jpg',
+    image: 'v1770903488/DSC_0169_lowu5p.jpg',
     alt: 'The savannah with a herd of gazelles'
   },
   {
     id: 'gazelle',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903503/DSC_0232_mhvplm.jpg',
+    image: 'v1770903503/DSC_0232_mhvplm.jpg',
     alt: 'The savannah with a herd of gazelles'
   },
   {
     id: 'hippos',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903491/DSC_0184_ofqwcn.jpg',
+    image: 'v1770903491/DSC_0184_ofqwcn.jpg',
     alt: 'Hippos in the water'
   },
   {
     id: 'giraffes',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903539/DSC_0519_cjrhjf.jpg',
+    image: 'v1770903539/DSC_0519_cjrhjf.jpg',
     alt: 'A heard od giraffes'
   }
 ]
@@ -213,27 +234,14 @@ onUnmounted(() => {
 
 /* Ken Burns Effect: Smooth slow zoom and pan */
 .ken-burns-active {
-  animation: kenburns 40s ease-in-out infinite alternate;
+  animation: kenburns 20s ease-out infinite alternate;
   transform-origin: center;
   will-change: transform;
 }
 
 @keyframes kenburns {
-  0% {
-    transform: scale(1) translate(0, 0);
-  }
-  25% {
-    transform: scale(1.05) translate(-1%, -1%);
-  }
-  50% {
-    transform: scale(1.1) translate(1%, 0);
-  }
-  75% {
-    transform: scale(1.05) translate(-1%, 1%);
-  }
-  100% {
-    transform: scale(1.15) translate(0, 0);
-  }
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); } /* Smaller scale (1.1 instead of 1.15) is easier on the GPU */
 }
 
 /* Hero Slide Transitions: Smooth crossfade */

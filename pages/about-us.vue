@@ -1,6 +1,6 @@
 <template>
   <!-- 
-    ABOUT US PAGE: Ethno Kenia Adventures
+    ABOUT US PAGE: Ethno Kenia Adventure
     CONCEPT: Natural, geographic style connecting to Kenya's landscapes and heritage
     VISION: African Heritage Symphony - Rooted in Kenyan geography and culture
   -->
@@ -31,14 +31,37 @@
           <div class="text-center lg:text-left order-1 lg:order-2">
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif text-brand-charcoal mb-6 leading-tight">
               About
-              <span class="text-brand-terracotta"> Ethno Kenia Adventures</span>
+              <span class="text-brand-terracotta"> Ethno Kenia Adventure</span>
             </h1>
             <div class="text-xl md:text-2xl lg:text-3xl font-serif text-brand-charcoal/90 mb-8">
               Rooted in the Heart of Africa
             </div>
-            <p class="text-lg md:text-xl font-light text-brand-charcoal/80 leading-relaxed">
-              Ethno Kenia Adventure is a professional safari and tours company based in Kenya, offering unforgettable wildlife safaris, beach holidays, and cultural experiences across Kenya and East Africa. We believe every safari should be more than a trip it should be a meaningful journey.
-            </p>
+            <div class="space-y-4 text-brand-charcoal/80 font-sans leading-relaxed ext-lg md:text-xl font-light text-brand-charcoal/80 leading-relaxed">
+              <p>
+                Ethno Kenia Adventure is a trusted safari and tours company based in Kenya, specializing in unforgettable wildlife safaris, relaxing beach holidays, and immersive cultural experiences across Kenya and East Africa. Our mission is to create meaningful journeys that go beyond sightseeing and leave our guests with lasting memories.
+              </p>
+              <p>
+                Our experienced team of professional guides and travel consultants is passionate about sharing the region’s remarkable landscapes, diverse wildlife, and rich cultural heritage. With strong local knowledge and a commitment to excellence, we ensure every safari is thoughtfully planned and delivered with care and attention to detail.
+              </p>
+              <p>
+                At Ethno Kenia Adventure, responsible tourism is a core value. We are committed to sustainable travel practices that respect wildlife, preserve natural ecosystems, and positively impact local communities, helping to protect East Africa’s natural and cultural heritage for future generations.
+              </p>
+              <p>
+                Client satisfaction is central to our approach. We work closely with each traveler to tailor safari experiences that match their individual preferences and expectations, ensuring every journey is personal, seamless, and rewarding. We also collaborate with established international tour listing platforms and are represented on
+                <a
+                  href="https://www.safaribookings.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-brand-terracotta underline hover:opacity-80 transition"
+                >
+                  SafariBookings.com
+                </a>,
+                providing our clients with added confidence and transparency when booking their safari.
+              </p>
+              <p>
+                We look forward to welcoming you to East Africa and delivering a safari experience defined by professionalism, authenticity, and unforgettable moments.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -488,10 +511,10 @@
 <script setup lang="ts">
 // Page title and meta
 useHead({
-  title: 'About Us - Ethno Kenia Adventures',
+  title: 'About Us - Ethno Kenia Adventure',
   meta: [
-    { name: 'description', content: 'Learn about Ethno Kenia Adventures - our story rooted in Kenyan geography, our local guides, and our commitment to authentic African experiences shaped by the land itself.' },
-    { name: 'keywords', content: 'Ethno Kenia Adventures, about us, Kenyan guides, geographic heritage, African travel, local expertise, Mount Kenya, Maasai Mara, sustainable tourism' }
+    { name: 'description', content: 'Learn about Ethno Kenia Adventure - our story rooted in Kenyan geography, our local guides, and our commitment to authentic African experiences shaped by the land itself.' },
+    { name: 'keywords', content: 'Ethno Kenia Adventure, about us, Kenyan guides, geographic heritage, African travel, local expertise, Mount Kenya, Maasai Mara, sustainable tourism' }
   ]
 })
 </script>

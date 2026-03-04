@@ -10,8 +10,12 @@ export interface SafariPackage {
   duration: string
   difficulty?: string
   category: string
-  country?: string
+  country?: string[]
+  countryCode?: string
+  type?: string
+  tags?: string[]
   location?: string
+  pace?: string
   popular?: number
   featured?: number
   price: number | PackagePricing

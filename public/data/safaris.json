@@ -9,10 +9,7 @@
     "price": 0,
     "duration": "8 – 10 hours",
     "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977492/DSC_0824_m6kzf5.jpg",
-    "gallery": [
-      "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977484/DSC_0059_jkummp.jpg",
-      "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977494/DSC_0866_jptj0w.jpg"
-    ],
+    "gallery": [],
     "snippet": "Explore the Great Rift Valley, cycle among wildlife in Hell's Gate, and walk with giraffes on Crescent Island.",
     "description": "Escape the busy city of Nairobi and explore the breathtaking beauty of Kenya’s Great Rift Valley on this exciting full-day adventure. Located approximately 90 kilometers from Nairobi, Lake Naivasha is surrounded by dramatic escarpments and volcanic formations.",
     "itinerary": [
@@ -26,8 +23,17 @@
         "time": "Morning",
         "title": "Hell’s Gate National Park",
         "details": "One of the few parks where you can explore on foot or bicycle. Famous for towering cliffs and geothermal activity.",
-        "activities": ["Guided cycling/walking safari", "Hell’s Gate Gorge walk", "Geothermal hot springs visit"],
-        "wildlife": ["Zebras", "Giraffes", "Buffaloes", "Antelopes"],
+        "activities": [
+          "Guided cycling/walking safari",
+          "Hell’s Gate Gorge walk",
+          "Geothermal hot springs visit"
+        ],
+        "wildlife": [
+          "Zebras",
+          "Giraffes",
+          "Buffaloes",
+          "Antelopes"
+        ],
         "icon": "tabler:bike"
       },
       {
@@ -40,7 +46,11 @@
         "time": "Afternoon",
         "title": "Crescent Island Walking Safari",
         "details": "A private sanctuary for a peaceful walking safari. Walk freely among roaming wildlife with no predators present.",
-        "highlights": ["Guided walking safari", "Close encounters with Wildebeests", "Mountain views"],
+        "highlights": [
+          "Guided walking safari",
+          "Close encounters with Wildebeests",
+          "Mountain views"
+        ],
         "icon": "tabler:walk"
       },
       {
@@ -68,6 +78,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Day Trip"
     ]
   },
   {
@@ -79,11 +97,12 @@
     "location": "Kenya",
     "price": 0,
     "duration": "03 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977493/DSC_0867_upjfw4.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252088/MtKenya_apuikb.jpg",
     "gallery": [],
     "snippet": "The 3 Days Sirimon – Sirimon trek is the shortest and most direct trekking route to Point Lenana via the northern slopes of Mount Kenya...",
     "description": "The 3 Days Sirimon – Sirimon trek is the shortest and most direct trekking route to Point Lenana via the northern slopes of Mount Kenya. This itinerary is ideal for trekkers with limited time but still seeking a rewarding high-altitude trekking experience. The route offers gradual altitude gain, scenic alpine landscapes, and excellent chances of wildlife sightings. This trek starts and ends via the Sirimon Gate, making logistics easier while still providing spectacular mountain views.",
-    "itinerary": [{
+    "itinerary": [
+      {
         "time": "Day 1",
         "title": "Nairobi-Sirimon Gate-Old Moses Camp (Judmaier Camp)",
         "details": "Your adventure begins with an early morning departure from Nairobi heading north through Kenya’s scenic central highlands. You will arrive at Sirimon Gate in time for registration and a briefing from your mountain guide. The trek begins through montane forest filled with cedar, olive, and podocarpus trees. Wildlife such as colobus monkeys, bushbucks, and numerous bird species are often spotted along the trail.The trail gradually opens into moorland vegetation with spectacular views of the mountain peaks. You will arrive at Old Moses Camp in the afternoon where your crew prepares hot meals and comfortable accommodation. The evening is spent resting, hydrating, and preparing for the higher altitude trekking ahead.",
@@ -115,6 +134,15 @@
       "Accommodation outside Trek",
       "Personal Expenses",
       "Tips & Gratuities"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -126,7 +154,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "04 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977500/DSC_0900_r9g4jo.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252087/chogoria-route_dgkmss.jpg",
     "gallery": [],
     "snippet": "The 4 Days Sirimon – Chogoria trek is a scenic Mount Kenya climbing itinerary combining the gradual ascent of the Sirimon route with the breathtaking descent along the Chogoria route...",
     "description": "The 4 Days Sirimon – Chogoria trek is a scenic Mount Kenya climbing itinerary combining the gradual ascent of the Sirimon route with the breathtaking descent along the Chogoria route. This trek offers diverse landscapes, good acclimatization, and spectacular alpine scenery, making it one of the most rewarding short Mount Kenya climbing options. This itinerary is ideal for trekkers looking for a balance between time efficiency and scenic experience. Join us for a memorable 04 Days Mount Kenya Sirimon chogoria. This package is designed to give you the best experience in Kenya. Full details coming soon.",
@@ -168,6 +196,15 @@
       "Personal Trekking Equipment",
       "Accommodation Outside Trek",
       "Personal Expenses"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -179,7 +216,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "04 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977494/DSC_0850_nl3ows.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252087/Chogoria_etf56f.jpg",
     "gallery": [],
     "snippet": "Your journey begins with an early morning departure from Nairobi travelling north through Kenya’s scenic agricultural highlands towards Mount Kenya National Park...",
     "description": "Your journey begins with an early morning departure from Nairobi travelling north through Kenya’s scenic agricultural highlands towards Mount Kenya National Park. Upon arrival at Sirimon Gate, you will complete park registration and meet your mountain crew including guides, porters, and cook. After a safety and trek briefing, the climb begins through lush montane forest.The trail passes through cedar and olive forests with opportunities to spot wildlife such as colobus monkeys, bushbucks, and a variety of bird species. As altitude increases, the vegetation gradually transitions into open moorland with spectacular mountain views. You will arrive at Old Moses Camp in the afternoon where your crew will have prepared meals and accommodation. The evening is spent relaxing and acclimatizing.",
@@ -214,13 +251,21 @@
       "Professional Mountain Crew",
       "Transport & Trek Support",
       "Safety & Emergency Support"
-
     ],
     "excludes": [
       "Travel & Insurance",
       "Personal Trekking Equipment",
       "Accommodation Outside Trek",
       "Personal Expenses"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -232,7 +277,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "05 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977488/DSC_0784_ug8a41.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771253241/Timau-route_uig4ns.jpg",
     "gallery": [],
     "snippet": "The 5 Days Sirimon – Chogoria route is one of the most scenic and well-balanced Mount Kenya trekking itineraries...",
     "description": "The 5 Days Sirimon – Chogoria route is one of the most scenic and well-balanced Mount Kenya trekking itineraries. The trek approaches the mountain from the drier northern slopes via Sirimon and descends through the spectacular Chogoria route, widely regarded as the most beautiful side of Mount Kenya.This itinerary offers excellent acclimatization, diverse ecosystems, breathtaking alpine lakes, dramatic valleys, and high summit success rates, making it one of the most recommended Mount Kenya trekking routes.Join us for a memorable 05 Days Mount Kenya Sirimon. This package is designed to give you the best experience in Kenya. Full details coming soon",
@@ -282,6 +327,15 @@
       "Accommodation Outside Trek",
       "Personal Expenses",
       "Tips & Gratuities"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -293,7 +347,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "09 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977496/DSC_0873_fwgejf.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977473/DSC_0691_vuykos.jpg",
     "gallery": [],
     "snippet": "Your safari begins with an early morning pick-up from your Nairobi hotel or airport...",
     "description": "Your safari begins with an early morning pick-up from your Nairobi hotel or airport. Travel north through Kenya’s central highlands, passing coffee and tea plantations with scenic views of Mount Kenya. Cross the equator en route to Samburu National Reserve.",
@@ -372,6 +426,14 @@
       "Tips and gratuities",
       "Personal expenses (laundry, phone calls, souvenirs, etc.)",
       "Accommodation in Nairobi before or after safari (unless requested)"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   },
   {
@@ -383,7 +445,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "09 Days",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-09-days-samburu.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905975/DSC_0551_flntpk.jpg",
     "gallery": [],
     "snippet": "Experience the magic of 09 Days Samburu. A unique journey through Kenya.",
     "description": "Join us for a memorable 09 Days Samburu. This package is designed to give you the best experience in Kenya. Full details coming soon.",
@@ -400,6 +462,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   },
   {
@@ -428,6 +498,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Day Trip"
     ]
   },
   {
@@ -456,6 +534,14 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Day Trip"
     ]
   },
   {
@@ -556,12 +642,22 @@
       "Optional activities",
       "Alcoholic and soft drinks",
       "Personal expenses and tips"
+    ],
+    "country": [
+      "Kenya",
+      "Tanzania"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Kenya-Tanzania",
+      "Multi-Day"
     ]
   },
   {
     "id": 11,
     "slug": "10-days-luxury-private-honeymoon-safari",
-    "title": "10 Days Luxury Private Honeymoon Safari & Beach Holiday in Kenya",
+    "title": "10 Days Luxury Private Honeymoon Safari & Diani Holiday in Kenya",
     "shortTitle": "10 Days Luxury Private Honeymoon Safari & Beach Holiday in Kenya",
     "category": "Luxury Safaris",
     "location": "Kenya",
@@ -645,6 +741,17 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Beach",
+    "tags": [
+      "Relaxation",
+      "wildlife",
+      "Honeymoon",
+      "Romantic"
     ]
   },
   {
@@ -706,7 +813,7 @@
       {
         "time": "Day 7",
         "title": "Day 7 – Wildlife Safari & Kazinga Channel Cruise",
-        "details":"Begin the day with lion tracking, followed by a boat cruise along the Kazinga Channel. Finish the day with a visit to the salt mining communities",
+        "details": "Begin the day with lion tracking, followed by a boat cruise along the Kazinga Channel. Finish the day with a visit to the salt mining communities",
         "icon": "tabler:ship"
       },
       {
@@ -739,6 +846,15 @@
         "details": "Travel back to Entebbe and do some souvenir shopping before heading to the airport for departure.",
         "icon": "tabler:plane"
       }
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -794,7 +910,7 @@
       {
         "time": "Day 7",
         "title": "Day 7: Maasai Mara to Serengeti National Park, Tanzania",
-        "details":"After breakfast, depart for the Kenya–Tanzania border at Isebania for immigration formalities. After crossing into Tanzania, continue your journey into the Serengeti National Park with game viewing along the way. The Serengeti is famous for its vast open plains and incredible wildlife density.",
+        "details": "After breakfast, depart for the Kenya–Tanzania border at Isebania for immigration formalities. After crossing into Tanzania, continue your journey into the Serengeti National Park with game viewing along the way. The Serengeti is famous for its vast open plains and incredible wildlife density.",
         "icon": "tabler:ship"
       },
       {
@@ -827,7 +943,6 @@
         "details": "Enjoy breakfast followed by a short morning game drive or relaxation at your lodge. You will then be transferred to Arusha or Kilimanjaro International Airport for your onward flight.",
         "icon": "tabler:plane"
       }
-
     ],
     "includes": [
       "Airport transfers",
@@ -846,7 +961,16 @@
       "Optional activities (balloon safari, cultural visits, etc.)",
       "Alcoholic and soft drinks (unless specified)",
       "Personal expenses and tips"
-
+    ],
+    "country": [
+      "Kenya",
+      "Tanzania"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Kenya-Tanzania",
+      "Multi-Day"
     ]
   },
   {
@@ -966,6 +1090,15 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -977,7 +1110,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "3 Days",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-3-days-amboseli-national-park-safari.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905979/DSC_0567_a53exz.jpg",
     "gallery": [],
     "snippet": "This 3-day Amboseli safari offers a rewarding wildlife experience in one of Kenya’s most scenic national parks. Amboseli is famous for its large elephant herds, wide open plains, seasonal wetlands, and views of Mount Kilimanjaro...",
     "description": "This 3-day Amboseli safari offers a rewarding wildlife experience in one of Kenya’s most scenic national parks. Amboseli is famous for its large elephant herds, wide open plains, seasonal wetlands, and views of Mount Kilimanjaro. Travel in a comfortable 4x4 safari Land Cruiser with a professional driver guide and stay in a selected safari lodge or tented camp located near or inside the park. This safari is ideal for travelers with limited time seeking an authentic wildlife experience.",
@@ -1017,6 +1150,14 @@
       "Alcoholic and soft drinks",
       "Personal expenses",
       "Tips and gratuities"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   },
   {
@@ -1064,6 +1205,16 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Activities & Added Experiences"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Luxury",
+      "Honeymoon",
+      "Romantic"
     ]
   },
   {
@@ -1075,7 +1226,7 @@
     "location": "Uganda",
     "price": 0,
     "duration": "3 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977504/DSC_0931_cnjhw2.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252087/murchison_w0fgvp.webp",
     "gallery": [],
     "snippet": "Experience the magic of 3 Days Murchisson falls. A unique journey through Uganda.",
     "description": "This 3 Days Murchison Falls National Park safari itinerary is perfect for travelers seeking a short wildlife adventure in Uganda. The safari offers game drives, Nile River boat cruises, and breathtaking waterfall views inside Uganda’s largest national park.",
@@ -1098,6 +1249,15 @@
         "details": "Optional sunrise game drive and breakfast at safari lodge. Depart park and travel back to Kampala or Entebbe with option for souvenir shopping and local ,market visits. Airport drop-off or hotel transfer.",
         "icon": "tabler:plane"
       }
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -1109,7 +1269,7 @@
     "location": "Uganda",
     "price": 0,
     "duration": "3 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977504/DSC_0931_cnjhw2.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134156/1001261558_gwdhib.jpg",
     "gallery": [],
     "snippet": "This 3 Days Queen Elizabeth National Park safari itinerary is ideal for travelers seeking a short but rewarding wildlife safari in Uganda.",
     "description": "This 3 Days Queen Elizabeth National Park safari itinerary is ideal for travelers seeking a short but rewarding wildlife safari in Uganda. Join us for a memorable 3 Days Safari Uganda. The itinerary combines the park's famous safari highlights with unique hidden experiences for a well-balanced wildlife and cultural adventure.",
@@ -1139,6 +1299,15 @@
       "Transport in a comfortable tour vehicle",
       "Guided activities at attractions",
       "Bottled drinking water"
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
@@ -1146,11 +1315,11 @@
     "slug": "6-days-5-nights-dubai-tour-package",
     "title": "6 Days 5 Nights Dubai Tour Package",
     "shortTitle": "6 Days 5 Nights Dubai Tour Package",
-    "category": "Multi-Day Safaris",
+    "category": "International",
     "location": "Dubai",
     "price": 0,
     "duration": "6 Days",
-    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905987/DSC_0592_ehn5so.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252087/dubai_p0wyxj.webp",
     "gallery": [],
     "snippet": "Experience the magic of 6 Days 5 Nights Dubai Tour Package. A unique journey through Dubai...",
     "description": "Join us for a memorable 6 Days 5 Nights Dubai Tour Package. This package is designed to give you the best experience in Dubai.",
@@ -1207,6 +1376,15 @@
       "Personl Expenses",
       "Optional Tours & Activities",
       "Tips & Gratuities"
+    ],
+    "country": [
+      "UAE"
+    ],
+    "countryCode": "AE",
+    "type": "Dining",
+    "tags": [
+      "International",
+      "Multi-Day"
     ]
   },
   {
@@ -1235,6 +1413,15 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1301,6 +1488,15 @@
       "Accommodation Outside the Mountain",
       "Personal Trekking Equipment",
       "Personal Expenses"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1312,7 +1508,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "6 Days",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-6-days-marangu-route-climb.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252087/marangu_route_srye2o.jpg",
     "gallery": [],
     "snippet": "The 6 Days Marangu Route is the only Kilimanjaro trail offering hut accommodation, making it one of the most ...",
     "description": "The 6 Days Marangu Route is the only Kilimanjaro trail offering hut accommodation, making it one of the most comfortable ways to summit Africa’s highest peak. This classic trekking route is located within Kilimanjaro National Park in Tanzania. The extra acclimatization day included in the 6-day itinerary significantly improves summit success rates while allowing trekkers to enjoy diverse mountain scenery.",
@@ -1367,6 +1563,15 @@
       "Personal Trekking Gear",
       "Personal Expenses",
       "Optional Add-Ons"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1378,7 +1583,7 @@
     "location": "Kenya",
     "price": 0,
     "duration": "7 Days",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-7-days-chimpanzee.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134231/1001261602_o07gwm.jpg",
     "gallery": [],
     "snippet": "This 7 Days Chimpanzee and Gorilla Trekking Uganda itinerary offers travelers a once-in-a-lifetime primate safari experience...",
     "description": "This 7 Days Chimpanzee and Gorilla Trekking Uganda itinerary offers travelers a once-in-a-lifetime primate safari experience. The journey combines rainforest adventures, wildlife encounters, cultural experiences, and scenic landscapes in Uganda, known as the Pearl of Africa. This itinerary is ideal for wildlife lovers, photographers, and eco-tourists seeking Uganda’s most iconic primate trekking experiences",
@@ -1438,34 +1643,101 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Uganda"
+    ],
+    "countryCode": "UG",
+    "type": "Wildlife",
+    "tags": [
+      "Primate Trekking",
+      "Multi-Day"
     ]
   },
   {
     "id": 24,
-    "slug": "79-days-mt-kenya-safari-combo",
+    "slug": "7-9-days-mt-kenya-safari-combo",
     "title": "7-9 Days Mt Kenya Safari Combo",
     "shortTitle": "7-9 Days Mt Kenya Safari Combo",
     "category": "Mountain Climbing",
     "location": "Kenya",
     "price": 0,
     "duration": "9 Days",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-79-days-mt-kenya-safari-combo.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252088/MtKenya2_bya1uu.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of 7-9 Days Mt Kenya Safari Combo. A unique journey through Kenya.",
-    "description": "Join us for a memorable 7-9 Days Mt Kenya Safari Combo. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "This adventure combines high-altitude trekking on Mount Kenya with world-class wildlife safaris in Kenya’s premier conservancies...",
+    "description": "This adventure combines high-altitude trekking on Mount Kenya with world-class wildlife safaris in Kenya’s premier conservancies. The itinerary offers an unforgettable journey that blends mountain climbing, wildlife encounters, cultural experiences, and scenic landscapes into one complete Kenyan adventure. This package is designed for travelers who want both summit achievement and authentic African safari experiences within one trip.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Nairobi – Sirimon Gate – Old Moses Camp",
+        "details": "Habitat: Montane Forest → Moorland Your adventure begins with an early morning departure from Nairobi travelling north through Kenya’s scenic central highlands. Upon arrival at Sirimon Gate, you will meet your mountain trekking crew including guides, porters, and cook. After registration and a safety briefing, the trek begins through dense montane forest with opportunities to spot wildlife such as colobus monkeys, bushbucks, and bird species. The trail gradually transitions into moorland vegetation with beautiful mountain scenery. You will arrive at Old Moses Camp in the afternoon where hot meals and accommodation await.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Old Moses Camp – Shipton Camp",
+        "details": "After breakfast, the trek continues across the scenic Mackinder Valley offering panoramic views of Mount Kenya’s rugged peaks and alpine terrain. You will pass giant lobelia and senecio plants unique to high-altitude environments. The trek is paced slowly to allow proper acclimatization. Lunch is served along the trail before continuing to Shipton Camp, located beneath Mount Kenya’s highest peaks. Upon arrival, trekkers rest and prepare for summit day while guides conduct altitude monitoring and safety briefings.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Summit Point Lenana – Descend to Old Moses Camp",
+        "details": "You will wake around midnight for tea and light snacks before starting the summit climb under the stars. The trail climbs gradually over rocky alpine terrain. You will reach Point Lenana (4,985m) at sunrise. This is Mount Kenya’s trekking summit and offers breathtaking views of glaciers, alpine lakes, and surrounding landscapes. After celebrating and photography, you will descend back through Shipton Camp and continue down to Old Moses Camp for overnight stay.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Old Moses Camp – Sirimon Gate – Transfer to Ol Pejeta Conservancy",
+        "details": "After breakfast, you will descend through forest vegetation to Sirimon Gate where you will meet your safari vehicle. You will transfer to Ol Pejeta Conservancy, arriving in time for lunch and an afternoon game drive. Ol Pejeta is famous for rhino conservation and offers excellent wildlife viewing including lions, elephants, buffalos, giraffes, and zebras. Optional visits include the chimpanzee sanctuary and endangered species conservation centers.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Full Day Safari in Ol Pejeta Conservancy",
+        "details": "Today is dedicated to wildlife exploration within Ol Pejeta Conservancy. Morning and afternoon game drives provide opportunities to spot the Big Five and other wildlife species. The conservancy is known for its successful rhino conservation programs and offers close encounters with endangered black and white rhinos. Between game drives, guests relax at the lodge enjoying scenic views and wildlife around waterholes.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Transfer to Samburu National Reserve",
+        "details": "After breakfast, you will travel north to Samburu National Reserve, known for its unique northern wildlife species and semi-arid landscapes. Upon arrival, lunch is served followed by an afternoon game drive. Samburu is home to rare species including Grevy’s zebra, reticulated giraffe, and Somali ostrich. The reserve offers stunning riverine forest landscapes along the Ewaso Nyiro River.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 7",
+        "title": "Day 7: Safari and Cultural Experience in Samburu",
+        "details": "Today includes morning and afternoon game drives exploring Samburu’s diverse wildlife habitats. Guests will also enjoy optional cultural visits to local Samburu communities to learn about traditional lifestyles, customs, and pastoral heritage. This day offers exceptional wildlife photography opportunities and authentic cultural interactions.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 8",
+        "title": "Day 8: Samburu – Return to Nairobi",
+        "details": "After breakfast, you will depart Samburu and drive back to Nairobi arriving in the afternoon marking the end of your Mount Kenya Trek and Safari adventure.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Park & Conservation Fees",
+      "Professional Mountain & Safari Crew",
+      "Accommodation & Meals",
+      "Transport & Trek Support",
+      "Safety & Emergency Support"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "Travel & Insurance",
+      "Personal Trekking Equipment",
+      "Accommodation outside Itinerary",
+      "Personal Expenses"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1476,52 +1748,158 @@
     "category": "Day Trips",
     "location": "Kenya",
     "price": 0,
-    "duration": "Flexible",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-carnivore-dining-experience.jpg",
+    "duration": "3 - 4 hours",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771312437/WhatsApp_Image_2026-02-17_at_9.55.35_AM_jryj5t.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Carnivore Dining Experience. A unique journey through Kenya.",
-    "description": "Join us for a memorable Carnivore Dining Experience. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "Enjoy one of Nairobi’s most iconic culinary adventures at the world-famous Carnivore Restaurant, widely known as “Africa’s Greatest Eating Experience...",
+    "description": "Enjoy one of Nairobi’s most iconic culinary adventures at the world-famous Carnivore Restaurant, widely known as “Africa’s Greatest Eating Experience.” This unforgettable dining experience combines traditional African barbecue, lively atmosphere, and exceptional service, making it a must-visit attraction for visitors to Nairobi.",
+    "itinerary": [
+      {
+        "time": "Pick up",
+        "title": "Hotel Pick-up",
+        "details": "Guests are picked up from their hotel or residence within Nairobi and transferred to Carnivore Restaurant in comfortable transport.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Arrival",
+        "title": "Arrival & Welcome",
+        "details": "Upon arrival, guests are welcomed into the vibrant restaurant setting, designed to reflect traditional African safari dining. Friendly staff guide visitors to their reserved tables and introduce the dining experience",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Carnivore Feast",
+        "title": "The Carnivore Feast",
+        "details": "The dining experience begins with: Freshly prepared soup of the day, Assorted side dishes including salads, vegetables, sauces, and condiments, Selection of freshly baked bread",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Barbecue Experience",
+        "title": "Unlimited Barbecue Experience",
+        "details": "Guests are served a continuous selection of roasted meats including: Beef, Lamb, Pork, Chicken, Turkey, Sausages, Seasonal game meat (subject to availability and regulations). The meats are roasted on traditional Maasai swords over a large charcoal pit and carved directly onto guests’ plates until they signal they are satisfied.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Dessert & Refreshments",
+        "title": "Dessert & Refreshments",
+        "details": "The meal concludes with a selection of desserts and optional tea or coffee. Guests may also enjoy a wide selection of beverages and cocktails available for purchase.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Entertainment & Atmosphere",
+        "title": "The restaurant features lively music, vibrant décor, and a relaxed social environment, making it perfect for couples, families, groups, and corporate visitors.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Return Transfer",
+        "title": "Day 7: Lake Ellis – Chogoria Gate – Nairobi",
+        "details": "After dinner, guests are transferred back to their hotel or preferred drop-off location in Nairobi.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
       "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Reserved table at Carnivore Restaurant",
+      "Full dining experience",
+      "Professional driver/guide"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "Alcoholic and soft drinks",
+      "Personal expenses",
+      "Tips and gratuities"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Dining",
+    "tags": [
+      "Food",
+      "Cultural",
+      "Day Trip"
     ]
   },
   {
     "id": 26,
     "slug": "mount-kenya-07-days",
-    "title": "Mount Kenya 07 Days",
+    "title": "Mount Kenya Multi Route Grand Traverse – Detailed Day-to-Day Itinerary",
     "shortTitle": "Mount Kenya 07 Days",
     "category": "Mountain Climbing",
     "location": "Kenya",
     "price": 0,
     "duration": "07 Days",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-mount-kenya-07-days.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771252088/MtKenya2_bya1uu.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Mount Kenya 07 Days. A unique journey through Kenya.",
-    "description": "Join us for a memorable Mount Kenya 07 Days. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "Your adventure begins with an early morning departure from Nairobi, driving north through the scenic agricultural highlands towards Mount Kenya National Park...",
+    "description": "Your adventure begins with an early morning departure from Nairobi, driving north through the scenic agricultural highlands towards Mount Kenya National Park. Upon arrival at Burguret Gate, you will meet your full mountain crew including guides, porters, and cook. After registration and briefing, the trek begins through dense tropical rainforest. This section is rich in biodiversity and offers excellent opportunities to spot wildlife such as colobus monkeys, forest elephants, and exotic bird species. The trail is relatively gentle but can be muddy depending  You will arrive at Burguret Forest Camp in the afternoon where your crew will have prepared tents and hot refreshments. The evening is spent relaxing, enjoying dinner, and receiving your first altitude and safety briefing.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Nairobi – Burguret Gate – Burguret Forest Camp",
+        "details": "Your adventure begins with an early morning departure from Nairobi, driving north through the scenic agricultural highlands towards Mount Kenya National Park. Upon arrival at Burguret Gate, you will meet your full mountain crew including guides, porters, and cook. After registration and briefing, the trek begins through dense tropical rainforest. This section is rich in biodiversity and offers excellent opportunities to spot wildlife such as colobus monkeys, forest elephants, and exotic bird species. The trail is relatively gentle but can be muddy depending on weather conditions. You will arrive at Burguret Forest Camp in the afternoon where your crew will have prepared tents and hot refreshments. The evening is spent relaxing, enjoying dinner, and receiving your first altitude and safety briefing.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Burguret Forest Camp – Giant Bamboo Zone Camp",
+        "details": "After breakfast, the trek continues deeper into the mountain transitioning into the Giant Bamboo zone. This area is unique to Mount Kenya and provides a mystical trekking experience with towering bamboo forests surrounding the trail. The route becomes slightly steeper, allowing gradual altitude gain which supports acclimatization. Wildlife sightings remain common here, particularly forest birds and small mammals. You will stop for a picnic lunch along the trail before continuing to Bamboo Zone Camp. Upon arrival, enjoy hot drinks and relaxation while surrounded by pristine wilderness rarely visited by trekkers.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Bamboo Zone – Highland Castle Moorlands",
+        "details": "Today marks your transition from forest to alpine moorland vegetation. The landscape opens dramatically, revealing giant lobelias, senecio plants, and expansive valleys. The trek offers breathtaking views of the mountain’s jagged peaks as you gain elevation steadily. The air becomes cooler and clearer as you approach the Highland Castle area, a spectacular camping location surrounded by rolling moorlands. This day is crucial for acclimatization and guides will maintain a slow, steady trekking pace. After arriving at camp, you will have time to rest and hydrate while enjoying panoramic sunset views.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Highland Castle – Shipton Camp",
+        "details": "After breakfast, the trek continues into the alpine zone where vegetation becomes sparse and rugged glacial valleys dominate the landscape. The route gradually merges with sections of the Sirimon trail as you approach Shipton Camp. Shipton Camp sits beneath the towering peaks of Batian and Nelion, offering one of Mount Kenya’s most spectacular base camp settings. Upon arrival, lunch is served followed by rest and optional short acclimatization walks. Your guides will provide a detailed summit briefing, explaining safety procedures, weather conditions, and summit strategy.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Summit Attempt – Point Lenana – Mintos Camp (Chogoria Route)",
+        "details": "You will wake around midnight for tea and light snacks before beginning the summit ascent under the stars. The trail climbs gradually over rocky terrain and glacial scree slopes. Reaching Point Lenana (4,985m) at sunrise is the highlight of your expedition. From the summit, enjoy breathtaking views across Mount Kenya’s glaciers, lakes, and surrounding plains. On clear days, Mount Kilimanjaro can sometimes be seen in the distance. After photography and celebration, you will descend via the scenic Chogoria route. The descent offers stunning views of the Gorges Valley, Lake Michaelson, and dramatic cliffs. You will arrive at Mintos Camp in the afternoon for rest and overnight stay.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Mintos Camp – Lake Ellis",
+        "details": "Today is a scenic descent through the breathtaking Gorges Valley. The trail offers incredible views of waterfalls, valleys, and alpine lakes. You will descend steadily towards Lake Ellis, one of Mount Kenya’s most picturesque camping locations. The lake is surrounded by rolling hills and provides excellent photography opportunities. The afternoon is relaxed allowing trekkers to recover after summit day. Optional nature walks around the lake can be arranged.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 7",
+        "title": "Day 7: Lake Ellis – Chogoria Gate – Nairobi",
+        "details": "After breakfast, you will complete the final descent through bamboo and rainforest vegetation towards Chogoria Gate. At the park exit, you will receive your Mount Kenya trekking certificate and bid farewell to your mountain crew. Lunch is usually served in Chogoria town before the drive back to Nairobi. You will arrive in Nairobi late afternoon marking the successful completion of your Mount Kenya Grand Traverse adventure",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Park & Conservation Fees",
+      "Professional Mountain Crew",
+      "Accommodation",
+      "Meals & Drinking Water",
+      "Safety & Emergency Support",
+      "Trekking Support Equipment",
+      "Summit Certification",
+      "Transport & Transfers"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
+      "Travel & Insurance",
+      "Personal Equipment",
+      "Accommodation outside Trek",
+      "Personal Expenses",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
@@ -1533,51 +1911,141 @@
     "location": "Kenya",
     "price": 0,
     "duration": "Flexible",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-mt-kenya-bird-watching.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905955/DSC_0388_snnmrh.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Mt Kenya Bird Watching. A unique journey through Kenya.",
-    "description": "Join us for a memorable Mt Kenya Bird Watching. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "The Mount Kenya Birding and Nature Expedition is a specialized trekking experience on Mount Kenya designed for nature enthusiasts, bird watchers...",
+    "description": "The Mount Kenya Birding and Nature Expedition is a specialized trekking experience on Mount Kenya designed for nature enthusiasts, bird watchers, conservation travelers, and photographers. This itinerary focuses on exploring the mountain’s unique ecosystems, endemic bird species, and diverse plant biodiversity while still offering an optional summit experience. Trekkers journey through pristine montane forests, bamboo zones, moorlands, and alpine environments while accompanied by experienced birding guides who help identify rare species and explain conservation efforts.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Nairobi – Sirimon Gate – Forest Bird Watching Trek",
+        "details": "Your expedition begins with a morning departure from Nairobi travelling north through Kenya’s fertile agricultural highlands toward Mount Kenya’s northern access point. Upon arrival at Sirimon Gate, you will meet your birding specialist guide, trekking crew, and porters. After registration and orientation, the trek begins through dense montane forest rich in birdlife and biodiversity. The forest hosts numerous bird species including sunbirds, turacos, hornbills, and forest raptors. The guide will conduct frequent bird observation stops, teaching identification techniques and sharing ecological knowledge. The trail gradually opens into moorland vegetation with scenic views of the mountain slopes. Arrival at camp is usually in the afternoon allowing time for relaxed evening bird observation.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Trek to Shipton Camp with Bird Observation Stops",
+        "details": "After breakfast, the trek continues across the scenic Mackinder Valley. The landscape changes dramatically as trekkers move into higher altitude habitats with unique plant species such as giant lobelias and senecios. Bird watching continues throughout the trek with opportunities to observe high-altitude species adapted to moorland and alpine environments. The pace remains moderate allowing frequent observation and photography stops. You will arrive at Shipton Camp in the afternoon, located beneath Mount Kenya’s dramatic peaks. The evening includes bird activity observation and altitude acclimatization.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Alpine Bird Watching and Nature Exploration",
+        "details": "This day focuses on slow-paced alpine exploration and bird observation around Shipton Camp and surrounding valleys. The alpine ecosystem supports specialized bird species that survive in extreme high-altitude conditions. Trekkers participate in guided acclimatization walks to nearby ridges and glacial valleys while learning about high-altitude plant adaptation and fragile mountain ecosystems. This day allows rest and proper acclimatization before the summit attempt while maximizing wildlife and nature observation opportunities.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Summit Attempt – Point Lenana",
+        "details": "You will wake shortly after midnight for tea and snacks before beginning the summit ascent under the stars. The trail climbs gradually across rocky alpine slopes and glacial scree. You will reach Point Lenana at sunrise. The summit offers spectacular panoramic views of glaciers, crater lakes, and surrounding landscapes. Early morning hours also provide rare opportunities to observe high-altitude bird activity. After summit celebrations and photography, trekkers descend back to Shipton Camp for rest and lunch before continuing to lower altitude camp.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Descend to Sirimon Gate – Return to Nairobi",
+        "details": "After breakfast, the descent begins through alpine vegetation into moorland and forest habitats. This section provides final opportunities for bird watching and nature photography.Upon reaching Sirimon Gate, you will meet your transport and drive back to Nairobi arriving in the afternoon or early evening marking the end of the expedition.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Park & Conservation Fees",
+      "Professional Trekking & Birding Crew",
+      "Accommodation & Meals",
+      "Transport & Expedition Support",
+      "Safety & Emergency Support"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "Travel & Insurance",
+      "Personal Trekking Equipment",
+      "Accommodation Outside Expedition",
+      "Personal Expenses"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Trekking",
+    "tags": [
+      "Adventure",
+      "Hiking"
     ]
   },
   {
     "id": 28,
     "slug": "private-safari",
-    "title": "Private Safari",
-    "shortTitle": "Private Safari",
+    "title": "Private Safari: Amboseli, Tsavo West & Tsavo East",
+    "shortTitle": "6 Days Kenya Southern Circuit Wildlife Safari",
     "category": "Multi-Day Safaris",
     "location": "Kenya",
     "price": 0,
-    "duration": "Flexible",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-private-safari.jpg",
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134453/1001261634_gizz04.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Private Safari. A unique journey through Kenya.",
-    "description": "Join us for a memorable Private Safari. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "Explore Kenya’s famous southern safari circuit on this private guided wildlife safari visiting Amboseli National Park, Tsavo West National Park, and Tsavo East National Park...",
+    "description": "Explore Kenya’s famous southern safari circuit on this private guided wildlife safari visiting Amboseli National Park, Tsavo West National Park, and Tsavo East National Park. This itinerary combines breathtaking scenery, diverse wildlife habitats, and Kenya’s largest protected wilderness areas. Travel in a private 4x4 safari Land Cruiser with an experienced driver guide, allowing flexibility, comfort, and personalized wildlife viewing. This safari offers a balanced combination of mountain views, volcanic landscapes, rivers, and vast savannah plains.",
+    "itinerary": [
+      {
+        "time": "Day 1",
+        "title": "Day 1: Nairobi – Amboseli National Park",
+        "details": "Depart Nairobi in the morning and drive south toward Amboseli National Park via the Nairobi–Mombasa highway. The journey takes approximately 4 to 5 hours and passes through rural towns and Maasai pastoral lands. Arrive at Amboseli in time for lunch at your lodge or camp followed by an afternoon game drive. Amboseli is one of Kenya’s most scenic parks and is famous for its large elephant herds and open plains with spectacular views of Mount Kilimanjaro. Wildlife commonly seen includes: Elephants, Lions and hyenas, Zebras and wildebeests, Giraffes and antelopes, Various bird species Return to your lodge or camp for dinner and overnight stay.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 2",
+        "title": "Day 2: Full Day Amboseli National Park",
+        "details": "Spend the entire day exploring Amboseli National Park with morning and afternoon game drives. Amboseli’s permanent water swamps attract wildlife throughout the year, making it one of the best parks in Kenya for consistent wildlife viewing. Safari Experiences, Observation of elephant families in natural habitat, Views of Mount Kilimanjaro (weather permitting), Visits to swamp areas rich in wildlife and birdlife, Predator tracking opportunities, Scenic photography of open plains. Lunch will be served at the lodge or as a picnic inside the park depending on wildlife activity. Return to your accommodation in the evening.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 3",
+        "title": "Day 3: Amboseli – Tsavo West National Park",
+        "details": "After breakfast, depart Amboseli and drive to Tsavo West National Park. The journey offers scenic views of volcanic hills and lava flows. Arrive at Tsavo West in time for lunch followed by an afternoon game drive. Tsavo West Highlights: Tsavo West features rugged landscapes, volcanic terrain, and natural springs making it one of Kenya’s most diverse parks. Safari activities include visiting:Mzima Springs – A natural freshwater oasis inhabited by hippos and crocodiles, Shetani Lava Flows – Vast volcanic formations. Rhino Sanctuary (subject to park regulations). Wildlife commonly found includes elephants, buffalo, leopards, and various antelope species.Return to the lodge or camp in the evening.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 4",
+        "title": "Day 4: Tsavo West – Tsavo East National Park",
+        "details": "After breakfast, enjoy a morning game drive in Tsavo West before departing for Tsavo East National Park via the Tsavo River Gate. Tsavo East is Kenya’s largest national park and is known for its open savannah landscapes and large elephant populations. Arrive in time for lunch followed by an afternoon game drive. Tsavo East Highlights, Red-dust elephants unique to the Tsavo ecosystem, Aruba Dam wildlife viewing area, Galana River ecosystem, Open plains ideal for wildlife spotting. Wildlife commonly seen includes lions, elephants, giraffes, zebras, and buffalo.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 5",
+        "title": "Day 5: Full Day Tsavo East National Park",
+        "details": "After breakfast, the descent begins through alpine vegetation into moorland and forest habitats. This section provides final opportunities for bird watching and nature photography.Upon reaching Sirimon Gate, you will meet your transport and drive back to Nairobi arriving in the afternoon or early evening marking the end of the expedition.",
+        "icon": "tabler:plane"
+      },
+      {
+        "time": "Day 6",
+        "title": "Day 6: Tsavo East – Nairobi",
+        "details": "After breakfast, enjoy a short morning game drive before departing Tsavo East and returning to Nairobi. Arrive in Nairobi in the afternoon with drop-off at your hotel or airport.",
+        "icon": "tabler:plane"
+      }
+    ],
     "includes": [
-      "Hotel pick-up and drop-off within Nairobi",
-      "Professional driver/guide",
-      "Transport in a comfortable tour vehicle",
-      "Guided activities at attractions",
-      "Bottled drinking water"
+      "Airport or hotel transfers",
+      "Private safari vehicle and guide",
+      "Accommodation as specified",
+      "Meals as indicated",
+      "Park entry fees",
+      "Game drives as per itinerary",
+      "Drinking water during safari"
     ],
     "excludes": [
-      "Park entry fees",
-      "Boat ride fees",
-      "Crescent Island conservation fees",
-      "Lunch and drinks"
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses and tips"
+    ],
+    "country": [
+      "Kenya",
+      "Tanzania"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
     ]
   },
   {
@@ -1589,11 +2057,47 @@
     "location": "Kenya",
     "price": 0,
     "duration": "Flexible",
-    "featuredImage": "https://res.cloudinary.com/demo/image/upload/v1/safari/placeholder-samburu.jpg",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903550/DSC_0585_xnv3ng.jpg",
     "gallery": [],
-    "snippet": "Experience the magic of Samburu. A unique journey through Kenya.",
-    "description": "Join us for a memorable Samburu. This package is designed to give you the best experience in Kenya. Full details coming soon.",
-    "itinerary": [],
+    "snippet": "Depart Nairobi after breakfast and drive north through the scenic central highlands, passing ...",
+    "description": "Depart Nairobi after breakfast and drive north through the scenic central highlands, passing Mount Kenya and crossing the equator. Enjoy beautiful views of changing landscapes as you head into Kenya’s semi-arid northern frontier.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Samburu National Reserve",
+        "details": "Depart Nairobi after breakfast and drive north through the scenic central highlands, passing Mount Kenya and crossing the equator. Enjoy beautiful views of changing landscapes as you head into Kenya’s semi-arid northern frontier. Arrive in Samburu in time for lunch at your lodge or camp, followed by some relaxation. In the afternoon, enjoy your first game drive in Samburu National Reserve, known for its rugged beauty and rare wildlife including Grevy’s zebra, reticulated giraffe, Somali ostrich, Beisa oryx, and gerenuk. Return to the lodge at sunset for dinner and overnight stay."
+      },
+      {
+        "day": 2,
+        "title": "Full Day in Samburu National Reserve",
+        "details": "Spend the day exploring Samburu with morning and afternoon game drives. The Ewaso Nyiro River attracts a wide variety of wildlife including elephants, lions, leopards, and crocodiles, as well as numerous bird species unique to northern Kenya. An optional cultural visit to a Samburu village can be arranged to experience local traditions, music, and lifestyle. Return to your lodge for dinner and overnight."
+      },
+      {
+        "day": 3,
+        "title": "Samburu – Ol Pejeta Conservancy",
+        "details": "After breakfast, depart for Ol Pejeta Conservancy, located between the foothills of Mount Kenya and the Aberdare Ranges. Arrive in time for lunch at your camp or lodge. In the afternoon, enjoy a game drive in this renowned private conservancy, home to the last two remaining northern white rhinos, large populations of black and southern white rhinos, the only chimpanzee sanctuary in Kenya, and abundant Big Five wildlife. Return to the lodge for dinner and overnight."
+      },
+      {
+        "day": 4,
+        "title": "Full Day in Ol Pejeta Conservancy",
+        "details": "Spend the day exploring Ol Pejeta with morning and afternoon game drives. Optional activities include visiting the Rhino Sanctuary, guided bush walks, night game drives where permitted, and a visit to the Sweetwaters Chimpanzee Sanctuary. The conservancy offers excellent wildlife viewing combined with strong conservation experiences. Dinner and overnight at your lodge."
+      },
+      {
+        "day": 5,
+        "title": "Ol Pejeta – Meru National Park",
+        "details": "After breakfast, depart for Meru National Park, one of Kenya’s most diverse and less crowded safari destinations. Arrive in time for lunch at your lodge or camp. Later, enjoy an afternoon game drive through Meru’s lush landscapes of rivers, swamps, grasslands, and acacia forests. Meru is famous as the setting of the story of Elsa the Lioness from Born Free and is home to elephants, lions, cheetahs, buffalo, and abundant birdlife. Dinner and overnight at your lodge."
+      },
+      {
+        "day": 6,
+        "title": "Full Day in Meru National Park",
+        "details": "Enjoy a full day of exploration in Meru National Park with morning and afternoon game drives. Highlights include the Rhino Sanctuary, Adamson Falls, Tana River ecosystems, and diverse wildlife and bird species. Meru offers a quieter and more exclusive safari experience with spectacular scenery and excellent photography opportunities. Return to your lodge for dinner and overnight."
+      },
+      {
+        "day": 7,
+        "title": "Meru – Nairobi",
+        "details": "After breakfast, depart Meru and drive back to Nairobi with scenic stops along the way. Arrive in Nairobi in the afternoon with drop-off at your hotel or at the airport for onward travel."
+      }
+    ],
     "includes": [
       "Hotel pick-up and drop-off within Nairobi",
       "Professional driver/guide",
@@ -1606,6 +2110,943 @@
       "Boat ride fees",
       "Crescent Island conservation fees",
       "Lunch and drinks"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day"
+    ]
+  },
+  {
+  "id": 30,
+  "slug": "masai-mara-group-tour-3-days",
+  "title": "03 Days Masai Mara Group Tour",
+  "shortTitle": "Masai Mara Group Tour",
+  "category": "Multi-Day Safaris",
+  "location": "Kenya",
+  "price": 0,
+  "duration": "3 Days",
+  "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977750/DSC_1020_tgnj14.jpg",
+  "gallery": [],
+  "snippet": "Enjoy a 3-day group safari to Masai Mara with exciting game drives, scenic views, and rich wildlife experiences.",
+  "description": "This 3 Days Masai Mara Group Tour offers an unforgettable safari experience through Kenya’s most famous wildlife reserve. Travel in a 4x4 Land Cruiser, enjoy guided game drives, full-board accommodation, and opportunities to spot the Big Five while exploring the vast savannahs of Masai Mara.",
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Nairobi – Masai Mara National Reserve",
+      "details": "Pick up from Nairobi in the morning and depart for Masai Mara National Reserve via the Great Rift Valley with a brief stop for photos. Arrive in Masai Mara in time for lunch at the camp. After lunch and a short rest, proceed for an afternoon game drive with chances to spot lions, elephants, giraffes, buffaloes, and various bird species. Return to the camp for dinner and overnight."
+    },
+    {
+      "day": 2,
+      "title": "Masai Mara Full Day Game Drive",
+      "details": "After an early breakfast, depart for a full-day game drive in Masai Mara National Reserve with packed lunch. Explore the vast savannahs and riverbanks, home to the Big Five and other wildlife. Visit the Mara River, famous for the seasonal wildebeest migration. Enjoy a picnic lunch in the park before continuing game viewing until late afternoon. Return to the camp for dinner and overnight."
+    },
+    {
+      "day": 3,
+      "title": "Masai Mara – Nairobi",
+      "details": "Enjoy an early morning breakfast at the camp. Check out and depart Masai Mara for Nairobi. An optional Maasai village visit can be arranged to experience local culture, traditional dances, and daily life. Arrive in Nairobi in the afternoon and be dropped off at your hotel or designated drop-off point, marking the end of the safari."
+    }
+  ],
+  "includes": [
+    "Transport in a 4x4 Land Cruiser (group tour)",
+    "Park entry fees to Masai Mara National Reserve",
+    "Accommodation on full board basis",
+    "All meals as per itinerary",
+    "Professional English-speaking driver-guide",
+    "Game drives as per itinerary",
+    "1 litre of drinking water per person per day"
+  ],
+  "excludes": [
+    "International and domestic flights",
+    "Visa fees and travel insurance",
+    "Drinks and beverages not mentioned",
+    "Personal expenses (laundry, telephone calls, tips)",
+    "Optional activities such as Maasai village visit",
+    "Anything not mentioned under ‘Tour Includes’"
+  ],
+  "country": [
+    "Kenya"
+  ],
+  "countryCode": "KE",
+  "type": "Wildlife",
+  "tags": [
+    "Multi-Day",
+    "Group Tour"
+  ]
+  },
+  {
+    "id": 31,
+    "slug": "masai-mara-lake-nakuru-4-days-budget-group-tour",
+    "title": "04 Days Masai Mara & Lake Nakuru Budget Group Tour",
+    "shortTitle": "Masai Mara & Nakuru Group Tour",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "4 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977470/DSC_0003_lnwosq.jpg",
+    "gallery": [],
+    "snippet": "A budget-friendly 4-day group safari combining Masai Mara and Lake Nakuru for excellent wildlife viewing and cultural experiences.",
+    "description": "This 4 Days Masai Mara & Lake Nakuru Budget Group Tour combines Kenya’s most iconic wildlife destinations with comfortable budget accommodation. Enjoy guided game drives, cultural interaction at a Maasai village, and outstanding wildlife viewing including the Big Five, rhinos, flamingos, and diverse birdlife.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Masai Mara National Reserve",
+        "details": "Pick up from Nairobi in the morning and depart for Masai Mara National Reserve via the Great Rift Valley, with a brief scenic stop en route. Arrive at the camp in time for lunch and check-in. In the afternoon, enjoy a game drive in the reserve with opportunities to spot lions, elephants, giraffes, zebras, antelopes, and other wildlife. Return to the camp for dinner and overnight."
+      },
+      {
+        "day": 2,
+        "title": "Masai Mara Full Day Game Drive",
+        "details": "After an early breakfast, depart for a full-day game drive in Masai Mara National Reserve with a picnic lunch. Explore the vast plains and riverbanks, home to the Big Five and abundant wildlife. Visit the Mara River, famous for the seasonal wildebeest migration, and enjoy lunch at a designated picnic site inside the park. Continue game viewing until late afternoon before returning to the camp for dinner and overnight."
+      },
+      {
+        "day": 3,
+        "title": "Masai Mara – Lake Nakuru (Maasai Village Visit)",
+        "details": "After breakfast, check out and depart Masai Mara for the Lake Nakuru area. En route, visit a traditional Maasai village to learn about Maasai culture, customs, and daily life. Continue to Nakuru and arrive at the resort in the afternoon. Spend the rest of the day at leisure. Dinner and overnight at the resort."
+      },
+      {
+        "day": 4,
+        "title": "Lake Nakuru – Nairobi (Morning Game Drive)",
+        "details": "After an early breakfast, proceed for a morning game drive in Lake Nakuru National Park, known for seasonal flamingos, rhinos, Rothschild giraffes, and rich birdlife. Later, exit the park and drive back to Nairobi, arriving in the afternoon. Drop off at your hotel or designated point, marking the end of the safari."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle (budget group tour)",
+      "Park entry fees to Masai Mara and Lake Nakuru National Parks",
+      "Accommodation in budget camps and resort on full board basis",
+      "All meals as per itinerary",
+      "Professional English-speaking driver-guide",
+      "Game drives as per itinerary",
+      "Picnic lunch on full-day game drive",
+      "1 litre of drinking water per person per day"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees and travel insurance",
+      "Drinks and beverages",
+      "Personal expenses (tips, laundry, phone calls)",
+      "Optional activities not mentioned",
+      "Anything not mentioned under ‘Tour Includes’"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Group Tour",
+      "Budget"
+    ]
+  },
+  {
+    "id": 32,
+    "slug": "12-days-tanzania-northern-circuit-zanzibar-holiday",
+    "title": "12 Days Tanzania Northern Circuit Safari & Zanzibar Beach Holiday",
+    "shortTitle": "Tanzania Safari & Zanzibar",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "12 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905963/DSC_0487_xrue8t.jpg",
+    "gallery": [],
+    "snippet": "A 12-day journey combining Tanzania’s Northern Safari Circuit with a relaxing Zanzibar beach holiday.",
+    "description": "This 12-day Tanzania safari and beach holiday blends exceptional wildlife viewing across the Northern Circuit—Tarangire, Lake Manyara, Serengeti, and Ngorongoro Crater—with a tranquil beach escape in Zanzibar. Enjoy expertly guided game drives, comfortable lodges and camps, and idyllic Indian Ocean beaches.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Arusha",
+        "details": "Upon arrival at Kilimanjaro International Airport, meet your safari representative and transfer to your hotel in Arusha. Spend the rest of the day at leisure. Dinner and overnight at your Arusha lodge or hotel."
+      },
+      {
+        "day": 2,
+        "title": "Arusha – Tarangire National Park",
+        "details": "After breakfast, depart for Tarangire National Park, renowned for large elephant herds and iconic baobab trees. Enjoy a game drive with sightings of elephants, lions, leopards, giraffes, zebras, wildebeests, and abundant birdlife. Dinner and overnight at a lodge or tented camp in Tarangire."
+      },
+      {
+        "day": 3,
+        "title": "Tarangire – Lake Manyara National Park",
+        "details": "After breakfast, drive to Lake Manyara National Park. Enjoy a game drive through forests, plains, and along the alkaline lake known for flamingos. The park is famous for tree-climbing lions and large elephant populations. Dinner and overnight near Lake Manyara."
+      },
+      {
+        "day": 4,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "Depart after breakfast for Serengeti National Park via the Ngorongoro Conservation Area. Enjoy scenic landscapes and wildlife en route. Arrive for lunch followed by an afternoon game drive across the vast Serengeti plains. Dinner and overnight in Serengeti."
+      },
+      {
+        "day": 5,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Spend a full day on morning and afternoon game drives in Serengeti, famous for predators and vast herbivore herds. Migration sightings are possible depending on the season. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 6,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Enjoy another full day exploring different regions of Serengeti for extended wildlife viewing. Optional hot air balloon safari available at extra cost, followed by a bush breakfast. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 7,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive before departing Serengeti with game viewing en route to Ngorongoro Conservation Area. Arrive late afternoon and check in near the crater rim. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 8,
+        "title": "Ngorongoro Crater Tour – Arusha",
+        "details": "After an early breakfast, descend into the Ngorongoro Crater for a half-day game drive featuring dense wildlife including lions, elephants, buffaloes, black rhinos, zebras, and flamingos. Enjoy a picnic lunch before ascending and returning to Arusha for overnight."
+      },
+      {
+        "day": 9,
+        "title": "Arusha – Zanzibar",
+        "details": "After breakfast, transfer to the airport for a domestic flight to Zanzibar. Upon arrival, transfer to your beach resort and relax by the Indian Ocean. Dinner and overnight at the resort."
+      },
+      {
+        "day": 10,
+        "title": "Zanzibar – Beach Relaxation",
+        "details": "Day at leisure enjoying white sandy beaches, turquoise waters, and resort facilities. Optional activities include snorkeling, diving, dolphin tours, or spice farm visits. Dinner and overnight at your beach resort."
+      },
+      {
+        "day": 11,
+        "title": "Zanzibar – Stone Town & Cultural Tour",
+        "details": "After breakfast, enjoy a guided tour of Stone Town, a UNESCO World Heritage Site, exploring historic buildings, markets, and cultural landmarks. Optional spice farm visit available. Return to the resort for relaxation. Dinner and overnight at your beach resort."
+      },
+      {
+        "day": 12,
+        "title": "Zanzibar – Departure",
+        "details": "After breakfast, enjoy free time at the resort before transfer to Zanzibar International Airport for your onward flight, marking the end of the safari and beach holiday."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in lodges, tented camps, and Zanzibar beach resort",
+      "Meals on full board basis during safari",
+      "Half board or all-inclusive meal plan in Zanzibar (depending on resort)",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Domestic flight from Arusha to Zanzibar",
+      "Airport and hotel transfers",
+      "Bottled drinking water during safari"
+    ],
+    "excludes": [
+      "International flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities (hot air balloon safari, snorkeling, diving, spice tours, etc.)",
+      "Alcoholic and soft drinks unless stated in Zanzibar package",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife & Beach",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Beach Holiday"
+    ]
+  },
+  {
+    "id": 33,
+    "slug": "8-days-masai-mara-nakuru-naivasha-amboseli-safari",
+    "title": "8 Days Masai Mara, Lake Nakuru, Lake Naivasha & Amboseli Safari",
+    "shortTitle": "Kenya Highlights Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "8 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134159/1001261572_od07z2.jpg",
+    "gallery": [],
+    "snippet": "An extended 8-day Kenya safari covering Masai Mara, Lake Nakuru, Lake Naivasha, and Amboseli with excellent game viewing and scenic highlights.",
+    "description": "This 8-day safari offers an in-depth exploration of Kenya’s premier wildlife destinations. Enjoy three nights in Masai Mara, discover rhinos and birdlife at Lake Nakuru, relax around Lake Naivasha, and experience Amboseli’s iconic elephant herds with views of Mount Kilimanjaro, all while traveling in a comfortable 4x4 Land Cruiser.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Masai Mara National Reserve",
+        "details": "Early morning pick-up from your Nairobi hotel or airport followed by a scenic drive to Masai Mara via the Great Rift Valley viewpoint. Arrive in time for lunch and relaxation. Enjoy an afternoon game drive in Masai Mara. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Masai Mara – Full Day Game Drive",
+        "details": "After breakfast, depart with picnic lunch boxes for a full day of game drives in Masai Mara. Spot lions, elephants, cheetahs, giraffes, zebras, hyenas, and antelopes. Visit the Mara River area during migration season. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 3,
+        "title": "Masai Mara – Full Day Game Drive",
+        "details": "Spend another full day exploring different sections of Masai Mara for a relaxed and in-depth wildlife experience. Enjoy a picnic lunch inside the reserve before continuing game drives. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 4,
+        "title": "Masai Mara – Lake Nakuru (Optional Maasai Village & Lake Naivasha Boat Ride)",
+        "details": "After breakfast, depart Masai Mara for Lake Nakuru. Optional visit to a Maasai village and an optional stop at Lake Naivasha for a boat ride. Continue to Lake Nakuru, arriving in the evening. Dinner and overnight at your lodge or resort."
+      },
+      {
+        "day": 5,
+        "title": "Lake Nakuru – Lake Naivasha",
+        "details": "Enjoy an early morning game drive in Lake Nakuru National Park, known for rhinos, flamingos (seasonal), Rothschild giraffes, and birdlife. Later depart for Lake Naivasha, arriving in time for lunch. Afternoon at leisure with optional activities. Dinner and overnight at your Naivasha lodge."
+      },
+      {
+        "day": 6,
+        "title": "Lake Naivasha – Amboseli National Park (Hell’s Gate Visit)",
+        "details": "After breakfast, visit Hell’s Gate National Park for a morning game viewing experience on foot or by bicycle. Later depart for Amboseli National Park with lunch en route. Arrive in the evening, check in, and enjoy dinner and overnight."
+      },
+      {
+        "day": 7,
+        "title": "Amboseli – Full Day Game Drive",
+        "details": "Spend a full day exploring Amboseli National Park with morning and afternoon game drives and picnic lunch. Enjoy sightings of large elephant herds and views of Mount Kilimanjaro, weather permitting. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 8,
+        "title": "Amboseli – Nairobi (En-route Game Drive)",
+        "details": "Early morning game drive in Amboseli followed by breakfast. Depart for Nairobi, arriving in the afternoon for drop-off at your hotel or Jomo Kenyatta International Airport, marking the end of the safari."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 Land Cruiser safari vehicle with pop-up roof",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or camps",
+      "Meals on full board basis during safari",
+      "Park entrance fees for all parks mentioned",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Nairobi"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities (Maasai village visit, Lake Naivasha boat ride, cycling at Hell’s Gate, etc.)",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Extended"
+    ]
+  },
+  {
+    "id": 34,
+    "slug": "3-days-serengeti-ngorongoro-crater-safari",
+    "title": "3 Days Serengeti & Ngorongoro Crater Tanzania Safari",
+    "shortTitle": "Serengeti & Ngorongoro Safari",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "3 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134230/1001261597_u2ysrq.jpg",
+    "gallery": [],
+    "snippet": "A short but rewarding 3-day safari exploring Serengeti National Park and the Ngorongoro Crater with exceptional wildlife viewing.",
+    "description": "This 3-day Tanzania safari explores two of the country’s most iconic wildlife destinations—Serengeti National Park and the Ngorongoro Crater. Enjoy breathtaking landscapes, excellent game viewing opportunities, and comfortable accommodation in lodges or tented camps.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arusha – Serengeti National Park",
+        "details": "Early morning pick-up from Arusha followed by a scenic drive through the Ngorongoro Conservation Area to Serengeti National Park. Arrive in time for lunch at your lodge or camp. In the afternoon, enjoy your first game drive across the Serengeti plains, home to lions, elephants, leopards, cheetahs, giraffes, zebras, and antelopes. Dinner and overnight at a lodge or tented camp in Serengeti."
+      },
+      {
+        "day": 2,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive in Serengeti exploring different sections of the park. During migration season, you may witness the wildebeest migration depending on animal movements. After lunch, depart Serengeti and drive toward the Ngorongoro Conservation Area with game viewing en route. Arrive in the late afternoon and check in at your lodge or camp near the crater rim. Dinner and overnight in Ngorongoro."
+      },
+      {
+        "day": 3,
+        "title": "Ngorongoro Crater – Arusha",
+        "details": "After early breakfast, descend into the Ngorongoro Crater for a half-day game drive. The crater hosts one of the highest wildlife concentrations in Africa, including lions, elephants, buffaloes, rhinos, zebras, wildebeests, and flamingos. Enjoy a picnic lunch before ascending and driving back to Arusha. Arrive in the late afternoon for drop-off at your hotel or airport."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or tented camps",
+      "Meals on full board basis during safari",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Arusha"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Short Safari"
+    ]
+  },
+  {
+    "id": 35,
+    "slug": "4-days-lake-manyara-serengeti-ngorongoro-safari",
+    "title": "04 Days Lake Manyara, Serengeti & Ngorongoro Crater Tanzania Safari",
+    "shortTitle": "Manyara, Serengeti & Ngorongoro",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "4 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771134159/1001261576_fixnrt.jpg",
+    "gallery": [],
+    "snippet": "A 4-day Northern Tanzania safari covering Lake Manyara, Serengeti National Park, and the iconic Ngorongoro Crater.",
+    "description": "This 4-day Tanzania safari delivers an exceptional wildlife experience across three of Northern Tanzania’s most celebrated parks—Lake Manyara, Serengeti National Park, and the Ngorongoro Crater. Enjoy diverse landscapes, abundant wildlife, and comfortable accommodation in carefully selected lodges or tented camps.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arusha – Lake Manyara National Park",
+        "details": "Morning pick-up from your Arusha hotel followed by a short drive to Lake Manyara National Park. Enjoy a game drive through forests, woodlands, and along the alkaline lake famous for flamingos and birdlife. Spot tree-climbing lions, elephants, giraffes, zebras, hippos, and more. Picnic lunch inside the park. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "After breakfast, depart for Serengeti National Park via the Ngorongoro Conservation Area, enjoying scenic landscapes and wildlife en route. Arrive in time for lunch. Afternoon game drive across the Serengeti plains, home to lions, cheetahs, leopards, elephants, giraffes, zebras, and antelopes. Dinner and overnight in Serengeti."
+      },
+      {
+        "day": 3,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive in Serengeti. During migration season, wildebeest migration sightings may be possible depending on animal movements. After lunch, depart for Ngorongoro Conservation Area with game viewing en route. Arrive late afternoon and check in near the crater rim. Dinner and overnight in Ngorongoro."
+      },
+      {
+        "day": 4,
+        "title": "Ngorongoro Crater – Arusha",
+        "details": "Early breakfast followed by a descent into the Ngorongoro Crater for a half-day game drive. The crater hosts dense wildlife populations including lions, elephants, buffaloes, black rhinos, zebras, wildebeests, hyenas, and flamingos. Enjoy a picnic lunch before ascending and driving back to Arusha. Arrive late afternoon for hotel or airport drop-off."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or tented camps",
+      "Meals on full board basis during safari",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Arusha"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Northern Circuit"
+    ]
+  },
+  {
+    "id": 36,
+    "slug": "5-days-lake-manyara-serengeti-ngorongoro-safari",
+    "title": "5 Days Lake Manyara, Serengeti & Ngorongoro Crater Tanzania Safari",
+    "shortTitle": "Manyara, Serengeti & Ngorongoro",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "5 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977514/DSC_0949_m9leo1.jpg",
+    "gallery": [],
+    "snippet": "A 5-day Northern Tanzania safari featuring Lake Manyara, two nights in Serengeti for extended game viewing, and the iconic Ngorongoro Crater.",
+    "description": "This 5-day Tanzania safari explores the highlights of the Northern Safari Circuit, combining Lake Manyara’s diverse habitats, extended wildlife viewing in the Serengeti with two nights, and the spectacular Ngorongoro Crater. Enjoy abundant wildlife, varied landscapes, and comfortable lodges or tented camps.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arusha – Lake Manyara National Park",
+        "details": "Morning pick-up from your hotel or airport in Arusha followed by a drive to Lake Manyara National Park. Enjoy a game drive through groundwater forests, acacia woodlands, and along the alkaline lake known for flamingos and birdlife. Spot tree-climbing lions, elephants, giraffes, zebras, and hippos. Picnic lunch inside the park. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "After breakfast, depart for Serengeti National Park via the Ngorongoro Conservation Area, enjoying scenic landscapes and wildlife en route. Arrive in time for lunch. Afternoon game drive across the Serengeti plains with chances to see lions, cheetahs, leopards, elephants, giraffes, zebras, and antelopes. Dinner and overnight in Serengeti."
+      },
+      {
+        "day": 3,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Spend the full day exploring Serengeti National Park with picnic lunches. Enjoy extensive game viewing across different regions of the park. During migration season, you may witness the wildebeest migration depending on animal movements. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 4,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive in Serengeti. After lunch, depart for Ngorongoro Conservation Area with game viewing en route. Arrive late afternoon and check in near the crater rim. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 5,
+        "title": "Ngorongoro Crater – Arusha",
+        "details": "Early breakfast followed by a descent into the Ngorongoro Crater for a half-day game drive. The crater hosts dense wildlife populations including lions, elephants, buffaloes, black rhinos, zebras, wildebeests, and flamingos. Picnic lunch inside the crater before ascending and driving back to Arusha. Arrive late afternoon for hotel or airport drop-off."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or tented camps",
+      "Meals on full board basis during safari",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Arusha"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Northern Circuit"
+    ]
+  },
+  {
+    "id": 37,
+    "slug": "9-days-tanzania-northern-circuit-safari",
+    "title": "9 Days Tanzania Northern Circuit Safari",
+    "shortTitle": "Tanzania Northern Circuit",
+    "category": "Multi-Day Safaris",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "9 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977496/DSC_0880_z04093.jpg",
+    "gallery": [],
+    "snippet": "An in-depth 9-day Northern Circuit safari covering Tarangire, Lake Manyara, Serengeti, and Ngorongoro Crater with extended wildlife viewing.",
+    "description": "This extended Northern Circuit safari offers a comprehensive exploration of Tanzania’s top wildlife destinations. Visit Tarangire National Park, Lake Manyara National Park, spend multiple days in Serengeti National Park, and explore the iconic Ngorongoro Crater while enjoying carefully selected lodges or tented camps.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Arusha",
+        "details": "Arrival at Kilimanjaro International Airport where you will be met by your safari representative and transferred to your hotel in Arusha. Rest and relax in preparation for your safari. Dinner and overnight stay at your Arusha lodge or hotel."
+      },
+      {
+        "day": 2,
+        "title": "Arusha – Tarangire National Park",
+        "details": "After breakfast, depart for Tarangire National Park, famous for its large elephant herds and baobab trees. Enjoy a game drive with chances to see elephants, lions, leopards, giraffes, zebras, wildebeests, and rich birdlife along the Tarangire River. Dinner and overnight at a lodge or tented camp in Tarangire."
+      },
+      {
+        "day": 3,
+        "title": "Tarangire – Lake Manyara National Park",
+        "details": "After breakfast, drive to Lake Manyara National Park. Enjoy a game drive through forests, open plains, and along the alkaline lake known for flamingos. Wildlife includes tree-climbing lions, elephants, hippos, and giraffes. Picnic lunch inside the park. Dinner and overnight at your lodge or camp."
+      },
+      {
+        "day": 4,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "After breakfast, depart for Serengeti National Park via the Ngorongoro Conservation Area. Enjoy scenic landscapes and wildlife en route. Arrive in time for lunch followed by an afternoon game drive in the Serengeti plains. Dinner and overnight at a lodge or tented camp in Serengeti."
+      },
+      {
+        "day": 5,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Full day of game drives in Serengeti National Park with morning and afternoon sessions. The park is known for its predators and large herbivore herds. During migration season, you may witness the wildebeest migration depending on animal movements. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 6,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Another full day exploring different regions of Serengeti for extensive wildlife viewing. Optional early morning hot air balloon safari available at extra cost. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 7,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive in Serengeti before departing for Ngorongoro Conservation Area with game viewing en route. Arrive late afternoon and check in near the crater rim. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 8,
+        "title": "Ngorongoro Crater Tour",
+        "details": "Early breakfast followed by a descent into the Ngorongoro Crater for a half-day game drive. The crater hosts dense wildlife populations including lions, elephants, buffaloes, black rhinos, zebras, wildebeests, hyenas, and flamingos. Picnic lunch inside the crater. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 9,
+        "title": "Ngorongoro – Arusha / Departure",
+        "details": "After breakfast, drive back to Arusha enjoying scenic views along the way. Drop-off at your hotel or Kilimanjaro International Airport for your onward journey."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or tented camps",
+      "Meals on full board basis during safari",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Airport transfers"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities (hot air balloon safari, cultural visits, etc.)",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Wildlife",
+    "tags": [
+      "Multi-Day",
+      "Safari",
+      "Northern Circuit"
+    ]
+  },
+  {
+    "id": 38,
+    "slug": "12-days-tanzania-northern-circuit-safari-zanzibar-beach-holiday",
+    "title": "12 Days Tanzania Northern Circuit Safari & Zanzibar Beach Holiday",
+    "shortTitle": "Tanzania Safari & Zanzibar",
+    "category": "International",
+    "location": "Tanzania",
+    "price": 0,
+    "duration": "12 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1771492839/zanzibar_u0i46k.jpg",
+    "gallery": [],
+    "snippet": "A perfect 12-day combination of Tanzania’s Northern Safari Circuit and a relaxing Zanzibar beach holiday, blending wildlife adventure with tropical leisure.",
+    "description": "This 12-day itinerary combines Tanzania’s top wildlife destinations—Tarangire, Lake Manyara, Serengeti, and Ngorongoro Crater—with a relaxing beach escape in Zanzibar. Enjoy unforgettable game drives, rich cultural experiences, and tranquil Indian Ocean beaches while staying in carefully selected lodges, tented camps, and beach resorts.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Arusha",
+        "details": "Arrival at Kilimanjaro International Airport, meet and greet by your safari representative, and transfer to your hotel in Arusha. Rest and prepare for your safari adventure. Dinner and overnight stay at your Arusha lodge or hotel."
+      },
+      {
+        "day": 2,
+        "title": "Arusha – Tarangire National Park",
+        "details": "After breakfast, drive to Tarangire National Park, famous for large elephant herds and baobab trees. Enjoy a game drive spotting elephants, lions, leopards, giraffes, zebras, wildebeests, and diverse birdlife along the Tarangire River. Dinner and overnight at a lodge or tented camp in Tarangire."
+      },
+      {
+        "day": 3,
+        "title": "Tarangire – Lake Manyara National Park",
+        "details": "After breakfast, depart for Lake Manyara National Park. Enjoy a game drive through forests, open plains, and along the alkaline lake known for flamingos. Wildlife includes tree-climbing lions and large elephant populations. Dinner and overnight at a lodge or camp near Lake Manyara."
+      },
+      {
+        "day": 4,
+        "title": "Lake Manyara – Serengeti National Park",
+        "details": "After breakfast, depart for Serengeti National Park via the Ngorongoro Conservation Area. Enjoy scenic landscapes and wildlife sightings en route. Arrive for lunch followed by an afternoon game drive across the Serengeti plains. Dinner and overnight at a lodge or tented camp in Serengeti."
+      },
+      {
+        "day": 5,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Full day of game drives in Serengeti National Park with morning and afternoon sessions. The park is renowned for its predators and vast herds of herbivores. During migration season, you may witness the wildebeest migration depending on animal movements. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 6,
+        "title": "Serengeti – Full Day Game Drive",
+        "details": "Another full day exploring different regions of Serengeti for extended wildlife viewing. Optional hot air balloon safari available at extra cost, offering aerial views of the plains followed by a bush breakfast. Dinner and overnight at your Serengeti lodge or camp."
+      },
+      {
+        "day": 7,
+        "title": "Serengeti – Ngorongoro Conservation Area",
+        "details": "After breakfast, enjoy a morning game drive before departing Serengeti for Ngorongoro Conservation Area with game viewing en route. Arrive late afternoon and check in near the crater rim. Dinner and overnight at your Ngorongoro lodge or camp."
+      },
+      {
+        "day": 8,
+        "title": "Ngorongoro Crater Tour – Arusha",
+        "details": "Early breakfast followed by a descent into the Ngorongoro Crater for a half-day game drive. Spot lions, elephants, buffaloes, black rhinos, zebras, and flamingos. Picnic lunch inside the crater, then drive back to Arusha for dinner and overnight stay."
+      },
+      {
+        "day": 9,
+        "title": "Arusha – Zanzibar",
+        "details": "After breakfast, transfer to the airport for your domestic flight to Zanzibar. On arrival, transfer to your beach resort and spend the rest of the day relaxing by the Indian Ocean. Dinner and overnight at your Zanzibar beach resort."
+      },
+      {
+        "day": 10,
+        "title": "Zanzibar – Beach Relaxation",
+        "details": "Leisure day at the beach enjoying white sands, turquoise waters, and resort facilities. Optional activities include snorkeling, diving, dolphin tours, and spice farm visits. Dinner and overnight at your beach resort."
+      },
+      {
+        "day": 11,
+        "title": "Zanzibar – Stone Town & Cultural Tour",
+        "details": "After breakfast, enjoy a guided tour of Stone Town exploring historical sites, local markets, and cultural landmarks. Optional spice farm visit available. Return to your beach resort for relaxation. Dinner and overnight at your beach resort."
+      },
+      {
+        "day": 12,
+        "title": "Zanzibar – Departure",
+        "details": "After breakfast, enjoy free time at the resort before transfer to Zanzibar International Airport for your onward flight, marking the end of your safari and beach holiday."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 safari vehicle with pop-up roof for game viewing",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in lodges, tented camps, and Zanzibar beach resort",
+      "Meals on full board basis during safari",
+      "Half board or all-inclusive meal plan in Zanzibar (depending on resort)",
+      "Park entrance and conservation fees",
+      "Game drives as per itinerary",
+      "Domestic flight from Arusha to Zanzibar",
+      "Airport and hotel transfers",
+      "Bottled drinking water during safari"
+    ],
+    "excludes": [
+      "International flights",
+      "Tanzania visa fees",
+      "Travel insurance",
+      "Optional activities (hot air balloon safari, snorkeling, diving, spice tours, etc.)",
+      "Alcoholic and soft drinks unless stated in Zanzibar package",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Tanzania"
+    ],
+    "countryCode": "TZ",
+    "type": "Safari & Beach",
+    "tags": [
+      "Multi-Day",
+      "Northern Circuit",
+      "Safari",
+      "Zanzibar",
+      "Beach Holiday"
+    ]
+  },
+  {
+  "id": 39,
+  "slug": "7-days-masai-mara-lake-nakuru-lake-naivasha-amboseli-safari",
+  "title": "7 Days Masai Mara, Lake Nakuru, Lake Naivasha & Amboseli Safari",
+  "shortTitle": "Kenya Classic Safari",
+  "category": "Kenya Safaris",
+  "location": "Kenya",
+  "price": 0,
+  "duration": "7 Days",
+  "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905959/DSC_0443_jozfk3.jpg",
+  "gallery": [],
+  "snippet": "A classic 7-day Kenya safari covering Masai Mara, Lake Nakuru, Lake Naivasha, and Amboseli National Park with diverse wildlife and scenic landscapes.",
+  "description": "This exciting 7-day safari takes you through Kenya’s most iconic wildlife destinations. Explore the endless plains of Masai Mara, the rhino sanctuary at Lake Nakuru, the scenic beauty of Lake Naivasha, and the breathtaking landscapes of Amboseli National Park with Mount Kilimanjaro as a stunning backdrop.",
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Nairobi – Masai Mara National Reserve",
+      "details": "Early morning pick-up from your Nairobi hotel or airport followed by a scenic drive to Masai Mara via the Great Rift Valley. Arrive at your lodge or camp for lunch and relaxation. Afternoon game drive in Masai Mara. Dinner and overnight stay at your lodge or camp."
+    },
+    {
+      "day": 2,
+      "title": "Masai Mara – Full Day Game Drive",
+      "details": "Full day game drive in Masai Mara with picnic lunch boxes. Spot lions, elephants, cheetahs, giraffes, zebras, and antelopes. During migration season, witness wildebeest migration and river crossings. Dinner and overnight stay at your lodge or camp."
+    },
+    {
+      "day": 3,
+      "title": "Masai Mara – Lake Nakuru (Optional Maasai Village & Lake Naivasha Boat Ride)",
+      "details": "After breakfast, depart Masai Mara for Lake Nakuru. Optional visit to a Maasai village and optional Lake Naivasha boat ride en route. Arrive in Nakuru in the evening. Dinner and overnight stay at your lodge or resort."
+    },
+    {
+      "day": 4,
+      "title": "Lake Nakuru – Lake Naivasha",
+      "details": "Early morning game drive in Lake Nakuru National Park, known for rhinos, flamingos, and Rothschild giraffes. After the game drive, proceed to Lake Naivasha for lunch. Afternoon at leisure or optional activities. Dinner and overnight stay at your Naivasha lodge or resort."
+    },
+    {
+      "day": 5,
+      "title": "Lake Naivasha – Amboseli National Park (Hell’s Gate Visit)",
+      "details": "Morning visit to Hell’s Gate National Park with walking or cycling opportunities. Later, depart for Amboseli National Park arriving in the evening. Dinner and overnight stay at your lodge or camp."
+    },
+    {
+      "day": 6,
+      "title": "Amboseli – Full Day Game Drive",
+      "details": "Full day game drives in Amboseli National Park with picnic lunch. Spot large elephant herds, lions, cheetahs, buffaloes, giraffes, zebras, and birdlife. Enjoy views of Mount Kilimanjaro if weather permits. Dinner and overnight stay at your lodge or camp."
+    },
+    {
+      "day": 7,
+      "title": "Amboseli – Nairobi (En-Route Game Drive)",
+      "details": "Early morning game drive in Amboseli. After breakfast, depart for Nairobi arriving in the afternoon with drop off at your hotel or Jomo Kenyatta International Airport."
+    }
+  ],
+  "includes": [
+    "Transport in a 4x4 Land Cruiser safari vehicle with pop-up roof",
+    "Professional English-speaking safari guide/driver",
+    "Accommodation in selected lodges or camps",
+    "Meals on full board basis during safari",
+    "Park entrance fees for all parks mentioned",
+    "Game drives as per itinerary",
+    "Bottled drinking water during safari",
+    "Pick up and drop off in Nairobi"
+  ],
+  "excludes": [
+    "International and domestic flights",
+    "Visa fees",
+    "Travel insurance",
+    "Optional activities (Maasai village visit, Lake Naivasha boat ride, cycling at Hell’s Gate, etc.)",
+    "Alcoholic and soft drinks",
+    "Personal expenses such as laundry, souvenirs, and tips"
+  ],
+  "country": [
+    "Kenya"
+  ],
+  "countryCode": "KE",
+  "type": "Wildlife Safari",
+  "tags": [
+    "Masai Mara",
+    "Amboseli",
+    "Lake Nakuru",
+    "Lake Naivasha",
+    "Big Five",
+    "Multi-Day Safari"
+  ]
+  },
+  {
+    "id": 40,
+    "slug": "6-days-masai-mara-lake-nakuru-amboseli-safari",
+    "title": "6 Days Masai Mara, Lake Nakuru & Amboseli Safari",
+    "shortTitle": "Kenya Highlights Safari",
+    "category": "Kenya Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "6 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905945/DSC_0325_evpkqa.jpg",
+    "gallery": [],
+    "snippet": "A 6-day Kenya safari exploring Masai Mara, Lake Nakuru, and Amboseli National Park with excellent wildlife viewing and scenic landscapes.",
+    "description": "Discover Kenya’s most celebrated wildlife destinations on this 6-day safari adventure. Visit the world-famous Masai Mara, the rhino sanctuary of Lake Nakuru National Park, and Amboseli National Park, renowned for its large elephant herds and breathtaking views of Mount Kilimanjaro. Travel in a comfortable 4x4 Land Cruiser designed for optimal game viewing.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Masai Mara National Reserve",
+        "details": "Early morning pick-up from your Nairobi hotel or airport followed by a scenic drive through the Great Rift Valley to Masai Mara National Reserve. Arrive for lunch at your lodge or camp. Afternoon game drive across the savannah plains. Dinner and overnight stay at your Masai Mara lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Masai Mara – Full Day Game Drive",
+        "details": "Full day game drive in Masai Mara with picnic lunch boxes. Explore different sections of the reserve known for predators and diverse wildlife. During migration season, witness the spectacular wildebeest migration. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 3,
+        "title": "Masai Mara – Lake Nakuru (Optional Maasai Village & Lake Naivasha Boat Ride)",
+        "details": "After breakfast, depart Masai Mara for Lake Nakuru. Optional visit to a Maasai village and optional stop at Lake Naivasha for a boat ride en route. Arrive in Nakuru in the late afternoon. Dinner and overnight stay at your lodge or resort."
+      },
+      {
+        "day": 4,
+        "title": "Lake Nakuru – Amboseli National Park",
+        "details": "Early morning game drive in Lake Nakuru National Park, famous for rhinos, Rothschild giraffes, flamingos, and birdlife. After the game drive, depart for Amboseli National Park with lunch en route. Arrive in the evening. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 5,
+        "title": "Amboseli – Full Day Game Drive",
+        "details": "Spend the day exploring Amboseli National Park with morning and afternoon game drives and picnic lunch. Spot large elephant herds, lions, cheetahs, giraffes, zebras, wildebeests, and birdlife. Enjoy views of Mount Kilimanjaro if weather permits. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 6,
+        "title": "Amboseli – Nairobi (En-route Game Drive)",
+        "details": "Early morning game drive in Amboseli followed by breakfast. Depart for Nairobi arriving in the afternoon with drop off at your hotel or Jomo Kenyatta International Airport."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 Land Cruiser safari vehicle with pop-up roof",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or camps",
+      "Meals on full board basis during safari",
+      "Park entrance fees for all parks mentioned",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Nairobi"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities (Maasai village visit, Lake Naivasha boat ride, etc.)",
+      "Alcoholic and soft drinks",
+      "Personal expenses such as laundry, souvenirs, and tips"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife Safari",
+    "tags": [
+      "Masai Mara",
+      "Lake Nakuru",
+      "Amboseli",
+      "Big Five",
+      "Multi-Day Safari"
+    ]
+  },
+  {
+    "id": 41,
+    "slug": "5-days-masai-mara-lake-nakuru-lake-naivasha-safari",
+    "title": "5 Days Masai Mara, Lake Nakuru & Lake Naivasha Safari",
+    "shortTitle": "Masai Mara, Nakuru & Naivasha Safari",
+    "category": "Kenya Safaris",
+    "location": "Kenya",
+    "price": 0,
+    "duration": "5 Days",
+    "featuredImage": "https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905943/DSC_0336_vmhmvv.jpg",
+    "gallery": [],
+    "snippet": "A 5-day Kenya safari exploring Masai Mara, Lake Nakuru, and Lake Naivasha with exciting game drives and scenic landscapes.",
+    "description": "Experience Kenya’s most iconic wildlife destinations on this 5-day safari adventure covering the world-famous Masai Mara, the bird-rich Lake Nakuru National Park, and the scenic Lake Naivasha. Enjoy thrilling game drives, breathtaking landscapes, and optional cultural and adventure activities.",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nairobi – Masai Mara National Reserve",
+        "details": "Early morning pick-up from your Nairobi hotel or airport followed by a scenic drive via the Great Rift Valley to Masai Mara National Reserve. Arrive in time for lunch and relaxation. Afternoon game drive in Masai Mara. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 2,
+        "title": "Masai Mara – Full Day Game Drive",
+        "details": "Full day game drive in Masai Mara with picnic lunch boxes. Explore the vast plains rich in wildlife including the Big Five. During migration season, witness wildebeest migration and river crossings. Dinner and overnight stay at your lodge or camp."
+      },
+      {
+        "day": 3,
+        "title": "Masai Mara – Lake Nakuru (Optional Maasai Village & Lake Naivasha Boat Ride)",
+        "details": "After breakfast, depart Masai Mara for Lake Nakuru. Optional Maasai village visit and optional stop at Lake Naivasha for a boat ride en route. Arrive in Nakuru in the evening. Dinner and overnight stay at your lodge."
+      },
+      {
+        "day": 4,
+        "title": "Lake Nakuru – Lake Naivasha",
+        "details": "Early morning game drive in Lake Nakuru National Park, known for rhinos, flamingos, Rothschild giraffes, and birdlife. After the game drive, proceed to Lake Naivasha for lunch and leisure time. Dinner and overnight stay at your Naivasha lodge."
+      },
+      {
+        "day": 5,
+        "title": "Lake Naivasha – Nairobi (Hell’s Gate National Park)",
+        "details": "After breakfast, visit Hell’s Gate National Park for a morning game viewing experience with options for walking or cycling. Later, depart for Nairobi arriving in the afternoon with drop off at your hotel or Jomo Kenyatta International Airport."
+      }
+    ],
+    "includes": [
+      "Transport in a 4x4 Land Cruiser safari vehicle with pop-up roof",
+      "Professional English-speaking safari guide/driver",
+      "Accommodation in selected lodges or camps",
+      "Meals on full board basis during safari",
+      "Park entrance fees",
+      "Game drives as per itinerary",
+      "Bottled drinking water during safari",
+      "Pick up and drop off in Nairobi"
+    ],
+    "excludes": [
+      "International and domestic flights",
+      "Visa fees",
+      "Travel insurance",
+      "Optional activities (Maasai village visit, boat ride, cycling, etc.)",
+      "Alcoholic and soft drinks",
+      "Personal expenses (laundry, souvenirs, tips, etc.)"
+    ],
+    "country": [
+      "Kenya"
+    ],
+    "countryCode": "KE",
+    "type": "Wildlife Safari",
+    "tags": [
+      "Masai Mara",
+      "Lake Nakuru",
+      "Lake Naivasha",
+      "Big Five",
+      "Multi-Day Safari"
     ]
   }
 ]

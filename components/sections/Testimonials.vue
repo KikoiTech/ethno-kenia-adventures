@@ -33,11 +33,26 @@
           
           <!-- Testimonial Background Image -->
           <div class="absolute inset-0">
-            <img 
+            <NuxtImg 
+              provider="cloudinary"
               :src="activeTestimonial.image"
               :alt="activeTestimonial.name"
-              class="w-full h-full object-cover"
-            >
+              
+              fit="fill"
+              
+              :modifiers="{ gravity: 'auto' }"
+              
+              sizes="sm:100vw md:90vw lg:1000px"
+              format="webp"
+              quality="80"
+              
+              width="1000"
+              height="600"
+              loading="lazy"
+              
+              class="w-full h-full object-cover transition-opacity duration-500"
+              :key="activeTestimonial.image" 
+            />
             <!-- Dark overlay for text readability -->
             <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/60 via-brand-charcoal/30 to-transparent"></div>
           </div>
@@ -123,11 +138,22 @@
             class="relative group overflow-hidden rounded-lg transition-all duration-300 hover:scale-105"
             :class="currentTestimonial === index ? 'ring-2 ring-brand-terracotta' : ''"
           >
-            <img 
-              :src="testimonial.thumbnail"
+            <NuxtImg 
+              provider="cloudinary"
+              :src="testimonial.image"
               :alt="testimonial.name"
+              
+              width="150"
+              height="150"
+              fit="cover"
+              :modifiers="{ gravity: 'auto' }"
+              
+              quality="60"
+              format="webp"
+              loading="lazy"
+              
               class="w-full h-20 md:h-24 object-cover transition-all duration-300 group-hover:scale-110"
-            >
+            />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
         </div>
@@ -150,7 +176,7 @@
           >
             <span>Begin Your Journey</span>
             <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5 5-5M13 17l5 5-5"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
             </svg>
           </NuxtLink>
           
@@ -164,6 +190,14 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
+interface Testimonial {
+  name: string
+  location: string
+  safari: string
+  quote: string
+  image: string // Cloudinary Public ID
+}
+
 const currentTestimonial = ref(0)
 
 // Testimonials data with authentic safari experiences
@@ -173,42 +207,45 @@ const testimonials = [
     location: 'London, United Kingdom',
     safari: '7-Day Maasai Mara Adventure',
     quote: 'Watching the sunrise over the savanna, with elephants moving silently in the distance, I felt connected to something ancient and profound. Kenya doesn\'t just show you wildlife; it reminds you of your place in the natural world.',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903537/DSC_0506_pr32cg.jpg',
-    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903537/DSC_0506_pr32cg.jpg'
+    image: 'v1770903537/DSC_0506_pr32cg.jpg',
+    // thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903537/DSC_0506_pr32cg.jpg'
   },
   {
     name: 'James Chen',
     location: 'San Francisco, USA',
     safari: '10-Day Kenya Explorer',
     quote: 'The guides\' knowledge of the land and its creatures is extraordinary. We tracked lions on foot and sat around the campfire under stars so bright they felt close enough to touch. This wasn\'t just a vacation; it was an education in wonder.',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903523/DSC_0316_ygi6fm.jpg',
-    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903523/DSC_0316_ygi6fm.jpg'
+    image: 'v1770903523/DSC_0316_ygi6fm.jpg',
+    // thumbnail: 'v1770903523/DSC_0316_ygi6fm.jpg'
   },
   {
     name: 'Amara Okonkwo',
     location: 'Lagos, Nigeria',
     safari: '5-Day Amboseli Luxury Safari',
     quote: 'As an African visiting another African country, I was moved by the warmth of the Kenyan people and the majesty of Mount Kilimanjaro backdrop. The giraffes walking against that sunrise - that image stays with me always.',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903539/DSC_0519_cjrhjf.jpg',
-    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903539/DSC_0519_cjrhjf.jpg'
+    image: 'v1770903539/DSC_0519_cjrhjf.jpg',
+    // thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770903539/DSC_0519_cjrhjf.jpg'
   },
   {
     name: 'Michael & Emma Thompson',
     location: 'Sydney, Australia',
     safari: '14-Day Honeymoon Safari',
     quote: 'We chose Kenya for our honeymoon, seeking adventure beyond beaches. What we found was magic - hot air balloons over wildebeest migrations, private bush dinners, and the sound of lions calling at night. Perfect doesn\'t begin to describe it.',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905945/DSC_0325_evpkqa.jpg',
-    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905945/DSC_0325_evpkqa.jpg'
+    image: 'v1770905945/DSC_0325_evpkqa.jpg',
+    // thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905945/DSC_0325_evpkqa.jpg'
   },
   {
     name: 'David Rodriguez',
     location: 'Madrid, Spain',
     safari: 'Conservation Experience Safari',
     quote: 'Working alongside rangers to track rhinos, learning about conservation efforts, and seeing black rhinos in their natural habitat - this trip changed how I see our responsibility to protect these magnificent creatures.',
-    image: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977757/DSC_1047_vkmqff.jpg',
-    thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977757/DSC_1047_vkmqff.jpg'
+    image: 'v1770977757/DSC_1047_vkmqff.jpg',
+    // thumbnail: 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770977757/DSC_1047_vkmqff.jpg'
   }
 ]
+
+const testimonialsSection = ref<HTMLElement | null>(null)
+const isSectionVisible = ref(false)
 
 // Computed property to safely access the current testimonial
 const activeTestimonial = computed(() => testimonials[currentTestimonial.value] ?? testimonials[0]!)
@@ -225,11 +262,21 @@ const previousTestimonial = () => {
 }
 
 // Auto-rotate testimonials
-let interval: ReturnType<typeof setInterval> | null = null
+let interval: any = null
 
 onMounted(() => {
-  // Auto-rotate every 8 seconds
-  interval = setInterval(nextTestimonial, 8000)
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0]?.isIntersecting) {
+      isSectionVisible.value = true
+      // Only start the timer when the user can see the section
+      interval = setInterval(nextTestimonial, 8000)
+    } else {
+      isSectionVisible.value = false
+      if (interval) clearInterval(interval)
+    }
+  }, { threshold: 0.1 })
+
+  if (testimonialsSection.value) observer.observe(testimonialsSection.value)
 })
 
 onUnmounted(() => {

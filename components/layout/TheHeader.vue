@@ -8,23 +8,29 @@
       <div class="container mx-auto flex justify-between items-center text-brand-off-white text-xs md:text-sm font-sans">
         <!-- Contact Info -->
         <div class="flex items-center space-x-6">
-          <a href="mailto:info@ethnokeniaadventures.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
+          <a href="mailto:info@ethnokeniaadventure.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-            <span>info@ethnokeniaadventures.com</span>
+            <span>info@ethnokeniaadventure.com</span>
           </a>
-          <a href="mailto:ethnokeniaadventures@gmail.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
+          <a href="mailto:ethnokeniaadventure@gmail.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-            <span>ethnokeniaadventures@gmail.com</span>
+            <span>ethnokeniaadventure@gmail.com</span>
           </a>
           <a href="tel:+254702373008" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
             <span>+254 702 373 008</span>
+          </a>
+          <!-- WhatsApp Integration -->
+          <a href="https://wa.me/254702373008" target="_blank" class="flex items-center hover:text-green-500 transition-colors duration-300" title="Chat on WhatsApp">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.438-9.889 9.886-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.982zm11.387-5.464c-.301-.15-1.774-.874-2.046-.972-.272-.098-.47-.147-.668.147-.197.294-.766.972-.938 1.169-.172.196-.344.221-.645.071-.301-.15-1.27-.469-2.42-1.493-.895-.798-1.498-1.783-1.673-2.083-.176-.3-.018-.462.132-.611.135-.134.301-.351.452-.526.15-.175.2-.299.3-.499.1-.199.05-.374-.025-.524-.075-.15-.668-1.611-.916-2.206-.241-.58-.487-.5-.668-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.774-.726 2.022-1.429.247-.704.247-1.306.173-1.43-.074-.124-.272-.198-.57-.348z"/>
+            </svg>
           </a>
         </div>
         <!-- Socials -->
@@ -42,15 +48,22 @@
       </div>
     </div>
     
-    <nav class="w-full py-2 flex justify-between items-center text-white transition-all duration-300">
+    <nav 
+      :class="[
+        'w-full flex justify-between items-center text-white transition-all duration-300',
+        !isMounted ? 'py-4' : (isScrolled ? 'py-2' : 'py-4')
+      ]"
+    >
       <div class="container mx-auto px-6 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex-shrink-0">
           <NuxtLink to="/">
             <img 
               src="/logo.png" 
-              alt="Ethnos Kenia Adventures" 
+              alt="Ethno Kenia Adventure" 
               class="h-14 w-auto" 
+              width="120"
+              height="56"
             />
           </NuxtLink>
         </div>
@@ -141,12 +154,14 @@ import { ref } from 'vue'
 const isMenuOpen = ref(false)
 const isMobileDropdownOpen = ref(false)
 const isScrolled = ref(false)
+const isMounted = ref(false)
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
 }
 
 onMounted(() => {
+  isMounted.value = true
   window.addEventListener('scroll', handleScroll)
 })
 
@@ -157,21 +172,26 @@ onUnmounted(() => {
 // *** THE CRITICAL FIX IS HERE ***
 const navigationLinks = ref([
   { name: 'Home', path: '/' },
+  { name: 'Safari Packages', path: '/safari-packages' },
   {
-    name: 'Safari Packages',
+    name: 'KENYA HOLIDAYS',
     children: [
-      { name: 'All Packages', path: '/safari-packages' },
-      // CORRECTED PATHS: Point to booking pages
-      { name: 'Savannah Sky', path: '/safari-packages/booking/savannah-sky' },
-      { name: 'Beach Safari', path: '/safari-packages/booking/beach-safari' },
-      { name: 'Great Migration', path: '/safari-packages/booking/great-migration' },
-      { name: 'Mountain Climbing', path: '/safari-packages/booking/mountain-climbing' },
-      { name: 'Primate Encounter', path: '/safari-packages/booking/primate-encounter' },
+      { name: 'Bush Safaris', path: '/safari-packages?type=wildlife&country=Kenya' },
+      { name: 'Beach Holidays', path: '/safari-packages?type=beach&country=Kenya' },
+      { name: 'Bush and Beach', path: '/safari-packages?type=beach&country=Kenya' },
     ]
   },
+  {
+    name: 'EAST AFRICA',
+    children: [
+      { name: 'Tanzania Safaris', path: '/safari-packages?country=tanzania' },
+      { name: 'Uganda Safaris', path: '/safari-packages?country=uganda' },
+      { name: 'Rwanda Safaris', path: '/safari-packages?country=rwanda' },
+    ]
+  },
+  { name: 'Mt Climbing', path: '/safari-packages?category=mountain-climbing' },
+  { name: 'International Tours', path: '/safari-packages?category=international' },
   { name: 'About Us', path: '/about-us' },
-  { name: 'Services', path: '/services' },
-  { name: 'Journal', path: '/journal' },
   { name: 'Contact Us', path: '/contact-us' },
 ])
 </script>
