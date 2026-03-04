@@ -6,5 +6,6 @@
     </main>
     <LayoutAppFooter />
     <!-- <LayoutOfferModal /> -->
+    <LayoutSafariBookingsWidget />
   </div>
 </template>

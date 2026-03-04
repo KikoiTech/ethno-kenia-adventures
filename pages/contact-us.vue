@@ -118,7 +118,7 @@
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto items-start">
       <!-- Contact Form -->
-      <div class="sticky top-32">
+      <div class="lg:sticky top-32">
         <h2 class="text-4xl font-serif text-brand-charcoal mb-8">
           Start Planning Your Safari
         </h2>
