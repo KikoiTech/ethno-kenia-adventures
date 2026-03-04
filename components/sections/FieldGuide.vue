@@ -9,9 +9,9 @@
     class="relative bg-brand-off-white py-24 md:py-32 overflow-hidden field-guide-section"
   >
     <!-- Papyrus texture overlay -->
-    <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
+    <!-- <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
          style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9IjAuMDUiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjUiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNwYXB5cnVzKSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
-    </div>
+    </div> -->
 
     <div class="container mx-auto px-6 relative">
       
@@ -26,52 +26,53 @@
       </div>
 
       <!-- Map Container -->
+      <!--
       <div class="relative max-w-6xl mx-auto h-96 md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
         <!-- Mapbox GL JS Map -->
         <div id="field-guide-map" class="w-full h-full"></div>
         
         <!-- Animal Migration Routes Overlay -->
-        <div class="absolute inset-0 pointer-events-none">
+        <!-- <div class="absolute inset-0 pointer-events-none"> -->
           <!-- Migration Route Lines -->
-          <svg class="w-full h-full" viewBox="0 0 1000 600">
+          <!-- <svg class="w-full h-full" viewBox="0 0 1000 600"> -->
             <!-- Elephant Migration Route -->
-            <path d="M200,300 Q350,200 500,250 T800,200" 
+            <!-- <path d="M200,300 Q350,200 500,250 T800,200" 
                   stroke="#92400e" stroke-width="3" fill="none" opacity="0.6"
-                  stroke-dasharray="10,5" class="migration-route"/>
+                  stroke-dasharray="10,5" class="migration-route"/> -->
             
             <!-- Wildebeest Migration Route -->
-            <path d="M150,400 Q400,350 600,300 T850,350" 
+            <!-- <path d="M150,400 Q400,350 600,300 T850,350" 
                   stroke="#92400e" stroke-width="3" fill="none" opacity="0.6"
-                  stroke-dasharray="10,5" class="migration-route"/>
+                  stroke-dasharray="10,5" class="migration-route"/> -->
             
             <!-- Zebra Migration Route -->
-            <path d="M100,200 Q300,150 500,180 T900,250" 
+            <!-- <path d="M100,200 Q300,150 500,180 T900,250" 
                   stroke="#92400e" stroke-width="3" fill="none" opacity="0.6"
-                  stroke-dasharray="10,5" class="migration-route"/>
-          </svg>
-        </div>
+                  stroke-dasharray="10,5" class="migration-route"/> -->
+          <!-- </svg> -->
+        <!-- </div> -->
 
         <!-- Wildlife Hotspot Markers -->
-        <div class="absolute inset-0 pointer-events-auto">
+        <!-- <div class="absolute inset-0 pointer-events-auto"> -->
           <!-- Maasai Mara - Elephant Hotspot -->
-          <div 
+          <!-- <div 
             class="location-marker absolute transform -translate-x-1/2 -translate-y-1/2"
             style="left: 45%; top: 40%;"
             @mouseenter="showInfo('maasai-mara')"
             @mouseleave="hideInfo"
-          >
-            <div class="marker-icon elephant-marker">
+          > -->
+            <!-- <div class="marker-icon elephant-marker">
               <svg viewBox="0 0 40 40" class="w-8 h-8 md:w-10 md:h-10">
                 <path d="M20,5 C15,5 10,10 10,15 C10,18 15,20 20,20 C25,20 30,18 30,15 C30,10 25,5 20,5 Z" 
                       fill="#92400e" opacity="0.8"/>
                 <circle cx="20" cy="15" r="2" fill="#36454f"/>
               </svg>
-            </div>
-            <div class="marker-label">Maasai Mara</div>
-          </div>
+            </div> -->
+            <!-- <div class="marker-label">Maasai Mara</div> -->
+          <!-- </div> -->
 
           <!-- Amboseli - Giraffe Hotspot -->
-          <div 
+          <!-- <div 
             class="location-marker absolute transform -translate-x-1/2 -translate-y-1/2"
             style="left: 65%; top: 25%;"
             @mouseenter="showInfo('amboseli')"
@@ -84,10 +85,10 @@
               </svg>
             </div>
             <div class="marker-label">Amboseli</div>
-          </div>
+          </div> -->
 
           <!-- Samburu - Rhino Hotspot -->
-          <div 
+          <!-- <div 
             class="location-marker absolute transform -translate-x-1/2 -translate-y-1/2"
             style="left: 30%; top: 30%;"
             @mouseenter="showInfo('samburu')"
@@ -101,10 +102,10 @@
               </svg>
             </div>
             <div class="marker-label">Samburu</div>
-          </div>
+          </div> -->
 
           <!-- Laikipia - Lion Hotspot -->
-          <div 
+          <!-- <div 
             class="location-marker absolute transform -translate-x-1/2 -translate-y-1/2"
             style="left: 50%; top: 35%;"
             @mouseenter="showInfo('laikipia')"
@@ -118,10 +119,10 @@
               </svg>
             </div>
             <div class="marker-label">Laikipia</div>
-          </div>
+          </div> -->
 
           <!-- Tsavo - Leopard Hotspot -->
-          <div 
+          <!-- <div 
             class="location-marker absolute transform -translate-x-1/2 -translate-y-1/2"
             style="left: 60%; top: 55%;"
             @mouseenter="showInfo('tsavo')"
@@ -135,8 +136,8 @@
               </svg>
             </div>
             <div class="marker-label">Tsavo</div>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
 
         <!-- Animal Info Panel -->
         <div v-if="activeInfo" class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-xl z-20 max-w-xs">
@@ -156,7 +157,90 @@
         </div>
 
       </div>
-    </div>
+      -->
+
+      <!-- Migration Safari Packages Container -->
+      <div class="relative max-w-7xl mx-auto mb-16 px-4">
+        <!-- Horizontal Scroll Container -->
+        <div 
+          class="flex overflow-x-auto scrollbar-hide space-x-6 pb-4" 
+          ref="packagesContainer"
+          @mouseenter="isPaused = true"
+          @mouseleave="isPaused = false"
+        >
+          <!-- Dynamic Package Cards -->
+          <NuxtLink 
+            v-for="(pkg, index) in displayPackages" 
+            :key="`${pkg.id}-${index}`"
+            :to="`/safari-packages/${pkg.id}`"
+            class="flex-shrink-0 w-80 md:w-96 relative group cursor-pointer block"
+          >
+            <!-- Package Card -->
+            <div class="relative h-96 md:h-[450px] rounded-lg overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl">
+              
+              <!-- Background Image with Zoom Effect -->
+              <div class="absolute inset-0">
+                <NuxtImg 
+                    v-if="pkg.featuredImage"
+                    provider="cloudinary"
+                    :src="pkg.featuredImage"
+                    :alt="pkg.title"
+                    sizes="sm:320px md:400px" 
+                    format="webp"
+                    quality="75"
+                    width="400"
+                    height="450"
+                    loading="lazy"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                <NuxtImg 
+                    v-else
+                    provider="cloudinary"
+                    src="v1770905959/DSC_0443_jozfk3.jpg"
+                    :alt="pkg.title"
+                    sizes="sm:320px md:400px" 
+                    format="webp"
+                    quality="75"
+                    width="400"
+                    height="450"
+                    loading="lazy"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                <!-- Dark Overlay -->
+                <!-- <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/40 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div> -->
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+
+              <!-- African Geometric Border -->
+              <div class="absolute inset-0 border-4 border-transparent group-hover:border-brand-terracotta transition-all duration-500 rounded-lg pointer-events-none">
+                <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brand-terracotta"></div>
+                <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-brand-terracotta"></div>
+                <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-brand-terracotta"></div>
+                <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-brand-terracotta"></div>
+              </div>
+
+              <!-- Package Content -->
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-brand-off-white z-10 pointer-events-none">
+                <div class="transform transition-transform duration-500 group-hover:-translate-y-2 translate-y-2">
+                  <h3 class="text-xl md:text-2xl font-serif mb-2 text-white drop-shadow-md">{{ pkg.title }}</h3>
+                  <p class="text-sm md:text-base font-sans opacity-95 mb-4 text-white line-clamp-2 drop-shadow-md">
+                    {{ pkg.duration }} - {{ pkg.description }}
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-1">
+                      <svg class="w-4 h-4 text-brand-terracotta drop-shadow-md" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4H6a2 2 0 100 4h2a1 1 0 100 2 2 2 0 002-2V5a2 2 0 00-2-2H6z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="text-xs font-medium text-white drop-shadow-md">{{ pkg.type || 'Safari' }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
 
     <!-- Business Owner Tourism Invitation (Wildlife Sanctuary Parallax) -->
     <div class="mt-24 relative overflow-hidden h-[500px] flex items-center justify-center group">
@@ -215,10 +299,43 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import safarisData from '~/public/data/safaris.json'
 
 const activeInfo = ref<string | null>(null)
 const fieldGuideSection = ref<HTMLElement>()
+
+const packagesContainer = ref<HTMLElement>()
+const isPaused = ref(false)
+let animationId: number | null = null
+
+const migrationSafaris = safarisData.filter((s: any) => s.tags && s.tags.includes('Migration'))
+const displayPackages = computed(() => {
+  if (migrationSafaris.length === 0) return []
+  return [...migrationSafaris, ...migrationSafaris, ...migrationSafaris]
+})
+
+const startAutoScroll = () => {
+  if (!packagesContainer.value) return
+  
+  const scrollSpeed = 0.5
+  
+  const animate = () => {
+    if (!packagesContainer.value) return
+    
+    if (!isPaused.value) {
+      if (packagesContainer.value.scrollLeft >= (packagesContainer.value.scrollWidth / 3)) {
+        packagesContainer.value.scrollLeft = 0
+      } else {
+        packagesContainer.value.scrollLeft += scrollSpeed
+      }
+    }
+    
+    animationId = requestAnimationFrame(animate)
+  }
+  
+  animate()
+}
 
 // Animal information data
 const animalData = {
@@ -314,6 +431,7 @@ const handleScroll = () => {
 onMounted(() => {
   // Add scroll listener for parallax
   window.addEventListener('scroll', handleScroll, { passive: true })
+  startAutoScroll()
   
   // Use Intersection Observer to load map ONLY when user reaches the section
   const observer = new IntersectionObserver((entries) => {
@@ -321,7 +439,7 @@ onMounted(() => {
     const entry = entries[0] 
     
     if (entry && entry.isIntersecting) {
-      initMap()
+      // initMap()
       observer.disconnect() // Run only once
     }
   }, { rootMargin: '200px' }) // Start loading 200px before user reaches it
@@ -476,5 +594,23 @@ img[data-nuxt-img] {
   .marker-label {
     font-size: 8px;
   }
+}
+
+/* Hide scrollbar for clean horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.group-hover\:opacity-100:hover .absolute.inset-0 > div:last-child {
+  opacity: 1;
+}
+.group-hover\:border-brand-terracotta:hover {
+  border-color: #92400e;
+}
+.group-hover\:-translate-y-2:hover .absolute.bottom-0 > div {
+  transform: translateY(-0.5rem);
 }
 </style>

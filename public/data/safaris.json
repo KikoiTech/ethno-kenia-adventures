@@ -433,8 +433,8 @@
     "countryCode": "KE",
     "type": "Wildlife",
     "tags": [
-      "Multi-Day"
-    ]
+      "Multi-Day",
+      "Migration"    ]
   },
   {
     "id": 7,
@@ -2174,6 +2174,7 @@
   "type": "Wildlife",
   "tags": [
     "Multi-Day",
+    "Migration",
     "Group Tour"
   ]
   },
@@ -2238,6 +2239,7 @@
     "tags": [
       "Multi-Day",
       "Group Tour",
+      "Migration",
       "Budget"
     ]
   },
@@ -2427,6 +2429,7 @@
     "type": "Wildlife",
     "tags": [
       "Multi-Day",
+      "Migration",
       "Safari",
       "Extended"
     ]
@@ -2897,6 +2900,7 @@
     "Masai Mara",
     "Amboseli",
     "Lake Nakuru",
+    "Migration",
     "Lake Naivasha",
     "Big Five",
     "Multi-Day Safari"
@@ -2974,6 +2978,7 @@
       "Masai Mara",
       "Lake Nakuru",
       "Amboseli",
+      "Migration",
       "Big Five",
       "Multi-Day Safari"
     ]
@@ -3045,6 +3050,7 @@
       "Masai Mara",
       "Lake Nakuru",
       "Lake Naivasha",
+      "Migration",
       "Big Five",
       "Multi-Day Safari"
     ]
