@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block shadow-xl rounded-md transition-transform hover:scale-105 bg-white p-2">
+  <div>
     <a href="https://www.safaribookings.com/reviews/p7970" target="_blank" rel="nofollow" class="block">
       <img src="https://s3.amazonaws.com/z_437er23a/images/p7970-3.png" alt="Reviews about Ethno Kenia Adventure" title="Reviews about Ethno Kenia Adventure" border="0" class="h-28 w-auto sm:h-32">
     </a>
