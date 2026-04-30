@@ -138,7 +138,7 @@
               <div class="bg-brand-charcoal/5 p-8 text-center border-b border-gray-100">
                 <span class="text-[10px] uppercase tracking-widest text-brand-charcoal/40 font-bold block mb-2">Package Investment</span>
                 <div class="flex items-baseline justify-center gap-2">
-                  <span class="text-sm font-serif text-brand-charcoal/40">USD</span>
+                  <!-- <span class="text-sm font-serif text-brand-charcoal/40">USD</span> -->
                   <span class="text-4xl md:text-5xl font-serif font-bold text-brand-charcoal">
                     {{ (typeof safariPackage.price === 'object') ? (safariPackage.price.USD || 'Ask') : (safariPackage.price || 'Ask') }}
                   </span>
@@ -151,45 +151,64 @@
                 <p class="text-center text-xs text-brand-charcoal/40 mb-8">Fill in your details and we'll get back to you within 24 hours</p>
 
                 <form @submit.prevent="handleInquiry" class="space-y-4">
-                  <div class="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="First Name" class="form-input" required />
-                    <input type="text" placeholder="Last Name" class="form-input" required />
-                  </div>
-                  <input type="tel" placeholder="Phone" class="form-input" required />
-                  <input type="email" placeholder="Email" class="form-input" required />
-                  <select class="form-input">
-                    <option value="">Country</option>
-                    <option value="US">United States</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="KE">Kenya</option>
-                  </select>
-
-                  <div>
-                    <label class="text-[10px] uppercase tracking-wider font-bold mb-1 block">When would you like to travel?</label>
-                    <input type="date" class="form-input" />
+                  <!-- Error Message -->
+                  <div v-if="bookingErrorMsg" class="p-3 bg-red-50 text-red-600 text-sm rounded-lg border border-red-100">
+                    {{ bookingErrorMsg }}
                   </div>
 
-                  <div class="grid grid-cols-2 gap-4">
-                    <div>
-                      <label class="text-[8px] uppercase tracking-wider font-bold mb-1 block">Number of Adults</label>
-                      <input type="number" value="1" class="form-input" />
+                  <!-- Success Message -->
+                  <div v-if="bookingSuccess" class="p-4 bg-green-50 text-green-700 text-sm rounded-lg border border-green-100 text-center">
+                    <svg class="w-8 h-8 text-green-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <p class="font-bold">Thank you for your inquiry!</p>
+                    <p class="mt-1 text-green-600/80">We have received your booking request and will contact you within 24 hours.</p>
+                  </div>
+
+                  <template v-else>
+                    <div class="grid grid-cols-2 gap-4">
+                      <input v-model="form.firstName" type="text" placeholder="First Name" class="form-input" required />
+                      <input v-model="form.lastName" type="text" placeholder="Last Name" class="form-input" required />
                     </div>
+                    <input v-model="form.phone" type="tel" placeholder="Phone" class="form-input" required />
+                    <input v-model="form.email" type="email" placeholder="Email" class="form-input" required />
+                    <select v-model="form.country" class="form-input">
+                      <option value="">Country</option>
+                      <option value="US">United States</option>
+                      <option value="UK">United Kingdom</option>
+                      <option value="KE">Kenya</option>
+                      <option value="Other">Other</option>
+                    </select>
+
                     <div>
-                      <label class="text-[8px] uppercase tracking-wider font-bold mb-1 block">Number of Children</label>
-                      <input type="number" value="0" class="form-input" />
+                      <label class="text-[10px] uppercase tracking-wider font-bold mb-1 block">When would you like to travel?</label>
+                      <input v-model="form.travelDate" type="date" class="form-input" />
                     </div>
-                  </div>
 
-                  <textarea placeholder="Extra Details" rows="3" class="form-input"></textarea>
+                    <div class="grid grid-cols-2 gap-4">
+                      <div>
+                        <label class="text-[8px] uppercase tracking-wider font-bold mb-1 block">Number of Adults</label>
+                        <input v-model="form.adults" type="number" min="1" class="form-input" />
+                      </div>
+                      <div>
+                        <label class="text-[8px] uppercase tracking-wider font-bold mb-1 block">Number of Children</label>
+                        <input v-model="form.children" type="number" min="0" class="form-input" />
+                      </div>
+                    </div>
 
-                  <div class="flex items-start gap-3 py-4">
-                    <input type="checkbox" class="mt-1" required />
-                    <p class="text-[9px] text-gray-500 leading-tight">I agree to the terms and understand this is a subject to availability.</p>
-                  </div>
+                    <textarea v-model="form.extraDetails" placeholder="Extra Details" rows="3" class="form-input"></textarea>
 
-                  <button class="w-full py-4 bg-[#006699] text-white rounded-lg font-bold hover:bg-brand-charcoal transition-all shadow-md uppercase tracking-wider text-sm">
-                    Submit Booking
-                  </button>
+                    <div class="flex items-start gap-3 py-4">
+                      <input v-model="form.agreeToTerms" type="checkbox" class="mt-1" required />
+                      <p class="text-[9px] text-gray-500 leading-tight">I agree to the terms and understand this is a subject to availability.</p>
+                    </div>
+
+                    <button 
+                      :disabled="isSubmitting"
+                      class="w-full py-4 bg-[#006699] text-white rounded-lg font-bold hover:bg-brand-charcoal transition-all shadow-md uppercase tracking-wider text-sm disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center"
+                    >
+                      <span v-if="isSubmitting" class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
+                      {{ isSubmitting ? 'Sending...' : 'Submit Booking' }}
+                    </button>
+                  </template>
                 </form>
 
                 <!-- Trust Badges -->
@@ -239,9 +258,74 @@ const cleanHeroImage = computed(() => {
   return img.replace('https://res.cloudinary.com/dmdihuyvn/image/upload/', '')
 })
 
-// FORM HANDLER
-const handleInquiry = () => {
-  alert('Thank you! Inquiry received.')
+// BOOKING FORM STATE & LOGIC
+const isSubmitting = ref(false)
+const bookingSuccess = ref(false)
+const bookingErrorMsg = ref('')
+
+const form = ref({
+  firstName: '',
+  lastName: '',
+  phone: '',
+  email: '',
+  country: '',
+  travelDate: '',
+  adults: 1,
+  children: 0,
+  extraDetails: '',
+  agreeToTerms: false
+})
+
+const handleInquiry = async () => {
+  isSubmitting.value = true
+  bookingSuccess.value = false
+  bookingErrorMsg.value = ''
+
+  try {
+    const payload = {
+      type: 'booking',
+      safariName: safariPackage.value?.title ? getText(safariPackage.value.title, 'en') : slug,
+      firstName: form.value.firstName,
+      lastName: form.value.lastName,
+      phone: form.value.phone,
+      email: form.value.email,
+      country: form.value.country,
+      travelDate: form.value.travelDate,
+      adults: form.value.adults,
+      children: form.value.children,
+      extraDetails: form.value.extraDetails
+    }
+
+    const { error: apiError } = await useFetch('/api/contact', {
+      method: 'POST',
+      body: payload
+    })
+
+    if (apiError.value) {
+      throw new Error(apiError.value.statusMessage || 'Failed to submit inquiry.')
+    }
+
+    // Success
+    bookingSuccess.value = true
+    // Reset form
+    form.value = {
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: '',
+      country: '',
+      travelDate: '',
+      adults: 1,
+      children: 0,
+      extraDetails: '',
+      agreeToTerms: false
+    }
+  } catch (err: any) {
+    console.error('Submission error:', err)
+    bookingErrorMsg.value = err.message || 'Something went wrong. Please try again or email us directly.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 
 // SEO

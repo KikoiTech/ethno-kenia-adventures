@@ -27,7 +27,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtagId: process.env.NUXT_PUBLIC_GTAG_ID // Fallback
-    }
+    },
+    smtpHost: process.env.SMTP_HOST,
+    smtpPort: process.env.SMTP_PORT,
+    smtpUser: process.env.SMTP_USER,
+    smtpPass: process.env.SMTP_PASS,
   },
 
   // Optimization 1: Localize Fonts (Removes render-blocking)

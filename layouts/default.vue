@@ -16,6 +16,5 @@
     
     <!-- Offer Modal with Newsletter Subscription -->
     <!-- <LayoutOfferModal /> -->
-    <LayoutSafariBookingsWidget />
   </div>
 </template>
