@@ -72,6 +72,10 @@
               </svg>
             </a>
           </div>
+          
+          <div class="pt-4">
+            <LayoutSafariBookingsWidget />
+          </div>
         </div>
 
         <!-- Quick Links -->

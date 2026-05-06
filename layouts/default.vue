@@ -15,6 +15,6 @@
     <LayoutAppFooter />
     
     <!-- Offer Modal with Newsletter Subscription -->
-    <LayoutOfferModal />
+    <!-- <LayoutOfferModal /> -->
   </div>
 </template>

@@ -221,26 +221,31 @@ const filteredPackages = computed(() => {
   // Apply filters based on query parameters
   if (category === 'mountain-climbing') {
     list = list.filter(pkg => pkg.type === 'Trekking')
-  } else if (category === 'international') {
-    list = list.filter(pkg => pkg.category === 'International')
-  } else if (type === 'bush') {
-    // Kenya Bush = Kenya + Wildlife tag
-    list = list.filter(pkg => pkg.country?.includes('Kenya') && (pkg.tags || []).includes('Wildlife'))
-  } else if (type === 'beach') {
-    // Kenya Beach = Kenya + Beach type
-    list = list.filter(pkg => pkg.country?.includes('Kenya') && pkg.type === 'Beach')
-  } else if (type === 'bush-and-beach') {
-    // Bush and Beach = contains both Beach and Wildlife markers
-    list = list.filter(pkg => 
-      (pkg.type === 'Beach' || (pkg.tags || []).includes('Beach') || (pkg.tags || []).includes('Relaxation')) && 
-      (pkg.type === 'Wildlife' || (pkg.tags || []).includes('Wildlife'))
-    )
-  } else if (country) {
-    // East Africa countries filter - support multi-country packages
-    const filterCountry = String(country).toLowerCase()
-    list = list.filter(pkg => 
-      pkg.country?.some(c => c.toLowerCase() === filterCountry)
-    )
+  } else {
+    // Exclusively show Trekking in mountain-climbing section
+    list = list.filter(pkg => pkg.type !== 'Trekking')
+
+    if (category === 'international') {
+      list = list.filter(pkg => pkg.category === 'International')
+    } else if (type === 'bush') {
+      // Kenya Bush = Kenya + Wildlife tag
+      list = list.filter(pkg => pkg.country?.includes('Kenya') && (pkg.tags || []).includes('Wildlife'))
+    } else if (type === 'beach') {
+      // Kenya Beach = Kenya + Beach type
+      list = list.filter(pkg => pkg.country?.includes('Kenya') && pkg.type === 'Beach')
+    } else if (type === 'bush-and-beach') {
+      // Bush and Beach = contains both Beach and Wildlife markers
+      list = list.filter(pkg => 
+        (pkg.type === 'Beach' || (pkg.tags || []).includes('Beach') || (pkg.tags || []).includes('Relaxation')) && 
+        (pkg.type === 'Wildlife' || (pkg.tags || []).includes('Wildlife'))
+      )
+    } else if (country) {
+      // East Africa countries filter - support multi-country packages
+      const filterCountry = String(country).toLowerCase()
+      list = list.filter(pkg => 
+        pkg.country?.some(c => c.toLowerCase() === filterCountry)
+      )
+    }
   }
 
   // Sort logic

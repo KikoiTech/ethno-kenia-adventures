@@ -126,7 +126,7 @@
                 <div class="mb-10 text-center">
                   <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-charcoal/30 block mb-2">Package Investment</span>
                   <div class="text-5xl font-serif text-brand-terracotta font-bold flex items-center justify-center gap-2">
-                    <span class="text-2xl font-sans font-medium text-brand-charcoal/20">USD</span>
+                    <!-- <span class="text-2xl font-sans font-medium text-brand-charcoal/20">USD</span> -->
                     {{ safari.price || 'Ask' }}
                   </div>
                   <div v-if="safari.price" class="text-xs text-brand-charcoal/40 mt-3 italic">Per person sharing</div>
