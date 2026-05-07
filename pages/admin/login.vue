@@ -5,8 +5,8 @@ import { toast } from 'vue-sonner'
 definePageMeta({ layout: false })
 
 useSeoMeta({
-  title: 'Admin Login | Ethno Kenya Adventures',
-  description: 'Secure admin portal for Ethno Kenya Adventures staff.',
+  title: 'Admin Login | Ethno Kenia Adventures',
+  description: 'Secure admin portal for Ethno Kenia Adventures staff.',
 })
 
 const supabase = useSupabase()
@@ -37,7 +37,22 @@ async function handleLogin() {
       return
     }
 
-    const role = data.user?.user_metadata?.role
+    // 2. FETCH THE ROLE FROM YOUR PUBLIC.PROFILES TABLE
+    const { data: profile, error: profileError } = await supabase
+      .from('profiles') // The table we created
+      .select('role')
+      .eq('id', data.user.id)
+      .single()
+
+    if (profileError || !profile) {
+      console.error("Profile Fetch Error:", profileError)
+      await supabase.auth.signOut()
+      errorMessage.value = 'Admin profile not found. Please contact the super admin.'
+      return
+    }
+
+    // 3. Verify the role from the database result
+    const role = profile.role
     if (role !== 'admin' && role !== 'super_admin') {
       await supabase.auth.signOut()
       errorMessage.value = 'Access denied. You do not have administrator privileges.'
@@ -46,10 +61,11 @@ async function handleLogin() {
 
     toast.success('Welcome back!', { description: 'Signed in successfully.' })
     await navigateTo('/admin/dashboard')
-  } catch {
-    errorMessage.value = 'An unexpected error occurred. Please try again.'
+  } catch (err) {
+      console.error(err)
+      errorMessage.value = 'An unexpected error occurred. Please try again.'
   } finally {
-    isLoading.value = false
+      isLoading.value = false
   }
 }
 </script>
@@ -74,7 +90,7 @@ async function handleLogin() {
             <div class="brand-icon">
               <Leaf class="w-7 h-7 text-white" />
             </div>
-            <span class="brand-name">Ethno Kenya</span>
+            <span class="brand-name">Ethno Kenia</span>
           </div>
 
           <h1 class="tagline">
@@ -117,7 +133,7 @@ async function handleLogin() {
 
           <div class="card-header">
             <h2 class="card-title">Admin Portal</h2>
-            <p class="card-desc">Sign in to manage Ethno Kenya Adventures</p>
+            <p class="card-desc">Sign in to manage Ethno Kenia Adventures</p>
           </div>
 
           <!-- Role pills -->
