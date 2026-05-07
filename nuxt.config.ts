@@ -17,8 +17,21 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',      // Add this
     '@nuxtjs/google-fonts', // Add this
-    'nuxt-gtag'
+    'nuxt-gtag',
+    'shadcn-nuxt'
   ],
+
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
+  },
 
   gtag: {
     // No ID here! It will read from .env automatically if named correctly

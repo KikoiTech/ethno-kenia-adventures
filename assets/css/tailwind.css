@@ -4,7 +4,57 @@
 @import 'mapbox-gl/dist/mapbox-gl.css';
 
 @layer base {
-  body {
-    @apply bg-brand-off-white text-brand-charcoal;
+  :root {
+    --background: 36 29% 96%;
+    --foreground: 120 2% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 120 2% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 2% 17%;
+    --primary: 120 10% 26%;
+    --primary-foreground: 36 29% 96%;
+    --secondary: 35 15% 87%;
+    --secondary-foreground: 120 10% 26%;
+    --muted: 35 15% 87%;
+    --muted-foreground: 120 2% 40%;
+    --accent: 15 51% 42%;
+    --accent-foreground: 36 29% 96%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 15% 80%;
+    --input: 35 15% 80%;
+    --ring: 120 10% 26%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 120 2% 17%;
+    --foreground: 36 29% 96%;
+    --card: 120 2% 17%;
+    --card-foreground: 36 29% 96%;
+    --popover: 120 2% 17%;
+    --popover-foreground: 36 29% 96%;
+    --primary: 36 29% 96%;
+    --primary-foreground: 120 10% 26%;
+    --secondary: 120 10% 20%;
+    --secondary-foreground: 36 29% 96%;
+    --muted: 120 10% 20%;
+    --muted-foreground: 120 2% 65%;
+    --accent: 15 51% 42%;
+    --accent-foreground: 36 29% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 10% 20%;
+    --input: 120 10% 20%;
+    --ring: 36 29% 96%;
   }
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
