@@ -25,7 +25,8 @@ const removeDay = (index: number) => {
 
 const updateDay = (index: number, field: keyof ItineraryDay, value: string) => {
   const newItinerary = [...props.modelValue]
-  newItinerary[index] = { ...newItinerary[index], [field]: value }
+  const currentDay = newItinerary[index] || { time: '', title: '', details: '' }
+  newItinerary[index] = { ...currentDay, [field]: value }
   emit('update:modelValue', newItinerary)
 }
 </script>

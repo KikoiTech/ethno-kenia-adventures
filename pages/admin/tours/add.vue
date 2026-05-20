@@ -10,10 +10,12 @@ import {
 import { toast } from 'vue-sonner'
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: ['admin-auth'],
 })
 
 const supabase = useSupabase()
+const { logAction } = useAdmin()
 const router = useRouter()
 
 const isSaving = ref(false)
@@ -21,15 +23,21 @@ const activeTab = ref('basic')
 
 const tourData = ref({
   title: '',
+  slug: '',         // Required UNIQUE field
   description: '',
-  price: null,
-  duration_days: null,
+  snippet: '',      // Short excerpt
+  price: null as number | null,
+  duration: '',     // e.g. '3 days / 2 nights'
   location: '',
-  image_url: '',
+  featured_image: '',
+  gallery: [] as string[],
   is_active: false,
-  itinerary: [], // JSONB
-  includes: [], // Array of strings
-  excludes: [] // Array of strings
+  is_featured: false,
+  itinerary: [] as any[],     // JSONB
+  includes: [] as string[],   // text[]
+  excludes: [] as string[],   // text[]
+  category: '',
+  tags: [] as string[],
 })
 
 const tabs = [
@@ -44,17 +52,38 @@ async function handleSave() {
     return
   }
 
+  // Auto-generate slug from title if not set
+  if (!tourData.value.slug) {
+    tourData.value.slug = tourData.value.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '')
+  }
+
   isSaving.value = true
+  console.log('[handleSave] Inserting trip:', tourData.value)
+
   try {
-    const { error } = await supabase
-      .from('tours')
+    const { data, error } = await supabase
+      .from('trips')
       .insert([tourData.value])
-    
-    if (error) throw error
-    
+      .select('id')
+      .single()
+
+    if (error) {
+      console.error('[handleSave] Supabase error:', error)
+      const msg = error.message || 'Unknown error'
+      const detail = (error as any).hint || (error as any).details || ''
+      toast.error('Failed to create tour', { description: detail ? `${msg} — ${detail}` : msg })
+      return
+    }
+
+    console.log('[handleSave] Created tour:', data)
+    await logAction('CREATE_TOUR', data.id, { name: tourData.value.title })
     toast.success('Tour created successfully!')
     router.push('/admin/tours')
-  } catch (err) {
+  } catch (err: any) {
+    console.error('[handleSave] Unexpected error:', err)
     toast.error('Failed to create tour', { description: err.message })
   } finally {
     isSaving.value = false
@@ -133,8 +162,8 @@ function addExclude() {
               </div>
 
               <div class="input-group">
-                <label class="form-label">Duration (Days)</label>
-                <input v-model="tourData.duration_days" type="number" placeholder="1" class="form-input" />
+                <label class="form-label">Duration</label>
+                <input v-model="tourData.duration" type="text" placeholder="e.g. 3 Days / 2 Nights" class="form-input" />
               </div>
 
               <div class="input-group col-span-2">
@@ -154,9 +183,9 @@ function addExclude() {
             <div class="input-group">
               <label class="form-label">Main Image URL</label>
               <div class="image-input-wrap">
-                <input v-model="tourData.image_url" type="text" placeholder="https://images.unsplash.com/..." class="form-input" />
-                <div class="image-preview" v-if="tourData.image_url">
-                  <img :src="tourData.image_url" alt="Preview" />
+                <input v-model="tourData.featured_image" type="text" placeholder="https://images.unsplash.com/..." class="form-input" />
+                <div class="image-preview" v-if="tourData.featured_image">
+                  <img :src="tourData.featured_image" alt="Preview" />
                 </div>
                 <div class="image-placeholder" v-else>
                   <ImageIcon class="w-8 h-8 opacity-20" />

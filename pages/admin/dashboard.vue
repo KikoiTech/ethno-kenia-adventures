@@ -1,21 +1,25 @@
 <script setup lang="ts">
-import { 
-  TrendingUp, 
-  Users, 
-  MapPin, 
-  DollarSign, 
+import {
+  TrendingUp,
+  Users,
+  MapPin,
+  DollarSign,
   ArrowUpRight,
   ArrowDownRight,
-  Activity
+  Activity,
+  FileCode,
 } from 'lucide-vue-next'
+import { toast } from 'vue-sonner'
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: ['admin-auth'],
 })
 
 const supabase = useSupabase()
 const { profile } = useAdmin()
 
+// ── Stats ──────────────────────────────────────────────────────────────────
 const stats = ref([
   { name: 'Total Revenue', value: '$0', change: '+0%', icon: DollarSign, color: 'text-emerald-400' },
   { name: 'Active Bookings', value: '0', change: '+0%', icon: MapPin, color: 'text-blue-400' },
@@ -23,66 +27,111 @@ const stats = ref([
   { name: 'Conversion Rate', value: '0%', change: '+0%', icon: Activity, color: 'text-purple-400' },
 ])
 
+const recentBookings = ref<any[]>([])
 const isLoading = ref(true)
 
-async function fetchDashboardStats() {
+// ── Data Fetch ──────────────────────────────────────────────────────────────
+async function fetchDashboardData() {
   isLoading.value = true
   try {
-    // 1. Get Total Revenue from bookings
-    const { data: revenueData } = await supabase
+    // 1. Total active trips (replaces revenue — no total_paid in schema)
+    const { count: tripsCount } = await supabase
+      .from('trips')
+      .select('*', { count: 'exact', head: true })
+      .eq('is_active', true)
+
+    stats.value[0]!.value = (tripsCount || 0).toString()
+    stats.value[0]!.name = 'Active Trips'
+
+    // 2. Active Bookings count
+    const { count: bookingsCount } = await supabase
       .from('bookings')
-      .select('total_paid')
-    
-    const totalRevenue = revenueData?.reduce((acc, curr) => acc + (curr.total_paid || 0), 0) || 0
-    stats.value[0].value = `$${totalRevenue.toLocaleString()}`
+      .select('*', { count: 'exact', head: true })
+      .in('status', ['pending', 'confirmed'])
 
-    const { data: bookingsData, count: bookingsCount } = await supabase
-      .from('bookings')
-      .select('trip_id', { count: 'exact' })
+    stats.value[1]!.value = (bookingsCount || 0).toString()
+    stats.value[1]!.name = 'Active Bookings'
 
-    if (bookingsData && bookingsData.length > 0) {
-      const tripCounts = bookingsData.reduce((acc: any, curr: any) => {
-        acc[curr.trip_id] = (acc[curr.trip_id] || 0) + 1
-        return acc
-      }, {})
-      const popularTripId = Object.keys(tripCounts).reduce((a, b) => tripCounts[a] > tripCounts[b] ? a : b)
-      
-      // Fetch trip title for the popular ID
-      const { data: tripInfo } = await supabase
-        .from('tours')
-        .select('title')
-        .eq('id', popularTripId)
-        .single()
-      
-      if (tripInfo) {
-        stats.value[1].value = tripInfo.title
-        stats.value[1].name = 'Most Popular Trip'
-      }
-    }
-
-    // 3. Get Total Inquiries count
+    // 3. Inquiries count
     const { count: inquiriesCount } = await supabase
       .from('inquiries')
       .select('*', { count: 'exact', head: true })
-    
-    stats.value[2].value = (inquiriesCount || 0).toString()
 
-    // 4. Calculate Conversion Rate (Inquiries vs Bookings)
+    stats.value[2]!.value = (inquiriesCount || 0).toString()
+
+    // 4. Conversion Rate
+    const { count: totalBookings } = await supabase
+      .from('bookings')
+      .select('*', { count: 'exact', head: true })
+
     if (inquiriesCount && inquiriesCount > 0) {
-      const rate = ((bookingsCount || 0) / inquiriesCount) * 100
-      stats.value[3].value = `${rate.toFixed(1)}%`
+      const rate = ((totalBookings || 0) / inquiriesCount) * 100
+      stats.value[3]!.value = `${rate.toFixed(1)}%`
     }
 
+    // 5. Recent Bookings — try join with trips, fallback to plain query if FK not set up yet
+    let bookings: any[] = []
+    const { data: bookingsJoined, error: joinError } = await supabase
+      .from('bookings')
+      .select(`*, trips (title)`)
+      .order('created_at', { ascending: false })
+      .limit(8)
+
+    if (joinError) {
+      // FK relationship not set up yet — fetch bookings without the join
+      const { data: bookingsPlain } = await supabase
+        .from('bookings')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(8)
+      bookings = bookingsPlain ?? []
+    } else {
+      bookings = bookingsJoined ?? []
+    }
+
+    recentBookings.value = bookings
+
   } catch (error) {
-    console.error('Error fetching stats:', error)
+    console.error('Error fetching dashboard stats:', error)
   } finally {
     isLoading.value = false
   }
 }
 
-onMounted(() => {
-  fetchDashboardStats()
+// ── Real-time subscription ──────────────────────────────────────────────────
+let bookingsChannel: ReturnType<typeof supabase.channel> | null = null
+
+onMounted(async () => {
+  await fetchDashboardData()
+
+  bookingsChannel = supabase
+    .channel('dashboard:bookings')
+    .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'bookings' }, (payload: any) => {
+      toast.info('🎉 New Booking Received!', {
+        description: `A new booking just came in.`,
+      })
+      fetchDashboardData()
+    })
+    .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'bookings' }, () => {
+      fetchDashboardData()
+    })
+    .subscribe()
 })
+
+onUnmounted(() => {
+  if (bookingsChannel) {
+    supabase.removeChannel(bookingsChannel)
+  }
+})
+
+function getStatusClass(status: string) {
+  switch (status?.toLowerCase()) {
+    case 'confirmed': return 'status--confirmed'
+    case 'pending': return 'status--pending'
+    case 'cancelled': return 'status--cancelled'
+    default: return 'status--pending'
+  }
+}
 </script>
 
 <template>
@@ -92,7 +141,7 @@ onMounted(() => {
         <h1 class="text-2xl font-bold">Welcome back, {{ profile?.full_name?.split(' ')[0] || 'Admin' }}</h1>
         <p class="text-muted text-sm">Here's what's happening with Ethno Kenia today.</p>
       </div>
-      <button class="refresh-btn" @click="fetchDashboardStats" :disabled="isLoading">
+      <button class="refresh-btn" @click="fetchDashboardData" :disabled="isLoading">
         <Activity class="w-4 h-4" :class="{ 'animate-spin': isLoading }" />
         <span>Refresh Stats</span>
       </button>
@@ -137,19 +186,34 @@ onMounted(() => {
                 <tr>
                   <th>Guest</th>
                   <th>Trip</th>
-                  <th>Date</th>
+                  <th>Travel Date</th>
+                  <th>Guests</th>
                   <th>Status</th>
-                  <th>Amount</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-if="isLoading" v-for="i in 5" :key="i">
                   <td colspan="5"><div class="skeleton-row" /></td>
                 </tr>
-                <tr v-else-if="stats[1].value === '0'">
-                  <td colspan="5" class="empty-state">No recent bookings found.</td>
+                <tr v-else-if="recentBookings.length === 0">
+                  <td colspan="5" class="empty-state">No bookings yet. New bookings will appear here in real-time.</td>
                 </tr>
-                <!-- Data rows would go here -->
+                <tr v-for="booking in recentBookings" :key="booking.id" class="booking-row">
+                  <td>
+                    <div class="guest-cell">
+                      <div class="guest-avatar">{{ booking.first_name?.charAt(0) || '?' }}</div>
+                      <span>{{ booking.first_name }} {{ booking.last_name }}</span>
+                    </div>
+                  </td>
+                  <td>{{ booking.trips?.title || 'Unknown Trip' }}</td>
+                  <td>{{ booking.travel_date ? new Date(booking.travel_date).toLocaleDateString() : '—' }}</td>
+                  <td>{{ (booking.adults_count || 1) + (booking.children_count || 0) }} pax</td>
+                  <td>
+                    <span :class="['status-pill', getStatusClass(booking.status)]">
+                      {{ booking.status || 'pending' }}
+                    </span>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -391,7 +455,7 @@ onMounted(() => {
 
 .empty-state {
   text-align: center;
-  padding: 3rem ! from;
+  padding: 3rem !important;
   color: rgba(240, 232, 220, 0.3);
 }
 

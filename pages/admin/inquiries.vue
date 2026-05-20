@@ -14,14 +14,15 @@ import {
 import { toast } from 'vue-sonner'
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: ['admin-auth'],
 })
 
 const supabase = useSupabase()
-const inquiries = ref([])
+const inquiries = ref<any[]>([])
 const isLoading = ref(true)
 const searchQuery = ref('')
-const selectedInquiry = ref(null)
+const selectedInquiry = ref<any>(null)
 
 async function fetchInquiries() {
   isLoading.value = true
@@ -32,8 +33,8 @@ async function fetchInquiries() {
       .order('created_at', { ascending: false })
     
     if (error) throw error
-    inquiries.value = data
-  } catch (err) {
+    inquiries.value = data ?? []
+  } catch (err: any) {
     toast.error('Failed to load inquiries', { description: err.message })
   } finally {
     isLoading.value = false
@@ -52,7 +53,7 @@ async function updateInquiryStatus(id: string, status: string) {
     toast.success(`Inquiry marked as ${status}`)
     fetchInquiries()
     if (selectedInquiry.value?.id === id) selectedInquiry.value = null
-  } catch (err) {
+  } catch (err: any) {
     toast.error('Action failed', { description: err.message })
   }
 }
@@ -72,7 +73,7 @@ onMounted(fetchInquiries)
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString('en-GB', {
     day: 'numeric',
-    shortMonth: 'short',
+    month: 'short',
     year: 'numeric'
   })
 }

@@ -14,11 +14,13 @@ import {
 import { toast } from 'vue-sonner'
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: ['admin-auth'],
 })
 
 const supabase = useSupabase()
-const tours = ref([])
+const { logAction } = useAdmin()
+const tours = ref<any[]>([])
 const isLoading = ref(true)
 const searchQuery = ref('')
 
@@ -26,33 +28,34 @@ async function fetchTours() {
   isLoading.value = true
   try {
     const { data, error } = await supabase
-      .from('tours')
+      .from('trips')
       .select('*')
       .order('created_at', { ascending: false })
     
     if (error) throw error
     tours.value = data
-  } catch (err) {
+  } catch (err: any) {
     toast.error('Failed to fetch tours', { description: err.message })
   } finally {
     isLoading.value = false
   }
 }
 
-async function deleteTour(id: string) {
+async function deleteTour(id: string, title?: string) {
   if (!confirm('Are you sure you want to delete this tour? This action cannot be undone.')) return
 
   try {
     const { error } = await supabase
-      .from('tours')
+      .from('trips')
       .delete()
       .eq('id', id)
-    
+
     if (error) throw error
-    
+
+    await logAction('DELETE_TOUR', id, { name: title })
     toast.success('Tour deleted successfully')
     fetchTours()
-  } catch (err) {
+  } catch (err: any) {
     toast.error('Delete failed', { description: err.message })
   }
 }
@@ -142,7 +145,7 @@ onMounted(fetchTours)
               <td>
                 <div class="cell-icon-text">
                   <Clock class="w-3.5 h-3.5 text-blue-400" />
-                  <span>{{ tour.duration_days }} Days</span>
+                  <span>{{ tour.duration }}</span>
                 </div>
               </td>
               <td>
@@ -161,7 +164,7 @@ onMounted(fetchTours)
                   <NuxtLink :to="`/admin/tours/edit/${tour.id}`" class="icon-btn edit" title="Edit">
                     <Edit2 class="w-4 h-4" />
                   </NuxtLink>
-                  <button class="icon-btn delete" title="Delete" @click="deleteTour(tour.id)">
+                  <button class="icon-btn delete" title="Delete" @click="deleteTour(tour.id, tour.title)">
                     <Trash2 class="w-4 h-4" />
                   </button>
                 </div>

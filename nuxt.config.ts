@@ -43,6 +43,8 @@ export default defineNuxtConfig({
       supabaseUrl: process.env.SUPERBASE_URL,
       supabaseKey: process.env.SUPERBASE_KEY,
     },
+    // Private (server-only) — never sent to the browser
+    supabaseServiceKey: process.env.SUPERBASE_KEY,
     smtpHost: process.env.SMTP_HOST,
     smtpPort: process.env.SMTP_PORT,
     smtpUser: process.env.SMTP_USER,

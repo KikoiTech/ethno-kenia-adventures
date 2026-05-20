@@ -11,7 +11,8 @@ import {
 } from 'lucide-vue-next'
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: ['admin-auth'],
 })
 
 const { isSuperAdmin } = useAdmin()
@@ -23,7 +24,7 @@ onMounted(() => {
   }
 })
 
-const logs = ref([])
+const logs = ref<any[]>([])
 const isLoading = ref(true)
 
 async function fetchLogs() {

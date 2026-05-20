@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { 
-  FileCode, 
-  Eye, 
-  Save, 
+import {
+  FileCode,
+  Eye,
+  Save,
   Send,
   Info,
   Code
@@ -10,7 +10,8 @@ import {
 import { toast } from 'vue-sonner'
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: ['admin-auth'],
 })
 
 const { isSuperAdmin } = useAdmin()
@@ -22,32 +23,73 @@ onMounted(() => {
   }
 })
 
-const templates = ref([
+const templateDefs = [
   { id: 1, name: 'Booking Confirmation', key: 'booking_confirm', subject: 'Your Safari with Ethno Kenia is Confirmed!' },
-  { id: 2, name: 'Inquiry Auto-Reply', key: 'inquiry_reply', subject: 'Thank you for your inquiry' },
-  { id: 3, name: 'Payment Received', key: 'payment_success', subject: 'Receipt for your payment' },
-])
+  { id: 2, name: 'Inquiry Auto-Reply',   key: 'inquiry_reply',   subject: 'Thank you for your inquiry' },
+  { id: 3, name: 'Payment Received',     key: 'payment_success', subject: 'Receipt for your payment' },
+]
 
-const selectedTemplate = ref(templates.value[0])
-const htmlContent = ref(`
-<div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee;">
+const selectedTemplate = ref(templateDefs[0]!)
+const htmlContent = ref('')
+const isSaving = ref(false)
+const isLoadingTemplate = ref(false)
+
+const defaultHtml = `<div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee;">
   <h1 style="color: #3d4a3d;">Jambo {{guest_name}}!</h1>
   <p>Your booking for <strong>{{trip_title}}</strong> has been confirmed.</p>
   <p>We are excited to host you on {{travel_date}}.</p>
   <br>
   <p>Best regards,<br>Ethno Kenia Adventures</p>
-</div>
-`)
+</div>`
 
-const isSaving = ref(false)
+// ── Load template from DB ──────────────────────────────────────────────────
+async function loadTemplate(key: string) {
+  isLoadingTemplate.value = true
+  try {
+    const { data } = await supabase
+      .from('email_templates')
+      .select('body_html')
+      .eq('slug', key)
+      .single()
 
-function saveTemplate() {
-  isSaving.value = true
-  setTimeout(() => {
-    toast.success('Template saved successfully')
-    isSaving.value = false
-  }, 1000)
+    htmlContent.value = data?.body_html ?? defaultHtml
+  } catch {
+    htmlContent.value = defaultHtml
+  } finally {
+    isLoadingTemplate.value = false
+  }
 }
+
+// ── Save template to DB ────────────────────────────────────────────────────
+async function saveTemplate() {
+  isSaving.value = true
+  try {
+    const { error } = await supabase
+      .from('email_templates')
+      .upsert({
+        slug: selectedTemplate.value.key,
+        name: selectedTemplate.value.name,
+        subject: selectedTemplate.value.subject,
+        body_html: htmlContent.value,
+        updated_at: new Date().toISOString(),
+      }, { onConflict: 'slug' })
+
+    if (error) throw error
+    toast.success('Template saved successfully')
+  } catch (err: any) {
+    toast.error('Save failed', { description: err.message })
+  } finally {
+    isSaving.value = false
+  }
+}
+
+// ── Switch template ────────────────────────────────────────────────────────
+function selectTemplate(t: typeof templateDefs[0]) {
+  selectedTemplate.value = t
+  loadTemplate(t.key)
+}
+
+onMounted(() => loadTemplate(selectedTemplate.value.key))
 </script>
 
 <template>
@@ -74,10 +116,10 @@ function saveTemplate() {
       <aside class="template-sidebar">
         <div class="sidebar-title">Templates</div>
         <div class="template-list">
-          <button 
-            v-for="t in templates" 
+          <button
+            v-for="t in templateDefs"
             :key="t.id"
-            @click="selectedTemplate = t"
+            @click="selectTemplate(t)"
             :class="['template-btn', { 'template-btn--active': selectedTemplate.id === t.id }]"
           >
             <span class="t-name">{{ t.name }}</span>

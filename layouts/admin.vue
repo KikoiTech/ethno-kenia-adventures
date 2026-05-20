@@ -23,7 +23,7 @@ onMounted(async () => {
 
 // Watch auth state changes
 onMounted(() => {
-  supabase.auth.onAuthStateChange((event, session) => {
+  supabase.auth.onAuthStateChange((event: any, session: any) => {
     if (event === 'SIGNED_OUT' || !session) {
       navigateTo('/admin/login')
     }

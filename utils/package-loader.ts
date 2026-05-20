@@ -32,8 +32,6 @@ export async function getSafaris(): Promise<SafariPackage[]> {
 
     if (error) throw error
     
-    console.log('Supabase Fetch:', { count: data?.length, firstItem: data?.[0] })
-    
     return (data || []).map(mapSafari)
   } catch (error) {
     console.error('Error fetching safaris from Supabase:', error)
