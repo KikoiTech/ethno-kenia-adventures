@@ -24,19 +24,31 @@ const tourId = route.params.id as string
 const isSaving = ref(false)
 const isLoading = ref(true)
 const activeTab = ref('basic')
+const askPrice = ref(false)
+
+function toggleAskPrice() {
+  askPrice.value = !askPrice.value
+  if (askPrice.value) tourData.value.price = 0
+  else tourData.value.price = null
+}
 
 const tourData = ref({
   title: '',
+  short_title: '',
   slug: '',
   description: '',
   snippet: '',
   price: null as number | null,
   duration: '',
   location: '',
+  country: [] as string[],
+  country_code: '',
+  type: '',
   featured_image: '',
   gallery: [] as string[],
   is_active: false,
   is_featured: false,
+  is_popular: false,
   itinerary: [] as any[],
   includes: [] as string[],
   excludes: [] as string[],
@@ -66,22 +78,28 @@ async function fetchTour() {
     // Populate form with existing data
     tourData.value = {
       title: data.title ?? '',
+      short_title: data.short_title ?? '',
       slug: data.slug ?? '',
       description: data.description ?? '',
       snippet: data.snippet ?? '',
-      price: data.price ?? null,
+      price: data.price ?? null,  // 0 means "ask for price"
       duration: data.duration ?? '',
       location: data.location ?? '',
+      country: data.country ?? [],
+      country_code: data.country_code ?? '',
+      type: data.type ?? '',
       featured_image: data.featured_image ?? '',
       gallery: data.gallery ?? [],
       is_active: data.is_active ?? false,
       is_featured: data.is_featured ?? false,
+      is_popular: data.is_popular ?? false,
       itinerary: data.itinerary ?? [],
       includes: data.includes ?? [],
       excludes: data.excludes ?? [],
       category: data.category ?? '',
       tags: data.tags ?? [],
     }
+    askPrice.value = data.price === 0
   } catch (err: any) {
     toast.error('Failed to load tour', { description: err.message })
     router.push('/admin/tours')
@@ -92,33 +110,49 @@ async function fetchTour() {
 
 // ── Save changes ────────────────────────────────────────────────────────────
 async function handleSave() {
-  if (!tourData.value.title || !tourData.value.price) {
+  console.log('[handleSave] function called')
+  console.log('[handleSave] auth user:', await supabase.auth.getUser())
+
+  if (!tourData.value.title || (!askPrice.value && (tourData.value.price === null || tourData.value.price === undefined))) {
     toast.error('Missing Information', { description: 'Please fill in the title and price.' })
     return
   }
 
   isSaving.value = true
+  console.log('[handleSave] sending PUT request to:', `/api/admin/tours/${tourId}`)
+  console.log('[handleSave] payload:', JSON.parse(JSON.stringify(tourData.value)))
   try {
-    const { error } = await supabase
-      .from('trips')
-      .update(tourData.value)
-      .eq('id', tourId)
-
-    if (error) throw error
+    await $fetch(`/api/admin/tours/${tourId}`, {
+      method: 'PUT',
+      body: tourData.value,
+    })
 
     await logAction('UPDATE_TOUR', tourId, { name: tourData.value.title })
     toast.success('Tour updated successfully!')
     router.push('/admin/tours')
   } catch (err: any) {
-    toast.error('Failed to update tour', { description: err.message })
+    console.error('[handleSave] caught error:', err)
+    const message = err.data?.statusMessage || err.data?.message || err.message || 'Unknown error'
+    toast.error('Failed to update tour', { description: message })
   } finally {
     isSaving.value = false
   }
 }
 
-// ── Helpers for tag fields ──────────────────────────────────────────────────
+// ── Helpers for list fields ─────────────────────────────────────────────────
 const newInclude = ref('')
 const newExclude = ref('')
+const newGalleryUrl = ref('')
+const newTag = ref('')
+const newCountry = ref('')
+
+function addCountry() {
+  const val = newCountry.value.trim()
+  if (val && !tourData.value.country.includes(val)) {
+    tourData.value.country.push(val)
+    newCountry.value = ''
+  }
+}
 
 function addInclude() {
   if (newInclude.value.trim()) {
@@ -131,6 +165,20 @@ function addExclude() {
   if (newExclude.value.trim()) {
     tourData.value.excludes.push(newExclude.value.trim())
     newExclude.value = ''
+  }
+}
+
+function addGalleryUrl() {
+  if (newGalleryUrl.value.trim()) {
+    tourData.value.gallery.push(newGalleryUrl.value.trim())
+    newGalleryUrl.value = ''
+  }
+}
+
+function addTag() {
+  if (newTag.value.trim()) {
+    tourData.value.tags.push(newTag.value.trim())
+    newTag.value = ''
   }
 }
 
@@ -192,13 +240,30 @@ onMounted(fetchTour)
                 </div>
 
                 <div class="input-group col-span-2">
+                  <label class="form-label">Short Title <span class="text-muted">(used on cards)</span></label>
+                  <input v-model="tourData.short_title" type="text" placeholder="e.g. Masai Mara 3 Days" class="form-input" />
+                </div>
+
+                <div class="input-group col-span-2">
                   <label class="form-label">URL Slug</label>
                   <input v-model="tourData.slug" type="text" placeholder="e.g. 3-days-masai-mara" class="form-input" />
                 </div>
 
                 <div class="input-group">
                   <label class="form-label">Price (USD)</label>
-                  <input v-model="tourData.price" type="number" placeholder="0.00" class="form-input" />
+                  <div class="price-field">
+                    <input
+                      v-if="!askPrice"
+                      v-model.number="tourData.price"
+                      type="number"
+                      placeholder="0.00"
+                      class="form-input"
+                    />
+                    <div v-else class="ask-price-badge">Ask for price</div>
+                    <button class="ask-price-toggle" :class="{ active: askPrice }" @click="toggleAskPrice">
+                      {{ askPrice ? 'Set price' : 'Ask' }}
+                    </button>
+                  </div>
                 </div>
 
                 <div class="input-group">
@@ -209,6 +274,38 @@ onMounted(fetchTour)
                 <div class="input-group col-span-2">
                   <label class="form-label">Location / Destination</label>
                   <input v-model="tourData.location" type="text" placeholder="e.g. Narok, Kenya" class="form-input" />
+                </div>
+
+                <div class="input-group">
+                  <label class="form-label">Countries</label>
+                  <div class="tag-input-wrap">
+                    <input v-model="newCountry" @keyup.enter="addCountry" type="text" placeholder="e.g. Kenya" class="form-input" />
+                    <button @click="addCountry" class="add-tag-btn">+</button>
+                  </div>
+                  <div class="tags-list mt-2">
+                    <div v-for="(c, i) in tourData.country" :key="i" class="tag tag--neutral">
+                      <span>{{ c }}</span>
+                      <button @click="tourData.country.splice(i, 1)">&times;</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label class="form-label">Country Code</label>
+                  <input v-model="tourData.country_code" type="text" placeholder="e.g. KE" maxlength="3" class="form-input" />
+                </div>
+
+                <div class="input-group col-span-2">
+                  <label class="form-label">Tour Type</label>
+                  <select v-model="tourData.type" class="form-select">
+                    <option value="">Select type...</option>
+                    <option value="group">Group Tour</option>
+                    <option value="private">Private Tour</option>
+                    <option value="self-drive">Self Drive</option>
+                    <option value="fly-in">Fly-In Safari</option>
+                    <option value="walking">Walking Safari</option>
+                    <option value="day-trip">Day Trip</option>
+                  </select>
                 </div>
 
                 <div class="input-group col-span-2">
@@ -225,7 +322,7 @@ onMounted(fetchTour)
 
             <div class="form-section mt-8">
               <h3 class="section-title">Media</h3>
-              <div class="input-group">
+              <div class="input-group mb-6">
                 <label class="form-label">Featured Image URL</label>
                 <div class="image-input-wrap">
                   <input v-model="tourData.featured_image" type="text" placeholder="https://..." class="form-input" />
@@ -234,6 +331,20 @@ onMounted(fetchTour)
                   </div>
                   <div class="image-placeholder" v-else>
                     <ImageIcon class="w-8 h-8 opacity-20" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label class="form-label">Gallery Images</label>
+                <div class="tag-input-wrap">
+                  <input v-model="newGalleryUrl" @keyup.enter="addGalleryUrl" type="text" placeholder="Paste image URL and press Enter..." class="form-input" />
+                  <button @click="addGalleryUrl" class="add-tag-btn">+</button>
+                </div>
+                <div class="gallery-list">
+                  <div v-for="(url, i) in tourData.gallery" :key="i" class="gallery-item">
+                    <img :src="url" alt="Gallery image" />
+                    <button class="gallery-remove" @click="tourData.gallery.splice(i, 1)">&times;</button>
                   </div>
                 </div>
               </div>
@@ -299,6 +410,12 @@ onMounted(fetchTour)
                 <div class="toggle-thumb" />
               </div>
             </div>
+            <div class="switch-group mt-4">
+              <label class="switch-label">Mark as Popular</label>
+              <div class="toggle" :class="{ 'toggle--on': tourData.is_popular }" @click="tourData.is_popular = !tourData.is_popular">
+                <div class="toggle-thumb" />
+              </div>
+            </div>
             <p class="text-xs text-muted mt-4">Draft tours are only visible to administrators.</p>
           </div>
 
@@ -314,6 +431,19 @@ onMounted(fetchTour)
                 <option value="mountain">Mountain</option>
                 <option value="adventure">Adventure</option>
               </select>
+            </div>
+            <div class="input-group mb-4">
+              <label class="form-label">Tags</label>
+              <div class="tag-input-wrap">
+                <input v-model="newTag" @keyup.enter="addTag" placeholder="Add tag..." class="form-input" />
+                <button @click="addTag" class="add-tag-btn">+</button>
+              </div>
+              <div class="tags-list mt-2">
+                <div v-for="(tag, i) in tourData.tags" :key="i" class="tag tag--neutral">
+                  <span>{{ tag }}</span>
+                  <button @click="tourData.tags.splice(i, 1)">&times;</button>
+                </div>
+              </div>
             </div>
             <div class="input-group">
               <label class="form-label">Tour ID</label>
@@ -432,6 +562,44 @@ onMounted(fetchTour)
   transition: all 0.2s;
 }
 
+.price-field {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.price-field .form-input { flex: 1; }
+
+.ask-price-badge {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: rgba(196, 113, 78, 0.1);
+  border: 1px dashed rgba(196, 113, 78, 0.4);
+  border-radius: 10px;
+  color: #c4714e;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ask-price-toggle {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: rgba(240, 232, 220, 0.6);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.ask-price-toggle.active {
+  background: rgba(196, 113, 78, 0.15);
+  border-color: rgba(196, 113, 78, 0.4);
+  color: #c4714e;
+}
+
 .form-input:focus, .form-textarea:focus, .form-select:focus {
   border-color: #c4714e;
   box-shadow: 0 0 0 3px rgba(196, 113, 78, 0.1);
@@ -486,8 +654,40 @@ onMounted(fetchTour)
 
 .tag--include { background: rgba(16, 185, 129, 0.1); color: #6ee7b7; }
 .tag--exclude { background: rgba(239, 68, 68, 0.1); color: #fca5a5; }
+.tag--neutral { background: rgba(196, 113, 78, 0.12); color: #e0a882; }
 
 .tag button { background: none; border: none; color: inherit; opacity: 0.5; cursor: pointer; padding: 0; font-size: 1.1rem; }
+
+.gallery-list { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.75rem; }
+
+.gallery-item {
+  position: relative;
+  width: 90px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+
+.gallery-remove {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(0,0,0,0.7);
+  border: none;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
 
 .sidebar-card {
   background: rgba(255, 255, 255, 0.03);

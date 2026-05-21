@@ -27,6 +27,7 @@ export async function getSafaris(): Promise<SafariPackage[]> {
     const { data, error } = await supabase
       .from('trips')
       .select('*')
+      .is('deleted_at', null)
       .order('is_featured', { ascending: false })
       .order('is_popular', { ascending: false })
 
@@ -50,6 +51,7 @@ export async function getSafariBySlug(slug: string): Promise<SafariPackage | nul
     let { data, error } = await supabase
       .from('trips')
       .select('*')
+      .is('deleted_at', null)
       .eq('slug', slug)
       .maybeSingle()
 
@@ -58,6 +60,7 @@ export async function getSafariBySlug(slug: string): Promise<SafariPackage | nul
       const { data: idData, error: idError } = await supabase
         .from('trips')
         .select('*')
+        .is('deleted_at', null)
         .eq('id', Number(slug))
         .maybeSingle()
       

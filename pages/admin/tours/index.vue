@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { 
-  Plus, 
-  Search, 
-  Filter, 
-  MoreHorizontal, 
-  Edit2, 
-  Trash2, 
-  Eye,
+import {
+  Plus,
+  Search,
+  Filter,
+  Edit2,
+  Trash2,
+  RotateCcw,
+  Skull,
+  AlertTriangle,
   MapPin,
   Clock,
   DollarSign
@@ -19,19 +20,29 @@ definePageMeta({
 })
 
 const supabase = useSupabase()
-const { logAction } = useAdmin()
+const { logAction, isSuperAdmin, fetchProfile } = useAdmin()
 const tours = ref<any[]>([])
 const isLoading = ref(true)
 const searchQuery = ref('')
+const confirmingId = ref<string | null>(null)
+const confirmingAction = ref<'archive' | 'purge' | null>(null)
+
+async function getAuthHeaders() {
+  const { data: { session } } = await supabase.auth.getSession()
+  return { Authorization: `Bearer ${session?.access_token}` }
+}
 
 async function fetchTours() {
   isLoading.value = true
   try {
-    const { data, error } = await supabase
-      .from('trips')
-      .select('*')
-      .order('created_at', { ascending: false })
-    
+    let query = supabase.from('trips').select('*').order('created_at', { ascending: false })
+
+    // Regular admins only see active (non-deleted) tours
+    if (!isSuperAdmin.value) {
+      query = query.is('deleted_at', null)
+    }
+
+    const { data, error } = await query
     if (error) throw error
     tours.value = data
   } catch (err: any) {
@@ -41,35 +52,67 @@ async function fetchTours() {
   }
 }
 
-async function deleteTour(id: string, title?: string) {
-  if (!confirm('Are you sure you want to delete this tour? This action cannot be undone.')) return
+function requestConfirm(id: string, action: 'archive' | 'purge') {
+  confirmingId.value = id
+  confirmingAction.value = action
+}
 
+function cancelConfirm() {
+  confirmingId.value = null
+  confirmingAction.value = null
+}
+
+async function softDeleteTour(id: string, title?: string) {
+  cancelConfirm()
   try {
-    const { error } = await supabase
-      .from('trips')
-      .delete()
-      .eq('id', id)
-
-    if (error) throw error
-
-    await logAction('DELETE_TOUR', id, { name: title })
-    toast.success('Tour deleted successfully')
+    const headers = await getAuthHeaders()
+    await $fetch(`/api/admin/tours/${id}`, { method: 'DELETE', headers })
+    await logAction('SOFT_DELETE_TOUR', id, { name: title })
+    toast.success('Tour archived', { description: `"${title}" has been archived.` })
     fetchTours()
   } catch (err: any) {
-    toast.error('Delete failed', { description: err.message })
+    toast.error('Archive failed', { description: err.data?.statusMessage ?? err.message })
+  }
+}
+
+async function restoreTour(id: string, title?: string) {
+  try {
+    const headers = await getAuthHeaders()
+    await $fetch(`/api/admin/tours/${id}/restore`, { method: 'POST', headers })
+    await logAction('RESTORE_TOUR', id, { name: title })
+    toast.success('Tour restored', { description: `"${title}" is now active.` })
+    fetchTours()
+  } catch (err: any) {
+    toast.error('Restore failed', { description: err.data?.statusMessage ?? err.message })
+  }
+}
+
+async function purgeTour(id: string, title?: string) {
+  cancelConfirm()
+  try {
+    const headers = await getAuthHeaders()
+    await $fetch(`/api/admin/tours/${id}/purge`, { method: 'DELETE', headers })
+    await logAction('PURGE_TOUR', id, { name: title })
+    toast.success('Tour permanently deleted')
+    fetchTours()
+  } catch (err: any) {
+    toast.error('Purge failed', { description: err.data?.statusMessage ?? err.message })
   }
 }
 
 const filteredTours = computed(() => {
   if (!searchQuery.value) return tours.value
   const q = searchQuery.value.toLowerCase()
-  return tours.value.filter(t => 
-    t.title.toLowerCase().includes(q) || 
+  return tours.value.filter(t =>
+    t.title?.toLowerCase().includes(q) ||
     t.location?.toLowerCase().includes(q)
   )
 })
 
-onMounted(fetchTours)
+onMounted(async () => {
+  await fetchProfile()
+  await fetchTours()
+})
 </script>
 
 <template>
@@ -89,10 +132,10 @@ onMounted(fetchTours)
     <div class="table-controls">
       <div class="search-wrap">
         <Search class="search-icon" />
-        <input 
+        <input
           v-model="searchQuery"
-          type="text" 
-          placeholder="Search by title or location..." 
+          type="text"
+          placeholder="Search by title or location..."
           class="search-input"
         />
       </div>
@@ -123,16 +166,24 @@ onMounted(fetchTours)
             <tr v-else-if="filteredTours.length === 0">
               <td colspan="6" class="empty-state">No tours found.</td>
             </tr>
-            <tr v-for="tour in filteredTours" :key="tour.id" class="tour-row">
+            <tr
+              v-for="tour in filteredTours"
+              :key="tour.id"
+              class="tour-row"
+              :class="{ 'row--deleted': tour.deleted_at }"
+            >
               <td>
                 <div class="tour-info">
                   <div class="tour-image">
-                    <img v-if="tour.image_url" :src="tour.image_url" :alt="tour.title" />
+                    <img v-if="tour.featured_image || tour.image_url" :src="tour.featured_image || tour.image_url" :alt="tour.title" />
                     <div v-else class="image-placeholder"><MapPin class="w-4 h-4" /></div>
                   </div>
                   <div class="tour-meta">
                     <span class="tour-title">{{ tour.title }}</span>
-                    <span class="tour-id">ID: {{ tour.id.slice(0, 8) }}</span>
+                    <div class="tour-badges">
+                      <span class="tour-id">ID: {{ tour.id.slice(0, 8) }}</span>
+                      <span v-if="tour.deleted_at" class="badge--deleted">Archived</span>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -149,24 +200,86 @@ onMounted(fetchTours)
                 </div>
               </td>
               <td>
-                <div class="price-tag">
+                <div v-if="tour.price === 0" class="price-tag price-tag--inquiry">
+                  <span>Ask</span>
+                </div>
+                <div v-else class="price-tag">
                   <DollarSign class="w-3 h-3" />
                   <span>{{ tour.price?.toLocaleString() }}</span>
                 </div>
               </td>
               <td>
-                <span :class="['status-pill', tour.is_active ? 'status--active' : 'status--draft']">
-                  {{ tour.is_active ? 'Published' : 'Draft' }}
+                <span :class="['status-pill', tour.deleted_at ? 'status--archived' : tour.is_active ? 'status--active' : 'status--draft']">
+                  {{ tour.deleted_at ? 'Archived' : tour.is_active ? 'Published' : 'Draft' }}
                 </span>
               </td>
               <td class="text-right">
-                <div class="action-btns">
-                  <NuxtLink :to="`/admin/tours/edit/${tour.id}`" class="icon-btn edit" title="Edit">
+                <!-- Inline confirmation banner -->
+                <div v-if="confirmingId === tour.id" class="confirm-row">
+                  <AlertTriangle class="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
+                  <span class="confirm-text">
+                    {{ confirmingAction === 'purge' ? 'Permanently delete?' : 'Archive this tour?' }}
+                  </span>
+                  <button
+                    class="confirm-yes"
+                    @click="confirmingAction === 'purge' ? purgeTour(tour.id, tour.title) : softDeleteTour(tour.id, tour.title)"
+                  >
+                    Yes
+                  </button>
+                  <button class="confirm-no" @click="cancelConfirm">No</button>
+                </div>
+
+                <div v-else class="action-btns">
+                  <!-- Edit — only for non-deleted tours -->
+                  <NuxtLink
+                    v-if="!tour.deleted_at"
+                    :to="`/admin/tours/edit/${tour.id}`"
+                    class="icon-btn edit"
+                    title="Edit"
+                  >
                     <Edit2 class="w-4 h-4" />
                   </NuxtLink>
-                  <button class="icon-btn delete" title="Delete" @click="deleteTour(tour.id, tour.title)">
-                    <Trash2 class="w-4 h-4" />
-                  </button>
+
+                  <!-- Regular admin: soft delete only -->
+                  <template v-if="!isSuperAdmin">
+                    <button
+                      class="icon-btn delete"
+                      title="Archive tour"
+                      @click="requestConfirm(tour.id, 'archive')"
+                    >
+                      <Trash2 class="w-4 h-4" />
+                    </button>
+                  </template>
+
+                  <!-- Super admin: full control -->
+                  <template v-if="isSuperAdmin">
+                    <!-- Restore if archived (no confirmation needed) -->
+                    <button
+                      v-if="tour.deleted_at"
+                      class="icon-btn restore"
+                      title="Restore tour"
+                      @click="restoreTour(tour.id, tour.title)"
+                    >
+                      <RotateCcw class="w-4 h-4" />
+                    </button>
+                    <!-- Archive if active -->
+                    <button
+                      v-else
+                      class="icon-btn delete"
+                      title="Archive tour"
+                      @click="requestConfirm(tour.id, 'archive')"
+                    >
+                      <Trash2 class="w-4 h-4" />
+                    </button>
+                    <!-- Purge always available for super admin -->
+                    <button
+                      class="icon-btn purge"
+                      title="Permanently delete"
+                      @click="requestConfirm(tour.id, 'purge')"
+                    >
+                      <Skull class="w-4 h-4" />
+                    </button>
+                  </template>
                 </div>
               </td>
             </tr>
@@ -296,6 +409,15 @@ onMounted(fetchTours)
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+/* Archived row styling */
+.row--deleted td {
+  opacity: 0.5;
+}
+.row--deleted {
+  background: rgba(239, 68, 68, 0.03);
+  border-left: 2px solid rgba(239, 68, 68, 0.3);
+}
+
 .tour-info {
   display: flex;
   align-items: center;
@@ -329,6 +451,7 @@ onMounted(fetchTours)
 .tour-meta {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
 }
 
 .tour-title {
@@ -337,10 +460,28 @@ onMounted(fetchTours)
   font-size: 0.95rem;
 }
 
+.tour-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .tour-id {
   font-size: 0.7rem;
   color: rgba(240, 232, 220, 0.3);
   font-family: monospace;
+}
+
+.badge--deleted {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .cell-icon-text {
@@ -363,6 +504,11 @@ onMounted(fetchTours)
   font-size: 0.9rem;
 }
 
+.price-tag--inquiry {
+  background: rgba(251, 191, 36, 0.1);
+  color: #fbbf24;
+}
+
 .status-pill {
   font-size: 0.7rem;
   font-weight: 700;
@@ -372,8 +518,9 @@ onMounted(fetchTours)
   letter-spacing: 0.05em;
 }
 
-.status--active { background: rgba(61, 74, 61, 0.3); color: #9ec89e; border: 1px solid rgba(61, 74, 61, 0.5); }
-.status--draft { background: rgba(255, 255, 255, 0.05); color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); }
+.status--active   { background: rgba(61, 74, 61, 0.3);   color: #9ec89e; border: 1px solid rgba(61, 74, 61, 0.5); }
+.status--draft    { background: rgba(255, 255, 255, 0.05); color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); }
+.status--archived { background: rgba(239, 68, 68, 0.1);  color: #f87171; border: 1px solid rgba(239, 68, 68, 0.2); }
 
 .action-btns {
   display: flex;
@@ -395,8 +542,49 @@ onMounted(fetchTours)
   transition: all 0.2s;
 }
 
-.icon-btn:hover.edit { background: rgba(59, 130, 246, 0.1); color: #60a5fa; border-color: rgba(59, 130, 246, 0.2); }
-.icon-btn:hover.delete { background: rgba(239, 68, 68, 0.1); color: #f87171; border-color: rgba(239, 68, 68, 0.2); }
+.icon-btn:hover.edit    { background: rgba(59, 130, 246, 0.1);  color: #60a5fa; border-color: rgba(59, 130, 246, 0.2); }
+.icon-btn:hover.delete  { background: rgba(239, 68, 68, 0.1);   color: #f87171; border-color: rgba(239, 68, 68, 0.2); }
+.icon-btn:hover.restore { background: rgba(16, 185, 129, 0.1);  color: #10b981; border-color: rgba(16, 185, 129, 0.2); }
+.icon-btn:hover.purge   { background: rgba(239, 68, 68, 0.2);   color: #ef4444; border-color: rgba(239, 68, 68, 0.4); }
+
+.confirm-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.confirm-text {
+  font-size: 0.78rem;
+  color: #fbbf24;
+  white-space: nowrap;
+}
+
+.confirm-yes,
+.confirm-no {
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+}
+
+.confirm-yes {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+.confirm-yes:hover { background: rgba(239, 68, 68, 0.3); }
+
+.confirm-no {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(240, 232, 220, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.confirm-no:hover { background: rgba(255, 255, 255, 0.1); }
 
 .empty-state {
   text-align: center;

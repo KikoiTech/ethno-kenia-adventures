@@ -38,6 +38,7 @@ async function fetchDashboardData() {
     const { count: tripsCount } = await supabase
       .from('trips')
       .select('*', { count: 'exact', head: true })
+      .is('deleted_at', null)
       .eq('is_active', true)
 
     stats.value[0]!.value = (tripsCount || 0).toString()
