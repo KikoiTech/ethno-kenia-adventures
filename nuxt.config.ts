@@ -40,11 +40,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtagId: process.env.NUXT_PUBLIC_GTAG_ID, // Fallback
-      supabaseUrl: process.env.SUPERBASE_URL,
-      supabaseKey: process.env.SUPERBASE_KEY,
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseKey: process.env.SUPABASE_KEY,
     },
     // Private (server-only) — never sent to the browser
-    supabaseServiceKey: process.env.SUPERBASE_KEY,
+    supabaseServiceKey: process.env.SUPABASE_KEY,
     smtpHost: process.env.SMTP_HOST,
     smtpPort: process.env.SMTP_PORT,
     smtpUser: process.env.SMTP_USER,

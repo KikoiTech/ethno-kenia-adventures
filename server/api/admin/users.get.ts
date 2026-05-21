@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   // Build a server-side Supabase client using the service_role key
   const supabaseAdmin = createClient(
     config.public.supabaseUrl as string,
-    config.supabaseServiceKey as string, // Set SUPERBASE_SERVICE_KEY in .env
+    config.supabaseServiceKey as string, // Set SUPABASE_SERVICE_KEY in .env
   )
 
   try {
