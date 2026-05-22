@@ -266,40 +266,28 @@ const handleSubmit = async () => {
   showSuccess.value = false
 
   try {
-    // Prepare submission data
-    const submission = createBookingSubmission(formData.value)
-    
-    // Construct email payload
-    const emailPayload = {
-      name: `${formData.value.personalInfo.firstName} ${formData.value.personalInfo.lastName}`,
-      email: formData.value.personalInfo.email,
-      phone: formData.value.personalInfo.phone,
-      nationality: formData.value.personalInfo.nationality,
-      safariName: props.package?.title || 'Unknown Safari',
-      preferredDate: bookingDate.value || 'Flexible',
-      groupSize: formData.value.travelPreferences.groupSize + numChildren.value,
-      message: formData.value.travelPreferences.specialRequirements,
-      type: 'booking' // Differentiate on server
-    }
-
-    // Send to API
-    await $fetch('/api/contact', {
+    await $fetch('/api/inquiries', {
       method: 'POST',
-      body: emailPayload
+      body: {
+        trip_id:        props.package?.id ?? null,
+        first_name:     formData.value.personalInfo.firstName,
+        last_name:      formData.value.personalInfo.lastName,
+        email:          formData.value.personalInfo.email,
+        phone:          formData.value.personalInfo.phone || null,
+        travel_date:    bookingDate.value || null,
+        adults_count:   formData.value.travelPreferences.groupSize,
+        children_count: numChildren.value,
+        message:        formData.value.travelPreferences.specialRequirements || null,
+      },
     })
-    
-    // Emit events
+
+    const submission = createBookingSubmission(formData.value)
     emit('submit', submission.data)
     emit('success', submission.data)
-    
-    // Show success message
+
     showSuccess.value = true
-    
-    // Reset form after successful submission
-    setTimeout(() => {
-      resetForm()
-    }, 3000)
-    
+    setTimeout(() => { resetForm() }, 3000)
+
   } catch (error) {
     console.error('Booking submission error:', error)
     errorMessage.value = 'Failed to submit booking request. Please try again.'
