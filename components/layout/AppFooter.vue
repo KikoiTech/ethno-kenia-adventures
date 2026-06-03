@@ -78,7 +78,7 @@
               <LayoutSafariBookingsWidget />
             </div>
             <a
-              href="https://www.tripadvisor.com/Attraction_Review-g294207-d34257816-Reviews-Ethno_Kenia_Adventure-Nairobi.html"
+              href="https://www.tripadvisor.com/Attraction_Review-g294207-d34257797-Reviews-Ethno_Kenia_Adventure-Nairobi.html"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:opacity-80 transition-opacity duration-300 flex-shrink-0"
