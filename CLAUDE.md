@@ -32,19 +32,27 @@ This is a **Nuxt 4 / Vue 3 / TypeScript** SSR application for a safari booking p
 
 ### Data Flow
 
-1. Safari packages are fetched from Supabase `trips` table (migrated from a local `safaris.json`)
-2. Booking/contact forms submit to `/api/contact` (server route), which sends HTML email via Nodemailer
-3. Admin dashboard reads/writes `bookings`, `trips`, `inquiries`, `profiles`, and `audit_logs` tables using the Supabase service role key (server-side only)
-4. Multi-currency rates are fetched via `utils/currency-api.ts` with a 24-hour client-side cache
-5. Multi-language support (EN/ES/FR/DE/ZH/JA) is handled in `utils/translation-api.ts`
+1. Safari packages are fetched from Supabase `trips` table (soft-deleted rows excluded via `.is('deleted_at', null)`)
+2. Contact/booking inquiries flow through `/api/inquiries.post` (server route) → database INSERT + admin alert email
+3. Admin dashboard (`pages/admin/inquiries.vue`) reads inquiries with trip joins; admins can convert inquiries to bookings
+4. Multi-currency rates cached client-side (24h) and multi-language support handled by utility APIs
+5. All admin writes use server routes with Supabase service role key (bypasses RLS), plus Bearer token auth verification
+
+**Inquiry Submission Pattern:**
+When an inquiry is submitted:
+
+1. Form POSTs to `/api/inquiries` with inquiry details
+2. Server route validates and inserts into `inquiries` table
+3. Admin alert email sent to ADMIN_EMAIL via SMTP (includes full inquiry details)
+4. Response returns immediately with inquiry ID
 
 ### Supabase Tables
 
-| Table | Purpose |
-|---|---|
-| `trips` | Safari packages |
-| `bookings` | Booking submissions |
-| `inquiries` | Contact/inquiry form submissions |
+| Table       | Purpose |
+|-------------|---------|
+| `trips` | Safari packages (includes `deleted_at` for soft deletes) |
+| `inquiries` | Contact/inquiry form submissions (status: new/replied/converted_to_booking/archived) |
+| `bookings` | Booking submissions (linked to inquiries via `original_inquiry_id`) |
 | `profiles` | Admin users (role: `admin` or `super_admin`) |
 | `audit_logs` | Admin action history |
 
@@ -59,6 +67,25 @@ This is a **Nuxt 4 / Vue 3 / TypeScript** SSR application for a safari booking p
 - `utils/supabase.ts` — Singleton Supabase client via `useSupabase()`
 - `utils/package-data.ts` — Package filtering, sorting, pricing calculations, and `validateBookingForm()`
 - `types/safari-package.ts` — All TypeScript interfaces (packages, bookings, pricing, availability)
+
+### Inquiry Management
+
+**Public Forms:**
+
+- `contact-us.vue` — General inquiry form (posts to `/api/inquiries` with `trip_id: null`)
+- `safari-packages/BookingForm.vue` — Per-trip booking inquiry (posts to `/api/inquiries` with trip's `id`)
+
+**Admin Dashboard:**
+
+- `pages/admin/inquiries.vue` — Full CRUD + conversion workflow for regular admins; filters by status (New/Replied/Converted/Archived)
+- `/api/inquiries.post` — Accepts inquiry submissions, saves to DB, sends admin alert email; uses service key to bypass RLS
+- `/api/admin/inquiries/[id]/convert.post` — Converts inquiry to booking entry
+
+**Soft Delete Pattern (Tours):**
+
+- `trips` table has `deleted_at` column; archiving sets it, deletion clears it
+- `utils/package-loader.ts` filters all queries: `.is('deleted_at', null)`
+- Regular admins see archive UI only; super-admins can restore or permanently delete
 
 ### Styling
 

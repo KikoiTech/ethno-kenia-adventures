@@ -73,8 +73,23 @@
             </a>
           </div>
           
-          <div class="pt-4">
-            <LayoutSafariBookingsWidget />
+          <div class="pt-4 flex items-center gap-4">
+            <div class="flex-shrink-0">
+              <LayoutSafariBookingsWidget />
+            </div>
+            <a
+              href="https://www.tripadvisor.com/Attraction_Review-g294207-d34257816-Reviews-Ethno_Kenia_Adventure-Nairobi.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:opacity-80 transition-opacity duration-300 flex-shrink-0"
+              aria-label="Review us on TripAdvisor"
+            >
+              <img
+                src="/images/logo-tripdavisor-ethnokenia.png"
+                alt="Ethno Kenia Adventure on TripAdvisor"
+                class="h-28 sm:h-32 w-auto"
+              />
+            </a>
           </div>
         </div>
 
@@ -231,7 +246,7 @@
         </div>
 
         <!-- Newsletter Signup -->
-        <div class="space-y-4">
+        <!-- <div class="space-y-4">
           <h4 class="text-lg font-serif text-brand-terracotta">
             Join Our Tribe
           </h4>
@@ -251,7 +266,7 @@
               Join
             </button>
           </form>
-        </div>
+        </div> -->
       </div>
 
       <!-- Bottom Bar -->
