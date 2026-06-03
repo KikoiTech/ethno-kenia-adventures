@@ -3,7 +3,7 @@
     <!-- HERO SECTION: Cinematic Banner -->
     <section class="relative h-[65vh] w-full overflow-hidden">
       <img 
-        :src="safari.featuredImage || safari.image" 
+        :src="safari.featuredImage || safari.image || 'https://res.cloudinary.com/dmdihuyvn/image/upload/v1770905930/DSC_0247_dkzytn.jpg'" 
         :alt="getText(safari.title)"
         class="w-full h-full object-cover"
       />

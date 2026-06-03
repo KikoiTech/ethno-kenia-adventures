@@ -80,7 +80,7 @@
              <!-- Price & Booking Button -->
              <div class="mb-6">
                 <span class="text-sm text-gray-500 uppercase tracking-tighter">Starting from</span>
-                <div class="text-4xl font-serif font-bold text-brand-charcoal">${{ safariPackage.price?.USD || safariPackage.price }}</div>
+                <div class="text-4xl font-serif font-bold text-brand-charcoal">${{ typeof safariPackage.price === 'object' && safariPackage.price ? safariPackage.price.USD : safariPackage.price }}</div>
              </div>
              
              <!-- Add a Guard for availability -->
