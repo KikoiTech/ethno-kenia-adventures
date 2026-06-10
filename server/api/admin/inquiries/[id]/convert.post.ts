@@ -47,7 +47,6 @@ export default defineEventHandler(async (event) => {
       travel_date:          inquiry.travel_date,
       adults_count:         inquiry.adults_count,
       children_count:       inquiry.children_count,
-      message:              inquiry.message,
       original_inquiry_id:  inquiry.id,
       status:               'confirmed',
     }])

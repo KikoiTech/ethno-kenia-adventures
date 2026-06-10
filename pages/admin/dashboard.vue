@@ -7,7 +7,6 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   Activity,
-  FileCode,
 } from 'lucide-vue-next'
 import { toast } from 'vue-sonner'
 
@@ -244,16 +243,6 @@ function getStatusClass(status: string) {
             <div class="action-info">
               <span class="action-label">Team Access</span>
               <span class="action-desc">Manage admin permissions</span>
-            </div>
-          </NuxtLink>
-
-          <NuxtLink to="/admin/templates" class="action-card">
-            <div class="action-icon bg-orange-500/10 text-orange-500">
-              <FileCode class="w-5 h-5" />
-            </div>
-            <div class="action-info">
-              <span class="action-label">Email Templates</span>
-              <span class="action-desc">Edit automated responses</span>
             </div>
           </NuxtLink>
         </div>

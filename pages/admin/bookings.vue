@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { 
-  Briefcase, 
-  Search, 
-  Filter, 
-  Calendar, 
-  User, 
-  DollarSign,
+import {
+  Search,
+  Calendar,
   CheckCircle2,
   XCircle,
   Clock,

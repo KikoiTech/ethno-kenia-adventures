@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {
   Mail, Search, MessageSquare, Calendar, CheckCircle2, Archive,
-  Trash2, MapPin, Users, ArrowRight, RefreshCcw, Send, X, ChevronDown
+  Trash2, MapPin, Users, ArrowRight, RefreshCcw, X, ChevronDown
 } from 'lucide-vue-next'
 import { toast } from 'vue-sonner'
 
@@ -15,12 +15,6 @@ const isLoading      = ref(true)
 const searchQuery    = ref('')
 const statusFilter   = ref('all')
 const selectedInquiry = ref<any>(null)
-
-// Template email panel
-const showEmailPanel  = ref(false)
-const templates       = ref<any[]>([])
-const selectedTplSlug = ref('')
-const isSendingEmail  = ref(false)
 
 // Custom booking dialog
 const showTripDialog  = ref(false)
@@ -55,11 +49,6 @@ async function fetchInquiries() {
   } finally {
     isLoading.value = false
   }
-}
-
-async function fetchTemplates() {
-  const { data } = await supabase.from('email_templates').select('slug, name, subject').order('slug')
-  templates.value = data ?? []
 }
 
 async function fetchTrips() {
@@ -108,26 +97,6 @@ async function convertToBooking() {
   }
 }
 
-async function sendTemplateEmail() {
-  if (!selectedInquiry.value || !selectedTplSlug.value) return
-  isSendingEmail.value = true
-  try {
-    const headers = await getAuthHeaders()
-    await $fetch(`/api/admin/inquiries/${selectedInquiry.value.id}/send-email`, {
-      method: 'POST',
-      headers,
-      body: { template_slug: selectedTplSlug.value },
-    })
-    toast.success('Email sent', { description: `Sent to ${selectedInquiry.value.email}` })
-    showEmailPanel.value = false
-    selectedTplSlug.value = ''
-  } catch (err: any) {
-    toast.error('Send failed', { description: err.data?.statusMessage ?? err.message })
-  } finally {
-    isSendingEmail.value = false
-  }
-}
-
 function openTripDialog() {
   fetchTrips()
   selectedTripId.value = ''
@@ -159,7 +128,6 @@ function formatDate(d: string) {
 onMounted(async () => {
   await fetchProfile()
   fetchInquiries()
-  fetchTemplates()
 })
 </script>
 
@@ -203,7 +171,7 @@ onMounted(async () => {
           <button
             v-for="inq in filteredInquiries"
             :key="inq.id"
-            @click="selectedInquiry = inq; showEmailPanel = false"
+            @click="selectedInquiry = inq"
             :class="['inquiry-card', { 'inquiry-card--active': selectedInquiry?.id === inq.id }]"
           >
             <div class="card-header">
@@ -249,12 +217,6 @@ onMounted(async () => {
                 <ChevronDown class="select-arrow w-3.5 h-3.5" />
               </div>
 
-              <!-- Send template email -->
-              <button class="action-btn" @click="showEmailPanel = !showEmailPanel">
-                <Send class="w-4 h-4" />
-                <span>Send Template</span>
-              </button>
-
               <!-- Reply via email -->
               <a
                 :href="`mailto:${selectedInquiry.email}?subject=Re: ${selectedInquiry.trips?.title ?? 'Your inquiry at Ethno Kenia'}`"
@@ -263,27 +225,6 @@ onMounted(async () => {
                 <Mail class="w-4 h-4" />
                 <span>Reply</span>
               </a>
-            </div>
-          </div>
-
-          <!-- Template email panel -->
-          <div v-if="showEmailPanel" class="email-panel">
-            <div class="email-panel-header">
-              <span>Send a template email to {{ selectedInquiry.email }}</span>
-              <button @click="showEmailPanel = false"><X class="w-4 h-4" /></button>
-            </div>
-            <div class="email-panel-body">
-              <select v-model="selectedTplSlug" class="tpl-select">
-                <option value="">— Select template —</option>
-                <option v-for="t in templates" :key="t.slug" :value="t.slug">{{ t.name ?? t.slug }}</option>
-              </select>
-              <button
-                class="send-tpl-btn"
-                :disabled="!selectedTplSlug || isSendingEmail"
-                @click="sendTemplateEmail"
-              >
-                {{ isSendingEmail ? 'Sending…' : 'Send' }}
-              </button>
             </div>
           </div>
 
@@ -473,15 +414,6 @@ onMounted(async () => {
 
 .action-btn { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.9rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #e8e2d9; font-size: 0.82rem; font-weight: 600; cursor: pointer; white-space: nowrap; text-decoration: none; }
 .action-btn.success { background: rgba(16,185,129,0.1); color: #6ee7b7; border-color: rgba(16,185,129,0.2); }
-
-/* Template email panel */
-.email-panel { background: rgba(196,113,78,0.06); border-bottom: 1px solid rgba(196,113,78,0.15); padding: 1rem 2rem; }
-.email-panel-header { display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: rgba(240,232,220,0.6); margin-bottom: 0.75rem; }
-.email-panel-header button { background: none; border: none; color: rgba(240,232,220,0.4); cursor: pointer; }
-.email-panel-body { display: flex; gap: 0.75rem; align-items: center; }
-.tpl-select { flex: 1; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.5rem 0.8rem; color: #e8e2d9; font-size: 0.85rem; outline: none; }
-.send-tpl-btn { padding: 0.5rem 1.25rem; background: #c4714e; color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 0.85rem; cursor: pointer; white-space: nowrap; }
-.send-tpl-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
 /* Details + message */
 .message-details { padding: 1rem 2rem; background: rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; gap: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.05); }

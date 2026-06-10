@@ -42,6 +42,17 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: error.message })
   }
 
+  // Resolve trip title for the notification email
+  let tripTitle: string | null = null
+  if (payload.trip_id) {
+    const { data: trip } = await supabaseAdmin
+      .from('trips')
+      .select('title')
+      .eq('id', payload.trip_id)
+      .maybeSingle()
+    tripTitle = trip?.title ?? null
+  }
+
   // Send admin alert email
   try {
     const smtpPort = Number(config.smtpPort || 465)
@@ -53,15 +64,19 @@ export default defineEventHandler(async (event) => {
         user: config.smtpUser as string,
         pass: config.smtpPass as string,
       },
+      tls: { rejectUnauthorized: false },
     })
 
-    const tripInfo = payload.trip_id ? ` – ${payload.trip_id}` : ''
+    const tripLine = tripTitle ? `<p><strong>Trip:</strong> ${tripTitle}</p>` : ''
+    const subjectSuffix = tripTitle ? ` — ${tripTitle}` : ''
+
     const adminHtml = `
       <div style="font-family:sans-serif;max-width:600px;margin:auto;padding:20px;border:1px solid #eee;">
         <h2 style="color:#c4714e;">New Inquiry Received</h2>
         <p><strong>Name:</strong> ${payload.first_name} ${payload.last_name}</p>
         <p><strong>Email:</strong> ${payload.email}</p>
         <p><strong>Phone:</strong> ${payload.phone ?? 'N/A'}</p>
+        ${tripLine}
         ${payload.travel_date ? `<p><strong>Travel date:</strong> ${payload.travel_date}</p>` : ''}
         ${payload.adults_count ? `<p><strong>Guests:</strong> ${payload.adults_count} adult(s), ${payload.children_count ?? 0} child(ren)</p>` : ''}
         ${payload.message ? `<p><strong>Message:</strong></p><p>${String(payload.message).replace(/\n/g, '<br>')}</p>` : ''}
@@ -70,13 +85,13 @@ export default defineEventHandler(async (event) => {
 
     await transporter.sendMail({
       from: `"Ethno Kenia Website" <${config.smtpUser}>`,
-      to: config.adminEmail,
-      subject: `New inquiry received${tripInfo}`,
+      to: config.smtpUser as string,
+      subject: `New inquiry received${subjectSuffix}`,
       html: adminHtml,
     })
   } catch (emailErr) {
     console.error('[POST /api/inquiries] Email send error:', emailErr)
-    // Don't throw - inquiry was saved successfully, email failure shouldn't block the response
+    // Don't throw — inquiry was saved, email failure shouldn't block the response
   }
 
   return { success: true, id: data.id }

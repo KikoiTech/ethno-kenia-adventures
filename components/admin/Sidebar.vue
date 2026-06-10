@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { 
-  LayoutDashboard, 
-  Map, 
-  Briefcase, 
-  Mail, 
-  FileCode, 
-  ShieldCheck, 
-  Users, 
-  LogOut, 
+import {
+  LayoutDashboard,
+  Map,
+  Briefcase,
+  Mail,
+  ShieldCheck,
+  Users,
+  LogOut,
   Leaf,
   ChevronRight
 } from 'lucide-vue-next'
@@ -22,7 +21,6 @@ const navigation = [
 ]
 
 const systemNavigation = [
-  { name: 'Email Templates', icon: FileCode, href: '/admin/templates' },
   { name: 'Audit Logs', icon: ShieldCheck, href: '/admin/logs' },
   { name: 'Team Management', icon: Users, href: '/admin/team' },
 ]
