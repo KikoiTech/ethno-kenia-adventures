@@ -49,7 +49,7 @@
               <p>
                 Client satisfaction is central to our approach. We work closely with each traveler to tailor safari experiences that match their individual preferences and expectations, ensuring every journey is personal, seamless, and rewarding. We also collaborate with established international tour listing platforms and are represented on
                 <a
-                  href="https://www.safaribookings.com"
+                  href="https://www.safaribookings.com/p7970"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-brand-terracotta underline hover:opacity-80 transition"

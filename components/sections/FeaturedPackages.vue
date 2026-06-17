@@ -9,10 +9,8 @@
     ref="featuredPackagesSection"
     class="relative bg-brand-sand py-24 md:py-32 overflow-hidden featured-packages-section"
   >
-    <!-- Papyrus texture overlay for consistency -->
-    <div class="absolute inset-0 opacity-[0.1] mix-blend-multiply pointer-events-none"
-         style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcHlydXMiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9IjAuMDUiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjUiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNwYXB5cnVzKSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');">
-    </div>
+    <!-- Texture overlay -->
+    <div class="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('/textures/papyrus.svg')]"></div>
 
     <div class="container mx-auto px-6 relative">
       
@@ -36,12 +34,12 @@
           @mouseleave="isPaused = false"
         >
           
-          <!-- Dynamic Package Cards (Duplicated for infinite scroll) -->
+          <!-- Dynamic Package Cards -->
           <div 
             v-for="(pkg, index) in displayPackages" 
             :key="`${pkg.id}-${index}`"
             class="flex-shrink-0 w-80 md:w-96 relative group cursor-pointer"
-            @mouseenter="hoverPackage(pkg.id)"
+            @mouseenter="hoverPackage(String(pkg.id))"
             @mouseleave="unhoverPackage"
           >
             <!-- Package Card -->
@@ -51,8 +49,8 @@
               <div class="absolute inset-0">
                 <NuxtImg 
                     provider="cloudinary"
-                    :src="pkg.image"
-                    :alt="pkg.alt"
+                    :src="pkg.image || pkg.featuredImage || 'v1770905930/DSC_0247_dkzytn.jpg'"
+                    :alt="getText(pkg.title)"
                     
                     sizes="sm:320px md:400px" 
                     
@@ -84,8 +82,8 @@
               <!-- Package Content -->
               <div class="absolute bottom-0 left-0 right-0 p-6 text-brand-off-white z-10">
                 <div class="transform transition-transform duration-500 group-hover:translate-y-2">
-                  <h3 class="text-xl md:text-2xl font-serif mb-2">{{ pkg.title }}</h3>
-                  <p class="text-sm md:text-base font-sans opacity-90 mb-4">{{ pkg.duration }} of {{ pkg.description }}</p>
+                  <h3 class="text-xl md:text-2xl font-serif mb-2">{{ getText(pkg.title) }}</h3>
+                  <p class="text-sm md:text-base font-sans opacity-90 mb-4">{{ pkg.duration }} of {{ getText(pkg.snippet || pkg.description) }}</p>
                   <div class="flex items-center justify-between">
                     <!-- <span class="text-xs md:text-sm font-sans opacity-75">From {{ pkg.price }}</span> -->
                     <div class="flex items-center space-x-1">
@@ -93,7 +91,7 @@
                         <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                         <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4H6a2 2 0 100 4h2a1 1 0 100 2 2 2 0 002-2V5a2 2 0 00-2-2H6z" clip-rule="evenodd"/>
                       </svg>
-                      <span class="text-xs font-medium">{{ pkg.label }}</span>
+                      <span class="text-xs font-medium">{{ pkg.label || pkg.category }}</span>
                     </div>
                   </div>
                 </div>
@@ -133,6 +131,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { getSafaris } from '~/utils/package-loader'
+import { getText } from '~/utils/translation-api'
 
 const featuredPackagesSection = ref<HTMLElement>()
 const packagesContainer = ref<HTMLElement>()
@@ -140,52 +140,19 @@ const hoveredPackage = ref<string | null>(null)
 const isPaused = ref(false)
 let animationId: number | null = null
 
-// Package Data
-const packages = [
-  {
-    id: 'maasai-mara',
-    title: 'Maasai Mara Explorer',
-    image: 'v1770905959/DSC_0443_jozfk3.jpg',
-    alt: 'Maasai Mara safari experience',
-    duration: '7 days',
-    description: 'unparalleled wildlife encounters',
-    price: '$3,500',
-    label: 'Premium'
-  },
-  {
-    id: 'amboseli',
-    title: 'Amboseli Luxury',
-    image: 'v1770905930/DSC_0227_tqver0.jpg',
-    alt: 'Amboseli luxury safari with Kilimanjaro',
-    duration: '5 days',
-    description: 'elegance with Kilimanjaro views',
-    price: '$5,200',
-    label: 'Luxury'
-  },
-  {
-    id: 'samburu',
-    title: 'Samburu Adventure',
-    image: 'v1770905975/DSC_0551_flntpk.jpg',
-    alt: 'Samburu adventure safari experience',
-    duration: '4 days',
-    description: 'rugged northern frontier exploration',
-    price: '$2,800',
-    label: 'Adventure'
-  },
-  {
-    id: 'conservation',
-    title: 'Conservation Experience',
-    image: 'v1770903469/DSC_0011_dp0tlt.jpg',
-    alt: 'Conservation experience with rhinos',
-    duration: '3 days',
-    description: 'supporting Kenya\'s wildlife protection',
-    price: '$4,100',
-    label: 'Impact'
-  }
-]
+// Data Fetching
+const { data: allPackages } = await useAsyncData('featured-safaris', () => getSafaris())
+
+// Filter for featured packages
+const packages = computed(() => {
+  if (!allPackages.value) return []
+  const featured = allPackages.value.filter(p => p.featured)
+  // If no featured trips found (e.g. column missing), just show the first 4
+  return featured.length > 0 ? featured.slice(0, 4) : allPackages.value.slice(0, 4)
+})
 
 // Duplicate packages for infinite scroll effect
-const displayPackages = computed(() => [...packages, ...packages, ...packages]) // Triple to ensure enough content for smooth loop
+const displayPackages = computed(() => [...packages.value, ...packages.value, ...packages.value]) // Triple to ensure enough content for smooth loop
 
 // Package hover handlers
 const hoverPackage = (packageId: string) => {

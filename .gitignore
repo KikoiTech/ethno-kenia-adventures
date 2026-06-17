@@ -25,3 +25,5 @@ logs
 scripts/
 safari
 fix_safaris.py
+migration/
+edge-function-code.ts

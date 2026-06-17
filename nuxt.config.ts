@@ -17,8 +17,21 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',      // Add this
     '@nuxtjs/google-fonts', // Add this
-    'nuxt-gtag'
+    'nuxt-gtag',
+    'shadcn-nuxt'
   ],
+
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
+  },
 
   gtag: {
     // No ID here! It will read from .env automatically if named correctly
@@ -26,8 +39,12 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      gtagId: process.env.NUXT_PUBLIC_GTAG_ID // Fallback
+      gtagId: process.env.NUXT_PUBLIC_GTAG_ID, // Fallback
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseKey: process.env.SUPABASE_KEY,
     },
+    // Private (server-only) — never sent to the browser
+    supabaseServiceKey: process.env.SUPABASE_SERVICE_KEY,
     smtpHost: process.env.SMTP_HOST,
     smtpPort: process.env.SMTP_PORT,
     smtpUser: process.env.SMTP_USER,

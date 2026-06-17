@@ -97,7 +97,7 @@ const props = withDefaults(defineProps<Props>(), {
 // --- DATA CLEANING ---
 // This ensures that even if your JSON has the full URL, Nuxt Image only uses the ID
 const cleanImageId = computed(() => {
-  const img = props.safariPackage.featuredImage || props.safariPackage.image || ''
+  const img = props.safariPackage.featuredImage || props.safariPackage.image || 'v1770905930/DSC_0247_dkzytn.jpg'
   // If it's a full URL, strip the Cloudinary parts to get just the ID
   return img.replace('https://res.cloudinary.com/dmdihuyvn/image/upload/', '')
 })

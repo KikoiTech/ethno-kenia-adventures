@@ -71,7 +71,7 @@ export function filterPackages(
     
     // Difficulty filter
     if (filters.difficulty && filters.difficulty.length > 0) {
-      if (!filters.difficulty.includes(safariPackage.difficulty)) {
+      if (!safariPackage.difficulty || !filters.difficulty.includes(safariPackage.difficulty)) {
         return false
       }
     }
@@ -88,7 +88,7 @@ export function filterPackages(
     
     // Price range filter
     if (filters.priceRange) {
-      const basePrice = safariPackage.price.USD
+      const basePrice = typeof safariPackage.price === 'object' && safariPackage.price ? safariPackage.price.USD : safariPackage.price
       if (basePrice < filters.priceRange.min || basePrice > filters.priceRange.max) {
         return false
       }
@@ -116,10 +116,18 @@ export function sortPackages(
   
   switch (sortBy) {
     case 'price-asc':
-      return sorted.sort((a, b) => a.price.USD - b.price.USD)
+      return sorted.sort((a, b) => {
+        const aPrice = typeof a.price === 'object' && a.price ? a.price.USD : a.price
+        const bPrice = typeof b.price === 'object' && b.price ? b.price.USD : b.price
+        return aPrice - bPrice
+      })
     
     case 'price-desc':
-      return sorted.sort((a, b) => b.price.USD - a.price.USD)
+      return sorted.sort((a, b) => {
+        const aPrice = typeof a.price === 'object' && a.price ? a.price.USD : a.price
+        const bPrice = typeof b.price === 'object' && b.price ? b.price.USD : b.price
+        return bPrice - aPrice
+      })
     
     case 'duration-asc':
       return sorted.sort((a, b) => {
@@ -410,25 +418,26 @@ export function calculatePackagePrice(
   seasonalAdjustment: number
   groupDiscount: number
 } {
-  const basePrice = safariPackage.price.USD
+  const priceObj = typeof safariPackage.price === 'object' && safariPackage.price ? safariPackage.price : null
+  const basePrice = priceObj ? priceObj.USD : (safariPackage.price as number)
   let seasonalAdjustment = 0
   let groupDiscount = 0
   
   // Check for seasonal pricing
-  if (safariPackage.price.seasonal) {
+  if (priceObj && priceObj.seasonal) {
     const date = new Date(travelDate)
     const month = date.getMonth() + 1 // 1-12
     
     // Peak season (June-September for most safaris)
     if (month >= 6 && month <= 9) {
-      if (safariPackage.price.seasonal.peak) {
-        seasonalAdjustment = safariPackage.price.seasonal.peak - basePrice
+      if (priceObj.seasonal.peak) {
+        seasonalAdjustment = priceObj.seasonal.peak - basePrice
       }
     }
     // Off-peak season (March-May, October-November)
     else if ((month >= 3 && month <= 5) || (month >= 10 && month <= 11)) {
-      if (safariPackage.price.seasonal.offPeak) {
-        seasonalAdjustment = safariPackage.price.seasonal.offPeak - basePrice
+      if (priceObj.seasonal.offPeak) {
+        seasonalAdjustment = priceObj.seasonal.offPeak - basePrice
       }
     }
   }
@@ -457,18 +466,18 @@ export function calculatePackagePrice(
  * Gets package highlights as formatted list
  */
 export function getPackageHighlights(safariPackage: SafariPackage, language: string = 'en'): string[] {
-  return safariPackage.highlights.map(highlight => getText(highlight, language))
+  return (safariPackage.highlights || []).map(highlight => getText(highlight, language))
 }
 
 /**
  * Gets package inclusions/exclusions as formatted lists
  */
 export function getPackageIncludes(safariPackage: SafariPackage, language: string = 'en'): string[] {
-  return safariPackage.included.map((item: MultiLanguageText) => getText(item, language))
+  return (safariPackage.included || []).map((item: MultiLanguageText) => getText(item, language))
 }
 
 export function getPackageExcludes(safariPackage: SafariPackage, language: string = 'en'): string[] {
-  return safariPackage.excluded.map((item: MultiLanguageText) => getText(item, language))
+  return (safariPackage.excluded || []).map((item: MultiLanguageText) => getText(item, language))
 }
 
 /**
@@ -495,7 +504,7 @@ export function searchPackages(packages: SafariPackage[], query: string): Safari
     }
     
     // Search in highlights
-    const highlights = safariPackage.highlights.map(h => getText(h, 'en')).join(' ').toLowerCase()
+    const highlights = (safariPackage.highlights || []).map(h => getText(h, 'en')).join(' ').toLowerCase()
     if (highlights.includes(searchTerm)) {
       return true
     }
@@ -532,8 +541,11 @@ export function getRelatedPackages(
     }
     
     // Then by price similarity
-    const aPriceDiff = Math.abs(a.price.USD - currentSafariPackage.price.USD)
-    const bPriceDiff = Math.abs(b.price.USD - currentSafariPackage.price.USD)
+    const aPrice = typeof a.price === 'object' && a.price ? a.price.USD : a.price
+    const bPrice = typeof b.price === 'object' && b.price ? b.price.USD : b.price
+    const currentPrice = typeof currentSafariPackage.price === 'object' && currentSafariPackage.price ? currentSafariPackage.price.USD : currentSafariPackage.price
+    const aPriceDiff = Math.abs(aPrice - currentPrice)
+    const bPriceDiff = Math.abs(bPrice - currentPrice)
     
     return aPriceDiff - bPriceDiff
   })

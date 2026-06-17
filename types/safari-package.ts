@@ -19,6 +19,7 @@ export interface SafariPackage {
   popular?: number
   featured?: number
   price: number | PackagePricing
+  label?: string
   image?: string
   featuredImage?: string
   gallery?: string[]
