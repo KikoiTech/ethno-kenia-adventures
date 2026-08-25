@@ -42,6 +42,7 @@ export default defineNuxtConfig({
       gtagId: process.env.NUXT_PUBLIC_GTAG_ID, // Fallback
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseKey: process.env.SUPABASE_KEY,
+      siteUrl: process.env.SITE_URL,
     },
     // Private (server-only) — never sent to the browser
     supabaseServiceKey: process.env.SUPABASE_SERVICE_KEY,
