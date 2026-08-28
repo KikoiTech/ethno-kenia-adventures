@@ -181,7 +181,7 @@
               </svg>
               <div>
                 <p class="text-brand-off-white/80 font-sans text-sm">
-                  Pension Towers, Loita street, 5th Floor, Nairobi Kenya
+                  Pension Towers, Loita street, 3rd Floor, Nairobi Kenya
                 </p>
               </div>
             </div>
