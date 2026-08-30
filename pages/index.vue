@@ -3,49 +3,48 @@
     
     
     
-    <div class="absolute inset-0 z-30 flex items-center justify-center px-8">
-      <div class="text-center max-w-[800px] typography-container" ref="typography">
-        
-        <!-- Main headline -->
+    <div class="absolute inset-0 z-30">
+      <div class="relative h-full max-w-[1400px] mx-auto">
+
+      <!-- Headline + subtext: pinned to the vertical center, independent of the bottom row -->
+      <div class="absolute top-1/2 -translate-y-1/2 left-6 right-6 sm:left-10 sm:right-auto lg:left-16 max-w-xl text-left typography-container" ref="typography">
         <h1 class="hero-headline opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-500" ref="headline">
           Where Nature becomes <span class="italic text-brand-terracotta">Adventure</span>
         </h1>
-        
+
         <!-- Divider Line -->
-        <div class="w-24 h-px bg-white/30 mx-auto my-8 opacity-0 transition-opacity duration-1000 ease-out delay-700" ref="divider"></div>
-        
+        <div class="w-24 h-px bg-white/30 my-6 opacity-0 transition-opacity duration-1000 ease-out delay-700" ref="divider"></div>
+
         <!-- Subtext -->
         <p class="hero-subtext opacity-0 transition-opacity duration-1000 ease-out delay-700" ref="subtext">
           Journeys that connect you to the timeless rhythm of the African wilderness.
         </p>
-        
-        <!-- Premium CTA -->
-        <div class="cta-container opacity-0 scale-90 transition-all duration-1000 ease-out delay-1000" ref="ctaContainer">
-          <NuxtLink 
-            to="/safari-packages?ref=hero" 
-            class="premium-cta group" 
-            ref="ctaButton" 
-            @click="handleCTAClick"
-          >
-            <span class="relative z-10">Begin Your Journey</span>
+      </div>
+
+      <!-- Bottom row: sell-copy badge (left) / CTA + link (right), pinned to the bottom -->
+      <div class="absolute bottom-16 sm:bottom-20 left-6 right-6 sm:left-10 sm:right-10 lg:left-16 lg:right-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
+
+        <!-- Bottom-left: sell-copy badge -->
+        <div class="max-w-sm">
+          <p class="font-sans text-xs uppercase tracking-[0.2em] text-brand-terracotta mb-2">Private Safaris · Kenya</p>
+          <p class="font-sans text-sm sm:text-base text-white/85 leading-relaxed">
+            Expert local guides, handpicked camps, and the freedom to explore Kenya's wild heart, entirely on your terms.
+          </p>
+        </div>
+
+        <!-- Bottom-right: CTA + link, side by side -->
+        <div class="flex flex-row items-center gap-6 cta-container opacity-0 scale-90 transition-all duration-1000 ease-out delay-1000" ref="ctaContainer">
+          <Button as-child variant="brand" class="h-auto px-8 py-3 text-sm">
+            <NuxtLink to="/safari-packages?ref=hero" ref="ctaButton" @click="handleCTAClick">Begin Your Journey</NuxtLink>
+          </Button>
+          <NuxtLink to="/safari-packages" class="font-sans text-xs uppercase tracking-[0.15em] text-white border-b border-white/40 hover:border-brand-terracotta hover:text-brand-terracotta transition-colors duration-300 pb-0.5">
+            Explore Safaris
           </NuxtLink>
         </div>
       </div>
-    </div>
-    
-    <div class="absolute right-8 top-1/2 transform -translate-y-1/2 z-40 scroll-indicator">
-      <div class="flex flex-col space-y-3">
-        <div 
-          v-for="i in 3" 
-          :key="i"
-          class="scroll-dot"
-          :class="{ active: currentSection >= i }"
-          @click="scrollToSection(i)"
-        >
-        </div>
       </div>
     </div>
-    
+
     <div class="absolute inset-0">
       <!-- Slideshow Container -->
       <TransitionGroup name="hero-fade">
@@ -98,6 +97,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, onMounted, onUnmounted } from 'vue'
+import { Button } from '@/components/ui/button'
 
 definePageMeta({
   layout: 'home'
@@ -165,19 +165,13 @@ const startSlideshow = () => {
 
 
 // State
-const currentSection = ref(0)
 const heroLoaded = ref(false)
 const scrolledValue = ref(0)
 
 
 // Advanced scroll-based animations with tribal patterns
 const handleScroll = () => {
-  const scrolled = window.pageYOffset
-  scrolledValue.value = scrolled
-  const windowHeight = window.innerHeight
-  
-  // Update current section
-  currentSection.value = Math.min(2, Math.floor((scrolled / windowHeight) * 3))
+  scrolledValue.value = window.pageYOffset
 }
 
 
@@ -185,12 +179,6 @@ const handleScroll = () => {
 const handleCTAClick = () => {
   // Editorial style click effect is handled by CSS (:active scale etc)
   console.log('CTA Clicked')
-}
-
-// Scroll to section
-const scrollToSection = (sectionIndex: number) => {
-  const targetY = sectionIndex * window.innerHeight
-  window.scrollTo({ top: targetY, behavior: 'smooth' })
 }
 
 onMounted(() => {
@@ -283,70 +271,12 @@ onUnmounted(() => {
   letter-spacing: 0.02em;
 }
 
-/* CTA with editorial style */
-.cta-container {
-  display: inline-block;
-}
-
-.premium-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 3rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #A25035; /* Brand Terracotta */
-  color: #ffffff;
-  border: none;
-  border-radius: 9999px;
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.premium-cta:hover {
-  transform: scale(1.05);
-  background-color: #8a422b; /* Darker Terracotta */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-
-.scroll-indicator {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  padding: 1rem;
-  border-radius: 9999px;
-}
-
-.scroll-dot {
-  width: 0.75rem;
-  height: 0.75rem;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-}
-
-.scroll-dot.active {
-  background: #A25035;
-  transform: scale(1.2);
-}
-
-
 /* Responsive excellence */
 @media (max-width: 768px) {
   .hero-headline {
     font-size: clamp(2rem, 4vw, 3rem);
   }
-  
-  .premium-cta {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-  }
-  
+
   .tribal-edge-left,
   .tribal-edge-right {
     width: 2rem;
