@@ -48,75 +48,76 @@
       </div>
     </div>
     
-    <nav 
+    <nav
       :class="[
-        'w-full flex justify-between items-center text-white transition-all duration-300',
-        !isMounted ? 'py-4' : (isScrolled ? 'py-2' : 'py-4')
+        'w-full flex items-stretch text-white transition-all duration-300',
+        !isMounted ? 'h-20' : (isScrolled ? 'h-16' : 'h-20')
       ]"
     >
-      <div class="container mx-auto px-6 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <NuxtLink to="/">
-            <img 
-              src="/logo.png" 
-              alt="Ethno Kenia Adventure" 
-              class="h-14 w-auto" 
-              width="120"
-              height="56"
-            />
-          </NuxtLink>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center space-x-10 font-sans uppercase tracking-[0.15em] text-xs font-medium">
-          <template v-for="link in navigationLinks" :key="link.name">
-            <!-- Regular Link -->
-            <NuxtLink 
-              v-if="!link.children" 
-              :to="link.path" 
-              class="relative group hover:text-[#A25035] transition-colors duration-300"
-            >
-              {{ link.name }}
-              <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-[#A25035] transition-all duration-300 group-hover:w-full group-hover:-translate-x-1/2"></span>
+      <div class="container mx-auto px-6 flex items-stretch justify-between w-full">
+        <div class="flex items-center justify-between flex-1 min-w-0 gap-8">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <NuxtLink to="/">
+              <img
+                src="/logo.png"
+                alt="Ethno Kenia Adventure"
+                class="h-14 w-auto"
+                width="120"
+                height="56"
+              />
             </NuxtLink>
-            <!-- Dropdown Link -->
-            <div v-else class="relative group">
-              <button class="hover:text-[#A25035] transition-colors duration-300 flex items-center">
-                {{ link.name }}
-                <svg class="w-3 h-3 ml-1 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-              <!-- Dropdown Panel -->
-              <div class="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-64 bg-brand-charcoal text-white shadow-xl rounded-sm p-4
-                          opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 border-t-2 border-[#A25035]">
-                <NuxtLink v-for="child in link.children" :key="child.name" :to="child.path"
-                   class="block px-4 py-3 hover:text-[#A25035] hover:bg-white/5 rounded-sm text-xs tracking-wider transition-colors">
-                  {{ child.name }}
-                </NuxtLink>
-              </div>
-            </div>
-          </template>
-        </div>
+          </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="lg:hidden">
-          <button @click="isMenuOpen = !isMenuOpen" class="focus:outline-none">
-             <!-- CORRECTED SVG ICON: Using stroke instead of fill for visibility -->
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center gap-8 font-sans text-sm font-medium">
+            <template v-for="link in navigationLinks" :key="link.name">
+              <!-- Regular Link -->
+              <NuxtLink
+                v-if="!link.children"
+                :to="link.path"
+                class="relative group hover:text-brand-terracotta transition-colors duration-300"
+              >
+                {{ link.name }}
+                <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-brand-terracotta transition-all duration-300 group-hover:w-full group-hover:-translate-x-1/2"></span>
+              </NuxtLink>
+              <!-- Dropdown Link -->
+              <div v-else class="relative group">
+                <button class="hover:text-brand-terracotta transition-colors duration-300 flex items-center">
+                  {{ link.name }}
+                  <svg class="w-3 h-3 ml-1 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <!-- Dropdown Panel -->
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-64 bg-brand-charcoal text-white shadow-xl rounded-sm p-4
+                            opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 border-t-2 border-brand-terracotta">
+                  <NuxtLink v-for="child in link.children" :key="child.name" :to="child.path"
+                     class="block px-4 py-3 hover:text-brand-terracotta hover:bg-white/5 rounded-sm text-xs tracking-wider transition-colors">
+                    {{ child.name }}
+                  </NuxtLink>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="lg:hidden">
+            <button @click="isMenuOpen = !isMenuOpen" class="focus:outline-none">
+               <!-- CORRECTED SVG ICON: Using stroke instead of fill for visibility -->
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
         </div>
 
         <!-- Desktop CTA Button -->
-        <div class="hidden lg:block flex-shrink-0">
-          <NuxtLink 
-            to="/contact-us" 
-            class="bg-brand-terracotta text-brand-off-white font-sans font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-all duration-300 h-auto min-h-[44px] flex items-center justify-center text-center leading-tight max-w-[200px]"
-          >
-            Start Your Journey
-          </NuxtLink>
-        </div>
+        <Button
+          as-child
+          variant="brand"
+          class="hidden lg:inline-flex h-auto items-center justify-center px-5 xl:px-6 py-2 my-3 flex-shrink-0 text-xs xl:text-sm ml-8"
+        >
+          <NuxtLink to="/contact-us">Start Your Journey</NuxtLink>
+        </Button>
       </div>
     </nav>
 
@@ -150,6 +151,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Button } from '@/components/ui/button'
 
 const isMenuOpen = ref(false)
 const isMobileDropdownOpen = ref(false)
