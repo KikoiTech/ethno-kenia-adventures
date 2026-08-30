@@ -1,10 +1,10 @@
 <template>
   <header 
     class="fixed top-0 left-0 w-full z-50 transition-all duration-500"
-    :class="[isScrolled ? 'bg-brand-charcoal shadow-lg' : 'bg-gradient-to-b from-black/50 to-transparent']"
+    :class="[(isScrolled || isMenuOpen) ? 'bg-brand-charcoal shadow-lg' : 'bg-gradient-to-b from-black/50 to-transparent']"
   >
     <!-- Top Bar: Contact & Socials -->
-    <div class="bg-brand-charcoal py-2 px-6 hidden sm:block">
+    <div class="bg-brand-charcoal py-2 px-6 hidden min-[940px]:block">
       <div class="container mx-auto flex justify-between items-center text-brand-off-white text-xs md:text-sm font-sans">
         <!-- Contact Info -->
         <div class="flex items-center space-x-6">
@@ -101,11 +101,19 @@
 
           <!-- Mobile Menu Button -->
           <div class="lg:hidden">
-            <button @click="isMenuOpen = !isMenuOpen" class="focus:outline-none">
-               <!-- CORRECTED SVG ICON: Using stroke instead of fill for visibility -->
-              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
+            <button @click="isMenuOpen = !isMenuOpen" class="relative h-6 w-6 focus:outline-none">
+              <span
+                class="absolute left-0 h-0.5 w-6 rounded-full bg-current transition-all duration-300 ease-in-out"
+                :class="isMenuOpen ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-[5px] rotate-0'"
+              ></span>
+              <span
+                class="absolute left-0 top-1/2 h-0.5 w-6 -translate-y-1/2 rounded-full bg-current transition-opacity duration-300 ease-in-out"
+                :class="isMenuOpen ? 'opacity-0' : 'opacity-100'"
+              ></span>
+              <span
+                class="absolute left-0 h-0.5 w-6 rounded-full bg-current transition-all duration-300 ease-in-out"
+                :class="isMenuOpen ? 'top-1/2 -translate-y-1/2 -rotate-45' : 'top-[17px] rotate-0'"
+              ></span>
             </button>
           </div>
         </div>
@@ -122,28 +130,65 @@
     </nav>
 
     <!-- Mobile Menu Panel -->
-    <div v-if="isMenuOpen" class="lg:hidden bg-brand-off-white shadow-xl">
-      <div class="flex flex-col items-center py-8 font-serif text-lg">
+    <div v-if="isMenuOpen" class="lg:hidden bg-brand-charcoal text-brand-off-white shadow-xl">
+      <div class="flex flex-col py-4 font-sans">
         <template v-for="link in navigationLinks" :key="link.name">
           <!-- Mobile Regular Link -->
-          <NuxtLink v-if="!link.children" :to="link.path" @click="isMenuOpen = false" class="py-3 hover:text-brand-terracotta">{{ link.name }}</NuxtLink>
-          <!-- Mobile Dropdown Section -->
-          <div v-else class="w-full text-center">
-            <button @click="isMobileDropdownOpen = !isMobileDropdownOpen" class="py-3 w-full flex justify-center items-center hover:text-brand-terracotta">
+          <div v-if="!link.children" class="flex flex-col">
+            <NuxtLink
+              :to="link.path"
+              @click="isMenuOpen = false"
+              class="block py-3 pl-6 pr-8 font-serif text-lg text-brand-off-white hover:text-brand-terracotta transition-colors duration-300"
+            >
               {{ link.name }}
-              <svg class="w-4 h-4 ml-1 transition-transform duration-300" :class="{'rotate-180': isMobileDropdownOpen}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div v-if="isMobileDropdownOpen" class="bg-gray-100 pb-4">
-              <NuxtLink v-for="child in link.children" :key="child.name" :to="child.path" @click="isMenuOpen = false"
-                 class="block py-3 text-brand-charcoal hover:text-brand-terracotta text-base">
+            </NuxtLink>
+            <div class="ml-6 mr-8 border-b border-brand-off-white/20"></div>
+          </div>
+          <!-- Mobile Dropdown Section: non-clickable heading + always-visible children -->
+          <div v-else class="flex flex-col">
+            <span class="block py-3 pl-6 pr-8 font-serif text-lg font-semibold text-brand-off-white cursor-default select-none">
+              {{ link.name }}
+            </span>
+            <div v-for="(child, index) in link.children" :key="child.name" class="flex flex-col">
+              <NuxtLink
+                :to="child.path"
+                @click="isMenuOpen = false"
+                class="block py-2.5 pl-10 pr-8 font-sans text-xs uppercase tracking-wider text-brand-off-white hover:text-brand-terracotta transition-colors duration-300"
+              >
                 {{ child.name }}
               </NuxtLink>
+              <div
+                :class="[
+                  index === link.children.length - 1 ? 'ml-6' : 'ml-10',
+                  'mr-8 border-b border-brand-off-white/20'
+                ]"
+              ></div>
             </div>
           </div>
         </template>
-        <NuxtLink to="/contact-us" @click="isMenuOpen = false" class="bg-brand-terracotta text-brand-off-white font-sans font-bold py-3 px-8 rounded-full mt-6">
-          Start Your Journey
-        </NuxtLink>
+
+        <!-- CTA -->
+        <div class="px-6 pt-4">
+          <Button as-child variant="brand" class="w-full h-auto justify-center py-3 text-sm">
+            <NuxtLink to="/contact-us" @click="isMenuOpen = false">Start Your Journey</NuxtLink>
+          </Button>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="flex flex-col gap-3 px-6 pt-6 font-sans text-sm">
+          <a href="tel:+254702373008" class="flex items-center text-brand-off-white/80 hover:text-brand-terracotta transition-colors duration-300">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>+254 702 373 008</span>
+          </a>
+          <a href="mailto:info@ethnokeniaadventure.com" class="flex items-center text-brand-off-white/80 hover:text-brand-terracotta transition-colors duration-300">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>info@ethnokeniaadventure.com</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -154,7 +199,6 @@ import { ref } from 'vue'
 import { Button } from '@/components/ui/button'
 
 const isMenuOpen = ref(false)
-const isMobileDropdownOpen = ref(false)
 const isScrolled = ref(false)
 const isMounted = ref(false)
 
