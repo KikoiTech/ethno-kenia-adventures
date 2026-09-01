@@ -5,7 +5,7 @@
   >
     <!-- Top Bar: Contact & Socials -->
     <div class="bg-brand-charcoal py-2 px-6 hidden min-[940px]:block">
-      <div class="container mx-auto flex justify-between items-center text-brand-off-white text-xs md:text-sm font-sans">
+      <div class="container mx-auto flex justify-between items-center text-brand-off-white text-xs md:text-[13px] font-sans">
         <!-- Contact Info -->
         <div class="flex items-center space-x-6">
           <a href="mailto:info@ethnokeniaadventure.com" class="flex items-center hover:text-brand-terracotta transition-colors duration-300">
@@ -70,7 +70,7 @@
           </div>
 
           <!-- Desktop Navigation -->
-          <div class="hidden lg:flex items-center gap-8 font-sans text-sm font-medium">
+          <div class="hidden lg:flex items-center gap-8 font-sans text-[13px] font-medium">
             <template v-for="link in navigationLinks" :key="link.name">
               <!-- Regular Link -->
               <NuxtLink
@@ -122,7 +122,7 @@
         <Button
           as-child
           variant="brand"
-          class="hidden lg:inline-flex h-auto items-center justify-center px-5 xl:px-6 py-2 my-3 flex-shrink-0 text-xs xl:text-sm ml-8"
+          class="hidden lg:inline-flex h-auto items-center justify-center px-5 xl:px-6 py-2 my-3 flex-shrink-0 text-xs ml-8"
         >
           <NuxtLink to="/contact-us">Start Your Journey</NuxtLink>
         </Button>

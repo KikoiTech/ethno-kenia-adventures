@@ -22,7 +22,7 @@
       </div>
 
       <!-- Bottom row: sell-copy badge (left) / CTA + link (right), pinned to the bottom -->
-      <div class="absolute bottom-16 sm:bottom-20 left-6 right-6 sm:left-10 sm:right-10 lg:left-16 lg:right-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
+      <div class="absolute bottom-[94px] sm:bottom-[110px] left-6 right-6 sm:left-10 sm:right-10 lg:left-16 lg:right-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
 
         <!-- Bottom-left: sell-copy badge -->
         <div class="max-w-sm">
@@ -34,7 +34,7 @@
 
         <!-- Bottom-right: CTA + link, side by side -->
         <div class="flex flex-row items-center gap-6 cta-container opacity-0 scale-90 transition-all duration-1000 ease-out delay-1000" ref="ctaContainer">
-          <Button as-child variant="brand" class="h-auto px-8 py-3 text-sm">
+          <Button as-child variant="brand" class="h-[62px] px-8 text-xs">
             <NuxtLink to="/safari-packages?ref=hero" ref="ctaButton" @click="handleCTAClick">Begin Your Journey</NuxtLink>
           </Button>
           <NuxtLink to="/safari-packages" class="font-sans text-xs uppercase tracking-[0.15em] text-white border-b border-white/40 hover:border-brand-terracotta hover:text-brand-terracotta transition-colors duration-300 pb-0.5">
@@ -80,7 +80,9 @@
     </div>
     
   </div>
-  
+
+  <!-- Trip Filter Section -->
+  <SectionsTripFilter class="relative z-20" />
 
   <!-- Manifesto Section -->
   <SectionsIntroSection class="relative z-20" />

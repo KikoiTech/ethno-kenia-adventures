@@ -175,6 +175,7 @@ import { useRoute } from 'vue-router'
 import type { SafariPackage } from '~/types/safari-package'
 import { getText } from '~/utils/translation-api'
 import { getSafaris } from '~/utils/package-loader'
+import { extractDurationDays } from '~/utils/package-data'
 
 // Components
 import PackageCard from '~/components/safari-packages/PackageCard.vue'
@@ -242,10 +243,22 @@ const filteredPackages = computed(() => {
     } else if (country) {
       // East Africa countries filter - support multi-country packages
       const filterCountry = String(country).toLowerCase()
-      list = list.filter(pkg => 
+      list = list.filter(pkg =>
         pkg.country?.some(c => c.toLowerCase() === filterCountry)
       )
     }
+  }
+
+  // Duration bucket filter (e.g. "3-5", "6-8") - applies on top of the filters above
+  const { duration } = route.query
+  if (duration) {
+    const [minStr, maxStr] = String(duration).split('-')
+    const min = parseInt(minStr, 10)
+    const max = maxStr ? parseInt(maxStr, 10) : Infinity
+    list = list.filter(pkg => {
+      const days = extractDurationDays(pkg.duration)
+      return days >= min && days <= max
+    })
   }
 
   // Sort logic
