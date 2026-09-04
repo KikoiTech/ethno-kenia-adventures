@@ -90,8 +90,8 @@
   <!-- Featured Packages Section -->
   <SectionsFeaturedPackages class="relative z-20" />
   
-  <!-- Field Guide Section -->
-  <SectionsFieldGuide class="relative z-20" />
+  <!-- Journey Showcase Section -->
+  <SectionsJourneyShowcase class="relative z-20" />
   
   <!-- Testimonials Section -->
   <SectionsTestimonials class="relative z-20" />
