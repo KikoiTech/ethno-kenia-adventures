@@ -1,8 +1,7 @@
 <template>
-  <section 
+  <section
     ref="manifestoSection"
-    class="relative -mt-[75px] bg-brand-sand py-[125px] px-12 overflow-x-hidden transition-all duration-700 ease-out"
-    :style="sectionStyle"
+    class="relative -mt-[75px] bg-brand-sand py-[125px] px-12 overflow-x-hidden"
   >
     <!-- Papyrus Texture Overlay (Optimized SVG) -->
     <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
@@ -80,7 +79,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 interface Channel {
   id: number;
@@ -92,7 +91,6 @@ interface Channel {
 const manifestoSection = ref<HTMLElement | null>(null)
 const videoPlayer = ref<HTMLVideoElement | null>(null)
 const isVisible = ref(false)
-const scrollProgress = ref(0)
 
 // TV Channels with Poster Images (CRITICAL FOR PERFORMANCE)
 const channels: Channel[] = [
@@ -123,26 +121,16 @@ const channels: Channel[] = [
 
 const currentChannelData = channels[0]!
 
-// Optimized Scroll Logic
-const sectionStyle = computed(() => ({
-  opacity: scrollProgress.value,
-  transform: `translateY(${(1 - scrollProgress.value) * 30}px)`
-}))
-
 const handleScroll = () => {
   const section = manifestoSection.value
   if (!section) return
-  
+
   const rect = section.getBoundingClientRect()
   const windowHeight = window.innerHeight
-  
-  // Calculate progress only when section is in view
+
+  // Play the video only while the section is in view, to save CPU
   if (rect.top < windowHeight && rect.bottom > 0) {
-    const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight * 0.8)))
-    scrollProgress.value = progress
     isVisible.value = true
-    
-    // Auto-pause video if user scrolls past to save CPU
     if (videoPlayer.value) videoPlayer.value.play()
   } else {
     if (videoPlayer.value) videoPlayer.value.pause()

@@ -6,8 +6,7 @@
     FUNCTIONALITY: Simple hover-float cards linking to real trips
   -->
   <section
-    ref="featuredPackagesSection"
-    class="relative bg-brand-charcoal py-24 md:py-32 overflow-hidden featured-packages-section"
+    class="relative bg-brand-charcoal py-24 md:py-32 overflow-hidden"
   >
     <!-- Texture overlay -->
     <div class="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('/textures/papyrus.svg')]"></div>
@@ -88,10 +87,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { computed } from 'vue'
 import { getSafariBySlug } from '~/utils/package-loader'
-
-const featuredPackagesSection = ref<HTMLElement>()
 
 const FALLBACK_IMAGE = 'v1770905930/DSC_0247_dkzytn.jpg'
 
@@ -123,34 +120,6 @@ const destinationCards = computed(() =>
     }
   })
 )
-
-// Parallax scrolling effect
-const handleScroll = () => {
-  if (!featuredPackagesSection.value) return
-
-  const scrolled = window.pageYOffset
-  const sectionTop = featuredPackagesSection.value?.offsetTop || 0
-  const windowHeight = window.innerHeight
-
-  // Calculate parallax progress for featured packages section
-  const sectionProgress = Math.max(0, Math.min(1, (scrolled - sectionTop + windowHeight * 0.5) / (windowHeight * 1.5)))
-
-  // Apply parallax transformation
-  const translateY = sectionProgress * -30 // Subtle upward movement
-
-  if (featuredPackagesSection.value) {
-    featuredPackagesSection.value.style.transform = `translateY(${translateY}px)`
-  }
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true })
-  handleScroll()
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 </script>
 
 <style scoped>

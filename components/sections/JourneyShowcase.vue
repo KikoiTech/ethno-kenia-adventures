@@ -5,8 +5,7 @@
     AESTHETIC: Brand-off-white, editorial card grid
   -->
   <section
-    ref="journeyShowcaseSection"
-    class="relative bg-brand-off-white py-24 md:py-32 overflow-hidden journey-showcase-section"
+    class="relative bg-brand-off-white pt-24 md:pt-32 overflow-hidden"
   >
     <div class="container mx-auto px-6 relative">
 
@@ -91,69 +90,15 @@
 
     </div>
 
-    <!-- Business Owner Tourism Invitation (Wildlife Sanctuary Parallax) -->
-    <div class="mt-24 relative overflow-hidden h-[500px] flex items-center justify-center group">
-  <!-- Background Container -->
-      <div class="absolute inset-0 z-0">
-        <NuxtImg
-          provider="cloudinary"
-          src="v1770903461/DSC_0036_dgo8e1.jpg"
-          alt="Wildlife Sanctuary"
-
-          fit="fill"
-
-          :modifiers="{
-            gravity: 'auto',
-            aspectRatio: '21:9'
-          }"
-
-          format="webp"
-          quality="80"
-          loading="lazy" 
-          sizes="sm:100vw md:100vw lg:1600px"
-          width="1600"
-          height="686"
-          class="w-full h-[120%] object-cover object-center transition-transform duration-700"
-        />
-        <!-- Darker overlay for better text contrast -->
-        <div class="absolute inset-0 bg-gradient-to-b from-brand-charcoal/70 via-brand-charcoal/40 to-brand-charcoal/70 backdrop-blur-[1px]"></div>
-      </div>
-
-      <!-- Content -->
-      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <!-- Optional: Small Tribal Icon above Title -->
-        <div class="mb-4 opacity-80">
-          <svg class="w-8 h-8 mx-auto text-brand-terracotta" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L15 8L22 9L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9L9 8L12 2Z" />
-          </svg>
-        </div>
-
-        <h3 class="text-4xl md:text-6xl font-serif mb-6 text-brand-off-white leading-tight">
-          Welcome to Our <span class="italic text-brand-terracotta">Wildlife</span> Sanctuary
-        </h3>
-
-        <p class="text-lg md:text-xl font-sans text-brand-off-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
-          Experience the raw rhythm of the Great Migration. Witness nature’s greatest spectacle within our protected conservation corridors.
-        </p>
-
-        <NuxtLink
-          to="/safari-packages?category=migration"
-          class="inline-flex items-center justify-center px-10 py-4 bg-brand-terracotta text-brand-off-white font-sans font-bold rounded-full transition-all duration-300 hover:bg-white hover:text-brand-terracotta shadow-2xl"
-        >
-          <span>Explore Migration Safaris</span>
-        </NuxtLink>
-      </div>
-    </div>
+    <SectionsWildlifeSanctuaryBanner />
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { computed } from 'vue'
 import { getSafaris } from '~/utils/package-loader'
 import { getText } from '~/utils/translation-api'
 import type { SafariPackage } from '~/types/safari-package'
-
-const journeyShowcaseSection = ref<HTMLElement>()
 
 const FALLBACK_IMAGE = 'v1770905959/DSC_0443_jozfk3.jpg'
 
@@ -219,41 +164,4 @@ const getLocationsLine = (pkg: SafariPackage) => {
 const getCountryBadge = (pkg: SafariPackage) => {
   return pkg.country?.join(' / ') || ''
 }
-
-// Parallax scrolling effect
-const handleScroll = () => {
-  if (!journeyShowcaseSection.value) return
-
-  const scrolled = window.pageYOffset
-  const sectionTop = journeyShowcaseSection.value.offsetTop
-  const windowHeight = window.innerHeight
-
-  // Calculate parallax progress for journey showcase section
-  if (scrolled + windowHeight > sectionTop && scrolled < sectionTop + journeyShowcaseSection.value.offsetHeight) {
-    const sectionProgress = (scrolled - sectionTop + windowHeight * 0.5) / (windowHeight * 1.5)
-
-  // Apply parallax transformation
-    const translateY = Math.max(-50, Math.min(50, sectionProgress * -40))
-    journeyShowcaseSection.value.style.transform = `translateY(${translateY}px)`
-  }
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true })
-  handleScroll()
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 </script>
-
-<style scoped>
-.journey-showcase-section {
-  transition: transform 0.3s ease-out, opacity 0.5s ease-out;
-}
-
-img[data-nuxt-img] {
-  will-change: transform;
-}
-</style>
