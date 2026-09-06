@@ -92,7 +92,10 @@
   
   <!-- Journey Showcase Section -->
   <SectionsJourneyShowcase class="relative z-20" />
-  
+
+  <!-- Gallery Preview Section -->
+  <SectionsGalleryPreview class="relative z-20" />
+
   <!-- Start Your Journey Section -->
   <SectionsStartYourJourney class="relative z-20" />
 </template>
