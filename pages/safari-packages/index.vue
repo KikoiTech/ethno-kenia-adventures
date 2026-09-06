@@ -1,115 +1,133 @@
 <template>
   <div class="safari-packages-page min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
     
-    <!-- National Geographic Hero Section -->
+    <!-- Hero Section -->
     <section class="relative h-screen overflow-hidden">
-      <!-- Hero Background with Parallax -->
+      <!-- Hero Background -->
       <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-orange-900/60 to-yellow-900/40"></div>
-        <NuxtImg 
+        <NuxtImg
           provider="cloudinary"
           src="v1770905930/DSC_0247_dkzytn.jpg"
           alt="Kenyan Safari Landscape"
           class="w-full h-full object-cover"
-          
+
           loading="eager"
           fetchpriority="high"
           preload
-          
+
           format="webp"
           quality="80"
           sizes="sm:100vw md:100vw lg:100vw"
           width="1920"
           height="1080"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-amber-900/60 to-transparent"></div>
+        <!-- Dark left panel fading to a clear view of the photo by the midpoint + 20px -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#2A2B2A_0%,#2A2B2A_50%,transparent_calc(50%_+_400px),transparent_100%)]"></div>
+        <!-- Short scrim so the fixed nav stays readable over the photo -->
+        <div class="absolute top-0 inset-x-0 h-28 md:h-32 bg-gradient-to-b from-brand-charcoal/90 to-transparent pointer-events-none"></div>
       </div>
-      
-      <!-- National Geographic Style Hero Content -->
-      <div class="relative z-20 h-full flex items-center justify-center text-center text-white">
-        <div class="max-w-6xl mx-auto px-6">
-          <!-- National Geographic Yellow Frame -->
-          <div class="relative inline-block mb-8">
-            <div class="absolute inset-0 bg-yellow-400 opacity-20 blur-xl"></div>
-            <div class="relative border-8 border-yellow-400/30 px-12 py-8">
-              <!-- NG Logo Style -->
-              <div class="flex items-center justify-center mb-6">
-                <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                  <svg class="w-10 h-10 text-amber-900" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.75.21-1.46.44-2.07.83l1.23 1.67c.39-.28.8-.49 1.23-.67.93-.48 1.62-1.37 1.62-2.93 0-1.56-.69-2.93-1.62-2.93-.18-.39-.39-.8-.67-1.23l1.67-1.23c.39.61.83 1.32 1.23 2.07 4.08.49 7.44 3.85 7.93 7.93z"/>
-                  </svg>
-                </div>
-              </div>
-              
-              <h1 class="text-4xl md:text-6xl font-serif tracking-wider mb-4 text-yellow-100 uppercase">
-                {{ heroTitle }}
-              </h1>
-              <div class="w-32 h-1 bg-yellow-400 mx-auto mb-6"></div>
-              <p class="text-xl md:text-2xl font-light text-yellow-50 max-w-3xl mx-auto leading-relaxed">
-                {{ getText({ en: "Journey into the heart of Africa's wilderness", es: "Viaja al corazón de la naturaleza africana", fr: "Voyage au cœur de la nature africaine", de: "Reise ins Herz der afrikanischen Wildnis", zh: "深入非洲荒野之心", ja: "アフリカの荒野の中心へ", sw: "Safiri kwa moyoni wa pori la Afrika" }, currentLanguage) }}
-              </p>
-            </div>
+
+      <!-- Hero Content: left-aligned -->
+      <div class="relative z-20 h-full flex items-center">
+        <div class="container mx-auto px-6">
+          <div class="max-w-xl text-left text-brand-off-white">
+            <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+              Private Safaris · Kenya And Beyond
+            </p>
+            <h1 class="text-4xl md:text-6xl font-serif leading-tight mb-6">
+              Tell Us Your Dream Safari.<br>
+              <span class="italic text-brand-terracotta">We'll Build The Rest.</span>
+            </h1>
+            <p class="text-lg md:text-xl font-sans font-light text-brand-off-white/80 max-w-lg leading-relaxed">
+              {{ getText({ en: "Journey into the heart of Africa's wilderness", es: "Viaja al corazón de la naturaleza africana", fr: "Voyage au cœur de la nature africaine", de: "Reise ins Herz der afrikanischen Wildnis", zh: "深入非洲荒野之心", ja: "アフリカの荒野の中心へ", sw: "Safiri kwa moyoni wa pori la Afrika" }, currentLanguage) }}
+            </p>
           </div>
-          
-          <!-- Currency & Language Controls -->
-          <!-- <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
-            <div class="bg-white/10 backdrop-blur-md border border-yellow-400/30 rounded-full px-6 py-3">
-              <div class="flex items-center gap-3">
-                <span class="text-yellow-100 font-medium">{{ getText({ en: "Currency:", es: "Moneda:", fr: "Devise:", de: "Währung:", zh: "货币:", ja: "通貨:", sw: "Fedha:" }, currentLanguage) }}</span>
-                <select 
-                  v-model="selectedCurrency"
-                  class="bg-transparent text-yellow-100 border border-yellow-400/50 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
-                >
-                  <option value="KSH">KSH 🇰🇰</option>
-                  <option value="USD">USD 🇺🇸</option>
-                  <option value="EUR">EUR 🇪🇺</option>
-                  <option value="GBP">GBP 🇬🇧</option>
-                </select>
-              </div>
-            </div>
-            
-            <LanguageSelector 
-              v-model="currentLanguage" 
-              mode="dropdown"
-              class="bg-white/10 backdrop-blur-md border border-yellow-400/30"
-            />
-          </div> -->
         </div>
       </div>
-      
-      <!-- Geographic Grid Pattern Overlay -->
-      <div class="absolute inset-0 opacity-10">
-        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(251, 191, 36, 0.3)" stroke-width="1"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+
+      <!-- Scroll cue -->
+      <div class="absolute bottom-8 left-6 md:left-10 z-20">
+        <span class="text-xs font-sans uppercase tracking-[0.2em] text-brand-off-white/70">Scroll To Explore</span>
       </div>
     </section>
 
-    <!-- Filter Section - National Geographic Style -->
-    <section class="py-16 px-6 bg-gradient-to-r from-amber-100 to-orange-100 border-y-2 border-yellow-400/30">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-8">
-          <h2 class="text-3xl font-serif text-amber-900 mb-2">{{ getText({ en: "Explore Our Adventures", sw: "Chunguza Safari Zetu" }, currentLanguage) }}</h2>
-          <div class="w-24 h-1 bg-yellow-400 mx-auto"></div>
+    <!-- Filter Section -->
+    <section class="bg-brand-off-white">
+      <div class="container mx-auto px-6 py-16">
+
+        <!-- Header row: heading left, blurb right -->
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 pb-10 border-b border-brand-charcoal/10">
+          <div>
+            <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+              Refine Your Search
+            </p>
+            <h2 class="text-4xl md:text-5xl font-serif leading-tight text-brand-charcoal">
+              Find Where Your Story Begins.
+            </h2>
+          </div>
+          <p class="font-sans text-base text-brand-charcoal/60 leading-relaxed max-w-sm">
+            Sort by destination or trip length — or skip the filters entirely and let our team suggest a route worth taking.
+          </p>
         </div>
-        
-        <div class="flex flex-wrap justify-center items-center gap-6">
-          <div class="flex items-center gap-4">
-            <label class="text-amber-900 font-serif font-medium">{{ getText({ en: "Sort by:", sw: "Panga kwa:" }, currentLanguage) }}</label>
-            <select 
-              v-model="sortBy"
-              class="bg-white/80 border-2 border-yellow-400/50 rounded-full px-6 py-3 text-amber-900 font-serif focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
-            >
-              <option value="default">{{ getText({ en: "Featured", sw: "Imeangaziwa" }, currentLanguage) }}</option>
-              <option value="duration">{{ getText({ en: "Duration", sw: "Muda" }, currentLanguage) }}</option>
-            </select>
+
+        <!-- Filter row: two country groups + duration -->
+        <div class="flex flex-col lg:flex-row lg:items-start divide-y lg:divide-y-0 lg:divide-x divide-brand-charcoal/10 py-10 border-b border-brand-charcoal/10 gap-8 lg:gap-0">
+
+          <!-- Core Destinations -->
+          <div class="lg:pr-10 pb-8 lg:pb-0">
+            <p class="text-[11px] uppercase tracking-[0.15em] text-brand-charcoal/50 font-sans mb-4">Core Destinations</p>
+            <div class="flex flex-wrap gap-3">
+              <NuxtLink
+                v-for="c in coreDestinations"
+                :key="c.value ?? 'all'"
+                :to="countryLink(c.value)"
+                class="px-5 py-2 text-xs font-bold uppercase tracking-wider border transition-colors"
+                :class="isActiveCountry(c.value) ? 'bg-brand-charcoal text-brand-off-white border-brand-charcoal' : 'bg-transparent text-brand-charcoal border-brand-charcoal/20 hover:border-brand-charcoal'"
+              >{{ c.label }}</NuxtLink>
+            </div>
+          </div>
+
+          <!-- Extend Your Journey -->
+          <div class="lg:px-10 pb-8 lg:pb-0">
+            <p class="text-[11px] uppercase tracking-[0.15em] text-brand-charcoal/50 font-sans mb-4">Extend Your Journey, With Trusted Partners</p>
+            <div class="flex flex-wrap gap-3">
+              <NuxtLink
+                v-for="c in extendedDestinations"
+                :key="c.value"
+                :to="countryLink(c.value)"
+                class="px-5 py-2 text-xs font-bold uppercase tracking-wider border transition-colors"
+                :class="isActiveCountry(c.value) ? 'bg-brand-charcoal text-brand-off-white border-brand-charcoal' : 'bg-transparent text-brand-charcoal border-brand-charcoal/20 hover:border-brand-charcoal'"
+              >{{ c.label }}</NuxtLink>
+            </div>
+          </div>
+
+          <!-- Trip length -->
+          <div class="lg:pl-10">
+            <p class="text-[11px] uppercase tracking-[0.15em] text-brand-charcoal/50 font-sans mb-4">Trip Length</p>
+            <div class="relative w-40">
+              <select
+                :value="route.query.duration ?? ''"
+                @change="handleDurationChange"
+                class="w-full bg-transparent font-serif text-lg text-brand-charcoal border-b border-brand-charcoal/30 pb-1 pr-6 focus:outline-none appearance-none cursor-pointer"
+              >
+                <option value="">Any length</option>
+                <option value="3-5">3–5 Days</option>
+                <option value="6-8">6–8 Days</option>
+                <option value="9-12">9–12 Days</option>
+                <option value="13-99">13+ Days</option>
+              </select>
+              <svg class="absolute right-0 bottom-2 w-4 h-4 text-brand-charcoal/60 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </div>
           </div>
         </div>
+
+        <!-- Results count -->
+        <p class="pt-8 font-sans text-sm text-brand-charcoal/70">
+          <span class="text-brand-terracotta font-bold">{{ filteredPackages.length }}</span>
+          Safaris, Each One Ready To Be Reshaped Around You.
+        </p>
       </div>
     </section>
 
@@ -181,6 +199,10 @@ import { extractDurationDays } from '~/utils/package-data'
 import PackageCard from '~/components/safari-packages/PackageCard.vue'
 import LanguageSelector from '~/components/safari-packages/LanguageSelector.vue'
 
+definePageMeta({
+  layout: 'home'
+})
+
 const route = useRoute()
 
 // 1. DATA FETCHING
@@ -193,6 +215,37 @@ const { data: rawPackages, error: loadError } = await useAsyncData(
 const currentLanguage = ref('en')
 const selectedCurrency = ref('KES')
 const sortBy = ref('default')
+
+// Filter Section: country buttons + trip-length select
+const coreDestinations = [
+  { value: null as string | null, label: 'All' },
+  { value: 'kenya', label: 'Kenya' },
+  { value: 'tanzania', label: 'Tanzania' },
+]
+const extendedDestinations = [
+  { value: 'uganda', label: 'Uganda' },
+  { value: 'rwanda', label: 'Rwanda' },
+]
+
+const countryLink = (country: string | null) => {
+  const query: Record<string, string> = {}
+  if (route.query.duration) query.duration = String(route.query.duration)
+  if (country) query.country = country
+  return { path: '/safari-packages', query }
+}
+
+const isActiveCountry = (value: string | null) => {
+  const current = route.query.country ? String(route.query.country).toLowerCase() : null
+  return current === value
+}
+
+const handleDurationChange = (e: Event) => {
+  const value = (e.target as HTMLSelectElement).value
+  const query: Record<string, string> = {}
+  if (route.query.country) query.country = String(route.query.country)
+  if (value) query.duration = value
+  navigateTo({ path: '/safari-packages', query })
+}
 
 // 3. COMPUTED LOGIC (Filtering and Sorting)
 const heroTitle = computed(() => {
@@ -253,7 +306,7 @@ const filteredPackages = computed(() => {
   const { duration } = route.query
   if (duration) {
     const [minStr, maxStr] = String(duration).split('-')
-    const min = parseInt(minStr, 10)
+    const min = parseInt(minStr!, 10)
     const max = maxStr ? parseInt(maxStr, 10) : Infinity
     list = list.filter(pkg => {
       const days = extractDurationDays(pkg.duration)
