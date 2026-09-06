@@ -93,8 +93,8 @@
   <!-- Journey Showcase Section -->
   <SectionsJourneyShowcase class="relative z-20" />
   
-  <!-- Testimonials Section -->
-  <SectionsTestimonials class="relative z-20" />
+  <!-- Start Your Journey Section -->
+  <SectionsStartYourJourney class="relative z-20" />
 </template>
 
 <script setup lang="ts">
