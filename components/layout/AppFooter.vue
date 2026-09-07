@@ -86,6 +86,20 @@
             </div>
           </div>
 
+          <!-- Pesapal Payment Badge -->
+          <div class="mt-8">
+            <a href="#" class="inline-block bg-brand-off-white rounded-md p-2">
+              <img
+                src="/badges/Pesapal_Footer_logo.png"
+                alt="Pesapal"
+                class="w-32 h-[60px] object-contain"
+              />
+            </a>
+            <p class="text-xs font-sans uppercase tracking-wider text-brand-off-white/50 mt-2">
+              Payments Secured By Pesapal
+            </p>
+          </div>
+
           <!-- Newsletter Signup: kept commented out until a newsletter backend exists -->
           <!--
           <div class="mt-6">
