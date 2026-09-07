@@ -160,15 +160,55 @@
     <div v-if="filteredPackages.length > 0" class="py-16 px-6">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          <PackageCard
-            v-for="(pkg, index) in filteredPackages"
+          <NuxtLink
+            v-for="pkg in filteredPackages"
             :key="pkg.id"
-            :safariPackage="pkg"
-            :language="currentLanguage"
-            
-            :index="index" 
-            class="transform transition-all duration-300 hover:scale-105"
-          />
+            :to="`/safari-packages/${pkg.slug || pkg.id}`"
+            class="group relative bg-brand-off-white overflow-hidden shadow-lg transition-shadow duration-300 hover:shadow-2xl"
+          >
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[449/381]">
+              <NuxtImg
+                provider="cloudinary"
+                :src="pkg.featuredImage || pkg.image || FALLBACK_IMAGE"
+                :alt="getText(pkg.title)"
+                sizes="sm:400px md:600px lg:449px"
+                format="webp"
+                quality="75"
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-charcoal text-[10px] font-bold uppercase tracking-wider shadow-lg">
+                  {{ getDurationBadge(pkg) }}
+                </span>
+                <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-charcoal text-[10px] font-bold uppercase tracking-wider shadow-lg">
+                  {{ getPaceBadge(pkg) }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="pt-7 px-7 pb-6">
+              <h3 class="text-2xl md:text-3xl font-serif text-brand-charcoal">
+                {{ getText(pkg.title) }}
+              </h3>
+              <p v-if="getLocationsLine(pkg)" class="text-sm text-brand-terracotta/80 font-sans mt-2">
+                {{ getLocationsLine(pkg) }}
+              </p>
+              <div class="flex items-center justify-between border-t border-brand-charcoal/10 mt-4 pt-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-charcoal/70">
+                  {{ getCountryBadge(pkg) }}
+                </span>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-charcoal">
+                  View Journey
+                </span>
+              </div>
+              <span class="mt-4 inline-flex items-center gap-2 border border-brand-terracotta text-brand-terracotta text-xs font-bold uppercase tracking-wider px-5 py-3 hover:bg-brand-terracotta hover:text-white transition-colors">
+                Request This Journey <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -196,7 +236,6 @@ import { getSafaris } from '~/utils/package-loader'
 import { extractDurationDays } from '~/utils/package-data'
 
 // Components
-import PackageCard from '~/components/safari-packages/PackageCard.vue'
 import LanguageSelector from '~/components/safari-packages/LanguageSelector.vue'
 
 definePageMeta({
@@ -245,6 +284,37 @@ const handleDurationChange = (e: Event) => {
   if (route.query.country) query.country = String(route.query.country)
   if (value) query.duration = value
   navigateTo({ path: '/safari-packages', query })
+}
+
+// Package card badges/labels (matches components/sections/JourneyShowcase.vue)
+const FALLBACK_IMAGE = 'v1770905959/DSC_0443_jozfk3.jpg'
+
+const getDurationBadge = (pkg: SafariPackage) => {
+  const duration = pkg.duration || ''
+  const match = duration.match(/(\d+)/)
+  if (match) {
+    const n = parseInt(match[1]!, 10)
+    return `${n} DAY${n === 1 ? '' : 'S'}`
+  }
+  return duration.toUpperCase()
+}
+
+const getPaceBadge = (pkg: SafariPackage) => {
+  const title = getText(pkg.title) || ''
+  const isGroup = pkg.tags?.includes('Group Tour') || /group/i.test(title)
+  return isGroup ? 'GROUP' : 'PRIVATE'
+}
+
+const getLocationsLine = (pkg: SafariPackage) => {
+  let title = getText(pkg.title) || ''
+  title = title.replace(/^\d+\s*Days?\s*/i, '')
+  title = title.replace(/\s*(Private|Group)?\s*(Safari|Tour|Holiday)s?$/i, '')
+  const parts = title.split(/,|&|\band\b/i).map(p => p.trim()).filter(Boolean)
+  return parts.join(' · ')
+}
+
+const getCountryBadge = (pkg: SafariPackage) => {
+  return pkg.country?.join(' / ') || ''
 }
 
 // 3. COMPUTED LOGIC (Filtering and Sorting)
