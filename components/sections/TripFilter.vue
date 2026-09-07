@@ -63,7 +63,12 @@
         <p class="font-sans text-sm text-brand-charcoal/60 leading-relaxed">Trusted by thousands of travellers who came to Africa with us.</p>
       </div>
 
-      <div class="py-6 sm:px-8 sm:border-t sm:border-brand-charcoal/10 flex items-center gap-4">
+      <a
+        href="https://www.safaribookings.com/reviews/p7970"
+        target="_blank"
+        rel="nofollow"
+        class="py-6 sm:px-8 sm:border-t sm:border-brand-charcoal/10 flex items-center gap-4 hover:opacity-80 transition-opacity"
+      >
         <PawPrint class="w-8 h-8 text-brand-charcoal/70 flex-shrink-0" :stroke-width="1.5" />
         <div class="flex items-baseline gap-1">
           <span class="font-serif text-3xl text-brand-terracotta">5.0</span>
@@ -73,9 +78,14 @@
           <span class="text-[11px] uppercase tracking-[0.1em] text-brand-charcoal font-sans font-semibold">SafariBookings</span>
           <span class="text-[11px] uppercase tracking-[0.1em] text-brand-charcoal/50 font-sans">669 Reviews</span>
         </div>
-      </div>
+      </a>
 
-      <div class="py-6 sm:pl-8 sm:border-t sm:border-brand-charcoal/10 flex items-center gap-4">
+      <a
+        href="https://www.tripadvisor.com/Attraction_Review-g294207-d34257797-Reviews-Ethno_Kenia_Adventure-Nairobi.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="py-6 sm:pl-8 sm:border-t sm:border-brand-charcoal/10 flex items-center gap-4 hover:opacity-80 transition-opacity"
+      >
         <Binoculars class="w-8 h-8 text-brand-charcoal/70 flex-shrink-0" :stroke-width="1.5" />
         <div class="flex items-baseline gap-1">
           <span class="font-serif text-3xl text-brand-terracotta">5.0</span>
@@ -85,7 +95,7 @@
           <span class="text-[11px] uppercase tracking-[0.1em] text-brand-charcoal font-sans font-semibold">TripAdvisor</span>
           <span class="text-[11px] uppercase tracking-[0.1em] text-brand-charcoal/50 font-sans">921 Reviews</span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>

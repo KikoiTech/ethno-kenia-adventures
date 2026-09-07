@@ -22,23 +22,23 @@
     <!-- Content -->
     <div class="relative z-10 w-full">
       <div class="max-w-xl px-6 sm:px-10 lg:px-16 text-left">
-        <p class="font-sans text-xs uppercase tracking-[0.2em] text-brand-terracotta mb-3">
-          Optional Maasai Mara Experience
+        <p class="font-sans text-xs uppercase tracking-[0.2em] text-brand-off-white mb-3">
+          The Maasai Mara Experience
         </p>
 
         <h3 class="banner-headline text-4xl md:text-6xl font-serif text-brand-off-white leading-tight mb-6">
-          See the Mara<br />from above.
+          See the Mara<br />from all angles.
         </h3>
 
         <p class="banner-subtext font-sans text-base md:text-lg text-brand-off-white/85 leading-relaxed mb-8">
-          Lift over the plains in a hot-air balloon at sunrise, then land for breakfast in the bush. Available as an optional addition to selected Maasai Mara safaris.
+          Endless golden plains, the Great Migration, and big cats at every turn — few places on earth match the raw, untamed spirit of the Maasai Mara.
         </p>
 
         <NuxtLink
           to="/contact-us"
           class="inline-flex items-center justify-center px-8 py-4 border border-white text-white text-xs font-bold uppercase tracking-[0.15em] bg-transparent transition-colors duration-300 hover:bg-white hover:text-black"
         >
-          Ask About Balloon Safaris
+          Ask About Mara Safaris
         </NuxtLink>
       </div>
     </div>

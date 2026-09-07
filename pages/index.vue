@@ -13,7 +13,7 @@
         </h1>
 
         <!-- Divider Line -->
-        <div class="w-24 h-px bg-white/30 my-6 opacity-0 transition-opacity duration-1000 ease-out delay-700" ref="divider"></div>
+        <div class="w-24 h-px bg-white/30 my-3 opacity-0 transition-opacity duration-1000 ease-out delay-700" ref="divider"></div>
 
         <!-- Subtext -->
         <p class="hero-subtext opacity-0 transition-opacity duration-1000 ease-out delay-700" ref="subtext">
@@ -268,12 +268,18 @@ onUnmounted(() => {
 
 .hero-subtext {
   font-family: 'Inter', sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2.5rem;
+  margin-bottom: 10px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.02em;
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .hero-headline {
+    font-size: 75px;
+  }
 }
 
 /* Responsive excellence */
