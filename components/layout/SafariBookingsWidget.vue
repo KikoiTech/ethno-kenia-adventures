@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <a href="https://www.safaribookings.com/reviews/p7970" target="_blank" rel="nofollow" class="block">
-      <img src="https://s3.amazonaws.com/z_437er23a/images/p7970-3.png" alt="Reviews about Ethno Kenia Adventure" title="Reviews about Ethno Kenia Adventure" border="0" class="h-28 w-auto sm:h-32">
-    </a>
-  </div>
+  <a href="https://www.safaribookings.com/reviews/p7970" target="_blank" rel="nofollow" class="inline-flex items-center">
+    <img src="/badges/SafariBookings.png" alt="Compare African Safaris reviews for Ethno Kenia Adventure" class="h-4 md:h-5 w-auto">
+  </a>
 </template>
 
 <script setup lang="ts">

@@ -1,40 +1,26 @@
 <template>
-  <section 
+  <section
     ref="manifestoSection"
-    class="relative bg-brand-off-white py-24 md:py-32 overflow-x-hidden transition-all duration-700 ease-out"
-    :style="sectionStyle"
+    class="relative -mt-[75px] bg-brand-sand py-[125px] px-12 overflow-x-hidden"
   >
     <!-- Papyrus Texture Overlay (Optimized SVG) -->
     <div class="absolute inset-0 opacity-[0.03] mix-blend-multiply pointer-events-none"
          style="background-image: url('data:image/svg+xml;base64,...');">
     </div>
 
-    <div class="container mx-auto px-6 relative">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-        
-        <!-- Left Column: Content -->
-        <div class="relative z-10">
-          <h2 class="text-4xl md:text-5xl lg:text-7xl font-serif leading-tight mb-8 text-brand-charcoal">
-            A Deeper <span class="italic text-brand-terracotta">Connection</span>
-          </h2>
-          
-          <div class="space-y-6 text-brand-charcoal/80 max-w-xl">
-            <p class="font-sans text-lg lg:text-xl leading-relaxed font-light">
-              We believe a safari is more than a holiday it's a reconnection with the wild soul that resides within each of us.
-            </p>
-            <p class="font-sans text-lg lg:text-xl leading-relaxed font-light">
-              Our journeys are crafted where luxury meets wilderness, where you meet your truest self.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Right Column: Optimized Vintage TV -->
+    <div class="container mx-auto max-w-[1400px] relative">
+      <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,485px)_1fr] gap-10 lg:gap-16 xl:gap-20 items-start">
+
+        <!-- Left Column: Portrait Media -->
         <div class="relative">
-          <div class="relative bg-brand-charcoal rounded-lg shadow-2xl overflow-hidden group">
-            
-            <!-- TV Screen Content -->
-            <div class="relative w-full h-80 md:h-96 lg:h-[400px] overflow-hidden">
-              <video 
+          <div class="relative w-full max-w-[420px] sm:max-w-[485px] mx-auto lg:mx-0 lg:max-w-none">
+
+            <!-- Decorative Rectangle -->
+            <div class="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 w-2/5 h-[42%] bg-brand-terracotta -z-10"></div>
+
+            <!-- Portrait Media Box -->
+            <div class="relative z-10 aspect-[3/4] overflow-hidden shadow-2xl bg-brand-charcoal">
+              <video
                 ref="videoPlayer"
                 :src="currentChannelData.video"
                 :poster="currentChannelData.poster"
@@ -47,22 +33,45 @@
                 <source :src="currentChannelData.video" type="video/mp4">
               </video>
 
-              <!-- Glitch & Static Overlays (Only active when section is visible) -->
-              <!-- <div v-if="isVisible" class="absolute inset-0 pointer-events-none opacity-20 mix-blend-screen bg-[url('/images/static-noise.png')]"></div> -->
-              
-              <!-- Channel Controls -->
-              <div class="absolute top-4 right-4 flex flex-col space-y-2 z-20">
-                <button @click="nextChannel" class="tv-btn">▲</button>
-                <div class="text-center text-white">
-                  <div class="text-[10px] uppercase opacity-60">CH</div>
-                  <div class="text-lg font-serif">{{ currentChannel }}</div>
-                </div>
-                <button @click="prevChannel" class="tv-btn">▼</button>
+              <!-- Caption Box -->
+              <div class="absolute bottom-0 right-0 z-20 max-w-[75%] bg-brand-charcoal/90 px-4 py-3">
+                <p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-off-white">
+                  {{ currentChannelData.name }}
+                </p>
+                <p class="text-[10px] font-sans text-brand-off-white/70 mt-0.5">
+                  Kenya, filmed by Ethno Kenia
+                </p>
               </div>
             </div>
           </div>
-          <!-- TV Base -->
-          <div class="mt-4 bg-brand-charcoal/20 h-2 w-3/4 mx-auto rounded-full blur-sm"></div>
+        </div>
+
+        <!-- Right Column: Content -->
+        <div class="relative z-10">
+          <p class="text-xs md:text-[11px] font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+            The Ethno Kenia Difference
+          </p>
+
+          <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif leading-tight mb-8 text-brand-charcoal">
+            A Deeper<br>
+            <span class="italic text-brand-terracotta">Connection.</span>
+          </h2>
+
+          <div class="max-w-xl">
+            <p class="font-sans text-lg leading-relaxed font-light text-brand-charcoal/80 mb-6">
+              We believe a safari is more than a holiday it's a reconnection with the wild soul that resides within each of us. It's an unhurried encounter with the wild, measured in moments rather than miles, that stays with you long after you're home.
+            </p>
+            <p class="font-sans text-sm md:text-base leading-relaxed text-brand-charcoal/60 mb-8">
+              Our journeys are crafted where luxury meets wilderness, where you meet your truest self. We design each itinerary around your pace, your curiosity and the small discoveries that make a place feel like it was made for you.
+            </p>
+
+            <NuxtLink
+              to="/about-us"
+              class="inline-block text-xs md:text-sm font-bold uppercase tracking-wider text-brand-charcoal border-b border-brand-charcoal pb-1 hover:text-brand-terracotta hover:border-brand-terracotta transition-colors"
+            >
+              Meet The People Behind Your Journey
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -70,7 +79,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 interface Channel {
   id: number;
@@ -82,7 +91,6 @@ interface Channel {
 const manifestoSection = ref<HTMLElement | null>(null)
 const videoPlayer = ref<HTMLVideoElement | null>(null)
 const isVisible = ref(false)
-const scrollProgress = ref(0)
 
 // TV Channels with Poster Images (CRITICAL FOR PERFORMANCE)
 const channels: Channel[] = [
@@ -111,36 +119,18 @@ const channels: Channel[] = [
   },
 ]
 
-const currentChannel = ref(1)
-const currentChannelData = computed((): Channel => {
-  const found = channels.find(c => c.id === currentChannel.value)
-  // If not found, return the first channel as a default
-  return found || channels[0]! 
-})
-
-const nextChannel = () => currentChannel.value = currentChannel.value === channels.length ? 1 : currentChannel.value + 1
-const prevChannel = () => currentChannel.value = currentChannel.value === 1 ? channels.length : currentChannel.value - 1
-
-// Optimized Scroll Logic
-const sectionStyle = computed(() => ({
-  opacity: scrollProgress.value,
-  transform: `translateY(${(1 - scrollProgress.value) * 30}px)`
-}))
+const currentChannelData = channels[0]!
 
 const handleScroll = () => {
   const section = manifestoSection.value
   if (!section) return
-  
+
   const rect = section.getBoundingClientRect()
   const windowHeight = window.innerHeight
-  
-  // Calculate progress only when section is in view
+
+  // Play the video only while the section is in view, to save CPU
   if (rect.top < windowHeight && rect.bottom > 0) {
-    const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight * 0.8)))
-    scrollProgress.value = progress
     isVisible.value = true
-    
-    // Auto-pause video if user scrolls past to save CPU
     if (videoPlayer.value) videoPlayer.value.play()
   } else {
     if (videoPlayer.value) videoPlayer.value.pause()
@@ -159,10 +149,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.tv-btn {
-  @apply w-8 h-8 bg-brand-charcoal/80 text-white rounded-full flex items-center justify-center text-xs transition-transform hover:scale-110 active:scale-95;
-}
-
 /* Optimize Video Rendering */
 video {
   will-change: opacity;

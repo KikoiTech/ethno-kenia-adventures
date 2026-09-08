@@ -2,6 +2,8 @@
 // Protects all /admin/* routes (except /admin/login)
 export default defineNuxtRouteMiddleware(async (to) => {
   if (to.path === '/admin/login') return
+  if (to.path === '/admin/accept-invite') return
+  if (to.path === '/admin/reset-password') return
 
   const supabase = useSupabase()
   const { data: { user } } = await supabase.auth.getUser()

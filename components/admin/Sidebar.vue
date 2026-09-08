@@ -8,7 +8,8 @@ import {
   Users,
   LogOut,
   Leaf,
-  ChevronRight
+  ChevronRight,
+  Settings
 } from 'lucide-vue-next'
 
 const { profile, isSuperAdmin, signOut } = useAdmin()
@@ -61,16 +62,31 @@ const isActive = (path: string) => route.path === path
       <div v-if="isSuperAdmin" class="nav-section mt-8">
         <span class="section-label">System Control</span>
         <div class="nav-items">
-          <NuxtLink 
-            v-for="item in systemNavigation" 
-            :key="item.name" 
-            :to="item.href" 
+          <NuxtLink
+            v-for="item in systemNavigation"
+            :key="item.name"
+            :to="item.href"
             class="nav-link"
             :class="{ 'nav-link--active': isActive(item.href) }"
           >
             <component :is="item.icon" class="nav-icon" />
             <span class="nav-label">{{ item.name }}</span>
             <ChevronRight v-if="isActive(item.href)" class="nav-indicator" />
+          </NuxtLink>
+        </div>
+      </div>
+
+      <div class="nav-section mt-8">
+        <span class="section-label">Account</span>
+        <div class="nav-items">
+          <NuxtLink
+            to="/admin/settings"
+            class="nav-link"
+            :class="{ 'nav-link--active': isActive('/admin/settings') }"
+          >
+            <Settings class="nav-icon" />
+            <span class="nav-label">Settings</span>
+            <ChevronRight v-if="isActive('/admin/settings')" class="nav-indicator" />
           </NuxtLink>
         </div>
       </div>

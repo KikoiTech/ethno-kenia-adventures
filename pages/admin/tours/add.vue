@@ -38,7 +38,7 @@ const tourData = ref({
   location: '',
   country: [] as string[],
   country_code: '',
-  type: '',
+  type: 'private',
   featured_image: '',
   gallery: [] as string[],
   is_active: false,

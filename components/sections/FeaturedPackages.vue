@@ -1,121 +1,78 @@
 <template>
-  <!-- 
+  <!--
     SECTION: Featured Packages
     PURPOSE: To entice users with visually rich, interactive preview of core offerings
-    VISUALS: Brand-off-white section with interactive cards
-    FUNCTIONALITY: Layered cards with hover effects and African geometric borders
+    VISUALS: Dark brand-charcoal section with a static row of destination cards
+    FUNCTIONALITY: Simple hover-float cards linking to real trips
   -->
-  <section 
-    ref="featuredPackagesSection"
-    class="relative bg-brand-sand py-24 md:py-32 overflow-hidden featured-packages-section"
+  <section
+    class="relative bg-brand-charcoal py-24 md:py-32 overflow-hidden"
   >
     <!-- Texture overlay -->
     <div class="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('/textures/papyrus.svg')]"></div>
 
-    <div class="container mx-auto px-6 relative">
-      
+    <div class="container mx-auto px-6 max-w-[1400px] relative">
+
       <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-serif leading-tight mb-4 text-brand-charcoal">
-          Featured Journeys
-        </h2>
-        <p class="text-lg md:text-xl font-sans font-light text-brand-charcoal/80 max-w-2xl mx-auto">
-          Discover our carefully crafted safari experiences, each designed to connect you deeply with Kenya's wild soul
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 lg:gap-12 mb-[58px]">
+        <div>
+          <p class="text-xs md:text-[11px] font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+            Start With A Place
+          </p>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-brand-off-white">
+            Five Ways Into<br>
+            <span class="italic text-brand-terracotta">Our Africa.</span>
+          </h2>
+        </div>
+        <p class="font-sans text-base font-light leading-relaxed text-brand-off-white/70 max-w-sm">
+          Choose a place, and we'll connect it to real trips, trusted guides and the small details that turn a destination into a story you'll tell for years.
         </p>
       </div>
 
-      <!-- Packages Container -->
-      <div class="relative">
-        <!-- Horizontal Scroll Container -->
-        <div 
-          class="flex overflow-x-auto scrollbar-hide space-x-6 pb-4" 
-          ref="packagesContainer"
-          @mouseenter="isPaused = true"
-          @mouseleave="isPaused = false"
+      <!-- Destination Cards -->
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 min-[1025px]:grid-cols-5 min-[1025px]:gap-4 lg:min-[1025px]:gap-6 max-[425px]:flex max-[425px]:grid-cols-none max-[425px]:gap-4 max-[425px]:overflow-x-auto max-[425px]:snap-x max-[425px]:snap-mandatory max-[425px]:scrollbar-hide pt-4">
+        <NuxtLink
+          v-for="(dest, index) in destinationCards"
+          :key="dest.slug"
+          :to="`/safari-packages/${dest.slug}`"
+          class="group relative w-full aspect-[301/480] sm:max-w-[301px] sm:mx-auto min-[1025px]:max-w-none min-[1025px]:mx-0 min-[1025px]:aspect-[259/550] max-[425px]:w-[85%] max-[425px]:max-w-none max-[425px]:mx-0 max-[425px]:flex-shrink-0 max-[425px]:snap-start origin-bottom shadow-lg transition-all duration-300 hover:scale-[1.06] hover:shadow-2xl hover:z-10"
         >
-          
-          <!-- Dynamic Package Cards -->
-          <div 
-            v-for="(pkg, index) in displayPackages" 
-            :key="`${pkg.id}-${index}`"
-            class="flex-shrink-0 w-80 md:w-96 relative group cursor-pointer"
-            @mouseenter="hoverPackage(String(pkg.id))"
-            @mouseleave="unhoverPackage"
-          >
-            <!-- Package Card -->
-            <div class="relative h-96 md:h-[450px] rounded-lg overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-2xl">
-              
-              <!-- Background Image with Zoom Effect -->
-              <div class="absolute inset-0">
-                <NuxtImg 
-                    provider="cloudinary"
-                    :src="pkg.image || pkg.featuredImage || 'v1770905930/DSC_0247_dkzytn.jpg'"
-                    :alt="getText(pkg.title)"
-                    
-                    sizes="sm:320px md:400px" 
-                    
-                    format="webp"
-                    quality="75"
-                    
-                    width="400"
-                    height="450"
-                    
-                    loading="lazy"
-                    
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                <!-- Dark Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/70 via-brand-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
+          <div class="absolute inset-0 overflow-hidden bg-brand-charcoal">
+            <!-- Background Image -->
+            <NuxtImg
+              provider="cloudinary"
+              :src="dest.image"
+              :alt="dest.name"
+              sizes="sm:190px md:220px lg:259px"
+              format="webp"
+              quality="75"
+              width="259"
+              height="550"
+              loading="lazy"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
 
-              <!-- African Geometric Border -->
-              <div 
-                class="absolute inset-0 border-4 border-transparent group-hover:border-brand-terracotta transition-all duration-500 rounded-lg"
-              >
-                <!-- Corner Decorations -->
-                <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brand-terracotta"></div>
-                <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-brand-terracotta"></div>
-                <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-brand-terracotta"></div>
-                <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-brand-terracotta"></div>
-              </div>
+            <!-- Legibility Scrim -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
 
-              <!-- Package Content -->
-              <div class="absolute bottom-0 left-0 right-0 p-6 text-brand-off-white z-10">
-                <div class="transform transition-transform duration-500 group-hover:translate-y-2">
-                  <h3 class="text-xl md:text-2xl font-serif mb-2">{{ getText(pkg.title) }}</h3>
-                  <p class="text-sm md:text-base font-sans opacity-90 mb-4">{{ pkg.duration }} of {{ getText(pkg.snippet || pkg.description) }}</p>
-                  <div class="flex items-center justify-between">
-                    <!-- <span class="text-xs md:text-sm font-sans opacity-75">From {{ pkg.price }}</span> -->
-                    <div class="flex items-center space-x-1">
-                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4H6a2 2 0 100 4h2a1 1 0 100 2 2 2 0 002-2V5a2 2 0 00-2-2H6z" clip-rule="evenodd"/>
-                      </svg>
-                      <span class="text-xs font-medium">{{ pkg.label || pkg.category }}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- Card Content -->
+            <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-off-white/70 mb-2">
+                {{ String(index + 1).padStart(2, '0') }} · {{ dest.eyebrow }}
+              </p>
+              <h3 class="text-2xl md:text-3xl font-serif text-brand-off-white mb-3">{{ dest.name }}</h3>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-off-white border-b border-brand-off-white/50 pb-0.5">
+                Explore
+              </span>
             </div>
           </div>
-
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="flex justify-center mt-6 space-x-2">
-          <div 
-            v-for="i in 4" 
-            :key="i"
-            class="w-2 h-2 rounded-full transition-all duration-300"
-            :class="i === 0 ? 'bg-brand-terracotta' : 'bg-brand-charcoal/30'"
-          ></div>
-        </div>
+        </NuxtLink>
       </div>
 
       <!-- Call to Action -->
-      <div class="mt-16 text-center">
-        <a 
-          href="#" 
+      <!-- <div class="mt-16 text-center">
+        <a
+          href="#"
           class="inline-flex items-center justify-center px-8 py-4 bg-brand-terracotta text-brand-off-white font-sans font-medium rounded-full transition-all duration-300 hover:bg-brand-terracotta/90 hover:scale-105"
         >
           <span>View All Safari Packages</span>
@@ -123,113 +80,50 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
           </svg>
         </a>
-      </div>
+      </div> -->
 
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { getSafaris } from '~/utils/package-loader'
-import { getText } from '~/utils/translation-api'
+import { computed } from 'vue'
+import { getSafariBySlug } from '~/utils/package-loader'
 
-const featuredPackagesSection = ref<HTMLElement>()
-const packagesContainer = ref<HTMLElement>()
-const hoveredPackage = ref<string | null>(null)
-const isPaused = ref(false)
-let animationId: number | null = null
+const FALLBACK_IMAGE = 'v1770905930/DSC_0247_dkzytn.jpg'
 
-// Data Fetching
-const { data: allPackages } = await useAsyncData('featured-safaris', () => getSafaris())
-
-// Filter for featured packages
-const packages = computed(() => {
-  if (!allPackages.value) return []
-  const featured = allPackages.value.filter(p => p.featured)
-  // If no featured trips found (e.g. column missing), just show the first 4
-  return featured.length > 0 ? featured.slice(0, 4) : allPackages.value.slice(0, 4)
-})
-
-// Duplicate packages for infinite scroll effect
-const displayPackages = computed(() => [...packages.value, ...packages.value, ...packages.value]) // Triple to ensure enough content for smooth loop
-
-// Package hover handlers
-const hoverPackage = (packageId: string) => {
-  hoveredPackage.value = packageId
+interface Destination {
+  slug: string;
+  name: string;
+  eyebrow: string;
 }
 
-const unhoverPackage = () => {
-  hoveredPackage.value = null
-}
+const destinations: Destination[] = [
+  { slug: 'masai-mara-group-tour-3-days', name: 'Mara', eyebrow: 'Endless Plains · Migration' },
+  { slug: '3-days-amboseli-national-park-safari', name: 'Amboseli', eyebrow: 'Elephants · Kilimanjaro' },
+  { slug: '3-days-serengeti-ngorongoro-crater-safari', name: 'Tanzania', eyebrow: 'Serengeti · Ngorongoro' },
+  { slug: '12-days-uganda-rare-parks', name: 'Uganda', eyebrow: 'Gorillas · Rare Parks' },
+  { slug: '10-days-luxury-private-honeymoon-safari', name: 'Diani', eyebrow: 'Barefoot Days · Indian Ocean' },
+]
 
-// Auto-scroll logic
-const startAutoScroll = () => {
-  if (!packagesContainer.value) return
-  
-  const scrollSpeed = 0.5 // Adjust speed here
-  
-  const animate = () => {
-    if (!packagesContainer.value) return
-    
-    if (!isPaused.value) {
-      if (packagesContainer.value.scrollLeft >= (packagesContainer.value.scrollWidth / 3)) {
-        // Reset to start (visually seamless because we tripled the content)
-        packagesContainer.value.scrollLeft = 0
-      } else {
-        packagesContainer.value.scrollLeft += scrollSpeed
-      }
+// Fetch each destination's real trip data (for its image) from Supabase
+const { data: destinationTrips } = await useAsyncData('featured-destinations', () =>
+  Promise.all(destinations.map(d => getSafariBySlug(d.slug)))
+)
+
+const destinationCards = computed(() =>
+  destinations.map((dest, index) => {
+    const trip = destinationTrips.value?.[index]
+    return {
+      ...dest,
+      image: trip?.image || trip?.featuredImage || FALLBACK_IMAGE,
     }
-    
-    animationId = requestAnimationFrame(animate)
-  }
-  
-  animate()
-}
-
-// Parallax scrolling effect
-const handleScroll = () => {
-  if (!featuredPackagesSection.value) return
-  
-  const scrolled = window.pageYOffset
-  const sectionTop = featuredPackagesSection.value?.offsetTop || 0
-  const windowHeight = window.innerHeight
-  
-  // Calculate parallax progress for featured packages section
-  const sectionProgress = Math.max(0, Math.min(1, (scrolled - sectionTop + windowHeight * 0.5) / (windowHeight * 1.5)))
-  
-  // Apply parallax transformation
-  const translateY = sectionProgress * -30 // Subtle upward movement
-  const opacity = Math.max(0.5, 1 - sectionProgress * 0.15) // Gentle fade as user scrolls
-  
-  if (featuredPackagesSection.value) {
-    featuredPackagesSection.value.style.transform = `translateY(${translateY}px)`
-    // featuredPackagesSection.value.style.opacity = opacity.toString()
-  }
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll, { passive: true })
-  handleScroll()
-  startAutoScroll()
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-  if (animationId) cancelAnimationFrame(animationId)
-})
+  })
+)
 </script>
 
 <style scoped>
-/* Parallax section styling */
-/*.featured-packages-section {
-  will-change: transform, opacity;
-  transition: transform 0.3s ease-out, opacity 0.5s ease-out;
-}*/
-.group:hover img {
-  will-change: transform; 
-}
-/* Hide scrollbar for clean horizontal scroll */
+/* Hide scrollbar for the sub-425px single-card horizontal scroll */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -238,32 +132,5 @@ onUnmounted(() => {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-
-/* Group hover effects */
-.group-hover\:scale-110:hover {
-  transform: scale(1.1);
-}
-
-.group-hover\:shadow-2xl:hover {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-.group-hover\:opacity-100:hover .absolute.inset-0 > div:last-child {
-  opacity: 1;
-}
-
-.group-hover\:border-brand-terracotta:hover {
-  border-color: #92400e;
-}
-
-.group-hover\:translate-y-2:hover .absolute.bottom-0 > div {
-  transform: translateY(-0.5rem);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .flex-shrink-0 {
-    width: 20rem;
-  }
-}
 </style>
+

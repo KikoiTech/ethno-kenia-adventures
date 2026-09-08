@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Eye, EyeOff, Leaf, AlertCircle, LogIn } from 'lucide-vue-next'
+import { Eye, EyeOff, Leaf, AlertCircle, LogIn, Mail } from 'lucide-vue-next'
 import { toast } from 'vue-sonner'
 
 definePageMeta({ layout: false })
@@ -10,12 +10,52 @@ useSeoMeta({
 })
 
 const supabase = useSupabase()
+const route = useRoute()
+
+onMounted(() => {
+  if (route.query.invited === '1') {
+    toast.success('Account created!', { description: 'Your admin account is ready. Sign in below.' })
+  }
+  if (route.query.reset === '1') {
+    toast.success('Password updated!', { description: 'You can now sign in with your new password.' })
+  }
+})
 
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
 const isLoading = ref(false)
 const errorMessage = ref('')
+
+// ── Forgot password ──────────────────────────────────────────────────────
+const showForgotForm   = ref(false)
+const forgotEmail      = ref('')
+const isSendingForgot  = ref(false)
+const forgotSent       = ref(false)
+
+async function handleForgotPassword() {
+  if (!forgotEmail.value.trim()) return
+
+  isSendingForgot.value = true
+  try {
+    await $fetch('/api/admin/forgot-password', {
+      method: 'POST',
+      body:   { email: forgotEmail.value.trim() },
+    })
+    forgotSent.value = true
+  } catch {
+    // Always show success to prevent email enumeration
+    forgotSent.value = true
+  } finally {
+    isSendingForgot.value = false
+  }
+}
+
+function openForgotForm() {
+  showForgotForm.value = true
+  forgotSent.value     = false
+  forgotEmail.value    = ''
+}
 
 async function handleLogin() {
   if (!email.value || !password.value) {
@@ -170,7 +210,7 @@ async function handleLogin() {
             <div class="field">
               <div class="field-row">
                 <label for="login-password" class="field-label">Password</label>
-                <a href="#" class="forgot">Forgot password?</a>
+                <button type="button" class="forgot" @click="openForgotForm">Forgot password?</button>
               </div>
               <div class="input-wrap">
                 <input
@@ -206,6 +246,51 @@ async function handleLogin() {
         </div>
       </main>
     </div>
+
+    <!-- ── Forgot Password Modal ── -->
+    <Transition name="fade">
+      <div v-if="showForgotForm" class="forgot-overlay" @click.self="showForgotForm = false">
+        <div class="forgot-card">
+          <div class="forgot-card-header">
+            <h3 class="forgot-title">Reset Your Password</h3>
+            <button class="forgot-close" @click="showForgotForm = false">✕</button>
+          </div>
+
+          <template v-if="!forgotSent">
+            <p class="forgot-desc">Enter your admin email and we'll send you a reset link valid for 30 minutes.</p>
+            <div class="forgot-form">
+              <div class="field">
+                <label class="field-label">Email Address</label>
+                <input
+                  v-model="forgotEmail"
+                  type="email"
+                  placeholder="admin@ethnokenya.com"
+                  class="field-input"
+                  :disabled="isSendingForgot"
+                  @keyup.enter="handleForgotPassword"
+                />
+              </div>
+              <button
+                class="submit-btn"
+                :disabled="isSendingForgot || !forgotEmail.trim()"
+                @click="handleForgotPassword"
+              >
+                <span v-if="isSendingForgot" class="spinner" />
+                <template v-else><Mail class="w-4 h-4" /> Send Reset Link</template>
+              </button>
+            </div>
+          </template>
+
+          <template v-else>
+            <div class="forgot-sent">
+              <div class="sent-icon">✓</div>
+              <p class="forgot-sent-msg">If that email belongs to an admin account, a reset link has been sent. Check your inbox.</p>
+              <button class="submit-btn" style="margin-top:1rem;" @click="showForgotForm = false">Back to Login</button>
+            </div>
+          </template>
+        </div>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -513,4 +598,25 @@ async function handleLogin() {
 /* ── Transitions ────────────────────────────────────── */
 .fade-enter-active, .fade-leave-active { transition: opacity .25s, transform .25s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; transform: translateY(-6px); }
+
+/* ── Forgot password modal ────────────────────────── */
+.forgot-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.75);
+  backdrop-filter: blur(8px); display: flex; align-items: center;
+  justify-content: center; z-index: 200; padding: 1.25rem;
+}
+.forgot-card {
+  width: 100%; max-width: 400px; background: #0d1610;
+  border: 1px solid rgba(255,255,255,.1); border-radius: 20px;
+  padding: 2rem; box-shadow: 0 32px 64px rgba(0,0,0,.5);
+}
+.forgot-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.forgot-title { font-size: 1.1rem; font-weight: 700; color: #f0e8dc; }
+.forgot-close { background: none; border: none; color: rgba(240,232,220,.4); cursor: pointer; font-size: 1rem; padding: .2rem; }
+.forgot-close:hover { color: #f0e8dc; }
+.forgot-desc { font-size: .85rem; color: rgba(240,232,220,.48); margin-bottom: 1.5rem; line-height: 1.55; }
+.forgot-form { display: flex; flex-direction: column; gap: 1rem; }
+.forgot-sent { text-align: center; padding: .5rem 0; }
+.sent-icon { font-size: 2rem; color: #9ec89e; margin-bottom: .75rem; }
+.forgot-sent-msg { font-size: .875rem; color: rgba(240,232,220,.55); line-height: 1.6; }
 </style>

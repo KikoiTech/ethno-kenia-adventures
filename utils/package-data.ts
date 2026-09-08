@@ -166,7 +166,7 @@ export function sortPackages(
 /**
  * Extracts numeric duration from duration string
  */
-function extractDurationDays(duration: string): number {
+export function extractDurationDays(duration: string): number {
   const match = duration?.match(/(\d+)/)
   return match && match[1] ? parseInt(match[1]) : 0
 }

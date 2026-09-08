@@ -307,7 +307,7 @@
           </h3>
 
           <p class="text-brand-charcoal/80 font-sans text-lg leading-relaxed mb-8">
-            Pension Towers, Loita street, 5th Floor, Nairobi Kenya
+            Pension Towers, Loita street, 3rd Floor, Nairobi Kenya
           </p>
 
           <a 

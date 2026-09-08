@@ -36,7 +36,7 @@
             <div class="text-xl md:text-2xl lg:text-3xl font-serif text-brand-charcoal/90 mb-8">
               Rooted in the Heart of Africa
             </div>
-            <div class="space-y-4 text-brand-charcoal/80 font-sans leading-relaxed ext-lg md:text-xl font-light text-brand-charcoal/80 leading-relaxed">
+            <div class="space-y-4 text-brand-charcoal/80 font-sans leading-relaxed text-lg md:text-xl font-light">
               <p>
                 Ethno Kenia Adventure is a trusted safari and tours company based in Kenya, specializing in unforgettable wildlife safaris, relaxing beach holidays, and immersive cultural experiences across Kenya and East Africa. Our mission is to create meaningful journeys that go beyond sightseeing and leave our guests with lasting memories.
               </p>
