@@ -77,6 +77,9 @@
       
       <!-- Gradient overlay for text readability - Editorial Style -->
       <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70 pointer-events-none"></div>
+
+      <!-- Corner overlay: darkest at the bottom-left/bottom-right corners, lightening toward center - improves readability behind the terracotta badge and CTA link -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,0,0,0.65)_0%,transparent_55%),radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.65)_0%,transparent_55%)] pointer-events-none"></div>
     </div>
     
   </div>
