@@ -12,7 +12,7 @@
       <!-- Section Header -->
       <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-16">
         <div>
-          <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
             Journeys Worth Crossing The World For
           </p>
           <h2 class="text-4xl md:text-5xl font-serif leading-tight text-brand-charcoal">
@@ -68,20 +68,20 @@
             <h3 class="text-2xl md:text-3xl font-serif text-brand-charcoal">
               {{ getText(pkg.title) }}
             </h3>
-            <p v-if="getLocationsLine(pkg)" class="text-sm text-brand-terracotta/80 font-sans mt-2">
+            <p v-if="getLocationsLine(pkg)" class="text-[12px] text-brand-terracotta/80 font-sans mt-2">
               {{ getLocationsLine(pkg) }}
             </p>
 
             <div class="flex items-center justify-between border-t border-brand-charcoal/10 mt-4 pt-4">
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-charcoal/70">
+              <span class="text-[9px] font-bold uppercase tracking-wider text-brand-charcoal/70">
                 {{ getCountryBadge(pkg) }}
               </span>
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-charcoal">
+              <span class="text-[9px] font-bold uppercase tracking-wider text-brand-charcoal">
                 View Journey
               </span>
             </div>
 
-            <span class="mt-4 inline-flex items-center gap-2 border border-brand-terracotta text-brand-terracotta text-xs font-bold uppercase tracking-wider px-5 py-3 hover:bg-brand-terracotta hover:text-white transition-colors">
+            <span class="mt-4 inline-flex items-center gap-2 border border-brand-terracotta text-brand-terracotta text-[10px] font-bold uppercase tracking-wider px-5 py-3 hover:bg-brand-terracotta hover:text-white transition-colors">
               Request This Journey <span aria-hidden="true">→</span>
             </span>
           </div>
@@ -139,11 +139,9 @@ const getDurationBadge = (pkg: SafariPackage) => {
   return duration.toUpperCase()
 }
 
-// Private/Group pill
+// Private/Group pill — driven by the admin's Tour Type field
 const getPaceBadge = (pkg: SafariPackage) => {
-  const title = getText(pkg.title) || ''
-  const isGroup = pkg.tags?.includes('Group Tour') || /group/i.test(title)
-  return isGroup ? 'GROUP' : 'PRIVATE'
+  return pkg.type === 'group' ? 'GROUP/PRIVATE' : 'PRIVATE'
 }
 
 // Locations line parsed from the trip title

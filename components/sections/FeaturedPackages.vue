@@ -16,7 +16,7 @@
       <!-- Section Header -->
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 lg:gap-12 mb-[58px]">
         <div>
-          <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+          <p class="text-xs md:text-[11px] font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
             Start With A Place
           </p>
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-brand-off-white">
@@ -24,7 +24,7 @@
             <span class="italic text-brand-terracotta">Our Africa.</span>
           </h2>
         </div>
-        <p class="font-sans text-base md:text-lg font-light leading-relaxed text-brand-off-white/70 max-w-sm">
+        <p class="font-sans text-base font-light leading-relaxed text-brand-off-white/70 max-w-sm">
           Choose a place, and we'll connect it to real trips, trusted guides and the small details that turn a destination into a story you'll tell for years.
         </p>
       </div>

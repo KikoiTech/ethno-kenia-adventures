@@ -9,7 +9,7 @@
       <!-- Header row: heading left, link right -->
       <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-12 md:mb-16">
         <div>
-          <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
             As We Saw It
           </p>
           <h2 class="text-4xl md:text-5xl font-serif leading-tight text-brand-off-white">

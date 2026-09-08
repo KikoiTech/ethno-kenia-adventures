@@ -48,7 +48,7 @@
 
         <!-- Right Column: Content -->
         <div class="relative z-10">
-          <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+          <p class="text-xs md:text-[11px] font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
             The Ethno Kenia Difference
           </p>
 
@@ -58,7 +58,7 @@
           </h2>
 
           <div class="max-w-xl">
-            <p class="font-sans text-lg lg:text-xl leading-relaxed font-light text-brand-charcoal/80 mb-6">
+            <p class="font-sans text-lg leading-relaxed font-light text-brand-charcoal/80 mb-6">
               We believe a safari is more than a holiday it's a reconnection with the wild soul that resides within each of us. It's an unhurried encounter with the wild, measured in moments rather than miles, that stays with you long after you're home.
             </p>
             <p class="font-sans text-sm md:text-base leading-relaxed text-brand-charcoal/60 mb-8">

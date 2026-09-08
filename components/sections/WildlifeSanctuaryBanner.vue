@@ -22,7 +22,7 @@
     <!-- Content -->
     <div class="relative z-10 w-full">
       <div class="max-w-xl px-6 sm:px-10 lg:px-16 text-left">
-        <p class="font-sans text-xs uppercase tracking-[0.2em] text-brand-off-white mb-3">
+        <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-brand-off-white mb-3">
           The Maasai Mara Experience
         </p>
 
@@ -30,7 +30,7 @@
           See the Mara<br />from all angles.
         </h3>
 
-        <p class="banner-subtext font-sans text-base md:text-lg text-brand-off-white/85 leading-relaxed mb-8">
+        <p class="banner-subtext font-sans text-base text-brand-off-white/85 leading-relaxed mb-8">
           Endless golden plains, the Great Migration, and big cats at every turn — few places on earth match the raw, untamed spirit of the Maasai Mara.
         </p>
 

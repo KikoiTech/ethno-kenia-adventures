@@ -25,13 +25,13 @@
       <!-- Content half -->
       <div class="relative bg-brand-sand flex items-center justify-center px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-24 xl:py-32">
         <div class="w-full max-w-xl text-left">
-          <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+          <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
             Let's Begin
           </p>
           <h2 class="text-4xl md:text-5xl font-serif leading-tight text-brand-charcoal mb-6">
             Where Will Your Journey Start?
           </h2>
-          <p class="font-sans text-base md:text-lg text-brand-charcoal/70 leading-relaxed mb-8 max-w-md">
+          <p class="font-sans text-base text-brand-charcoal/70 leading-relaxed mb-8 max-w-md">
             Tell us a little about the safari you're imagining — the season, the pace, the wildlife
             you hope to see. A safari designer will reply personally, usually within a day, with the
             first outline of a journey built entirely around you.

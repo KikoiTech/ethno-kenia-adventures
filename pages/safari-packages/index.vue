@@ -31,14 +31,14 @@
       <div class="relative z-20 h-full flex items-center">
         <div class="container mx-auto px-6">
           <div class="max-w-xl text-left text-brand-off-white">
-            <p class="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
+            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-terracotta mb-4">
               Private Safaris · Kenya And Beyond
             </p>
             <h1 class="text-4xl md:text-6xl font-serif leading-tight mb-6">
               Tell Us Your Dream Safari.<br>
               <span class="italic text-brand-terracotta">We'll Build The Rest.</span>
             </h1>
-            <p class="text-lg md:text-xl font-sans font-light text-brand-off-white/80 max-w-lg leading-relaxed">
+            <p class="text-[16px] font-sans font-light text-brand-off-white/80 max-w-lg leading-relaxed">
               {{ getText({ en: "Journey into the heart of Africa's wilderness", es: "Viaja al corazón de la naturaleza africana", fr: "Voyage au cœur de la nature africaine", de: "Reise ins Herz der afrikanischen Wildnis", zh: "深入非洲荒野之心", ja: "アフリカの荒野の中心へ", sw: "Safiri kwa moyoni wa pori la Afrika" }, currentLanguage) }}
             </p>
           </div>
@@ -47,7 +47,7 @@
 
       <!-- Scroll cue -->
       <div class="absolute bottom-8 left-6 md:left-10 z-20">
-        <span class="text-xs font-sans uppercase tracking-[0.2em] text-brand-off-white/70">Scroll To Explore</span>
+        <span class="text-[9px] font-sans uppercase tracking-[0.2em] text-brand-off-white/70">Scroll To Explore</span>
       </div>
     </section>
 
@@ -193,18 +193,18 @@
               <h3 class="text-2xl md:text-3xl font-serif text-brand-charcoal">
                 {{ getText(pkg.title) }}
               </h3>
-              <p v-if="getLocationsLine(pkg)" class="text-sm text-brand-terracotta/80 font-sans mt-2">
+              <p v-if="getLocationsLine(pkg)" class="text-[12px] text-brand-terracotta/80 font-sans mt-2">
                 {{ getLocationsLine(pkg) }}
               </p>
               <div class="flex items-center justify-between border-t border-brand-charcoal/10 mt-4 pt-4">
-                <span class="text-xs font-bold uppercase tracking-wider text-brand-charcoal/70">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-brand-charcoal/70">
                   {{ getCountryBadge(pkg) }}
                 </span>
-                <span class="text-xs font-bold uppercase tracking-wider text-brand-charcoal">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-brand-charcoal">
                   View Journey
                 </span>
               </div>
-              <span class="mt-4 inline-flex items-center gap-2 border border-brand-terracotta text-brand-terracotta text-xs font-bold uppercase tracking-wider px-5 py-3 hover:bg-brand-terracotta hover:text-white transition-colors">
+              <span class="mt-4 inline-flex items-center gap-2 border border-brand-terracotta text-brand-terracotta text-[10px] font-bold uppercase tracking-wider px-5 py-3 hover:bg-brand-terracotta hover:text-white transition-colors">
                 Request This Journey <span aria-hidden="true">→</span>
               </span>
             </div>
@@ -299,10 +299,9 @@ const getDurationBadge = (pkg: SafariPackage) => {
   return duration.toUpperCase()
 }
 
+// Private/Group pill — driven by the admin's Tour Type field
 const getPaceBadge = (pkg: SafariPackage) => {
-  const title = getText(pkg.title) || ''
-  const isGroup = pkg.tags?.includes('Group Tour') || /group/i.test(title)
-  return isGroup ? 'GROUP' : 'PRIVATE'
+  return pkg.type === 'group' ? 'GROUP/PRIVATE' : 'PRIVATE'
 }
 
 const getLocationsLine = (pkg: SafariPackage) => {

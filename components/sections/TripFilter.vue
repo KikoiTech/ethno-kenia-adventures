@@ -49,7 +49,7 @@
       <!-- Submit -->
       <Button
         variant="brand"
-        class="h-auto rounded-none px-10 py-6 min-[1315px]:py-0 text-sm w-full min-[1315px]:w-auto lg:col-start-1 lg:row-start-2 min-[1315px]:col-auto min-[1315px]:row-auto"
+        class="h-auto rounded-none px-10 py-6 min-[1315px]:py-0 text-[11px] w-full min-[1315px]:w-auto lg:col-start-1 lg:row-start-2 min-[1315px]:col-auto min-[1315px]:row-auto"
         @click="handleSubmit"
       >
         Reveal My Safari
@@ -59,8 +59,8 @@
     <!-- Trust Signals -->
     <div class="max-w-[1400px] mx-auto sm:w-fit grid grid-cols-1 sm:grid-cols-[auto_auto_auto] divide-y sm:divide-y-0 sm:divide-x divide-brand-charcoal/10 mt-10">
       <div class="py-6 sm:pr-8 flex flex-col justify-center">
-        <p class="text-[11px] uppercase tracking-[0.2em] text-brand-terracotta font-sans mb-2">Independent Reviews</p>
-        <p class="font-sans text-sm text-brand-charcoal/60 leading-relaxed">Trusted by thousands of travellers who came to Africa with us.</p>
+        <p class="text-[9px] uppercase tracking-[0.2em] text-brand-terracotta font-sans mb-2">Independent Reviews</p>
+        <p class="font-sans text-[13px] text-brand-charcoal/60 leading-relaxed">Trusted by thousands of travellers who came to Africa with us.</p>
       </div>
 
       <a
@@ -75,8 +75,8 @@
           <span class="font-serif text-lg text-brand-charcoal/40">/5</span>
         </div>
         <div class="flex flex-col">
-          <span class="text-[11px] uppercase tracking-[0.1em] text-brand-charcoal font-sans font-semibold">SafariBookings</span>
-          <span class="text-[11px] uppercase tracking-[0.1em] text-brand-charcoal/50 font-sans">669 Reviews</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] text-brand-charcoal font-sans font-semibold">SafariBookings</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] text-brand-charcoal/50 font-sans">669 Reviews</span>
         </div>
       </a>
 
@@ -92,8 +92,8 @@
           <span class="font-serif text-lg text-brand-charcoal/40">/5</span>
         </div>
         <div class="flex flex-col">
-          <span class="text-[11px] uppercase tracking-[0.1em] text-brand-charcoal font-sans font-semibold">TripAdvisor</span>
-          <span class="text-[11px] uppercase tracking-[0.1em] text-brand-charcoal/50 font-sans">921 Reviews</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] text-brand-charcoal font-sans font-semibold">TripAdvisor</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] text-brand-charcoal/50 font-sans">921 Reviews</span>
         </div>
       </a>
     </div>

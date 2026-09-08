@@ -275,6 +275,19 @@
                   +254 702 373 008
                 </a>
               </div>
+              <!-- WeChat QR: anchor target for the header's WeChat icon link -->
+              <div id="wechat-qr" class="pt-2 scroll-mt-32">
+                <div class="inline-block bg-brand-off-white rounded-md p-2">
+                  <img
+                    src="/badges/we_chat_qr.jpeg"
+                    alt="Scan to connect with Ethno Kenia Adventure on WeChat"
+                    class="w-[140px] h-[140px] object-contain"
+                  />
+                </div>
+                <p class="text-brand-off-white/80 font-sans text-sm mt-2">
+                  Scan To Connect On WeChat
+                </p>
+              </div>
             </div>
           </div>
 
