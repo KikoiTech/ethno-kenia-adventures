@@ -1,13 +1,15 @@
 <template>
-  <div class="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+  <div class="relative hero-shell w-full overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
     
     
     
     <div class="absolute inset-0 z-30">
-      <div class="relative h-full max-w-[1400px] mx-auto">
+      <div class="relative h-full max-w-[1400px] mx-auto flex flex-col px-6 sm:px-10 lg:px-16">
 
-      <!-- Headline + subtext: pinned to the vertical center, independent of the bottom row -->
-      <div class="absolute top-1/2 -translate-y-1/2 left-6 right-6 sm:left-10 sm:right-auto lg:left-16 max-w-xl text-left typography-container" ref="typography">
+      <!-- Headline + subtext: biased toward the lower part of the space left over above the bottom row (bigger top spacer than bottom), so it can never grow into it -->
+      <div class="flex-1 flex flex-col max-w-xl text-left typography-container" ref="typography">
+        <div class="flex-1" aria-hidden="true"></div>
+
         <h1 class="hero-headline opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-500" ref="headline">
           Where Nature becomes <span class="italic text-brand-terracotta">Adventure</span>
         </h1>
@@ -19,22 +21,24 @@
         <p class="hero-subtext opacity-0 transition-opacity duration-1000 ease-out delay-700" ref="subtext">
           Journeys that connect you to the timeless rhythm of the African wilderness.
         </p>
+
+        <div class="flex-1" aria-hidden="true"></div>
       </div>
 
-      <!-- Bottom row: sell-copy badge (left) / CTA + link (right), pinned to the bottom -->
-      <div class="absolute bottom-[94px] sm:bottom-[110px] left-6 right-6 sm:left-10 sm:right-10 lg:left-16 lg:right-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
+      <!-- Bottom row: sell-copy badge (left) / CTA + link (right), reserved space at the bottom (same 94/110px buffer above the TripFilter card's -75px overlap as before) -->
+      <div class="shrink-0 pb-[94px] sm:pb-[110px] flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
 
         <!-- Bottom-left: sell-copy badge -->
         <div class="max-w-sm">
           <p class="font-sans text-xs uppercase tracking-[0.2em] text-brand-terracotta mb-2">Private Safaris · Kenya</p>
-          <p class="font-sans text-sm sm:text-base text-white/85 leading-relaxed">
+          <p class="font-sans text-[13px] sm:text-sm md:text-base text-white/85 leading-relaxed">
             Expert local guides, handpicked camps, and the freedom to explore Kenya's wild heart, entirely on your terms.
           </p>
         </div>
 
         <!-- Bottom-right: CTA + link, side by side -->
-        <div class="flex flex-row items-center gap-6 cta-container opacity-0 scale-90 transition-all duration-1000 ease-out delay-1000" ref="ctaContainer">
-          <Button as-child variant="brand" class="h-[62px] px-8 text-xs">
+        <div class="flex flex-row items-center gap-4 sm:gap-6 cta-container opacity-0 scale-90 transition-all duration-1000 ease-out delay-1000" ref="ctaContainer">
+          <Button as-child variant="brand" class="h-12 sm:h-14 lg:h-[62px] px-6 sm:px-7 lg:px-8 text-[11px] sm:text-xs">
             <NuxtLink to="/safari-packages?ref=hero" ref="ctaButton" @click="handleCTAClick">Begin Your Journey</NuxtLink>
           </Button>
           <NuxtLink to="/safari-packages" class="font-sans text-xs uppercase tracking-[0.15em] text-white border-b border-white/40 hover:border-brand-terracotta hover:text-brand-terracotta transition-colors duration-300 pb-0.5">
@@ -228,6 +232,23 @@ onUnmounted(() => {
 
 <style scoped>
 
+.hero-shell {
+  min-height: 100vh;
+  min-height: 100dvh; /* better handling of mobile browser chrome */
+}
+
+/* Short, wide viewports only (small-height laptops, landscape tablets/phones —
+   NOT portrait phones, excluded by the min-width gate, which already get a
+   comfortable single-screen hero from the rule above). Give the hero a fixed,
+   content-appropriate height instead of compressing everything into the short
+   viewport. Because 820px exceeds the viewport in this range, the page shows
+   ~60-65% of the hero on load and the rest is a normal scroll — no JS needed. */
+@media (max-height: 800px) and (min-width: 640px) {
+  .hero-shell {
+    min-height: 820px;
+  }
+}
+
 /* Ken Burns Effect: Smooth slow zoom and pan */
 .ken-burns-active {
   animation: kenburns 20s ease-out infinite alternate;
@@ -261,7 +282,7 @@ onUnmounted(() => {
 /* Typography with editorial accents */
 .hero-headline {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 6vw, 5rem); /* Increased size */
+  font-size: clamp(2rem, 6vw, 5rem); /* Continuous scaling — no breakpoint jumps */
   line-height: 1.1;
   margin-bottom: 0;
   font-weight: 700;
@@ -271,29 +292,11 @@ onUnmounted(() => {
 
 .hero-subtext {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1.8vw, 1rem);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 10px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.02em;
-}
-
-@media (min-width: 1280px) and (max-width: 1440px) {
-  .hero-headline {
-    font-size: 75px;
-  }
-}
-
-/* Responsive excellence */
-@media (max-width: 768px) {
-  .hero-headline {
-    font-size: clamp(2rem, 4vw, 3rem);
-  }
-
-  .tribal-edge-left,
-  .tribal-edge-right {
-    width: 2rem;
-  }
 }
 </style>

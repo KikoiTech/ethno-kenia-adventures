@@ -30,7 +30,7 @@
           </div>
 
           <p class="font-sans text-sm text-brand-off-white/70 leading-relaxed mb-6 max-w-xs">
-            Journeys that connect you to the timeless rhythm of the African wilderness.
+            Ethno Kenia Adventure is a professional safari and tours company based in Kenya, offering unforgettable wildlife safaris, beach holidays, and cultural experiences across Kenya and East Africa. We believe every safari should be more than a trip it should be a meaningful journey.
           </p>
 
           <!-- Social / Review Badges -->
