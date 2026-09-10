@@ -13,6 +13,22 @@ export default defineEventHandler(async (event) => {
     config.supabaseServiceKey as string, // Set SUPABASE_SERVICE_KEY in .env
   )
 
+  // Verify the caller is a super admin
+  const authHeader = getHeader(event, 'authorization')
+  if (!authHeader?.startsWith('Bearer ')) {
+    throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+  }
+  const token = authHeader.slice(7)
+  const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token)
+  if (authError || !user) {
+    throw createError({ statusCode: 401, statusMessage: 'Invalid session' })
+  }
+  const { data: callerProfile } = await supabaseAdmin
+    .from('profiles').select('role').eq('id', user.id).single()
+  if (callerProfile?.role !== 'super_admin') {
+    throw createError({ statusCode: 403, statusMessage: 'Forbidden' })
+  }
+
   try {
     // Fetch all profiles with admin roles
     const { data, error } = await supabaseAdmin

@@ -304,6 +304,10 @@ const getPaceBadge = (pkg: SafariPackage) => {
   return pkg.type === 'group' ? 'GROUP/PRIVATE' : 'PRIVATE'
 }
 
+// Case-insensitive tag match (legacy data has inconsistent tag casing, e.g. "wildlife" vs "Wildlife")
+const hasTag = (pkg: SafariPackage, name: string) =>
+  (pkg.tags || []).some(t => t.toLowerCase() === name.toLowerCase())
+
 const getLocationsLine = (pkg: SafariPackage) => {
   let title = getText(pkg.title) || ''
   title = title.replace(/^\d+\s*Days?\s*/i, '')
@@ -318,10 +322,12 @@ const getCountryBadge = (pkg: SafariPackage) => {
 
 // 3. COMPUTED LOGIC (Filtering and Sorting)
 const heroTitle = computed(() => {
-  const { category, type, country } = route.query
-  
+  const { category, type, country, tourType } = route.query
+
   if (category === 'mountain-climbing') return getText({ en: 'Mount Climbing', sw: 'Kupanda Milima' }, currentLanguage.value)
   if (category === 'international') return getText({ en: 'International Tours', sw: 'Ziara za Kimataifa' }, currentLanguage.value)
+  if (type === 'bush' && tourType === 'group') return getText({ en: 'Kenya Group Bush Safaris', sw: 'Safari za Kikundi za Nyika Kenya' }, currentLanguage.value)
+  if (type === 'bush' && tourType === 'private') return getText({ en: 'Kenya Private Bush Safaris', sw: 'Safari Binafsi za Nyika Kenya' }, currentLanguage.value)
   if (type === 'bush') return getText({ en: 'Kenya Bush Safaris', sw: 'Safari za Nyika Kenya' }, currentLanguage.value)
   if (type === 'beach') return getText({ en: 'Kenya Beach Holidays', sw: 'Likizo za Pwani Kenya' }, currentLanguage.value)
   if (type === 'bush-and-beach') return getText({ en: 'Bush and Beach', sw: 'Nyika na Pwani' }, currentLanguage.value)
@@ -338,29 +344,29 @@ const heroTitle = computed(() => {
 const filteredPackages = computed(() => {
   if (!rawPackages.value) return []
   
-  const { category, type, country } = route.query
+  const { category, type, country, tourType } = route.query
   let list = [...rawPackages.value]
 
   // Apply filters based on query parameters
   if (category === 'mountain-climbing') {
-    list = list.filter(pkg => pkg.type === 'Trekking')
+    list = list.filter(pkg => pkg.activityType === 'Trekking')
   } else {
     // Exclusively show Trekking in mountain-climbing section
-    list = list.filter(pkg => pkg.type !== 'Trekking')
+    list = list.filter(pkg => pkg.activityType !== 'Trekking')
 
     if (category === 'international') {
       list = list.filter(pkg => pkg.category === 'International')
     } else if (type === 'bush') {
-      // Kenya Bush = Kenya + Wildlife tag
-      list = list.filter(pkg => pkg.country?.includes('Kenya') && (pkg.tags || []).includes('Wildlife'))
+      // Kenya Bush = Kenya + Wildlife activity
+      list = list.filter(pkg => pkg.country?.includes('Kenya') && pkg.activityType?.includes('Wildlife'))
     } else if (type === 'beach') {
-      // Kenya Beach = Kenya + Beach type
-      list = list.filter(pkg => pkg.country?.includes('Kenya') && pkg.type === 'Beach')
+      // Kenya Beach = Kenya + Beach activity
+      list = list.filter(pkg => pkg.country?.includes('Kenya') && pkg.activityType?.includes('Beach'))
     } else if (type === 'bush-and-beach') {
       // Bush and Beach = contains both Beach and Wildlife markers
-      list = list.filter(pkg => 
-        (pkg.type === 'Beach' || (pkg.tags || []).includes('Beach') || (pkg.tags || []).includes('Relaxation')) && 
-        (pkg.type === 'Wildlife' || (pkg.tags || []).includes('Wildlife'))
+      list = list.filter(pkg =>
+        (pkg.activityType?.includes('Beach') || hasTag(pkg, 'Beach') || hasTag(pkg, 'Relaxation')) &&
+        (pkg.activityType?.includes('Wildlife') || hasTag(pkg, 'Wildlife'))
       )
     } else if (country) {
       // East Africa countries filter - support multi-country packages
@@ -369,6 +375,11 @@ const filteredPackages = computed(() => {
         pkg.country?.some(c => c.toLowerCase() === filterCountry)
       )
     }
+  }
+
+  // Tour type filter (group vs private) - applies on top of the filters above
+  if (tourType) {
+    list = list.filter(pkg => pkg.type === String(tourType))
   }
 
   // Duration bucket filter (e.g. "3-5", "6-8") - applies on top of the filters above

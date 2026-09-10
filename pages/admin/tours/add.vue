@@ -14,12 +14,18 @@ definePageMeta({
   middleware: ['admin-auth'],
 })
 
+const supabase = useSupabase()
 const { logAction } = useAdmin()
 const router = useRouter()
 
 const isSaving = ref(false)
 const activeTab = ref('basic')
 const askPrice = ref(false)
+
+async function getAuthHeaders() {
+  const { data: { session } } = await supabase.auth.getSession()
+  return { Authorization: `Bearer ${session?.access_token}` }
+}
 
 function toggleAskPrice() {
   askPrice.value = !askPrice.value
@@ -39,6 +45,7 @@ const tourData = ref({
   country: [] as string[],
   country_code: '',
   type: 'private',
+  activityType: '',
   featured_image: '',
   gallery: [] as string[],
   is_active: false,
@@ -58,8 +65,6 @@ const tabs = [
 ]
 
 async function handleSave() {
-  console.log('[handleSave] called — title:', tourData.value.title, '| price:', tourData.value.price)
-
   const price = Number(tourData.value.price)
   if (!tourData.value.title?.trim() || (!askPrice.value && (!price || isNaN(price)))) {
     toast.error('Missing Information', { description: 'Please fill in the title and price.' })
@@ -74,12 +79,11 @@ async function handleSave() {
   }
 
   isSaving.value = true
-  console.log('[handleSave] sending POST request')
-  console.log('[handleSave] payload:', JSON.parse(JSON.stringify(tourData.value)))
 
   try {
     const result = await $fetch('/api/admin/tours', {
       method: 'POST',
+      headers: await getAuthHeaders(),
       body: tourData.value,
     })
 
@@ -251,6 +255,17 @@ function addTag() {
               </div>
 
               <div class="input-group col-span-2">
+                <label class="form-label">Activity Type</label>
+                <select v-model="tourData.activityType" class="form-select">
+                  <option value="">Select activity...</option>
+                  <option value="Wildlife">Wildlife</option>
+                  <option value="Trekking">Trekking</option>
+                  <option value="Beach">Beach</option>
+                  <option value="Dining">Dining</option>
+                </select>
+              </div>
+
+              <div class="input-group col-span-2">
                 <label class="form-label">Short Excerpt</label>
                 <input v-model="tourData.snippet" type="text" placeholder="One-line summary for cards..." class="form-input" />
               </div>
@@ -367,11 +382,12 @@ function addTag() {
             <label class="form-label">Category</label>
             <select v-model="tourData.category" class="form-select">
               <option value="">Select category...</option>
-              <option value="safari">Safari</option>
-              <option value="beach">Beach</option>
-              <option value="cultural">Cultural</option>
-              <option value="mountain">Mountain</option>
-              <option value="adventure">Adventure</option>
+              <option value="Day Trips">Day Trips</option>
+              <option value="Mountain Climbing">Mountain Climbing</option>
+              <option value="Multi-Day Safaris">Multi-Day Safaris</option>
+              <option value="Luxury Safaris">Luxury Safaris</option>
+              <option value="International">International</option>
+              <option value="Kenya Safaris">Kenya Safaris</option>
             </select>
           </div>
           <div class="input-group">

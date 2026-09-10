@@ -22,6 +22,16 @@ export default defineEventHandler(async (event) => {
   const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token)
   if (authError || !user) throw createError({ statusCode: 401, statusMessage: 'Invalid session' })
 
+  const { data: profile } = await supabaseAdmin
+    .from('profiles')
+    .select('role')
+    .eq('id', user.id)
+    .single()
+
+  if (!profile || (profile.role !== 'admin' && profile.role !== 'super_admin')) {
+    throw createError({ statusCode: 403, statusMessage: 'Forbidden' })
+  }
+
   // Fetch the inquiry
   const { data: inquiry, error: fetchError } = await supabaseAdmin
     .from('inquiries')

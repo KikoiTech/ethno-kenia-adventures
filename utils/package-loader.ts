@@ -11,6 +11,7 @@ function mapSafari(item: any): SafariPackage {
     ...item,
     shortTitle: item.short_title || item.shortTitle,
     countryCode: item.country_code || item.countryCode,
+    activityType: item.activity_type || item.activityType,
     featuredImage: item.featured_image || item.featuredImage,
     featured: item.is_featured,
     popular: item.is_popular,

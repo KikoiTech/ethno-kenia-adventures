@@ -225,9 +225,10 @@ const navigationLinks = ref([
   {
     name: 'KENYA HOLIDAYS',
     children: [
-      { name: 'Bush Safaris', path: '/safari-packages?type=wildlife&country=Kenya' },
+      { name: 'Group Bush Safaris', path: '/safari-packages?type=bush&tourType=group&country=Kenya' },
+      { name: 'Private Bush Safaris', path: '/safari-packages?type=bush&tourType=private&country=Kenya' },
       { name: 'Beach Holidays', path: '/safari-packages?type=beach&country=Kenya' },
-      { name: 'Bush and Beach', path: '/safari-packages?type=beach&country=Kenya' },
+      { name: 'Bush and Beach', path: '/safari-packages?type=bush-and-beach&country=Kenya' },
     ]
   },
   {
