@@ -5,16 +5,11 @@ export default defineEventHandler(async (event) => {
   const id = getRouterParam(event, 'id')
   const body = await readBody(event)
 
-  console.log('[PUT /api/admin/tours/:id] hit — id:', id)
-  console.log('[PUT /api/admin/tours/:id] supabaseUrl defined:', !!config.public.supabaseUrl)
-  console.log('[PUT /api/admin/tours/:id] supabaseServiceKey defined:', !!config.supabaseServiceKey)
-
   if (!id) {
     throw createError({ statusCode: 400, statusMessage: 'Tour ID is required' })
   }
 
   if (!config.public.supabaseUrl || !config.supabaseServiceKey) {
-    console.error('[PUT /api/admin/tours/:id] Missing Supabase credentials in runtimeConfig')
     throw createError({ statusCode: 500, statusMessage: 'Server configuration error: missing Supabase credentials' })
   }
 
@@ -22,6 +17,28 @@ export default defineEventHandler(async (event) => {
     config.public.supabaseUrl as string,
     config.supabaseServiceKey as string,
   )
+
+  // Verify the caller is an authenticated admin
+  const authHeader = getHeader(event, 'authorization')
+  if (!authHeader?.startsWith('Bearer ')) {
+    throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+  }
+
+  const token = authHeader.slice(7)
+  const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token)
+  if (authError || !user) {
+    throw createError({ statusCode: 401, statusMessage: 'Invalid session' })
+  }
+
+  const { data: profile } = await supabaseAdmin
+    .from('profiles')
+    .select('role')
+    .eq('id', user.id)
+    .single()
+
+  if (!profile || (profile.role !== 'admin' && profile.role !== 'super_admin')) {
+    throw createError({ statusCode: 403, statusMessage: 'Forbidden' })
+  }
 
   const payload = {
     title:          String(body.title ?? ''),
@@ -35,6 +52,7 @@ export default defineEventHandler(async (event) => {
     country:        Array.isArray(body.country) ? body.country : (body.country ? [String(body.country)] : []),
     country_code:   String(body.country_code ?? ''),
     type:           String(body.type ?? ''),
+    activity_type:  String(body.activityType ?? ''),
     category:       String(body.category ?? ''),
     featured_image: String(body.featured_image ?? ''),
     gallery:        Array.isArray(body.gallery)   ? body.gallery   : [],
@@ -47,23 +65,14 @@ export default defineEventHandler(async (event) => {
     is_popular:     Boolean(body.is_popular),
   }
 
-  console.log('[PUT /api/admin/tours/:id] payload:', payload)
-
   const { error } = await supabaseAdmin
     .from('trips')
     .update(payload)
     .eq('id', id)
 
   if (error) {
-    console.error('[PUT /api/admin/tours/:id] Supabase error:', {
-      message: error.message,
-      details: error.details,
-      hint: error.hint,
-      code: error.code,
-    })
     throw createError({ statusCode: 400, statusMessage: `${error.message} | details: ${error.details} | hint: ${error.hint}` })
   }
 
-  console.log('[PUT /api/admin/tours/:id] update successful for id:', id)
   return { success: true }
 })

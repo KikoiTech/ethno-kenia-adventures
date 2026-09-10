@@ -12,7 +12,8 @@ export interface SafariPackage {
   category: string
   country?: string[]
   countryCode?: string
-  type?: string
+  type?: string // booking mode: group / private / self-drive / fly-in / walking / day-trip
+  activityType?: string // safari activity: Wildlife / Trekking / Beach / Dining
   tags?: string[]
   location?: string
   pace?: string

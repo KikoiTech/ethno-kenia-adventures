@@ -48,6 +48,8 @@
               quality="75"
               width="259"
               height="550"
+              fit="cover"
+              gravity="auto"
               loading="lazy"
               class="absolute inset-0 w-full h-full object-cover"
             />
